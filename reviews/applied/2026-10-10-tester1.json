@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "graph_version": "76e018266e2c",
+  "reviewer": {
+    "name": "Tester1"
+  },
+  "created": "2026-10-10T15:31:08.879Z",
+  "decisions": [
+    {
+      "target": {
+        "kind": "node",
+        "id": "sen-alpha"
+      },
+      "action": "accept"
+    },
+    {
+      "target": {
+        "kind": "node",
+        "id": "sen-alpha"
+      },
+      "action": "comment",
+      "comment": "This and Sen's beta overlap with the combined iff to WARP, it would be helpful to adjust the spacing to ensure lines don't overlap in the visualization"
+    }
+  ]
+}
