@@ -239,7 +239,7 @@
       "type": "implies"
     }
   ],
-  "graph_version": "76e018266e2c",
+  "graph_version": "f343b055f9e2",
   "nodes": [
     {
       "citations": [
@@ -533,8 +533,10 @@
       "id": "sen-alpha",
       "kind": "axiom",
       "name": "Sen's alpha",
+      "reviewed_by": "Tester1",
+      "reviewed_on": "2026-10-10",
       "section": "s02-choice",
-      "status": "proposed",
+      "status": "verified",
       "topic": "revealed-preference"
     },
     {
