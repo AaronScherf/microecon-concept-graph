@@ -1,0 +1,13 @@
+name: Submit a review
+description: Paste the review copied from the viewer. Do not edit it.
+title: "Review: "
+labels: ["review"]
+body:
+  - type: textarea
+    id: review
+    attributes:
+      label: Review
+      description: Paste the text the viewer copied to your clipboard.
+      render: json
+    validations:
+      required: true

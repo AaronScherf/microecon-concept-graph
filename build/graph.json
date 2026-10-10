@@ -1,0 +1,677 @@
+{
+  "edges": [
+    {
+      "citations": [],
+      "explanation": "A binary relation on $X$ is a set of ordered pairs drawn from $X$.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e23281a1b74b8aaa"
+      },
+      "id": "binary-relation--defined_on--set",
+      "source": "binary-relation",
+      "status": "proposed",
+      "target": "set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [],
+      "explanation": "Menus and choices are subsets of a set $X$ of alternatives.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "1c9bef2a489785c8"
+      },
+      "id": "choice-structure--defined_on--set",
+      "source": "choice-structure",
+      "status": "proposed",
+      "target": "set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14"
+      },
+      "id": "partial-order--has_property--antisymmetry",
+      "source": "partial-order",
+      "status": "proposed",
+      "target": "antisymmetry",
+      "type": "has_property"
+    },
+    {
+      "citations": [],
+      "explanation": "The theorem starts from an arbitrary partial order.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "7b70b9b2534cc550"
+      },
+      "id": "partial-order--hypothesis_of--szpilrajn-extension",
+      "source": "partial-order",
+      "status": "proposed",
+      "target": "szpilrajn-extension",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [],
+      "condition": "it is also antisymmetric",
+      "explanation": "Adding antisymmetry removes ties between distinct elements.",
+      "hashes": {
+        "condition": "c82282a9f270b857",
+        "explanation": "e7e8fcc1edd7bde7"
+      },
+      "id": "partial-order--is_a--preorder",
+      "source": "partial-order",
+      "status": "proposed",
+      "target": "preorder",
+      "type": "is_a"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14"
+      },
+      "id": "preorder--has_property--reflexivity",
+      "source": "preorder",
+      "status": "proposed",
+      "target": "reflexivity",
+      "type": "has_property"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14"
+      },
+      "id": "preorder--has_property--transitivity",
+      "source": "preorder",
+      "status": "proposed",
+      "target": "transitivity",
+      "type": "has_property"
+    },
+    {
+      "citations": [],
+      "condition": "it is reflexive and transitive",
+      "explanation": "A preorder is a binary relation with two extra properties.",
+      "hashes": {
+        "condition": "46394fbdaa4cfd18",
+        "explanation": "7b0915c4c42a5e03"
+      },
+      "id": "preorder--is_a--binary-relation",
+      "source": "preorder",
+      "status": "proposed",
+      "target": "binary-relation",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "1.D",
+          "source": "mwg"
+        }
+      ],
+      "condition": "choices are the most-preferred elements of each menu",
+      "explanation": "Choosing the best element under a rational preference always satisfies the weak axiom.",
+      "hashes": {
+        "condition": "cb9018f6b2e22c5a",
+        "explanation": "c39114f6b0810d34"
+      },
+      "id": "rational-preference--implies--warp",
+      "source": "rational-preference",
+      "status": "proposed",
+      "target": "warp",
+      "type": "implies"
+    },
+    {
+      "citations": [],
+      "condition": "it is also complete",
+      "explanation": "A rational preference relation is a complete preorder.",
+      "hashes": {
+        "condition": "75bf6a1593bbf1a5",
+        "explanation": "df6f42b6ac9e26f8"
+      },
+      "id": "rational-preference--is_a--preorder",
+      "source": "rational-preference",
+      "status": "proposed",
+      "target": "preorder",
+      "type": "is_a"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14"
+      },
+      "id": "sen-alpha--component_of--sen-alpha-beta",
+      "source": "sen-alpha",
+      "status": "proposed",
+      "target": "sen-alpha-beta",
+      "type": "component_of"
+    },
+    {
+      "citations": [],
+      "condition": "choices are defined on a rich enough family of menus (confirm the exact domain condition in the course notes)",
+      "explanation": "Satisfying both of Sen's conditions is the same as satisfying the weak axiom.",
+      "hashes": {
+        "condition": "368336a9d28c35ef",
+        "explanation": "562ff350b13efd6f"
+      },
+      "id": "sen-alpha-beta--iff--warp",
+      "source": "sen-alpha-beta",
+      "status": "proposed",
+      "target": "warp",
+      "type": "iff"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14"
+      },
+      "id": "sen-beta--component_of--sen-alpha-beta",
+      "source": "sen-beta",
+      "status": "proposed",
+      "target": "sen-alpha-beta",
+      "type": "component_of"
+    },
+    {
+      "citations": [],
+      "explanation": "The conclusion is a total order that extends the original.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "ad45df0f20148d0c"
+      },
+      "id": "szpilrajn-extension--yields--total-order",
+      "source": "szpilrajn-extension",
+      "status": "proposed",
+      "target": "total-order",
+      "type": "yields"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14"
+      },
+      "id": "total-order--has_property--completeness",
+      "source": "total-order",
+      "status": "proposed",
+      "target": "completeness",
+      "type": "has_property"
+    },
+    {
+      "citations": [],
+      "condition": "it is also complete, so every pair is comparable",
+      "explanation": "Adding completeness removes incomparable pairs.",
+      "hashes": {
+        "condition": "cc9192c042b537c1",
+        "explanation": "4495a6e18972b69c"
+      },
+      "id": "total-order--is_a--partial-order",
+      "source": "total-order",
+      "status": "proposed",
+      "target": "partial-order",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "1.D",
+          "source": "mwg"
+        }
+      ],
+      "condition": "the family of menus contains every subset of up to three elements",
+      "explanation": "Under that richness condition, weak-axiom behaviour can be rationalized by some rational preference.",
+      "hashes": {
+        "condition": "07543035c552d8ea",
+        "explanation": "db5064de8ded3160"
+      },
+      "id": "warp--implies--rational-preference",
+      "source": "warp",
+      "status": "proposed",
+      "target": "rational-preference",
+      "type": "implies"
+    }
+  ],
+  "graph_version": "76e018266e2c",
+  "nodes": [
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "If two elements are related in both directions they must be the same element. This is what rules out ties\nbetween distinct elements.\n",
+      "formal": "$\\forall x, y:\\ x R y \\wedge y R x \\Rightarrow x = y$.\n",
+      "gist": "Two different elements are never related in both directions.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "abc0f23eca2afe51",
+        "formal": "999f54c5ab584b11",
+        "gist": "87fd4d93152b9e4a"
+      },
+      "id": "antisymmetry",
+      "kind": "property",
+      "name": "Antisymmetry",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "A binary relation $R$ on a set $X$ is a collection of ordered pairs of elements of $X$. Writing $x R y$ means\nthe pair $(x, y)$ is in the collection. Preferences, \"at least as good as\" and \"is a multiple of\" are all\nbinary relations.\n",
+      "formal": "$R \\subseteq X \\times X$.\n",
+      "gist": "A rule that says, for some ordered pairs of elements of a set, that the first is related to the second.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "18b879d3b47db2a4",
+        "formal": "4c8c68a3e94f4354",
+        "gist": "dce69ccf75f3f9d3"
+      },
+      "id": "binary-relation",
+      "kind": "object",
+      "name": "Binary relation",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "For every pair of elements, at least one is related to the other. Nothing is left incomparable.\n",
+      "formal": "$\\forall x, y:\\ x R y \\vee y R x$.\n",
+      "gist": "Any two elements can be compared.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "c8c7acb3630ba908",
+        "formal": "1c29d59d900d2ca2",
+        "gist": "ebb54f15d10a4076"
+      },
+      "id": "completeness",
+      "kind": "property",
+      "name": "Completeness",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "A partial order ranks elements without ties between distinct elements, but may leave some pairs\nincomparable. Divisibility on the positive integers is the standard example.\n",
+      "gist": "A preorder that is also antisymmetric.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "babafcb8ed28df46",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "baea1b2f76c8a39c"
+      },
+      "id": "partial-order",
+      "kind": "object",
+      "name": "Partial order",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "A preorder is the weakest useful notion of ranking: every element ranks with itself and comparisons chain\ntogether, but ties between different elements are allowed and some pairs may be incomparable.\n",
+      "gist": "A binary relation that is reflexive and transitive.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "43ebb5423f0ab0d1",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "8e7f4b391c09cb45"
+      },
+      "id": "preorder",
+      "kind": "object",
+      "name": "Preorder",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "1.B",
+          "source": "mwg"
+        },
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "A decision maker's preferences are called rational when they are complete (any two alternatives can be\ncompared) and transitive (comparisons chain). Everything in standard consumer theory starts here.\n",
+      "formal": "$\\succsim$ is complete and transitive on $X$.\n",
+      "gist": "A complete and transitive \"at least as good as\" relation.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "4f07568ec0262984",
+        "formal": "8d55189fbec3c324",
+        "gist": "a5d2ea3c896f83c3"
+      },
+      "id": "rational-preference",
+      "kind": "object",
+      "name": "Rational preference relation",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "rational-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "A relation is reflexive when every element is related to itself. For \"at least as good as\" this says each\nalternative is at least as good as itself.\n",
+      "formal": "$\\forall x \\in X:\\ x R x$.\n",
+      "gist": "Everything is related to itself.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "da07b1088dedc158",
+        "formal": "4a5961bda3cf9e53",
+        "gist": "7b0a63799f15fe00"
+      },
+      "id": "reflexivity",
+      "kind": "property",
+      "name": "Reflexivity",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 1",
+          "source": "ok"
+        }
+      ],
+      "explanation": "A set is just a collection of distinct things, with no order and no repeats. Alternatives, bundles of goods\nand states of the world are all modelled as elements of some set $X$.\n",
+      "gist": "A collection of distinct objects; the ground floor everything else is built on.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "fba684f5df410745",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "d02e08e6037577de"
+      },
+      "id": "set",
+      "kind": "structure",
+      "name": "Set",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 1",
+          "source": "ok"
+        }
+      ],
+      "explanation": "Given any partial order, one can add comparisons for the incomparable pairs and obtain a total order that\nstill ranks every pair the original already ranked in the same way. For infinite sets the proof needs the\naxiom of choice.\n",
+      "gist": "Every partial order can be completed into a total order without contradicting it.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "adb849b9e0cbf031",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "4afd997cf789f7f2"
+      },
+      "id": "szpilrajn-extension",
+      "kind": "theorem",
+      "name": "Szpilrajn extension theorem",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "A total order lines all the elements up on a single ladder: no ties between distinct elements and no\nincomparable pairs.\n",
+      "gist": "A partial order in which every pair is comparable.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "43eaf460e62e8f44",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "447ed4d51a5126fe"
+      },
+      "id": "total-order",
+      "kind": "object",
+      "name": "Total order",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "ch. 2",
+          "source": "rubinstein"
+        }
+      ],
+      "explanation": "Chains of comparisons carry through. If $x$ is at least as good as $y$ and $y$ is at least as good as $z$,\nthen $x$ is at least as good as $z$.\n",
+      "formal": "$\\forall x, y, z:\\ x R y \\wedge y R z \\Rightarrow x R z$.\n",
+      "gist": "If a is related to b and b to c, then a is related to c.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "cc7a92df451182b8",
+        "formal": "36ec69681de92397",
+        "gist": "8d5e7fd3dab029aa"
+      },
+      "id": "transitivity",
+      "kind": "property",
+      "name": "Transitivity",
+      "section": "s01-binary-relations",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "1.C",
+          "source": "mwg"
+        }
+      ],
+      "explanation": "A choice structure pairs a family of budget sets (the menus that might be offered) with a rule saying which\nelements are chosen from each menu. It describes behaviour directly, without mentioning preferences.\n",
+      "gist": "A family of available sets together with what is chosen from each.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "f6b5818aa439aa71",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "ab3ad69bb60323e7"
+      },
+      "id": "choice-structure",
+      "kind": "structure",
+      "name": "Choice structure",
+      "section": "s02-choice",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "choice and revealed preference",
+          "source": "lecture"
+        }
+      ],
+      "explanation": "If an element is chosen from a menu and it also belongs to a smaller menu inside it, it must be chosen\nfrom the smaller one too. Shrinking the menu cannot make a still-available winner lose.\n",
+      "gist": "Something chosen from a big menu is still chosen from any smaller menu that contains it.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "77642111889f259b",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "7bcff4674b5d696b"
+      },
+      "id": "sen-alpha",
+      "kind": "axiom",
+      "name": "Sen's alpha",
+      "section": "s02-choice",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "choice and revealed preference",
+          "source": "lecture"
+        }
+      ],
+      "explanation": "A bundle node: the choice structure satisfies Sen's alpha and Sen's beta simultaneously. It exists so the\nequivalence with the weak axiom can be drawn as one edge.\n",
+      "gist": "The bundle of both consistency conditions at once.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "549454016090a3b9",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "54b7a404e25847dc"
+      },
+      "id": "sen-alpha-beta",
+      "kind": "axiom",
+      "name": "Sen's alpha and beta together",
+      "section": "s02-choice",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "choice and revealed preference",
+          "source": "lecture"
+        }
+      ],
+      "explanation": "When two elements tie as chosen in a small menu, then in any larger menu that contains it, choosing one of\nthem forces choosing the other as well.\n",
+      "gist": "If two elements are both chosen from a small menu, a bigger menu cannot choose one without the other.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "3fc88192c1550098",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "21ce149c1e90d6ae"
+      },
+      "id": "sen-beta",
+      "kind": "axiom",
+      "name": "Sen's beta",
+      "section": "s02-choice",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "1.C",
+          "source": "mwg"
+        }
+      ],
+      "explanation": "The weak axiom captures \"observed consistent choice behaviour\". If you ever pick $x$ while $y$ was on the\nmenu, you may not pick $y$ without also picking $x$ in another menu where both are available.\n",
+      "gist": "If x is chosen when y is available, then y is never chosen without x being chosen too whenever both are available.",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "d264a35c4f12e3ce",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "8a5686e4c03f3662"
+      },
+      "id": "warp",
+      "kind": "axiom",
+      "name": "Weak axiom of revealed preference",
+      "section": "s02-choice",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [],
+      "explanation": "",
+      "gist": "",
+      "hashes": {
+        "example": "e3b0c44298fc1c14",
+        "explanation": "e3b0c44298fc1c14",
+        "formal": "e3b0c44298fc1c14",
+        "gist": "e3b0c44298fc1c14"
+      },
+      "id": "walrasian-demand",
+      "kind": "correspondence",
+      "name": "Walrasian demand",
+      "section": "s03-demand",
+      "status": "proposed",
+      "topic": "demand"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s01-binary-relations",
+      "lectures": [],
+      "order": 1.0,
+      "state": "taught",
+      "syllabus_ref": null,
+      "title": "Binary relations and orders"
+    },
+    {
+      "id": "s02-choice",
+      "lectures": [],
+      "order": 2.0,
+      "state": "taught",
+      "syllabus_ref": null,
+      "title": "Choice and revealed preference"
+    },
+    {
+      "id": "s03-demand",
+      "lectures": [],
+      "order": 3.0,
+      "state": "planned",
+      "syllabus_ref": null,
+      "title": "Consumer demand"
+    }
+  ],
+  "site": {
+    "repo": "AaronScherf/microecon-concept-graph",
+    "title": "Microeconomics concept graph"
+  },
+  "vocab": {
+    "kinds": [
+      "object",
+      "structure",
+      "property",
+      "axiom",
+      "definition",
+      "theorem",
+      "lemma",
+      "model",
+      "function",
+      "correspondence",
+      "identity",
+      "technique",
+      "example"
+    ],
+    "topics": [
+      "order-theory",
+      "rational-choice",
+      "revealed-preference",
+      "demand"
+    ]
+  }
+}
