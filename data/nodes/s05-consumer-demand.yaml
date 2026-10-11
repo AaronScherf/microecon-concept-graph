@@ -1,0 +1,231 @@
+  - id: budget-set
+    name: Budget set
+    kind: structure
+    section: s05-consumer-demand
+    topic: demand
+    gist: The set of all affordable commodity bundles whose market valuation at given prices does not exceed a consumer's wealth.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      In consumer theory, the budget set $B(p, w)$ formalizes the choice problem faced by a price-taking consumer with wealth $w$ confronting market prices $p \gg 0$.
+      It comprises all non-negative commodity bundles $x \in \mathbb{R}^K_+$ whose total expenditure $p \cdot x$ is at most $w$.
+      Geometrically, because prices are strictly positive and consumption is non-negative, the budget set is non-empty, compact (closed and bounded), and convex, with the boundary $p \cdot x = w$ forming the budget hyperplane.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §5.1 Budget sets, p. 75
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.1 - Budget set, p. 76
+      - source: lecture
+        ref: '2026-10-06'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The consumer's choice function, p. 77
+    formal: B(p, w) = \{ x \in \mathbb{R}^K_+ \mid p \cdot x \le w \}, \quad \text{with } p \in \mathbb{R}^K_{++} \text{ and } w > 0
+    example: |-
+      For two goods with prices $p = (2, 5)$ and wealth $w = 100$, the budget set is $B(p, w) = \{(x_1, x_2) \in \mathbb{R}^2_+ \mid 2x_1 + 5x_2 \le 100\}$.
+      The consumer can afford bundle $(10, 10)$ since $2(10) + 5(10) = 70 \le 100$, but cannot afford $(30, 10)$ since it costs $110$.
+  - id: walrasian-demand
+    name: Walrasian demand
+    kind: correspondence
+    section: s05-consumer-demand
+    topic: demand
+    gist: A correspondence mapping price vectors and wealth levels to the set of utility-maximizing affordable consumption bundles.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      The Walrasian demand correspondence $x(p, w)$ identifies the set of commodity bundles that maximize a consumer's preferences over the budget set $B(p, w)$.
+      When preferences are strictly convex, the maximizer is unique, turning the correspondence into a single-valued Walrasian demand function.
+      Under standard assumptions of continuity and local non-satiation, Walrasian demand satisfies homogeneity of degree zero—since proportional scaling of prices and wealth preserves the budget set—and Walras' law, which ensures that the consumer exhausts their entire wealth.
+    citations:
+      - source: slides
+        ref: Consumer Choice 1
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 62
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The consumer's choice function, p. 77
+      - source: lecture
+        ref: '2026-10-08'
+    formal: |-
+      x(p, w) = \arg\max \{ u(x) \mid x \in \mathbb{R}^L_+ \text{ and } p \cdot x \le w \} \\
+      \text{Properties: } x(\alpha p, \alpha w) = x(p, w) \ \forall \alpha > 0, \quad p \cdot x = w \ \forall x \in x(p, w)
+    example: For a consumer with Cobb-Douglas utility $u(x_1, x_2) = x_1^\alpha x_2^{1-\alpha}$, the single-valued Walrasian demand function is $x_1(p, w) = \frac{\alpha w}{p_1}$ and $x_2(p, w) = \frac{(1-\alpha) w}{p_2}$, directly satisfying both zero-degree homogeneity and Walras' law.
+  - id: walras-law
+    name: Walras' law
+    kind: identity
+    section: s05-consumer-demand
+    topic: demand
+    gist: An identity stating that consumers fully exhaust their budget at optimal choices whenever preferences satisfy local non-satiation.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      Walras' law is a fundamental budget exhaustion property in demand theory stating that the total expenditure on an optimal bundle equals available wealth ($p \cdot x = w$).
+      It follows directly from local non-satiation or monotonicity: if an optimal bundle left unspent wealth ($p \cdot x < w$), there would exist an affordable nearby bundle providing strictly higher utility, contradicting optimality.
+      In general equilibrium contexts, when aggregated across all price-taking consumers whose budget constraints bind, Walras' law implies that if $L-1$ markets clear at positive prices, the remaining market must also clear.
+    citations:
+      - source: slides
+        ref: Consumer Choice 1
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Claim (Walras' Law) - , p. 80
+      - source: lecture
+        ref: '2026-10-08'
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Allowing for Mixed Strategies, p. 323
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Claim - , p. 88
+    formal: p \cdot x = \sum_{i=1}^n p_i x_i = w \quad \forall x \in x(p, w)
+    example: With prices $p = (3, 2)$ and income $w = 30$, a consumer with strictly monotonic preferences choosing bundle $x = (6, 6)$ spends exactly $3(6) + 2(6) = 18 + 12 = 30$, leaving zero unspent budget.
+  - id: homogeneity-of-degree-zero
+    name: Homogeneity of degree zero
+    kind: property
+    section: s05-consumer-demand
+    topic: demand
+    gist: A property of demand correspondences where multiplying all prices and wealth by a positive scalar leaves chosen quantities unchanged.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      This foundational property asserts that simultaneously multiplying every unit price and nominal spending allowance by a common positive multiplier leaves the optimal commodity bundle unaffected.
+      Intuitively, this invariance arises because expanding or contracting currency units alters both sides of the expenditure requirement in equal proportion, preserving the boundary and interior of the consumer's affordable opportunity set.
+      Since rational choices depend strictly on the underlying physical combinations an individual can realistically attain rather than numerical price tags, demand decisions remain immune to purely nominal rescaling, formalizing the absence of money illusion.
+    citations:
+      - source: slides
+        ref: Consumer Choice 1
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §2.E Demand Functions and Comparative Statics, p. 34
+      - source: lecture
+        ref: '2026-10-06'
+    formal: |-
+      x(\alpha p, \alpha w) = x(p, w) \quad \forall (p, w) \gg 0 \text{ and } \forall \alpha > 0, \\
+      \text{since } B(\alpha p, \alpha w) = \{x \in \mathbb{R}^n_+ \mid \alpha p \cdot x \le \alpha w\} = B(p, w)
+    example: |-
+      If a consumer demands $x(p, w) = \frac{w}{2p_1}$ of good 1 under prices $p_1 = 5$ and wealth $w = 100$, doubling all variables to $\alpha = 2$ gives prices $p_1' = 10$ and wealth $w' = 200$.
+      The resulting quantity demanded remains $\frac{200}{2(10)} = 10$, displaying zero-degree homogeneity.
+  - id: utility-maximization-problem
+    name: Utility maximization problem
+    kind: model
+    section: s05-consumer-demand
+    topic: demand
+    gist: The constrained optimization problem of finding a consumption bundle in the budget set that maximizes the consumer's utility.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      The Utility Maximization Problem describes an individual selecting the highest-ranked affordable basket under market constraints.
+      Given prevailing price vector $p \gg 0$ and wealth $w > 0$, the decision-maker maximizes an objective criterion $u(x)$ over non-negative expenditure bundles whose total cost does not exceed $w$.
+      Because this feasible region is closed, bounded, and non-empty in Euclidean space, the Weierstrass theorem guarantees the existence of at least one optimal bundle whenever $u$ is continuous.
+      Strict convexity of underlying preferences ensures that the optimum is a unique singleton bundle, defining the Walrasian demand function, while the resulting maximum utility level yields the indirect utility function $v(p, w)$.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.D The Utility Maximization Problem, p. 61
+      - source: lecture
+        ref: '2026-10-08'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The consumer's problem, p. 77
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Consumer Problem with Differentiable Preferences, p. 78
+    formal: |-
+      \max_{x \ge 0} u(x) \quad \text{subject to } p \cdot x \le w, \\
+      \text{yielding optimal set } x(p, w) = \arg\max_{x \in B(p, w)} u(x) \text{ and indirect utility } v(p, w) = \max_{x \in B(p, w)} u(x)
+    example: For a consumer with utility $u(x_1, x_2) = \ln(x_1) + \ln(x_2)$ facing prices $(p_1, p_2)$ and income $w$, solving the UMP equates the marginal rate of substitution to the price ratio $p_1 / p_2$, yielding demand $x^* = (w / (2p_1), w / (2p_2))$.
+  - id: theorem-of-the-maximum
+    name: Theorem of the maximum
+    kind: theorem
+    section: s05-consumer-demand
+    topic: demand
+    gist: Berge's theorem establishing that maximizing a continuous objective over a continuous, compact constraint yields an upper hemicontinuous argmax.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      Berge's Theorem of the Maximum is the cornerstone result governing parametric optimization in microeconomic theory.
+      Let $\Gamma: \Theta \rightrightarrows X$ be a continuous, compact-valued constraint correspondence between metric spaces and let $\varphi: X \times \Theta \to \mathbb{R}$ be a continuous objective function.
+      The theorem demonstrates that the maximized value function $\varphi^*(\theta) = \max_{x \in \Gamma(\theta)} \varphi(x, \theta)$ is continuous, while the set of maximizers $\sigma(\theta) = \arg\max_{x \in \Gamma(\theta)} \varphi(x, \theta)$ forms a compact-valued and upper hemicontinuous correspondence.
+      If the optimal solution is uniquely valued for each parameter—such as under strictly convex preferences—the optimal argmax correspondence collapses to an ordinary continuous function.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §THE MAXIMUM THEOREM, p. 287
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §CHAPTER E Continuity II, p. 268
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §PROOF, p. 288
+    formal: |-
+      \text{If } \Gamma: \Theta \rightrightarrows X \text{ is continuous and compact-valued, and } \varphi \in C(X \times \Theta), \text{ then:} \\
+      1.\ \varphi^*(\theta) = \max_{x \in \Gamma(\theta)} \varphi(x, \theta) \text{ is continuous on } \Theta. \\
+      2.\ \sigma(\theta) = \arg\max_{x \in \Gamma(\theta)} \varphi(x, \theta) \text{ is compact-valued and upper hemicontinuous.}
+    example: |-
+      In the consumer's utility maximization problem parameterized by prices and wealth $\theta = (p, w)$, the budget correspondence $\Gamma(p, w)$ is continuous and compact-valued for $p \gg 0$.
+      The Theorem of the Maximum implies that indirect utility $v(p, w)$ is continuous and Walrasian demand $x(p, w)$ is upper hemicontinuous.
+  - id: monotonic-preferences
+    name: Monotonic preferences
+    kind: property
+    section: s05-consumer-demand
+    topic: demand
+    gist: A preference property capturing that commodities are desirable goods, ensuring that larger bundles are weakly or strictly preferred.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      Monotonicity formalizes the economic principle that commodities are desirable goods rather than bads.
+      Under weak monotonicity, having at least as much of every good guarantees that a bundle is weakly preferred, and having strictly more of all goods yields strict preference.
+      Under strong (or strict) monotonicity, increasing even a single good without decreasing any other strictly increases preference ($x \ge y, x \neq y \implies x \succ y$).
+      Geometrically, strict monotonicity forces indifference curves to be strictly downward-sloping, guarantees local non-satiation, and ensures that the budget constraint binds with equality under Walras' law.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §4.3 Monotonicity, p. 66
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Monotonicity, p. 59
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 4.2 - Monotone preference relation, p. 67
+      - source: lecture
+        ref: '2026-10-06'
+    formal: |-
+      \text{Weak monotonicity: } [x_k \ge y_k \ \forall k \implies x \succsim y] \land [x_k > y_k \ \forall k \implies x \succ y] \\
+      \text{Strong monotonicity: } [x \ge y \land x \neq y] \implies x \succ y
+    example: |-
+      A consumer with utility $u(x_1, x_2) = x_1 + x_2$ exhibits strong monotonicity because adding any positive amount of either commodity strictly raises utility.
+      In contrast, Leontief preferences $u(x_1, x_2) = \min\{x_1, x_2\}$ are weakly monotone but not strongly monotone, as increasing $x_1$ alone at $(2, 2)$ leaves utility unchanged.
+  - id: convex-preferences
+    name: Convex preferences
+    kind: property
+    section: s05-consumer-demand
+    topic: demand
+    gist: A property requiring upper contour sets to be convex, reflecting diminishing marginal rates of substitution and a taste for mixtures.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s05
+    explanation: |-
+      A preference relation $\succsim$ is convex if for every alternative $x \in X$, its upper contour set $\{y \in X \mid y \succsim x\}$ is a convex set.
+      Behaviorally, this reflects a preference for diversification or balanced averages over extreme bundles: if $y \succsim x$ and $z \succsim x$, then any convex combination $\alpha y + (1 - \alpha)z$ is also weakly preferred to $x$.
+      When preferences are strictly convex, mixtures of distinct indifferent bundles are strictly preferred, guaranteeing that utility representations are strictly quasiconcave and ensuring the uniqueness of Walrasian demand.
+    citations:
+      - source: lecture
+        ref: '2026-10-06'
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 55
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 4.2 - Characterization of convex preference relation, p. 70
+    formal: |-
+      \text{Convex: } \forall x, y, z \in X \text{ and } \alpha \in [0, 1], \ [y \succsim x \land z \succsim x] \implies \alpha y + (1 - \alpha) z \succsim x \\
+      \text{Strictly convex: } [y \succsim x \land z \succsim x \land y \neq z] \implies \alpha y + (1 - \alpha) z \succ x \quad \forall \alpha \in (0, 1)
+    example: |-
+      Consider an agent with utility $U(a, b) = \sqrt{a} + \sqrt{b}$ evaluating consumption bundles of two goods.
+      The agent derives identical satisfaction from unbalanced allocations $(9, 1)$ and $(1, 9)$, each generating a utility index of 4.
+      Evaluating their intermediate combination $(5, 5)$ yields $2\sqrt{5} \approx 4.47$, confirming that diversified mixtures are strictly preferred to polarized extremes.

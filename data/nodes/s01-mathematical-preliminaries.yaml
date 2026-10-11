@@ -1,0 +1,254 @@
+  - id: set
+    name: Set
+    kind: object
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A well-defined collection of distinct elements viewed as a unified mathematical object.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      A set is an aggregation of distinct items considered together as a single entity.
+      In economic theory, sets formalize fundamental constructs such as choice menus, consumption spaces, and feasibility constraints.
+      A set is entirely characterized by its constituent elements through the fundamental membership relation.
+      Economists rely on set operations and subset relations to model agent choices from constrained environments.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §1.1 Sets, p. 26
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §1.1 Sets, p. 27
+    formal: A = B \iff (x \in A \iff x \in B)
+    example: 'The empty set $\emptyset = \{x : x \neq x\}$ possesses no elements, whereas the singleton $\{\emptyset\}$ contains one element, making $\{\emptyset\} \neq \emptyset$.'
+  - id: binary-relation
+    name: Binary relation
+    kind: object
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A subset of pairs from a Cartesian product specifying which elements are related.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      A binary relation on a set $X$ is formally defined as a subset of the Cartesian product $X \times X$.
+      It identifies pairs of elements $(x, y)$ that satisfy an association, typically written using the infix notation $x R y$ when the pair belongs to the relation.
+      In microeconomics, binary relations serve as the primary mathematical vehicle for formalizing pairwise comparisons such as weak preferences, strict preferences, and indifference.
+      Imposing behavioral axioms like completeness or transitivity on these relations structures an agent's decision-making process.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §1.2 Relations, p. 30
+      - source: lecture
+        ref: '2026-09-10'
+    formal: R \subseteq X \times Y \quad (\text{or } R \subseteq X^2)
+    example: On the real numbers $\mathbb{R}$, the standard weak inequality $\ge$ forms a binary relation where $x \ge y$ indicates that $(x, y)$ belongs to the relation.
+  - id: reflexivity
+    name: Reflexivity
+    kind: property
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: The property of a binary relation where every element is related to itself.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      Reflexivity is a property of a binary relation ensuring that each element in the underlying set is related to itself.
+      In microeconomic consumer theory, this corresponds to the requirement that any alternative is considered at least as good as itself ($x \succsim x$).
+      Although conceptually intuitive, reflexivity is often omitted from the formal axiomatization of standard preference relations because it is mathematically implied by completeness when evaluating identical options ($y = x$).
+      It also serves as a foundational condition in order theory for constructing equivalence relations and preorders.
+    citations:
+      - source: lecture
+        ref: '2026-09-10'
+      - source: rubinstein
+        ref: 'Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1: Complete binary relation, p. 23'
+    formal: \forall x \in X, \quad x R x
+    example: On the set $X = \{1, 2, 3\}$, a relation containing the pairs $(1, 1)$, $(2, 2)$, $(3, 3)$, and $(1, 2)$ is reflexive because each element in $X$ is paired with itself.
+  - id: transitivity
+    name: Transitivity
+    kind: property
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A property requiring that if an element relates to a second and the second to a third, the first relates to the third.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      Transitivity is an internal consistency property of binary relations requiring that whenever $x$ relates to $y$ and $y$ relates to $z$, $x$ must also relate to $z$.
+      In microeconomic theory, transitivity ensures that preferences do not exhibit cyclic rankings, enabling agents to form coherent best choices over arbitrary sets of alternatives.
+      Combined with completeness, it underpins the standard mathematical model of rational consumer preference relations.
+      It is also an indispensable building block for preorders, partial orders, and equivalence classes.
+    citations:
+      - source: rubinstein
+        ref: 'Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2: Transitive binary relation, p. 24'
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §1.2 Preference formation, p. 26
+    formal: \forall x, y, z \in X, \quad (x R y \land y R z) \implies x R z
+    example: Under majority voting across three individuals with cyclic rankings ($a \succ b \succ c$ and $c \succ a$), the aggregated majority rule violates transitivity through the Condorcet paradox.
+  - id: antisymmetry
+    name: Antisymmetry
+    kind: property
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A condition stating that two distinct elements cannot be mutually related to each other.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      Antisymmetry is an order-theoretic property requiring that whenever two elements mutually satisfy a binary relation ($x R y$ and $y R x$), they must be identical ($x = y$).
+      In order theory, adding antisymmetry to a preorder produces a partial order, restricting the symmetric part of the relation strictly to the diagonal.
+      Consumer weak preference relations typically violate antisymmetry because decision makers can be indifferent between distinct alternatives ($x \neq y$ with $x \sim y$).
+      Imposing antisymmetry therefore rules out non-trivial indifference classes across distinct choices.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31
+      - source: rubinstein
+        ref: 'Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.4: Symmetric and antisymmetric binary relations, p. 24'
+      - source: lecture
+        ref: '2026-09-10'
+    formal: \forall x, y \in X, \quad (x R y \land y R x) \implies x = y
+    example: The relation "is older than" is antisymmetric because two different individuals cannot simultaneously be strictly older than each other.
+  - id: completeness
+    name: Completeness
+    kind: property
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: The requirement that every pair of elements in a set can be compared by the relation.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      Completeness is a property of a binary relation requiring that for every pair of alternatives, at least one is related to the other.
+      In standard microeconomic consumer theory, completeness ensures that an individual is never indecisive and can always rank any two consumption bundles ($x \succsim y$, $y \succsim x$, or both).
+      Because setting $y = x$ immediately forces $x \succsim x$, completeness mathematically implies reflexivity.
+      However, economic theorists often relax completeness to accommodate genuine indecision or multi-criteria evaluations, such as incomplete orderings in Pareto dominance.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105
+      - source: rubinstein
+        ref: 'Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1: Complete binary relation, p. 23'
+    formal: \forall x, y \in X, \quad x R y \lor y R x
+    example: Pareto dominance across multiple agents constitutes an incomplete preorder, since two allocations cannot be compared when one improves welfare for one agent but harms another.
+  - id: preorder
+    name: Preorder
+    kind: object
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A binary relation that is both reflexive and transitive.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      A preorder is a binary relation that satisfies reflexivity and transitivity on a domain.
+      In microeconomic theory, preorders provide the foundational architecture for preference relations, allowing consistent rankings while accommodating indifference between distinct alternatives.
+      When completeness is additionally satisfied, a preorder defines a standard complete consumer preference relation.
+      Adding antisymmetry specializes a preorder into a partial order by restricting indifference strictly to identical elements.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 35
+      - source: lecture
+        ref: '2026-09-10'
+    formal: \forall x, y, z \in X, \quad x R x \quad \text{and} \quad (x R y \land y R z \implies x R z)
+    example: A consumer preference relation allowing distinct indifferent consumption choices forms a preorder, whose symmetric part contains non-diagonal pairs.
+  - id: partial-order
+    name: Partial order
+    kind: object
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A binary relation that is reflexive, transitive, and antisymmetric.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      A partial order is a binary relation that satisfies reflexivity, transitivity, and antisymmetry, defining a partially ordered set (poset).
+      Unlike a general preorder, a partial order forces its symmetric part to consist exclusively of the diagonal relation, preventing indifference between distinct elements.
+      It does not demand completeness, thereby permitting distinct alternatives to remain mutually incomparable.
+      In economic analysis, partial orders structure comparison systems where ties between distinct options are ruled out but rankings may remain incomplete.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 35
+      - source: lecture
+        ref: '2026-09-10'
+    formal: \forall x, y, z \in X, \quad x R x, \quad (x R y \land y R z \implies x R z), \quad \text{and} \quad (x R y \land y R x \implies x = y)
+  - id: total-order
+    name: Total order
+    kind: object
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A complete partial order that arranges every pair of elements into a definite ranking.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      A total order (also referred to as a linear order or chain) is a partial order that satisfies completeness.
+      By combining reflexivity, transitivity, antisymmetry, and completeness, it ensures every pair of elements can be compared without permitting indifference between distinct alternatives.
+      In economic models and decision theory, total orders represent strict linear preferences where every indifference set is a singleton.
+      A foundational result in order theory guarantees that any partial order can be extended to a total order.
+    citations:
+      - source: lecture
+        ref: '2026-09-10'
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36
+    formal: \forall x, y, z \in X, \quad (x R y \land y R z \implies x R z), \quad (x R y \land y R x \implies x = y), \quad \text{and} \quad (x R y \lor y R x)
+  - id: equivalence-relation
+    name: Equivalence relation
+    kind: object
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A reflexive, symmetric, and transitive binary relation that partitions a set into disjoint classes.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      An equivalence relation is a binary relation that satisfies reflexivity, symmetry, and transitivity.
+      It partitions the underlying space into pairwise disjoint equivalence classes, grouping together items that share an invariant property.
+      In microeconomic consumer theory, the symmetric part of a preference relation forms an equivalence relation representing indifference.
+      Its equivalence classes constitute indifference sets (or indifference curves), guaranteeing that mutually indifferent alternatives belong to a single class and preventing indifference curves from crossing.
+    citations:
+      - source: rubinstein
+        ref: 'Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5: Equivalence relation, p. 25'
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 32
+    formal: \forall x, y, z \in X, \quad x \sim x, \quad (x \sim y \implies y \sim x), \quad \text{and} \quad (x \sim y \land y \sim z \implies x \sim z)
+    example: On the set $X = \{1, 2, 3\}$, the relation consisting of pairs $(1, 1)$, $(2, 2)$, $(3, 3)$, $(1, 2)$, and $(2, 1)$ is an equivalence relation that partitions $X$ into classes $\{1, 2\}$ and $\{3\}$.
+  - id: szpilrajn-extension-theorem
+    name: Szpilrajn extension theorem
+    kind: theorem
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: Every partial order can be extended to a linear order, and every preorder extends to a complete preorder.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s01
+    explanation: |-
+      Szpilrajn's extension theorem establishes that any partial order defined on a set can be extended to a complete linear order while preserving all original comparisons.
+      A foundational corollary broadens this result to preorders, proving that every incomplete preorder possesses an extension to a complete preorder on the same set.
+      In microeconomic theory, this result is essential when studying agents with incomplete preferences, ensuring that unranked alternatives can be consistently completed without violating existing choices.
+      It provides the mathematical basis for ranking quotient indifference classes and building utility representations on partially ordered domains.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §<span id="page-36-0"></span>SZPILRAJN'S THEOREM, p. 36
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §COROLLARY 1, p. 36
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §PROOF, p. 37
+    formal: \text{If } (X, \succsim) \text{ is a poset, there exists a linear order } \triangleright \text{ on } X \text{ such that } \succsim \;\subseteq\; \triangleright.

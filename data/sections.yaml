@@ -1,15 +1,49 @@
-- id: s01-binary-relations
-  title: Binary relations and orders
-  order: 1
-  state: taught
-  lectures: []
-- id: s02-choice
-  title: Choice and revealed preference
-  order: 2
-  state: taught
-  lectures: []
-- id: s03-demand
-  title: Consumer demand
-  order: 3
-  state: planned
-  lectures: []
+  - id: s01-mathematical-preliminaries
+    title: Mathematical Preliminaries and Order Theory
+    order: 1
+    state: taught
+    lectures:
+      - '2026-09-07'
+  - id: s02-preference-and-utility
+    title: Preferences, Utility, and Rational Choice
+    order: 2
+    state: taught
+    lectures:
+      - '2026-09-10'
+      - '2026-09-15'
+      - '2026-09-17'
+  - id: s03-revealed-preference
+    title: Revealed Preference and Extensions
+    order: 3
+    state: taught
+    lectures:
+      - '2026-09-22'
+  - id: s04-stochastic-choice
+    title: Stochastic Choice and Bounded Rationality
+    order: 4
+    state: taught
+    lectures:
+      - '2026-09-29'
+      - '2026-10-01'
+  - id: s05-consumer-demand
+    title: Consumer Demand and Utility Maximization
+    order: 5
+    state: taught
+    lectures:
+      - '2026-10-06'
+      - '2026-10-08'
+  - id: s06-duality-and-classical-demand
+    title: Duality, Expenditure, and Slutsky Decomposition
+    order: 6
+    state: planned
+    lectures: []
+  - id: s07-producer-theory
+    title: Production and Cost Minimization
+    order: 7
+    state: planned
+    lectures: []
+  - id: s08-choice-under-uncertainty
+    title: Choice Under Risk and Uncertainty
+    order: 8
+    state: planned
+    lectures: []

@@ -1,1 +1,6 @@
-[]
+  - kind: edge
+    id: rational-preference-relation--has_property--convex-preferences
+  - kind: edge
+    id: rational-preference-relation--has_property--monotonic-preferences
+  - kind: edge
+    id: convex-preferences--implies--walrasian-demand

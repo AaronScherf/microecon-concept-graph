@@ -1,0 +1,280 @@
+  - id: rational-preference-relation
+    name: Rational preference relation
+    kind: object
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A binary relation that is complete and transitive, modeling consistent pairwise choices across a set of alternatives.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      In microeconomic theory, an agent's preferences over a choice set $X$ are modeled as a binary relation $\succsim$.
+      The relation is considered rational when it satisfies completeness, ensuring that every pair of items can be compared, and transitivity, guaranteeing that comparisons remain coherent without cycles.
+      Completeness immediately implies reflexivity, meaning that any alternative is as good as itself.
+      From this weak preference relation, one uniquely derives strict preference $\succ$ as its asymmetric part and indifference $\sim$ as its symmetric part.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1 - Complete binary relation, p. 23
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2 - Transitive binary relation, p. 24
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.3 - Preference relation, p. 24
+      - source: lecture
+        ref: '2026-09-10'
+    formal: |-
+      \text{A binary relation } \succsim \subseteq X \times X \text{ is a rational preference relation if:} \\
+      1.\ \forall x, y \in X, \ x \succsim y \text{ or } y \succsim x \quad (\text{completeness}) \\
+      2.\ \forall x, y, z \in X, \ (x \succsim y \land y \succsim z) \implies x \succsim z \quad (\text{transitivity})
+    example: |-
+      Consider evaluating commodity baskets in $\mathbb{R}^2_+$ using the standard sum rule where $x \succsim y$ whenever $x_1 + x_2 \ge y_1 + y_2$.
+      Since weak inequality on real numbers is both complete and transitive, this defines a rational preference relation.
+  - id: utility-function
+    name: Utility function
+    kind: function
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A real-valued function that numerically represents a preference relation by assigning higher values to more preferred alternatives.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      A utility function assigns a real number to each alternative in a choice space $X$ such that one bundle receives a higher or equal number than another precisely when it is weakly preferred.
+      This transforms qualitative binary comparisons into mathematical optimization problems over real numbers.
+      Because the utility representation is purely ordinal, the numerical values themselves carry no cardinal significance; any strictly increasing monotonic transformation preserves the underlying preference ordering.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Concept of Utility Representation, p. 22
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.6 - Utility function, p. 27
+    formal: |-
+      \text{A function } u: X \to \mathbb{R} \text{ represents a preference relation } \succsim \text{ on } X \text{ if:} \\
+      \forall x, y \in X, \quad x \succsim y \iff u(x) \ge u(y)
+    example: For an agent choosing bundles $(x_1, x_2) \in \mathbb{R}^2_+$, the Cobb-Douglas utility function $u(x_1, x_2) = x_1 x_2$ represents the same preference ordering as $v(x_1, x_2) = \ln(x_1) + \ln(x_2)$ because the natural logarithm is a strictly increasing transformation.
+  - id: sens-alpha
+    name: Sen's alpha
+    kind: axiom
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A choice consistency axiom stating that if an option is chosen from a larger set, it must remain chosen in any subset containing it.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      Sen's condition $\alpha$, frequently equated with Chernoff's condition or the Independence of Irrelevant Alternatives, requires contraction consistency on choices.
+      If an alternative is deemed best in a broad set of options $B$, removing other irrelevant alternatives to form a subset $A$ that still includes this item cannot disqualify it from being chosen.
+      While obeying condition $\alpha$ is a necessary consequence of maximizing a preference relation or utility function, it is not sufficient on its own when choice correspondences allow ties, requiring condition $\beta$ for full rationalizability.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §2.3 Property α, p. 39
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Condition α - , p. 38
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 2.3 - Property α, p. 39
+      - source: lecture
+        ref: '2026-09-07'
+    formal: |-
+      \text{For choice correspondence } C \text{ and menus } A \subseteq B: \\
+      [x \in C(B) \land x \in A] \implies x \in C(A) \\
+      \text{For single-valued choice function } c: \\
+      [c(B) \in A \subseteq B] \implies c(A) = c(B)
+    example: |-
+      Consider an agent selecting the second-best item according to an underlying ranking.
+      From $\{x, y, z\}$ with $x \succ y \succ z$, the agent chooses $y$.
+      When faced with the reduced set $\{y, z\}$, the agent chooses $z$ rather than $y$, directly violating condition $\alpha$.
+  - id: sens-beta
+    name: Sen's beta
+    kind: axiom
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: An expansion consistency axiom requiring that if two items are chosen in a menu and one is chosen in an expanded set, the other must also be chosen.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      Sen's condition $\beta$ governs expansion consistency for choice correspondences where multiple alternatives can be selected simultaneously.
+      It dictates that if two candidates $x$ and $y$ are both chosen from a menu $A$, and the set is enlarged to $B \supset A$ such that $y$ remains among the chosen items, then $x$ must also be chosen from $B$.
+      While condition $\alpha$ handles contractions, condition $\beta$ prevents arbitrary tie-breaking upon menu expansion.
+      Together, conditions $\alpha$ and $\beta$ are necessary and sufficient for a choice correspondence to be rationalized by a complete and transitive preference relation on finite domains.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak Axiom of Revealed Preference (WA) - , p. 43
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Proposition - , p. 43
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Condition α - , p. 38
+      - source: slides
+        ref: Utility Maximization 1 Proofs
+      - source: lecture
+        ref: '2026-09-15'
+    formal: |-
+      \text{For choice correspondence } C \text{ and menus } A \subseteq B: \\
+      [x, y \in C(A) \land y \in C(B)] \implies x \in C(B)
+    example: |-
+      Suppose a decision maker ranks options as $x \succ y \succ z$ but always selects the top two available elements.
+      From $\{x, y\}$, the choice is $\{x, y\}$.
+      When the menu expands to $\{x, y, z\}$, the choice is still $\{x, y\}$, which maintains consistency.
+      However, if from $\{y, z\}$ the choice is $\{y, z\}$ and from $\{x, y, z\}$ the choice is $\{x, y\}$, then $y$ is chosen in the larger set while $z$ is dropped, violating condition $\beta$.
+  - id: weak-axiom-of-revealed-preference
+    name: Weak axiom of revealed preference
+    kind: axiom
+    section: s02-preference-and-utility
+    topic: revealed-preference
+    gist: An axiom stating that if an affordable alternative is chosen over another, the latter cannot be chosen when the former is strictly affordable.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      The Weak Axiom of Revealed Preference (WARP) is the fundamental behavioral consistency requirement in choice-based demand theory.
+      It asserts that if a bundle $x$ is purchased when another distinct bundle $y$ was affordable, thereby revealing $x$ as weakly preferred to $y$, then $y$ cannot be selected in another price situation where $x$ remains affordable.
+      In consumer theory, WARP requires that if $p \cdot x' \le w$ for distinct choices $x = x(p, w)$ and $x' = x(p', w')$, then bundle $x$ must be unaffordable at the second budget ($p' \cdot x > w'$).
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §The weak axiom of revealed preference, p. 84
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.7 - Weak axiom of revealed preference (WARP), p. 85
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §2.F The Weak Axiom of Revealed Preference and the Law of Demand, p. 39
+      - source: lecture
+        ref: '2026-10-08'
+    formal: |-
+      \text{For Walrasian demand } x(p, w): \\
+      [p \cdot x(p', w') \le w \text{ and } x(p', w') \neq x(p, w)] \implies p' \cdot x(p, w) > w'
+    example: |-
+      Suppose at prices $p = (1, 2)$ with wealth $w = 10$, a consumer selects $x = (2, 4)$, which costs \$10.
+      Bundle $y = (4, 2)$ costs $1(4) + 2(2) = \$8 \le 10$, so $y$ was affordable.
+      If at prices $p' = (2, 1)$ with wealth $w' = 10$, the consumer chooses $y$ while $x$ costs $2(2) + 1(4) = \$8 \le 10$, WARP is violated because both bundles were affordable in both regimes.
+  - id: choice-structure
+    name: Choice structure
+    kind: structure
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A framework consisting of a set of alternatives, a family of observable menus, and a mapping assigning chosen elements to each menu.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      A choice structure pairs an underlying universe of alternatives $X$ with a collection of admissible subsets $\mathcal{B} \subseteq 2^X \setminus \{\emptyset\}$ and a behavioral rule.
+      The rule can be modeled as a choice function $c(B) \in B$ selecting a single observed action, or more generally as a choice correspondence $C(B) \subseteq B$ specifying all acceptable or maximal elements within the menu.
+      This constructs the empirical foundation of choice-based decision theory, allowing researchers to evaluate behavioral axioms directly on recorded selections without presupposing utility.
+    citations:
+      - source: lecture
+        ref: '2026-09-22'
+      - source: lecture
+        ref: '2026-09-10'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Choice Correspondences, p. 42
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Example - , p. 34
+    formal: '(\mathcal{B}, C) \quad \text{where } \mathcal{B} \subseteq 2^X \setminus \{\emptyset\} \text{ and } C: \mathcal{B} \to 2^X \setminus \{\emptyset\} \text{ such that } \forall B \in \mathcal{B}, \ \emptyset \neq C(B) \subseteq B'
+    example: |-
+      Let the set of available snacks be $X = \{\text{apple}, \text{banana}, \text{cookie}\}$.
+      If the domain $\mathcal{B}$ includes the pair $\{\text{apple}, \text{banana}\}$, a choice correspondence might register $C(\{\text{apple}, \text{banana}\}) = \{\text{apple}\}$, indicating that the apple is chosen over the banana.
+  - id: continuous-preference
+    name: Continuous preference
+    kind: property
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A topological property of preferences where preference rankings are preserved under limits, making upper and lower contour sets closed.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      Preference continuity guarantees that pairwise comparisons remain stable under convergent sequences of alternatives.
+      In topological terms, whenever one bundle is weakly ranked over another, small enough perturbations of either bundle will not suddenly invert the consumer's judgment.
+      This is equivalent to asserting that the preference relation forms a closed subset within the Cartesian product space, ensuring closed upper level sets and preventing abrupt discontinuous jumps in choice behavior.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.C Preference and Utility, p. 57
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §4.4 Continuity, p. 67
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Definition C2 - , p. 26
+      - source: lecture
+        ref: '2026-09-17'
+      - source: lecture
+        ref: '2026-09-22'
+    formal: |-
+      \forall \{(x^n, y^n)\}_{n=1}^\infty \text{ with } x^n \to x \text{ and } y^n \to y: \\
+      (\forall n, \ x^n \succsim y^n) \implies x \succsim y
+    example: |-
+      Standard Cobb-Douglas preferences represented by $u(x_1, x_2) = x_1^\alpha x_2^{1-\alpha}$ are continuous.
+      In contrast, lexicographic preferences are not continuous: the sequence $x^n = (1/n, 0)$ satisfies $x^n \succ (0, 1)$ for all $n \ge 1$, yet at the limit $\lim_{n \to \infty} x^n = (0, 0)$, the ranking flips to $(0, 1) \succ (0, 0)$.
+  - id: debreus-representation-theorem
+    name: Debreu's representation theorem
+    kind: theorem
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A foundational result ensuring that continuous preference orderings on separable spaces possess a continuous numerical utility scale.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      Debreu's representation theorem provides the foundational topological bridge between binary rankings and real-valued analysis in microeconomics.
+      It establishes that if a rational preference relation $\succsim$ defined on a separable metric space $X$ (such as $\mathbb{R}^n$ or any subset thereof) is continuous, there exists a continuous utility function $u: X \to \mathbb{R}$ representing those preferences.
+      Separability guarantees the existence of a countable dense subset on which utilities can be assigned and then extended across the full domain without gaps.
+    citations:
+      - source: slides
+        ref: Utility Maximization 2 part 1
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEBREU'S UTILITY REPRESENTATION THEOREM, p. 231
+      - source: lecture
+        ref: '2026-09-22'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Debreu's Theorem, p. 27
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §LEMMA 1, p. 230
+    formal: |-
+      \text{Let } (X, d) \text{ be a separable metric space, and let } \succsim \text{ be a complete, transitive binary relation on } X. \\
+      \succsim \text{ is continuous} \iff \exists\, u: X \to \mathbb{R} \text{ such that } u \text{ is continuous and } \forall x, y \in X, \ [x \succsim y \iff u(x) \ge u(y)].
+    example: |-
+      On commodity space $X = \mathbb{R}^2_+$, any standard continuous preference ordering admits a continuous utility representation such as $u(x_1, x_2) = x_1^\alpha x_2^{1-\alpha}$.
+      Conversely, lexicographic preferences cannot be represented by any continuous utility function on $\mathbb{R}^2_+$ because they violate preference continuity.
+  - id: lexicographic-preferences
+    name: Lexicographic preferences
+    kind: example
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: A preference relation that prioritizes attributes sequentially and fails order separability, preventing any real-valued utility representation.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s02
+    explanation: |-
+      Lexicographic preferences order multidimensional bundles sequentially by comparing their coordinates in order of priority, like words in a dictionary.
+      An alternative is strictly preferred if it has a strictly greater value in the first dimension; ties in the first dimension are broken by comparing the second dimension, and so on.
+      Although lexicographic preferences define a complete and transitive relation, they are neither continuous nor order separable on uncountable domains like $\mathbb{R}^2_+$.
+      Because any purported utility representation would require an uncountably infinite collection of disjoint non-degenerate open intervals on $\mathbb{R}$, no real-valued utility function can represent them.
+    citations:
+      - source: slides
+        ref: Utility Maximization 2 part 1
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Example - , p. 25
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE1, p. 109
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Claim - , p. 25
+      - source: lecture
+        ref: '2026-09-17'
+    formal: |-
+      \text{For } x, y \in \mathbb{R}^2, \ x \succ_L y \iff (x_1 > y_1) \lor (x_1 = y_1 \land x_2 > y_2) \\
+      x \sim_L y \iff (x_1 = y_1 \land x_2 = y_2)
+    example: Comparing bundles in $\mathbb{R}^2$, we have $(2, 0) \succ_L (1, 100)$ because the first coordinate takes strict precedence, while $(2, 5) \succ_L (2, 3)$ because the first coordinates match and the second coordinate breaks the tie.

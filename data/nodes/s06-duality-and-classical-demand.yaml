@@ -1,0 +1,77 @@
+  - id: indirect-utility-function
+    name: Indirect utility function
+    kind: function
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Value function specifying maximum attainable utility given prices and wealth.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: expenditure-function
+    name: Expenditure function
+    kind: function
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Minimal spending required to attain a specified target utility at given prices.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: hicksian-demand
+    name: Hicksian demand
+    kind: correspondence
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Compensated bundle correspondence achieving target utility at lowest expenditure.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: slutsky-equation
+    name: Slutsky equation
+    kind: identity
+    section: s06-duality-and-classical-demand
+    topic: demand
+    gist: Decomposition splitting price sensitivities into substitution and income effects.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: roys-identity
+    name: Roy's identity
+    kind: identity
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Formula obtaining Walrasian demand from price and wealth derivatives of indirect utility.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: expenditure-minimization-problem
+    name: Expenditure minimization problem
+    kind: model
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Dual consumer problem minimizing spending subject to achieving target utility.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: shephards-lemma
+    name: Shephard's lemma
+    kind: lemma
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Result that price gradient of expenditure equals Hicksian compensated demand.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10

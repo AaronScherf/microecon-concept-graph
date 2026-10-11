@@ -1,0 +1,170 @@
+  - id: random-choice-rule
+    name: Random choice rule
+    kind: model
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: A mapping assigning to each feasible menu a probability distribution over its alternatives, modeling stochastic or population-level choices.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s04
+    explanation: |-
+      A random choice rule formalizes probabilistic decision-making over a domain of menus $\mathcal{D}$ within a finite set of alternatives $X$.
+      Instead of picking a single deterministic outcome, the agent assigns a probability $p(x, A)$ to each alternative $x \in A$ such that the probabilities across $A$ sum to one and zero probability is allocated outside $A$.
+      This stochastic framework captures empirical choice variability originating from unobserved utility shocks, decision errors, or population-level heterogeneity across individuals.
+    citations:
+      - source: slides
+        ref: Random choice
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Problem A24. (NYU 2025), p. 161
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Choice Functions, p. 33
+    formal: |-
+      p: \mathcal{D} \to \Delta(X) \quad \text{such that} \quad \forall A \in \mathcal{D}, \ \text{supp}(p(A)) \subseteq A, \\
+      \text{where } \sum_{x \in A} p(x, A) = 1 \text{ and } p(x, A) \ge 0 \ \forall x \in A
+    example: Given a menu of drinks $A = \{\text{coffee}, \text{tea}\}$, a random choice rule might specify $p(\text{coffee}, A) = 0.7$ and $p(\text{tea}, A) = 0.3$, reflecting repeated purchase frequencies by a consumer across workdays.
+  - id: random-utility-model
+    name: Random utility model
+    kind: model
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: A framework where stochastic choices arise from maximizing a utility function drawn from a fixed probability distribution over utility states.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s04
+    explanation: |-
+      A Random Utility Model (RUM) explains stochastic choice patterns by assuming that an agent maximizes a utility function drawn randomly from a menu-independent probability distribution $\pi$.
+      Instead of regarding inconsistent selections as irrational, the model attributes choice variation to unobserved state fluctuations, perceptual errors, or heterogeneous preferences across a population.
+      The probability of selecting alternative $x$ from menu $A$ corresponds to the total probability of drawing a utility function under which $x$ is the unique maximizer within $A$.
+    citations:
+      - source: slides
+        ref: Random choice
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Modeling Choice Procedures, p. 49
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 2.1 - Choice problem and choice function, p. 36
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §1.2 The Traditional Economist's Position, p. 22
+    formal: 'p(x, A) = \sum_{u \in \mathcal{U} : x = \arg\max u(A)} \pi(u), \quad \text{where } \sum_{u \in \mathcal{U}} \pi(u) = 1 \text{ and } \pi \text{ is independent of } A'
+    example: An individual choosing between taking the train ($T$) or driving a car ($C$) may draw utility $u_{\text{rain}}$ favoring the train during stormy weather and utility $u_{\text{sun}}$ favoring driving on clear days, generating observable choice probabilities $p(T, \{T, C\}) = \pi(u_{\text{rain}})$.
+  - id: axiom-of-revealed-stochastic-preference
+    name: Axiom of revealed stochastic preference
+    kind: axiom
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: A necessary and sufficient condition characterizing when a random choice rule can be rationalized by a random utility model.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s04
+    explanation: |-
+      The Axiom of Revealed Stochastic Preference (ARSP) provides the exact necessary and sufficient condition for a random choice rule to be rationalizable by a random utility model (RUM).
+      Formulated without requiring complete dataset observations, the axiom tests whether total observed choice probabilities across any arbitrary sequence of menu-subset pairs can be upper-bounded by the maximum score achievable by any single deterministic linear order.
+      If the empirical frequencies exceed this upper bound, no menu-independent probability distribution over preferences can generate the observed stochastic choices.
+    citations:
+      - source: slides
+        ref: Random choice
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §1.D The Relationship between Preference Relations and Choice Rules, p. 27
+    formal: |-
+      \text{For any finite sequence } \{(A_i, B_i)\}_{i=1}^n \text{ with } B_i \subseteq A_i \subseteq X: \\
+      \sum_{i=1}^n p(B_i, A_i) \le \max_{\succ \in \mathcal{P}} \sum_{i=1}^n \mathbf{1}(\max_{\succ}(A_i) \in B_i)
+    example: |-
+      Consider pairwise stochastic choices over $\{x, y, z\}$ where $p(x, \{x, y\}) = p(y, \{y, z\}) = p(z, \{z, x\}) = 3/4$.
+      Summing these probabilities yields $9/4 = 2.25$.
+      However, for any linear order on three elements, at most 2 of these three pairwise choices can match the order's top element, yielding a maximum of 2.
+      Because $2.25 > 2$, ARSP is violated and the data cannot be generated by a random utility model.
+  - id: luce-model
+    name: Luce model
+    kind: model
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: A stochastic choice model where the probability of selecting an option is proportional to its strictly positive scale value.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s04
+    explanation: |-
+      The Luce model represents stochastic decision-making by assigning a strictly positive value $u(x) > 0$ to each alternative such that choice probabilities equal relative utility shares.
+      It is characterized by Stochastic Independence of Irrelevant Alternatives (Stochastic IIA), which requires that the relative probability ratio $p(x, A) / p(y, A)$ between any two options remains invariant to the presence or removal of other alternatives.
+      While mathematically tractable and widely used in econometric discrete choice (multinomial logit), this property makes the model vulnerable to classic counterexamples such as the red bus / blue bus paradox.
+    citations:
+      - source: slides
+        ref: Random choice
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §7.2 Interactions Between Luce Players, p. 134-135
+    formal: |-
+      p(x, A) = \frac{u(x)}{\sum_{y \in A} u(y)} \quad \text{for } u: X \to \mathbb{R}_{++}, \\
+      \text{satisfying Stochastic IIA: } \frac{p(x, A)}{p(y, A)} = \frac{p(x, B)}{p(y, B)} \quad \forall x, y \in A \cap B
+    example: |-
+      If an individual chooses between traveling by car ($u(\text{car}) = 6$) and train ($u(\text{train}) = 4$), the probability of selecting the car from $\{\text{car}, \text{train}\}$ is $6 / (6 + 4) = 0.60$.
+      Adding a bicycle with utility $2$ scales the car probability to $6 / (6 + 4 + 2) = 0.50$ while maintaining the probability ratio $p(\text{car}) / p(\text{train}) = 1.5$.
+  - id: satisficing-procedure
+    name: Satisficing procedure
+    kind: model
+    section: s04-stochastic-choice
+    topic: rational-choice
+    gist: A bounded rationality procedure that inspects alternatives in a set order and picks the first one meeting an aspiration threshold.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s04
+    explanation: |-
+      Introduced by Herbert Simon, the satisficing procedure models decision makers who face search or cognitive costs by replacing global optimization with an aspiration threshold.
+      Given an evaluation function $v$, a threshold $v^*$, and an inspection sequence $O$ on a set of options $X$, the agent reviews alternatives in menu $A$ sequentially and selects the first candidate satisfying $v(x) \ge v^*$.
+      If no option in $A$ attains the aspiration level, a default tie-breaker is invoked, such as picking the final element evaluated under $O$.
+      Remarkably, when using this consistent tie-breaking rule, the satisficing procedure satisfies Sen's condition $\alpha$ and can be rationalized as if the agent maximized an artificial preference ordering.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Satisficing Procedure, p. 40
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §Rationalizing on a Higher Level, p. 34
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §2.4 Satisficing, p. 40
+      - source: hw
+        ref: Homework_1
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §1.2 The Traditional Economist's Position, p. 23
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §1.2 The Traditional Economist's Position, p. 24
+    formal: |-
+      c(A) = \begin{cases}
+      \text{first } a \in A \text{ along } O \text{ such that } v(a) \ge v^* & \text{if } \{x \in A \mid v(x) \ge v^*\} \neq \emptyset \\
+      \text{last } a \in A \text{ along } O & \text{otherwise}
+      \end{cases}
+    example: |-
+      An employer reviewing job applicants in alphabetical order seeks any candidate scoring at least $v^* = 80$ on an assessment.
+      Among applicants $\{\text{Alice (75)}, \text{Bob (82)}, \text{Charlie (95)}\}$, the employer interviews Alice, rejects her, and immediately hires Bob without ever evaluating Charlie.
+  - id: regularity-condition
+    name: Regularity condition
+    kind: property
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: A stochastic choice monotonicity property stating that adding new alternatives to a menu cannot increase the choice probability of an existing option.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s04
+    explanation: |-
+      While the offered passages do not formally define the regularity condition by name, they illustrate its behavioral content and empirical violations through context-dependent choices in P1, alongside menu-dependence issues in P4 and P5.
+      In stochastic choice theory, regularity is the probabilistic counterpart of Sen's condition $\alpha$, requiring monotonicity: adding new alternatives to an available set cannot increase the probability of choosing an existing option.
+      Regularity is a core property satisfied by all random utility models.
+      However, empirical phenomena such as the compromise effect or decoy effect—where adding an expensive third camera increases the purchase share of a mid-tier camera—directly violate regularity.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Reason-Based Choice, p. 47
+      - source: lecture
+        ref: '2026-09-22'
+    formal: |-
+      \forall A, B \in \mathcal{D} \text{ with } A \subseteq B \text{ and } \forall x \in A: \\
+      p(x, B) \le p(x, A)
+    example: |-
+      If a consumer chooses a standard camera with probability $0.40$ from a two-item menu, introducing an expensive premium camera cannot raise that standard camera's choice probability above $0.40$ under regularity.
+      Observing the choice probability rise to $0.60$ violates regularity via a compromise effect.

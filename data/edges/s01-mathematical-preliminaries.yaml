@@ -1,0 +1,188 @@
+  - id: binary-relation--defined_on--set
+    source: binary-relation
+    type: defined_on
+    target: set
+    explanation: A binary relation on a collection consists of pairs taken from its Cartesian self-product, associating members within that underlying set.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §1.2 Relations, p. 30
+      - source: lecture
+        ref: '2026-09-10'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: equivalence-relation--is_a--binary-relation
+    source: equivalence-relation
+    type: is_a
+    target: binary-relation
+    condition: it satisfies reflexivity, symmetry, and transitivity
+    explanation: An equivalence relation specializes binary relations by imposing that every element is tied to itself, links are symmetric, and pairings chain transitively.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: completeness--implies--reflexivity
+    source: completeness
+    type: implies
+    target: reflexivity
+    condition: for any binary relation defined on a set
+    explanation: Evaluating the completeness condition by comparing an alternative with itself forces that element to be related to itself, immediately yielding reflexivity.
+    citations:
+      - source: lecture
+        ref: '2026-09-10'
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1 - Complete binary relation, p. 23
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: reflexivity--component_of--equivalence-relation
+    source: reflexivity
+    type: component_of
+    target: equivalence-relation
+    explanation: Reflexivity is one of the three foundational axiomatic requirements defining an equivalence relation alongside symmetry and transitivity.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 32
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: antisymmetry--component_of--partial-order
+    source: antisymmetry
+    type: component_of
+    target: partial-order
+    explanation: Antisymmetry is the definitive property added to a preorder to form a partial order, ensuring distinct elements cannot mutually dominate each other.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 35
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: partial-order--is_a--preorder
+    source: partial-order
+    type: is_a
+    target: preorder
+    condition: it satisfies antisymmetry
+    explanation: A partial order is defined specifically as a preorder that satisfies antisymmetry, ruling out distinct elements with mutual relation.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 35
+      - source: lecture
+        ref: '2026-09-10'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: total-order--is_a--partial-order
+    source: total-order
+    type: is_a
+    target: partial-order
+    condition: it satisfies completeness
+    explanation: A total (linear) order is a specialized partial order that adds complete comparability between every distinct pair.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §1.7\ A Glimpse of Advanced Set Theory - The Axiom of Choice, p. 49
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: szpilrajn-extension-theorem--yields--total-order
+    source: szpilrajn-extension-theorem
+    type: yields
+    target: total-order
+    explanation: Szpilrajn's extension theorem guarantees that every partial order can be enlarged into a complete linear order.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: partial-order--hypothesis_of--szpilrajn-extension-theorem
+    source: partial-order
+    type: hypothesis_of
+    target: szpilrajn-extension-theorem
+    explanation: A partial order provides the foundational incomplete binary ranking that the theorem takes as input.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §<span id="page-36-0"></span>SZPILRAJN'S THEOREM, p. 36
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: equivalence-relation--defined_on--set
+    source: equivalence-relation
+    type: defined_on
+    target: set
+    explanation: Equivalence relations are binary relations structured over the elements of an underlying nonempty set.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 32
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: equivalence-relation--has_property--transitivity
+    source: equivalence-relation
+    type: has_property
+    target: transitivity
+    explanation: An equivalence relation requires that indirect connections chain together directly.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''

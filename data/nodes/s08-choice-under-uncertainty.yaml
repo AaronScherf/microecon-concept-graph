@@ -1,0 +1,77 @@
+  - id: expected-utility-theorem
+    name: Expected utility theorem
+    kind: theorem
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Representation result expressing lottery preferences as probability-weighted payoffs.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: risk-aversion
+    name: Risk aversion
+    kind: property
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Preference for a guaranteed expected payoff over facing the lottery itself.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2-2026-10-10
+  - id: von-neumann-morgenstern-utility-function
+    name: von Neumann-Morgenstern utility function
+    kind: function
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Bernoulli utility function over sure outcomes evaluated under expectation.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: independence-axiom
+    name: Independence axiom
+    kind: axiom
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Axiom stating lottery preference is invariant to mixing with a common lottery.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: first-order-stochastic-dominance
+    name: First-order stochastic dominance
+    kind: property
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Condition where one distribution yields higher outcomes with greater probability.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: certainty-equivalent
+    name: Certainty equivalent
+    kind: definition
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Sure monetary payoff offering the exact same utility as a given lottery.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: arrow-pratt-measure
+    name: Arrow-Pratt measure
+    kind: definition
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Curvature metric measuring absolute risk aversion via negative ratio of derivatives.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10

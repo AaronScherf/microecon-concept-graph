@@ -1,0 +1,47 @@
+# Hints for the seed stage (see agent/concept_graph/README.md, "Seed config").
+
+scope: >-
+  Graduate microeconomic theory, first half (choice theory): start from sets, binary relations and orders, then
+  preferences, utility and choice (including revealed preference, stochastic choice and departures from rationality),
+  then consumer demand (utility maximization and Walrasian demand, duality, Slutsky), then producer theory, then choice
+  under risk and uncertainty and choice over time. Out of scope: game theory, general equilibrium, welfare economics,
+  information economics, mechanism design (the second half of the sequence and textbook chapters beyond the ones listed).
+
+must_include:
+  - Set
+  - Binary relation
+  - Reflexivity
+  - Transitivity
+  - Antisymmetry
+  - Completeness
+  - Preorder
+  - Partial order
+  - Total order
+  - [Szpilrajn extension theorem, Szpilrajn theorem]
+  - [Rational preference relation, Preference relation]
+  - Utility function
+  - [Sen's alpha, Axiom alpha, Property alpha]
+  - [Sen's beta, Axiom beta, Property beta]
+  - [Weak axiom of revealed preference, WARP]
+  - [Strong axiom of revealed preference, SARP]
+  - [Generalized axiom of revealed preference, GARP]
+  - [Afriat's theorem, Afriat]
+  - Budget set
+  - [Walrasian demand, Walrasian demand correspondence]
+  - Walras' law
+  - Homogeneity of degree zero
+  - Utility maximization problem
+  - Indirect utility function
+  - Expenditure function
+  - [Hicksian demand, Compensated demand]
+  - Slutsky equation
+  - Roy's identity
+  - Expected utility theorem
+  - Risk aversion
+
+textbook_chapters:
+  mwg: [1, 2, 3, 4, 5, 6]
+  rubinstein: [2, 3, 4, 5, 6, 7, 8, 9]
+  ok: [1]
+
+min_nodes_per_section: 5

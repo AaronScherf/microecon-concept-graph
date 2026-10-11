@@ -1,0 +1,150 @@
+  - id: strong-axiom-of-revealed-preference--implies--weak-axiom-of-revealed-preference
+    source: strong-axiom-of-revealed-preference
+    type: implies
+    target: weak-axiom-of-revealed-preference
+    condition: for any single-valued demand function
+    explanation: The Strong Axiom extends the two-budget consistency of the Weak Axiom to arbitrarily long revealed preference chains.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: strong-axiom-of-revealed-preference--implies--rational-preference-relation
+    source: strong-axiom-of-revealed-preference
+    type: implies
+    target: rational-preference-relation
+    condition: for single-valued Walrasian demand
+    explanation: By Richter's theorem, demand obeying the Strong Axiom can be fully rationalized by a complete and transitive preference relation.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: generalized-axiom-of-revealed-preference--iff--rational-preference-relation
+    source: generalized-axiom-of-revealed-preference
+    type: iff
+    target: rational-preference-relation
+    condition: for any choice correspondence on an arbitrary family of non-empty menus
+    explanation: A choice correspondence satisfies GARP if and only if there exists a rational preference relation rationalizing observed choices.
+    citations:
+      - source: lecture
+        ref: '2026-09-22'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: generalized-axiom-of-revealed-preference--iff--utility-function
+    source: generalized-axiom-of-revealed-preference
+    type: iff
+    target: utility-function
+    condition: for a finite consumption dataset with locally non-satiated preferences
+    via: afriats-theorem
+    explanation: By Afriat's theorem, a finite price-consumption dataset satisfies GARP if and only if it admits a rationalizing utility function.
+    citations:
+      - source: lecture
+        ref: '2026-09-22'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: generalized-axiom-of-revealed-preference--hypothesis_of--afriats-theorem
+    source: generalized-axiom-of-revealed-preference
+    type: hypothesis_of
+    target: afriats-theorem
+    explanation: GARP serves as the testable behavioral condition required by Afriat's theorem to construct a rationalizing utility.
+    citations:
+      - source: lecture
+        ref: '2026-09-22'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: afriats-theorem--yields--utility-function
+    source: afriats-theorem
+    type: yields
+    target: utility-function
+    explanation: Afriat's theorem establishes the explicit construction of a continuous, concave, monotonic utility function rationalizing the choice observations.
+    citations:
+      - source: lecture
+        ref: '2026-09-22'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: transitive-closure--defined_on--binary-relation
+    source: transitive-closure
+    type: defined_on
+    target: binary-relation
+    explanation: The transitive closure operation is constructed from an underlying binary relation by collecting all finite relation paths.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: transitive-closure--has_property--transitivity
+    source: transitive-closure
+    type: has_property
+    target: transitivity
+    explanation: By definition, the transitive closure satisfies transitivity, representing the minimal transitive superset of the original relation.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: revealed-preference-relation--is_a--binary-relation
+    source: revealed-preference-relation
+    type: is_a
+    target: binary-relation
+    condition: it is constructed from choices made from budget sets
+    explanation: The revealed preference relation is a binary relation formed by recording pairs of chosen and affordable alternatives.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.6 - Revealed preference, p. 85
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''

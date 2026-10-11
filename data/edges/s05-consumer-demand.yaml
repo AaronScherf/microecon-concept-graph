@@ -1,0 +1,153 @@
+  - id: budget-set--is_a--set
+    source: budget-set
+    type: is_a
+    target: set
+    condition: it consists of consumption bundles whose cost does not exceed wealth at market prices
+    explanation: The budget set is a subset of the commodity space consisting of bundles that do not exceed the consumer's available income.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §2.D Competitive Budgets, p. 31
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.1 - Budget set, p. 76
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: budget-set--component_of--utility-maximization-problem
+    source: budget-set
+    type: component_of
+    target: utility-maximization-problem
+    explanation: The budget set serves as the feasible constraint set within the standard utility maximization problem.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §2.D Competitive Budgets, p. 31
+      - source: slides
+        ref: Consumer Choice 1
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: walrasian-demand--has_property--homogeneity-of-degree-zero
+    source: walrasian-demand
+    type: has_property
+    target: homogeneity-of-degree-zero
+    explanation: Multiplying commodity prices and wealth by the same positive scalar leaves the budget constraint and demand choices unchanged.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 62
+      - source: lecture
+        ref: '2026-10-08'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: walrasian-demand--has_property--walras-law
+    source: walrasian-demand
+    type: has_property
+    target: walras-law
+    explanation: Under local non-satiation, Walrasian demand satisfies Walras' law by using all available consumer wealth.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 62
+      - source: lecture
+        ref: '2026-10-08'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: theorem-of-the-maximum--yields--walrasian-demand
+    source: theorem-of-the-maximum
+    type: yields
+    target: walrasian-demand
+    explanation: Berge's Maximum Theorem establishes the upper hemicontinuity and compactness of the argmax correspondence representing Walrasian demand.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §THE MAXIMUM THEOREM, p. 287
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: monotonic-preferences--implies--walras-law
+    source: monotonic-preferences
+    type: implies
+    target: walras-law
+    condition: for utility maximization over budget sets
+    explanation: Monotonicity guarantees that the consumer strictly prefers larger bundles, forcing total budget expenditure at optimum.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Monotonicity, p. 59
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: utility-function--component_of--utility-maximization-problem
+    source: utility-function
+    type: component_of
+    target: utility-maximization-problem
+    explanation: The utility function serves as the objective function maximized by the consumer over feasible bundles.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.D The Utility Maximization Problem, p. 61
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: convex-preferences--defined_on--rational-preference-relation
+    source: convex-preferences
+    type: defined_on
+    target: rational-preference-relation
+    explanation: Convexity is a behavioral property defined on an agent's preference relation, requiring all upper contour sets to be convex.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 55
+      - source: lecture
+        ref: '2026-10-06'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-convex
+  - id: utility-function--implies--convex-preferences
+    source: utility-function
+    type: implies
+    target: convex-preferences
+    condition: when the utility function is concave or quasiconcave
+    explanation: A concave or quasiconcave utility function yields convex upper contour sets, ensuring that the represented preference relation satisfies convexity.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Proof, p. 71
+      - source: lecture
+        ref: '2026-10-06'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-convex

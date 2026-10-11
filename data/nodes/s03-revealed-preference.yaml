@@ -1,0 +1,145 @@
+  - id: strong-axiom-of-revealed-preference
+    name: Strong axiom of revealed preference
+    kind: axiom
+    section: s03-revealed-preference
+    topic: revealed-preference
+    gist: A revealed preference axiom requiring the transitive closure of direct revealed preference to be acyclic, ensuring demand can be rationalized.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s03
+    explanation: |-
+      The Strong Axiom of Revealed Preference generalizes pairwise behavioral consistency to multistep choice trajectories.
+      Under this condition, whenever a chain of consumer decisions demonstrates that bundle $a$ stands above bundle $b$ through intermediate purchasing acts at which each succeeding option was within budget, bundle $b$ cannot be picked in any scenario where $a$ is feasible.
+      Eliminating cycles of any length ensures that the transitive closure of binary revealed comparisons remains strictly acyclic, enabling economists to extend empirical consumer choices into an underlying complete preference ordering.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak and Strong Axioms of Revealed Preference, p. 85
+      - source: lecture
+        ref: '2026-09-10'
+      - source: lecture
+        ref: '2026-09-15'
+    formal: |-
+      \text{For distinct bundles } x^1, \dots, x^k \text{ with } x^i = x(p^i, w^i): \\
+      \left[ \forall i \in \{1, \dots, k-1\}, \ p^i \cdot x^{i+1} \le w^i \right] \implies p^k \cdot x^1 > w^k
+    example: |-
+      Suppose bundle $A$ is purchased when $B$ is affordable, and under a different price regime $B$ is purchased when $C$ is affordable.
+      Then $A$ is indirectly revealed preferred to $C$.
+      SARP dictates that under any budget where $C$ is chosen, bundle $A$ must be strictly unaffordable.
+  - id: generalized-axiom-of-revealed-preference
+    name: Generalized axiom of revealed preference
+    kind: axiom
+    section: s03-revealed-preference
+    topic: revealed-preference
+    gist: A revealed preference axiom stating that if an option is revealed preferred to another, the second cannot be strictly revealed preferred to the first.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s03
+    explanation: |-
+      The Generalized Axiom of Revealed Preference (GARP) is the exact non-parametric behavioral condition needed to rationalize finite consumption data by utility maximization.
+      It posits that whenever bundle $x$ is revealed preferred to bundle $y$ through a chain of pairwise comparisons ($x R y$), bundle $y$ cannot be strictly revealed preferred to $x$ ($y S x$).
+      In consumer choice with locally non-satiated preferences, this means that if $x$ is weakly preferred to $y$ through indirect choices, $x$ must not have been strictly affordable when $y$ was purchased ($p^y \cdot x \ge p^y \cdot y$).
+      Unlike SARP, GARP accommodates multivalued demand and indifference between distinct bundles.
+    citations:
+      - source: lecture
+        ref: '2026-10-08'
+      - source: lecture
+        ref: '2026-09-22'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak and Strong Axioms of Revealed Preference, p. 85
+    formal: |-
+      x R y \implies \neg (y S x), \\
+      \text{where } R = \text{tr}(R^D) \text{ and } y S x \iff p^y \cdot x < p^y \cdot y \quad (\text{or } x \in A \land x \notin C(A) \text{ while } y \in C(A))
+    example: |-
+      Suppose observed choices yield $C(\{x, y\}) = \{x\}$ and $C(\{y, z\}) = \{y\}$, establishing that $x$ is revealed preferred to $z$ ($x R z$).
+      If a third choice reveals $C(\{x, z\}) = \{z\}$, then $z$ is strictly revealed preferred to $x$ ($z S x$), creating a cycle that directly violates GARP.
+  - id: afriats-theorem
+    name: Afriat's theorem
+    kind: theorem
+    section: s03-revealed-preference
+    topic: revealed-preference
+    gist: A theorem proving the equivalence between GARP, Afriat inequalities, and rationalization by a continuous, concave, monotonic utility function.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s03
+    explanation: |-
+      Afriat's theorem provides the foundational result in non-parametric demand analysis for discrete price-consumption records $\{(p^i, x^i)\}_{i=1}^I$.
+      It shows that an agent's purchases are consistent with optimizing unsatiated preferences if and only if the observations obey the Generalized Axiom of Revealed Preference (GARP).
+      This consistency is computationally equivalent to finding strictly positive numbers for utility levels and Lagrange multipliers solving a system of linear constraints known as Afriat inequalities.
+      Furthermore, whenever such numbers exist, one can construct an explicit objective function exhibiting continuity, concavity, and monotonicity that fully explains the choices.
+      Thus, classical structural assumptions like concavity generate zero testable restrictions beyond GARP in finite empirical samples.
+    citations:
+      - source: lecture
+        ref: '2026-09-22'
+    formal: |-
+      \text{For data } \{(p^i, x^i)\}_{i=1}^I, \text{ the following are equivalent:} \\
+      1.\ \text{The data is rationalized by a locally non-satiated preference relation.} \\
+      2.\ \text{The data satisfies GARP: } x^j R x^k \implies \neg (p^k \cdot x^j < p^k \cdot x^k). \\
+      3.\ \exists\, \{u^i, \lambda^i > 0\}_{i=1}^I \text{ such that } u^i \le u^j + \lambda^j p^j \cdot (x^i - x^j) \quad \forall i, j. \\
+      4.\ \exists \text{ a continuous, concave, strictly monotonic } u \text{ rationalizing the data.}
+    example: Given two consumption observations $(p^1, x^1)$ and $(p^2, x^2)$, checking Afriat's conditions reduces to verifying whether expenditure comparisons avoid strict revealed preference cycles, guaranteeing numbers $u^1, u^2$ and multipliers $\lambda^1, \lambda^2 > 0$ that satisfy the subgradient inequalities.
+  - id: transitive-closure
+    name: Transitive closure
+    kind: object
+    section: s03-revealed-preference
+    topic: revealed-preference
+    gist: The smallest transitive relation containing a given binary relation, connecting elements linked by any finite sequence of related pairs.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s03
+    explanation: |-
+      The offered passages do not explicitly define the term transitive closure, focusing instead on binary relations and the definition of transitivity.
+      Building on those foundations, the transitive closure of a binary relation $R$ on a set $X$ is the minimal transitive relation containing $R$.
+      Formally, $x$ is related to $y$ under the transitive closure if there exists a finite sequence of elements starting at $x$ and terminating at $y$ where each step is connected by $R$.
+      In choice theory, this operation converts direct revealed preferences into indirect revealed preferences to evaluate behavioral consistency.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1 - Complete binary relation, p. 23
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2 - Transitive binary relation, p. 24
+      - source: lecture
+        ref: '2026-09-10'
+    formal: \text{tr}(R) = \bigcup_{n=1}^\infty R^n, \quad \text{where } (x, y) \in \text{tr}(R) \iff \exists\, z_0, \dots, z_k \in X \text{ with } z_0 = x, z_k = y \text{ and } z_{i-1} R z_i \ \forall i
+    example: |-
+      If an agent reveals direct pairwise preferences $x R y$ and $y R z$, the initial relation $R$ may not contain $(x, z)$.
+      The transitive closure $\text{tr}(R)$ adds the pair $(x, z)$, ensuring that transitivity holds throughout the comparison chain.
+  - id: revealed-preference-relation
+    name: Revealed preference relation
+    kind: object
+    section: s03-revealed-preference
+    topic: revealed-preference
+    gist: A binary relation inferred from choice behavior where bundle x is revealed preferred to y if x is chosen when y is available.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-s03
+    explanation: |-
+      A revealed preference relation reconstructs a decision-maker's ordering solely from observable market transactions.
+      We record that package $x$ dominates $y$ in the direct revealed ordering whenever $x$ is picked in a situation where $y$ could have been purchased within the budget ($p \cdot y \le w$).
+      When preferences satisfy monotonicity or local unsatiation and the foregone option $y$ is strictly cheaper than the consumer's expenditure ($p \cdot y < w$), the selected bundle $x$ is deemed strictly superior to $y$.
+      By translating tangible price-demand data into pairwise binary comparisons, this concept enables empirical verification of optimizing behavior without positing unobserved psychological utilities.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §The weak axiom of revealed preference, p. 84
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.6 - Revealed preference, p. 85
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85
+      - source: lecture
+        ref: '2026-09-10'
+    formal: |-
+      x R^D y \iff \exists (p, w) \text{ such that } x = x(p, w) \text{ and } p \cdot y \le w \\
+      x S^D y \iff \exists (p, w) \text{ such that } x = x(p, w) \text{ and } p \cdot y < w
+    example: |-
+      If a consumer with wealth $w = 20$ faces prices $p = (2, 4)$ and purchases bundle $a = (6, 2)$ costing \$20, bundle $b = (2, 2)$ costs $2(2) + 4(2) = \$12 < 20$.
+      Because $b$ was strictly affordable when $a$ was selected, $a$ is strictly revealed preferred to $b$.

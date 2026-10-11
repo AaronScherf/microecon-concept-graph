@@ -1,0 +1,66 @@
+  - id: production-set
+    name: Production set
+    kind: object
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Set of all technologically feasible net output bundles for a firm.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: profit-maximization-problem
+    name: Profit maximization problem
+    kind: model
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Firm optimization problem selecting net outputs to maximize total profit.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: profit-function
+    name: Profit function
+    kind: function
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Function giving maximum attainable profit as a function of prices.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: cost-minimization-problem
+    name: Cost minimization problem
+    kind: model
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Firm optimization selecting input quantities to minimize production cost.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: cost-function
+    name: Cost function
+    kind: function
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Function providing minimal cost needed to produce a specified output level.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10
+  - id: hotellings-lemma
+    name: Hotelling's lemma
+    kind: lemma
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Result that derivative of profit with respect to output price yields supply.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: seed-v2b-2026-10-10

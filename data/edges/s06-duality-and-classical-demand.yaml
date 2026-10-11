@@ -1,0 +1,16 @@
+  - id: theorem-of-the-maximum--yields--indirect-utility-function
+    source: theorem-of-the-maximum
+    type: yields
+    target: indirect-utility-function
+    explanation: Berge's Maximum Theorem guarantees the continuity of the maximum value function, corresponding to indirect utility.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §THE MAXIMUM THEOREM, p. 287
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''

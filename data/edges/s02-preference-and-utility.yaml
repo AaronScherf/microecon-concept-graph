@@ -1,0 +1,246 @@
+  - id: transitivity--component_of--rational-preference-relation
+    source: transitivity
+    type: component_of
+    target: rational-preference-relation
+    explanation: Transitivity is an indispensable consistency postulate defining a rational preference relation, guaranteeing that chained rankings do not cycle.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2 - Transitive binary relation, p. 24
+      - source: lecture
+        ref: '2026-09-10'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: rational-preference-relation--is_a--preorder
+    source: rational-preference-relation
+    type: is_a
+    target: preorder
+    condition: it satisfies completeness
+    explanation: Economic preference relations are complete preorders, strengthening reflexivity and transitivity with total comparability across all choices.
+    citations:
+      - source: lecture
+        ref: '2026-09-10'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: utility-function--implies--rational-preference-relation
+    source: utility-function
+    type: implies
+    target: rational-preference-relation
+    condition: the preference relation is represented by the utility function
+    explanation: Any preference ordering represented numerically by a real-valued function inherits completeness and transitivity directly from the standard order of real numbers.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Concept of Utility Representation, p. 22
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: rational-preference-relation--implies--utility-function
+    source: rational-preference-relation
+    type: implies
+    target: utility-function
+    condition: the choice set is finite
+    explanation: When defined over a finite set of alternatives, any complete and transitive preference relation is guaranteed to possess a utility representation.
+    citations:
+      - source: slides
+        ref: Utility Maximization 1
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: weak-axiom-of-revealed-preference--implies--sens-alpha
+    source: weak-axiom-of-revealed-preference
+    type: implies
+    target: sens-alpha
+    condition: for any choice correspondence defined on a family of menus
+    explanation: The Weak Axiom of Revealed Preference directly implies contraction consistency, known as Sen's alpha.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak Axiom of Revealed Preference (WA) - , p. 43
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: sens-alpha--component_of--weak-axiom-of-revealed-preference
+    source: sens-alpha
+    type: component_of
+    target: weak-axiom-of-revealed-preference
+    explanation: Sen's alpha constitutes the contraction consistency component that, together with Sen's beta, characterizes the Weak Axiom.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak Axiom of Revealed Preference (WA) - , p. 43
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: weak-axiom-of-revealed-preference--implies--sens-beta
+    source: weak-axiom-of-revealed-preference
+    type: implies
+    target: sens-beta
+    condition: for any choice correspondence defined on a family of menus
+    explanation: The Weak Axiom of Revealed Preference forces choice behavior to obey expansion consistency across growing menus, which is Sen's beta.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak Axiom of Revealed Preference (WA) - , p. 43
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: sens-beta--component_of--weak-axiom-of-revealed-preference
+    source: sens-beta
+    type: component_of
+    target: weak-axiom-of-revealed-preference
+    explanation: Sen's beta is the expansion consistency axiom that combines with Sen's alpha to form the Weak Axiom of Revealed Preference.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak Axiom of Revealed Preference (WA) - , p. 43
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: choice-structure--defined_on--set
+    source: choice-structure
+    type: defined_on
+    target: set
+    explanation: A choice structure is formulated over a set of feasible options from which various menus and choices are drawn.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Example - , p. 34
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: continuous-preference--implies--utility-function
+    source: continuous-preference
+    type: implies
+    target: utility-function
+    condition: defined on a separable metric space
+    via: debreus-representation-theorem
+    explanation: Debreu's representation theorem proves that continuous preference orderings on separable spaces admit a continuous utility representation.
+    citations:
+      - source: lecture
+        ref: '2026-09-17'
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.C Preference and Utility, p. 57
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: continuous-preference--hypothesis_of--debreus-representation-theorem
+    source: continuous-preference
+    type: hypothesis_of
+    target: debreus-representation-theorem
+    explanation: Preference continuity is the primary behavioral hypothesis required by Debreu's theorem.
+    citations:
+      - source: slides
+        ref: Utility Maximization 2 part 1
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEBREU'S UTILITY REPRESENTATION THEOREM, p. 231
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: debreus-representation-theorem--yields--utility-function
+    source: debreus-representation-theorem
+    type: yields
+    target: utility-function
+    explanation: Debreu's theorem produces a continuous numerical utility function that represents the underlying preferences.
+    citations:
+      - source: slides
+        ref: Utility Maximization 2 part 1
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEBREU'S UTILITY REPRESENTATION THEOREM, p. 231
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: lexicographic-preferences--is_a--rational-preference-relation
+    source: lexicographic-preferences
+    type: is_a
+    target: rational-preference-relation
+    condition: it compares alternatives by sequential componentwise priority
+    explanation: Lexicographic preference is a complete and transitive preference relation that ranks vectors by checking dimensions in strict sequential priority.
+    citations:
+      - source: slides
+        ref: Utility Maximization 2 part 1
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE1, p. 109
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: completeness--component_of--rational-preference-relation
+    source: completeness
+    type: component_of
+    target: rational-preference-relation
+    explanation: Completeness is paired with transitivity to form standard rational preference relations, ensuring every pair of alternatives can be evaluated.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1 - Complete binary relation, p. 23
+      - source: lecture
+        ref: '2026-09-10'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''

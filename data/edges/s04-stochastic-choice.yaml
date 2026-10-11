@@ -1,0 +1,133 @@
+  - id: random-choice-rule--defined_on--set
+    source: random-choice-rule
+    type: defined_on
+    target: set
+    explanation: A random choice rule is defined over menus formed from an underlying set of alternatives, assigning probabilities to options.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: utility-function--component_of--random-utility-model
+    source: utility-function
+    type: component_of
+    target: random-utility-model
+    explanation: A random utility model builds stochastic choice distributions by drawing from a probability distribution over deterministic utility functions.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: random-utility-model--defined_on--set
+    source: random-utility-model
+    type: defined_on
+    target: set
+    explanation: The random utility framework evaluates rankings across menus of options drawn from a ground set of alternatives.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: axiom-of-revealed-stochastic-preference--iff--random-utility-model
+    source: axiom-of-revealed-stochastic-preference
+    type: iff
+    target: random-utility-model
+    condition: for any random choice rule on a finite set of alternatives
+    explanation: The Axiom of Revealed Stochastic Preference characterizes exactly when a stochastic choice rule can be rationalized by a random utility model.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: luce-model--is_a--random-utility-model
+    source: luce-model
+    type: is_a
+    target: random-utility-model
+    condition: utilities have independent and identically distributed extreme value error terms
+    explanation: The Luce model is a specific parametric form of the random utility model where choice probabilities match the softmax ratio of scale values.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: satisficing-procedure--implies--sens-alpha
+    source: satisficing-procedure
+    type: implies
+    target: sens-alpha
+    condition: for any fixed search order, aspiration threshold, and tie-breaking rule
+    explanation: Under a constant search sequence and fixed threshold, satisficing choices satisfy Sen's alpha consistency across submenus.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Satisficing Procedure, p. 40
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: satisficing-procedure--implies--rational-preference-relation
+    source: satisficing-procedure
+    type: implies
+    target: rational-preference-relation
+    condition: for any fixed search order, aspiration threshold, and tie-breaking rule
+    explanation: Because the satisficing decision rule induces choice behavior satisfying property alpha, it can be rationalized by a preference relation.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Satisficing Procedure, p. 40
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
+  - id: random-utility-model--implies--regularity-condition
+    source: random-utility-model
+    type: implies
+    target: regularity-condition
+    condition: for any random choice rule over finite menus
+    explanation: Every random utility model generates stochastic choices satisfying monotonicity or regularity when expanding choice sets.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-all
+    critic:
+      verdict: supports
+      note: ''
