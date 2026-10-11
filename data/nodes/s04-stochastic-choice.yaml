@@ -146,25 +146,22 @@
     kind: property
     section: s04-stochastic-choice
     topic: stochastic-choice
-    gist: A stochastic choice monotonicity property stating that adding new alternatives to a menu cannot increase the choice probability of an existing option.
+    gist: A stochastic choice axiom requiring that expanding a menu cannot raise the selection probability of any item.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: fill-s04
+      run: fix-meta
     explanation: |-
-      While the offered passages do not formally define the regularity condition by name, they illustrate its behavioral content and empirical violations through context-dependent choices in P1, alongside menu-dependence issues in P4 and P5.
-      In stochastic choice theory, regularity is the probabilistic counterpart of Sen's condition $\alpha$, requiring monotonicity: adding new alternatives to an available set cannot increase the probability of choosing an existing option.
-      Regularity is a core property satisfied by all random utility models.
-      However, empirical phenomena such as the compromise effect or decoy effect—where adding an expensive third camera increases the purchase share of a mid-tier camera—directly violate regularity.
+      The regularity condition, also referred to as monotonicity in random choice theory, requires that an alternative's choice probability cannot increase when supplementary options are introduced into a menu. It acts as an essential necessary axiom for rationalizability by random utility models, ensuring that larger choice sets do not boost demand for previously available candidates.
     citations:
-      - source: rubinstein
-        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Reason-Based Choice, p. 47
-      - source: lecture
-        ref: '2026-09-22'
+      - source: slides
+        ref: Random choice
     formal: |-
-      \forall A, B \in \mathcal{D} \text{ with } A \subseteq B \text{ and } \forall x \in A: \\
-      p(x, B) \le p(x, A)
+      A random choice rule satisfies regularity (monotonicity) if for any alternatives and menus satisfying $x \in B \subset A \subseteq X$:
+      \[
+      p(x, B) \ge p(x, A)
+      \]
+      This is a necessary condition for rationalizability in a random utility model, since $\{u \in \mathcal{U} : x = \arg\max u(A)\} \subseteq \{u \in \mathcal{U} : x = \arg\max u(B)\}$.
     example: |-
-      If a consumer chooses a standard camera with probability $0.40$ from a two-item menu, introducing an expensive premium camera cannot raise that standard camera's choice probability above $0.40$ under regularity.
-      Observing the choice probability rise to $0.60$ violates regularity via a compromise effect.
+      Let an agent choose among items $\{a, b, c\}$. From the full menu, suppose choice probabilities are $\rho(a, \{a, b, c\}) = 0.2$, $\rho(b, \{a, b, c\}) = 0.3$, and $\rho(c, \{a, b, c\}) = 0.5$. If option $c$ is removed, regularity requires that neither remaining alternative suffers a drop in likelihood; for instance, the reduced menu could yield $\rho(a, \{a, b\}) = 0.4 \ge 0.2$ and $\rho(b, \{a, b\}) = 0.6 \ge 0.3$.

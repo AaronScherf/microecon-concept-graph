@@ -1491,7 +1491,7 @@
       "type": "implies"
     }
   ],
-  "graph_version": "2e58dca557d3",
+  "graph_version": "e820ae4a9490",
   "nodes": [
     {
       "citations": [
@@ -2393,27 +2393,19 @@
     {
       "citations": [
         {
-          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1 - Complete binary relation, p. 23",
-          "source": "rubinstein"
-        },
-        {
-          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2 - Transitive binary relation, p. 24",
-          "source": "rubinstein"
-        },
-        {
-          "ref": "2026-09-10",
-          "source": "lecture"
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31",
+          "source": "ok"
         }
       ],
-      "example": "If an agent reveals direct pairwise preferences $x R y$ and $y R z$, the initial relation $R$ may not contain $(x, z)$.\nThe transitive closure $\\text{tr}(R)$ adds the pair $(x, z)$, ensuring that transitivity holds throughout the comparison chain.",
-      "explanation": "The offered passages do not explicitly define the term transitive closure, focusing instead on binary relations and the definition of transitivity.\nBuilding on those foundations, the transitive closure of a binary relation $R$ on a set $X$ is the minimal transitive relation containing $R$.\nFormally, $x$ is related to $y$ under the transitive closure if there exists a finite sequence of elements starting at $x$ and terminating at $y$ where each step is connected by $R$.\nIn choice theory, this operation converts direct revealed preferences into indirect revealed preferences to evaluate behavioral consistency.",
-      "formal": "\\text{tr}(R) = \\bigcup_{n=1}^\\infty R^n, \\quad \\text{where } (x, y) \\in \\text{tr}(R) \\iff \\exists\\, z_0, \\dots, z_k \\in X \\text{ with } z_0 = x, z_k = y \\text{ and } z_{i-1} R z_i \\ \\forall i",
-      "gist": "The smallest transitive relation containing a given binary relation, connecting elements linked by any finite sequence of related pairs.",
+      "example": "Suppose $X = \\{x, y, z\\}$ and $R = \\{(x, y), (y, z)\\}$. The relation $R$ is not transitive because $(x, z) \\notin R$. Its transitive closure adds this missing link, giving $\\operatorname{tr}(R) = \\{(x, y), (y, z), (x, z)\\}$.",
+      "explanation": "The transitive closure extends an initial binary relation $R$ to ensure transitivity while adding no unnecessary pairs. Two elements are linked in the closure whenever they can be connected through a finite sequence of intermediate steps related under $R$. In order theory and choice modeling, constructing this closure yields the smallest transitive relation that includes the original relation.",
+      "formal": "Let $R$ be a binary relation on a nonempty set $X$. Define $R_0 = R$, and for each integer $m \\ge 1$, let $x R_m y$ if there exist $z_1, \\dots, z_m \\in X$ such that $x R z_1, z_1 R z_2, \\dots, z_m R y$. The transitive closure of $R$ is\n\\[\n\\operatorname{tr}(R) := \\bigcup_{m=0}^\\infty R_m\n\\]\nIf $R'$ is any transitive relation on $X$ satisfying $R \\subseteq R'$, then $\\operatorname{tr}(R) \\subseteq R'$.",
+      "gist": "The minimal transitive relation containing a given binary relation, formed by chains of related elements.",
       "hashes": {
-        "example": "d9006c164ab74b71",
-        "explanation": "8972baffcda34817",
-        "formal": "da70e49c920a8b73",
-        "gist": "e77353e30762c1ff"
+        "example": "73552e49f6a4e522",
+        "explanation": "00137fc74343b560",
+        "formal": "7387a30dba76e14c",
+        "gist": "cd961306bc3eb2bb"
       },
       "id": "transitive-closure",
       "kind": "object",
@@ -2421,7 +2413,7 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "fill-s03"
+        "run": "fix-meta"
       },
       "section": "s03-revealed-preference",
       "status": "proposed",
@@ -2574,23 +2566,19 @@
     {
       "citations": [
         {
-          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Reason-Based Choice, p. 47",
-          "source": "rubinstein"
-        },
-        {
-          "ref": "2026-09-22",
-          "source": "lecture"
+          "ref": "Random choice",
+          "source": "slides"
         }
       ],
-      "example": "If a consumer chooses a standard camera with probability $0.40$ from a two-item menu, introducing an expensive premium camera cannot raise that standard camera's choice probability above $0.40$ under regularity.\nObserving the choice probability rise to $0.60$ violates regularity via a compromise effect.",
-      "explanation": "While the offered passages do not formally define the regularity condition by name, they illustrate its behavioral content and empirical violations through context-dependent choices in P1, alongside menu-dependence issues in P4 and P5.\nIn stochastic choice theory, regularity is the probabilistic counterpart of Sen's condition $\\alpha$, requiring monotonicity: adding new alternatives to an available set cannot increase the probability of choosing an existing option.\nRegularity is a core property satisfied by all random utility models.\nHowever, empirical phenomena such as the compromise effect or decoy effect—where adding an expensive third camera increases the purchase share of a mid-tier camera—directly violate regularity.",
-      "formal": "\\forall A, B \\in \\mathcal{D} \\text{ with } A \\subseteq B \\text{ and } \\forall x \\in A: \\\\\np(x, B) \\le p(x, A)",
-      "gist": "A stochastic choice monotonicity property stating that adding new alternatives to a menu cannot increase the choice probability of an existing option.",
+      "example": "Let an agent choose among items $\\{a, b, c\\}$. From the full menu, suppose choice probabilities are $\\rho(a, \\{a, b, c\\}) = 0.2$, $\\rho(b, \\{a, b, c\\}) = 0.3$, and $\\rho(c, \\{a, b, c\\}) = 0.5$. If option $c$ is removed, regularity requires that neither remaining alternative suffers a drop in likelihood; for instance, the reduced menu could yield $\\rho(a, \\{a, b\\}) = 0.4 \\ge 0.2$ and $\\rho(b, \\{a, b\\}) = 0.6 \\ge 0.3$.",
+      "explanation": "The regularity condition, also referred to as monotonicity in random choice theory, requires that an alternative's choice probability cannot increase when supplementary options are introduced into a menu. It acts as an essential necessary axiom for rationalizability by random utility models, ensuring that larger choice sets do not boost demand for previously available candidates.",
+      "formal": "A random choice rule satisfies regularity (monotonicity) if for any alternatives and menus satisfying $x \\in B \\subset A \\subseteq X$:\n\\[\np(x, B) \\ge p(x, A)\n\\]\nThis is a necessary condition for rationalizability in a random utility model, since $\\{u \\in \\mathcal{U} : x = \\arg\\max u(A)\\} \\subseteq \\{u \\in \\mathcal{U} : x = \\arg\\max u(B)\\}$.",
+      "gist": "A stochastic choice axiom requiring that expanding a menu cannot raise the selection probability of any item.",
       "hashes": {
-        "example": "01843bf65630ad9b",
-        "explanation": "3ca08722965c5b5a",
-        "formal": "050c23680883de2d",
-        "gist": "42b0daacf1b24b16"
+        "example": "836f294daedc647b",
+        "explanation": "75de53e41f0e1707",
+        "formal": "e7f4d6f0066d4360",
+        "gist": "96a18e731a3c4126"
       },
       "id": "regularity-condition",
       "kind": "property",
@@ -2598,7 +2586,7 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "fill-s04"
+        "run": "fix-meta"
       },
       "section": "s04-stochastic-choice",
       "status": "proposed",

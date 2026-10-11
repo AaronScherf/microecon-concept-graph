@@ -90,28 +90,25 @@
     kind: object
     section: s03-revealed-preference
     topic: revealed-preference
-    gist: The smallest transitive relation containing a given binary relation, connecting elements linked by any finite sequence of related pairs.
+    gist: The minimal transitive relation containing a given binary relation, formed by chains of related elements.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: fill-s03
+      run: fix-meta
     explanation: |-
-      The offered passages do not explicitly define the term transitive closure, focusing instead on binary relations and the definition of transitivity.
-      Building on those foundations, the transitive closure of a binary relation $R$ on a set $X$ is the minimal transitive relation containing $R$.
-      Formally, $x$ is related to $y$ under the transitive closure if there exists a finite sequence of elements starting at $x$ and terminating at $y$ where each step is connected by $R$.
-      In choice theory, this operation converts direct revealed preferences into indirect revealed preferences to evaluate behavioral consistency.
+      The transitive closure extends an initial binary relation $R$ to ensure transitivity while adding no unnecessary pairs. Two elements are linked in the closure whenever they can be connected through a finite sequence of intermediate steps related under $R$. In order theory and choice modeling, constructing this closure yields the smallest transitive relation that includes the original relation.
     citations:
-      - source: rubinstein
-        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.1 - Complete binary relation, p. 23
-      - source: rubinstein
-        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2 - Transitive binary relation, p. 24
-      - source: lecture
-        ref: '2026-09-10'
-    formal: \text{tr}(R) = \bigcup_{n=1}^\infty R^n, \quad \text{where } (x, y) \in \text{tr}(R) \iff \exists\, z_0, \dots, z_k \in X \text{ with } z_0 = x, z_k = y \text{ and } z_{i-1} R z_i \ \forall i
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31
+    formal: |-
+      Let $R$ be a binary relation on a nonempty set $X$. Define $R_0 = R$, and for each integer $m \ge 1$, let $x R_m y$ if there exist $z_1, \dots, z_m \in X$ such that $x R z_1, z_1 R z_2, \dots, z_m R y$. The transitive closure of $R$ is
+      \[
+      \operatorname{tr}(R) := \bigcup_{m=0}^\infty R_m
+      \]
+      If $R'$ is any transitive relation on $X$ satisfying $R \subseteq R'$, then $\operatorname{tr}(R) \subseteq R'$.
     example: |-
-      If an agent reveals direct pairwise preferences $x R y$ and $y R z$, the initial relation $R$ may not contain $(x, z)$.
-      The transitive closure $\text{tr}(R)$ adds the pair $(x, z)$, ensuring that transitivity holds throughout the comparison chain.
+      Suppose $X = \{x, y, z\}$ and $R = \{(x, y), (y, z)\}$. The relation $R$ is not transitive because $(x, z) \notin R$. Its transitive closure adds this missing link, giving $\operatorname{tr}(R) = \{(x, y), (y, z), (x, z)\}$.
   - id: revealed-preference-relation
     name: Revealed preference relation
     kind: object
