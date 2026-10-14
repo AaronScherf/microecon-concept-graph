@@ -229,3 +229,176 @@
       Consider an agent with utility $U(a, b) = \sqrt{a} + \sqrt{b}$ evaluating consumption bundles of two goods.
       The agent derives identical satisfaction from unbalanced allocations $(9, 1)$ and $(1, 9)$, each generating a utility index of 4.
       Evaluating their intermediate combination $(5, 5)$ yields $2\sqrt{5} \approx 4.47$, confirming that diversified mixtures are strictly preferred to polarized extremes.
+  - id: marginal-rate-of-substitution
+    name: Marginal rate of substitution
+    kind: property
+    section: s05-consumer-demand
+    topic: demand
+    gist: Rate at which a consumer trades good 2 for good 1 along an indifference curve, equaling the marginal utility ratio and the price ratio at an interior optimum.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-utilities-20261014
+    explanation: For two consumption goods, the marginal rate of substitution measures the quantity of good 2 that a consumer must sacrifice to obtain an additional unit of good 1 while maintaining an unchanged level of utility. Along any smooth indifference curve $u(x_1, x_2) = \bar{u}$, totally differentiating reveals that this trade-off coincides with the quotient of marginal utilities $u_1(x)/u_2(x)$, representing the negative slope of the indifference contour. At an interior utility-maximizing choice subject to a linear budget constraint, the consumer's subjective valuation must align with the market rate of exchange $p_1/p_2$. If the marginal rate of substitution exceeded the relative price, reallocating expenditure toward good 1 would strictly enhance satisfaction; thus, tangency between the indifference curve and budget line is a necessary first-order condition for an interior optimum.
+    citations:
+      - source: lecture
+        ref: '2026-10-06'
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §5.4 Differentiable preferences, p. 80
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 64
+    formal: |-
+      $$\text{Definition: } MRS_{12}(x_1, x_2) = -\left.\frac{dx_2}{dx_1}\right|_{u(x)=\bar{u}} = \frac{\partial u(x)/\partial x_1}{\partial u(x)/\partial x_2}$$
+      $$\text{Interior tangency condition: } MRS_{12}(x^*) = \frac{p_1}{p_2}$$
+      $$\text{Cobb-Douglas } (u = x_1^a x_2^b): MRS_{12} = \frac{a x_2}{b x_1}$$
+      $$\text{CES } \left(u = (a_1 x_1^\rho + a_2 x_2^\rho)^{1/\rho}, \sigma = \frac{1}{1-\rho}\right): MRS_{12} = \frac{a_1}{a_2}\left(\frac{x_2}{x_1}\right)^{\frac{1}{\sigma}}$$
+      $$\text{Linear } (u = a x_1 + b x_2): MRS_{12} = \frac{a}{b}$$
+      $$\text{Leontief } (u = \min\{a x_1, b x_2\}): MRS_{12} = \begin{cases} \infty & \text{if } a x_1 < b x_2 \\ 0 & \text{if } a x_1 > b x_2 \\ \text{undefined} & \text{if } a x_1 = b x_2 \end{cases}$$
+      $$\text{Quasi-linear } (u = x_1 + x_2^a, 0 < a \le 1): MRS_{12} = \frac{1}{a} x_2^{1-a}$$
+    example: Consider a consumer with utility $u(x_1, x_2) = x_1 x_2$ facing prices $p_1 = 4$ and $p_2 = 2$. The marginal rate of substitution is $MRS_{12} = x_2/x_1$. Setting this equal to the price ratio $p_1/p_2 = 2$ requires $x_2 = 2 x_1$ at an interior optimum.
+  - id: cobb-douglas-utility-function
+    name: Cobb-Douglas utility function
+    kind: function
+    section: s05-consumer-demand
+    topic: demand
+    gist: Two-good utility function exhibiting constant expenditure shares, unit elasticity of substitution, homotheticity, and strictly convex indifference curves.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-utilities-20261014
+    explanation: The Cobb-Douglas specification $u(x_1, x_2) = x_1^a x_2^b$ with parameters $a, b > 0$ represents strictly monotonic and strictly convex preferences defined on the strictly positive orthant. These properties guarantee that indifference curves never touch the axes, generating unique interior optimal bundles where expenditure shares on goods 1 and 2 remain constantly fixed at $a/(a+b)$ and $b/(a+b)$ regardless of prices or wealth. Homotheticity ensures that all demand functions scale linearly with wealth, producing straight-line income expansion paths emanating from the origin. Furthermore, the elasticity of substitution between the two commodities is identically equal to one everywhere, so price changes induce proportional compensating volume shifts that leave nominal budget shares invariant.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 66
+      - source: lecture
+        ref: '2026-10-08'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Example 3 - , p. 83
+    formal: |-
+      $$\text{Utility function: } u(x_1, x_2) = x_1^a x_2^b \quad (a, b > 0)$$
+      $$\text{Marginal rate of substitution: } MRS_{12}(x) = \frac{a x_2}{b x_1}$$
+      $$\text{Walrasian demand: } x_1(p, w) = \frac{a}{a+b} \frac{w}{p_1}, \quad x_2(p, w) = \frac{b}{a+b} \frac{w}{p_2}$$
+      $$\text{Indirect utility function: } v(p, w) = \left(\frac{a}{a+b}\right)^a \left(\frac{b}{a+b}\right)^b w^{a+b} p_1^{-a} p_2^{-b}$$
+      $$\text{Expenditure function: } e(p, u) = (a+b) \left(\frac{p_1}{a}\right)^{\frac{a}{a+b}} \left(\frac{p_2}{b}\right)^{\frac{b}{a+b}} u^{\frac{1}{a+b}}$$
+      $$\text{Hicksian demand: } h_1(p, u) = \left(\frac{a p_2}{b p_1}\right)^{\frac{b}{a+b}} u^{\frac{1}{a+b}}, \quad h_2(p, u) = \left(\frac{b p_1}{a p_2}\right)^{\frac{a}{a+b}} u^{\frac{1}{a+b}}$$
+      $$\text{Slutsky matrix: } S(p, w) = \frac{a b}{(a+b)^2} w \begin{pmatrix} -\frac{1}{p_1^2} & \frac{1}{p_1 p_2} \\ \frac{1}{p_1 p_2} & -\frac{1}{p_2^2} \end{pmatrix}$$
+    example: For $u(x_1, x_2) = x_1^{1/3} x_2^{2/3}$ with wealth $w = 120$ and prices $p_1 = 2$, $p_2 = 4$, the consumer allocates one third of wealth (\$40) to good 1 giving $x_1 = 20$, and two thirds of wealth (\$80) to good 2 giving $x_2 = 20$.
+  - id: ces-utility-function
+    name: CES utility function
+    kind: function
+    section: s05-consumer-demand
+    topic: demand
+    gist: Utility specification with constant elasticity of substitution, nesting linear, Cobb-Douglas, and Leontief preferences as limiting cases.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-utilities-20261014
+    explanation: The constant elasticity of substitution utility function $u(x_1, x_2) = (a_1 x_1^r + a_2 x_2^r)^{1/r}$ parameterizes the curvature of indifference curves via the elasticity of substitution $\sigma = 1/(1-r) \in (0, \infty)$ for $r \le 1$. As the parameter $r \to 1$, the elasticity $\sigma \to \infty$ and preferences converge to the linear utility model of perfect substitutes. When $r \to 0$, application of l'Hopital's rule reveals that the CES functional form converges to Cobb-Douglas preferences with unit elasticity of substitution $\sigma = 1$. Finally, as $r \to -\infty$, the substitution parameter $\sigma \to 0$ and the indifference curves bend into right angles, approaching the Leontief utility function of perfect complements.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §22.C Social Welfare Functions and Social Optima, p. 834
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.C Preference and Utility, p. 60
+      - source: lecture
+        ref: '2026-10-06'
+    formal: |-
+      $$\text{Utility function: } u(x_1, x_2) = (a_1 x_1^r + a_2 x_2^r)^{\frac{1}{r}}, \quad r \le 1, \, r \neq 0, \quad \sigma = \frac{1}{1-r}$$
+      $$\text{Marginal rate of substitution: } MRS_{12}(x) = \frac{a_1}{a_2} \left(\frac{x_2}{x_1}\right)^{\frac{1}{\sigma}}$$
+      $$\text{Price aggregator: } P(p) = \left(a_1^\sigma p_1^{1-\sigma} + a_2^\sigma p_2^{1-\sigma}\right)^{\frac{1}{1-\sigma}}$$
+      $$\text{Walrasian demand: } x_i(p, w) = \frac{w a_i^\sigma p_i^{-\sigma}}{a_1^\sigma p_1^{1-\sigma} + a_2^\sigma p_2^{1-\sigma}} = \frac{w a_i^\sigma p_i^{-\sigma}}{P(p)^{1-\sigma}}, \quad i \in \{1, 2\}$$
+      $$\text{Indirect utility function: } v(p, w) = \frac{w}{P(p)} = \frac{w}{\left(a_1^\sigma p_1^{1-\sigma} + a_2^\sigma p_2^{1-\sigma}\right)^{\frac{1}{1-\sigma}}}$$
+      $$\text{Expenditure function: } e(p, u) = u P(p) = u \left(a_1^\sigma p_1^{1-\sigma} + a_2^\sigma p_2^{1-\sigma}\right)^{\frac{1}{1-\sigma}}$$
+      $$\text{Hicksian demand: } h_i(p, u) = u \left(\frac{a_i P(p)}{p_i}\right)^\sigma, \quad i \in \{1, 2\}$$
+      $$\text{Slutsky matrix: } S(p, w) = \frac{\sigma}{w} \begin{pmatrix} -x_1(p, w) \left(w - p_1 x_1(p, w)\right) / p_1 & x_1(p, w) x_2(p, w) \\ x_1(p, w) x_2(p, w) & -x_2(p, w) \left(w - p_2 x_2(p, w)\right) / p_2 \end{pmatrix}$$
+    example: When $r = 1/2$, the elasticity of substitution is $\sigma = 2$. With symmetric coefficients $a_1 = a_2 = 1$, the price aggregator is $P(p) = (p_1^{-1} + p_2^{-1})^{-1}$. An increase in $p_1$ induces consumers to substitute more readily toward good 2 than in a Cobb-Douglas environment.
+  - id: linear-utility-function
+    name: Linear utility function
+    kind: function
+    section: s05-consumer-demand
+    topic: demand
+    gist: Utility specification representing perfect substitutes with a constant marginal rate of substitution and corner or set-valued demand solutions.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-utilities-20261014
+    explanation: A linear utility function $u(x_1, x_2) = a x_1 + b x_2$ models commodities that serve as perfect substitutes, generating linear indifference curves with an unvarying slope of $-a/b$. Because the marginal rate of substitution is constant while the budget frontier has constant slope $-p_1/p_2$, optimal consumer choice concentrates entirely on whichever good yields greater utility per dollar expended. When relative prices cross the critical threshold $p_1/p_2 = a/b$, the budget line tilts past the slope of the indifference curves, triggering an abrupt jump in demand from a corner on one axis to a corner on the other. Precisely at the tie $p_1/p_2 = a/b$, the budget constraint becomes collinear with an indifference contour, expanding the optimal demand from a unique singleton to the entire budget line segment.
+    citations:
+      - source: lecture
+        ref: '2026-10-06'
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Quasi-linearity in all commodities, p. 70
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Example 4.1 - Constant tradeoff, p. 64
+    formal: |-
+      $$\text{Utility function: } u(x_1, x_2) = a x_1 + b x_2 \quad (a, b > 0)$$
+      $$\text{Marginal rate of substitution: } MRS_{12}(x) = \frac{a}{b}$$
+      $$\text{Walrasian demand: } x(p, w) = \begin{cases} \left(\frac{w}{p_1}, 0\right) & \text{if } \frac{p_1}{p_2} < \frac{a}{b} \\ \left(0, \frac{w}{p_2}\right) & \text{if } \frac{p_1}{p_2} > \frac{a}{b} \\ \left\{\left(\alpha \frac{w}{p_1}, \, (1-\alpha) \frac{w}{p_2}\right) : \alpha \in [0, 1]\right\} & \text{if } \frac{p_1}{p_2} = \frac{a}{b} \end{cases}$$
+      $$\text{Indirect utility function: } v(p, w) = w \max\left\{\frac{a}{p_1}, \, \frac{b}{p_2}\right\}$$
+      $$\text{Expenditure function: } e(p, u) = u \min\left\{\frac{p_1}{a}, \, \frac{p_2}{b}\right\}$$
+      $$\text{Hicksian demand: } h(p, u) = \begin{cases} \left(\frac{u}{a}, 0\right) & \text{if } \frac{p_1}{p_2} < \frac{a}{b} \\ \left(0, \frac{u}{b}\right) & \text{if } \frac{p_1}{p_2} > \frac{a}{b} \\ \left\{\left(\alpha \frac{u}{a}, \, (1-\alpha) \frac{u}{b}\right) : \alpha \in [0, 1]\right\} & \text{if } \frac{p_1}{p_2} = \frac{a}{b} \end{cases}$$
+      $$\text{Slutsky matrix: } S(p, w) = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} \quad \text{for } \frac{p_1}{p_2} \neq \frac{a}{b} \quad (\text{undefined at the tie } \frac{p_1}{p_2} = \frac{a}{b})$$
+    example: Suppose $u(x_1, x_2) = 2 x_1 + x_2$ and wealth is $w = 10$. If $p_1 = 3$ and $p_2 = 2$, then $a/p_1 = 2/3 > b/p_2 = 1/2$, so the consumer chooses the corner $(10/3, 0)$. If $p_1$ increases to $5$, then $a/p_1 = 2/5 < 1/2$, causing demand to discontinuously switch to $(0, 5)$.
+  - id: leontief-utility-function
+    name: Leontief utility function
+    kind: function
+    section: s05-consumer-demand
+    topic: demand
+    gist: Utility function representing perfect complements with right-angled indifference curves, fixed proportion demand, and zero substitution effects.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-utilities-20261014
+    explanation: The Leontief utility function $u(x_1, x_2) = \min\{a x_1, b x_2\}$ models perfect complements where commodities must be utilized together in fixed proportions. Because an increase in one good without an accompanying rise in the other contributes zero marginal utility, any consumption bundle off the ray $a x_1 = b x_2$ incurs redundant expenditure; hence, utility-maximizing and cost-minimizing consumers strictly choose the vertex $x_1/x_2 = b/a$. The indifference curves exhibit a sharp ninety-degree kink at each vertex, preventing any smooth substitution along the contour as price slopes vary. Consequently, the expenditure-minimizing bundle to attain any target utility level $\bar{u}$ remains frozen at the corner $(\bar{u}/a, \bar{u}/b)$, implying that compensated demand is entirely invariant to relative prices and the Slutsky substitution matrix is identically zero everywhere.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.C Preference and Utility, p. 60
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Example 4.4 - Complementary goods, p. 65
+      - source: lecture
+        ref: '2026-10-06'
+    formal: |-
+      $$\text{Utility function: } u(x_1, x_2) = \min\{a x_1, b x_2\} \quad (a, b > 0)$$
+      $$\text{Marginal rate of substitution: } MRS_{12}(x_1, x_2) = \begin{cases} \infty & \text{if } a x_1 < b x_2 \\ 0 & \text{if } a x_1 > b x_2 \\ \text{undefined} & \text{if } a x_1 = b x_2 \end{cases}$$
+      $$\text{Fixed proportion ray: } a x_1 = b x_2 \implies x_1 = \frac{b}{a} x_2$$
+      $$\text{Walrasian demand: } x_1(p, w) = \frac{b w}{b p_1 + a p_2}, \quad x_2(p, w) = \frac{a w}{b p_1 + a p_2}$$
+      $$\text{Indirect utility function: } v(p, w) = \frac{a b w}{b p_1 + a p_2} = \frac{w}{\frac{p_1}{a} + \frac{p_2}{b}}$$
+      $$\text{Expenditure function: } e(p, u) = u \left(\frac{p_1}{a} + \frac{p_2}{b}\right)$$
+      $$\text{Hicksian demand: } h_1(p, u) = \frac{u}{a}, \quad h_2(p, u) = \frac{u}{b}$$
+      $$\text{Slutsky matrix: } S(p, w) = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$$
+    example: Suppose a recipe requires two scoops of coffee grounds $c$ per mug of water $w$, yielding utility $\min\{c/2, w\}$. With budget $M = 12$ and prices $p_c = 1$, $p_w = 2$, the consumer optimizes at the corner $c = 2 w$, purchasing $4$ scoops and $2$ mugs to fully spend the budget ($1 \cdot 4 + 2 \cdot 2 = 12$).
+  - id: quasi-linear-utility-function
+    name: Quasi-linear utility function
+    kind: function
+    section: s05-consumer-demand
+    topic: demand
+    gist: Utility function linear in one commodity and concave in the other, characterized by parallel indifference curves and zero income effects on the nonlinear good.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-utilities-20261014
+    explanation: A quasi-linear utility function of the form $u(x_1, x_2) = x_1 + x_2^a$ with $0 < a \le 1$ features preferences that are linear in the numeraire commodity $x_1$ and strictly concave in commodity $x_2$ when $a < 1$. Because utility is linear in good 1, the marginal rate of substitution depends exclusively on the quantity consumed of good 2, generating indifference curves that are vertical translations of one another. At an interior optimum, the first-order condition equates this marginal rate of substitution to the price ratio, determining the optimal level of good 2 purely as a function of prices without any dependence on income. Consequently, any variation in wealth is absorbed dollar-for-dollar by the linear numeraire good, eliminating the wealth effect on good 2 entirely and equating its uncompensated Walrasian price derivative with its compensated Hicksian substitution effect.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Quasi-Linear Preferences, p. 68
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Proof of the Claim, p. 70
+      - source: lecture
+        ref: '2026-10-06'
+    formal: |-
+      $$\text{Utility function: } u(x_1, x_2) = x_1 + x_2^a \quad (0 < a \le 1, \, \text{strictly concave for } a < 1)$$
+      $$\text{Marginal rate of substitution: } MRS_{12}(x) = \frac{\partial u/\partial x_1}{\partial u/\partial x_2} = \frac{1}{a} x_2^{1-a}$$
+      $$\text{Threshold wealth: } \bar{w} = p_2 \left(a \frac{p_1}{p_2}\right)^{\frac{1}{1-a}}$$
+      $$\text{Walrasian demand (interior, } w \ge \bar{w}): x_1(p, w) = \frac{w}{p_1} - \frac{p_2}{p_1}\left(a \frac{p_1}{p_2}\right)^{\frac{1}{1-a}}, \quad x_2(p, w) = \left(a \frac{p_1}{p_2}\right)^{\frac{1}{1-a}}$$
+      $$\text{Walrasian demand (corner, } w < \bar{w}): x_1(p, w) = 0, \quad x_2(p, w) = \frac{w}{p_2}$$
+      $$\text{Indirect utility (interior, } w \ge \bar{w}): v(p, w) = \frac{w}{p_1} + (1-a) a^{\frac{a}{1-a}} \left(\frac{p_1}{p_2}\right)^{\frac{a}{1-a}}$$
+      $$\text{Indirect utility (corner, } w < \bar{w}): v(p, w) = \left(\frac{w}{p_2}\right)^a$$
+      $$\text{Expenditure function (interior): } e(p, u) = p_1 u - (1-a) a^{\frac{a}{1-a}} p_1^{\frac{1}{1-a}} p_2^{-\frac{a}{1-a}}$$
+      $$\text{Hicksian demand (interior): } h_1(p, u) = u - \left(a \frac{p_1}{p_2}\right)^{\frac{a}{1-a}}, \quad h_2(p, u) = \left(a \frac{p_1}{p_2}\right)^{\frac{1}{1-a}}$$
+      $$\text{Slutsky matrix (interior): } S(p, w) = \frac{1}{1-a}\left(a \frac{p_1}{p_2}\right)^{\frac{1}{1-a}} \begin{pmatrix} -\frac{p_2}{p_1^2} & \frac{1}{p_1} \\ \frac{1}{p_1} & -\frac{1}{p_2} \end{pmatrix}$$
+    example: For $u(x_1, x_2) = x_1 + \sqrt{x_2}$ with $a = 1/2$, the interior demand for good 2 is $x_2^* = (p_1 / (2 p_2))^2$. If prices are $p_1 = p_2 = 1$, then $x_2 = 1/4$ whenever wealth $w \ge 1/4$. Doubling wealth from $w = 10$ to $w = 20$ leaves $x_2$ unchanged at $1/4$ while $x_1$ increases from $9.75$ to $19.75$.

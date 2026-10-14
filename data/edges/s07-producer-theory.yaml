@@ -230,3 +230,84 @@
     critic:
       verdict: supports
       note: Conditional factor demand is the argmin correspondence characterizing optimal factor choices in the cost minimization problem.
+  - id: profit-function--component_of--profit-maximization-problem
+    source: profit-function
+    type: component_of
+    target: profit-maximization-problem
+    explanation: The profit function serves as the value function recording the maximum net payoff achievable in the profit maximization problem.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s07-20261014
+    critic:
+      verdict: supports
+      note: The passage characterizes the profit-maximizing producer's problem by its optimal value function, which is the profit function.
+  - id: supply-correspondence--component_of--profit-maximization-problem
+    source: supply-correspondence
+    type: component_of
+    target: profit-maximization-problem
+    explanation: The supply correspondence characterizes the collection of optimal production plans that solve the profit maximization problem at given market prices.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s07-20261014
+    critic:
+      verdict: supports
+      note: The supply correspondence is defined as the set of netput vectors that solve the firm's profit maximization problem.
+  - id: marginal-rate-of-technical-substitution--is_a--marginal-rate-of-substitution
+    source: marginal-rate-of-technical-substitution
+    type: is_a
+    target: marginal-rate-of-substitution
+    condition: it measures substitution between physical inputs along an isoquant rather than consumption goods along an indifference curve
+    explanation: The marginal rate of technical substitution is the producer theory counterpart of the marginal rate of substitution, capturing the rate at which one input trades off against another while holding production volume fixed.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s07-20261014
+    critic:
+      verdict: supports
+      note: The passage explicitly describes the marginal rate of technical substitution as the production analog of the consumer marginal rate of substitution along an isoquant.
+  - id: returns-to-scale--defined_on--production-function
+    source: returns-to-scale
+    type: defined_on
+    target: production-function
+    explanation: Returns to scale can be evaluated directly on a production function by analyzing how output scales under proportional increases in all inputs.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Core, p. 685
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s07-20261014
+    critic:
+      verdict: supports
+      note: The passage defines constant, increasing, and decreasing returns to scale through proportional input scalings of a production function.
+  - id: theorem-of-the-maximum--yields--supply-correspondence
+    source: theorem-of-the-maximum
+    type: yields
+    target: supply-correspondence
+    explanation: Applying the theorem of the maximum guarantees that maximizing linear profit over a compact constraint set produces an upper hemicontinuous and compact-valued supply correspondence.
+    citations:
+      - source: slides
+        ref: Consumer Choice 1
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s07-20261014
+    critic:
+      verdict: supports
+      note: Berge's Maximum Theorem establishes the upper hemicontinuity and nonemptiness of parameterized optimizer correspondences such as supply correspondences.

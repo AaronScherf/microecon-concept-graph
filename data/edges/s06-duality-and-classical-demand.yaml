@@ -238,3 +238,136 @@
     critic:
       verdict: supports
       note: The Slutsky equation decomposes the price and wealth sensitivities of Walrasian demand into substitution and wealth components.
+  - id: indirect-utility-function--has_property--homogeneity-of-degree-zero
+    source: indirect-utility-function
+    type: has_property
+    target: homogeneity-of-degree-zero
+    explanation: Scaling all commodity prices and total expenditure by an identical positive factor leaves the maximum reachable utility unaltered.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The passage directly establishes that the indirect utility function is homogeneous of degree zero in prices and wealth.
+  - id: walrasian-demand--component_of--roys-identity
+    source: walrasian-demand
+    type: component_of
+    target: roys-identity
+    explanation: Walrasian consumer demand appears as the quantity generated on the left side of the identity through normalized price derivatives of indirect utility.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 84
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: Roy's identity explicitly expresses Walrasian demand as the negative quotient of price and wealth derivatives of the indirect utility function.
+  - id: indirect-utility-function--component_of--roys-identity
+    source: indirect-utility-function
+    type: component_of
+    target: roys-identity
+    explanation: The indirect utility function provides the value function whose gradient with respect to prices and wealth determines optimal demand.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 84
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The indirect utility function serves as the underlying scalar potential whose partial derivatives generate Walrasian demand via Roy's identity.
+  - id: weak-axiom-of-revealed-preference--hypothesis_of--law-of-compensated-demand
+    source: weak-axiom-of-revealed-preference
+    type: hypothesis_of
+    target: law-of-compensated-demand
+    explanation: Whenever demand behavior satisfies the weak axiom and budget exhaustion, any compensated change in prices guarantees nonpositive dot products with resulting demand movements.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 43
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The passage demonstrates that demand satisfying the weak axiom of revealed preference necessarily obeys the compensated law of demand.
+  - id: walrasian-demand--component_of--slutsky-matrix
+    source: walrasian-demand
+    type: component_of
+    target: slutsky-matrix
+    explanation: The Slutsky matrix is constructed directly from the price and wealth derivatives and consumption levels of Walrasian demand.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The Slutsky matrix is constructed directly from the price derivatives and wealth derivatives of Walrasian demand.
+  - id: substitution-effect--component_of--slutsky-matrix
+    source: substitution-effect
+    type: component_of
+    target: slutsky-matrix
+    explanation: Individual entries across the matrix represent pairwise substitution effects between commodities under compensated price changes.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The entries of the Slutsky substitution matrix capture the compensated substitution effects of commodity price changes.
+  - id: hicksian-demand--component_of--slutsky-matrix
+    source: hicksian-demand
+    type: component_of
+    target: slutsky-matrix
+    explanation: The substitution matrix equals the Jacobian matrix of price derivatives of Hicksian compensated demand.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The Slutsky substitution matrix coincides with the derivative matrix of Hicksian demand with respect to prices by Shephard's lemma.
+  - id: weak-axiom-of-revealed-preference--implies--negative-semidefinite-substitution
+    source: weak-axiom-of-revealed-preference
+    type: implies
+    target: negative-semidefinite-substitution
+    condition: A differentiable Walrasian demand function satisfying Walras' law and homogeneity of degree zero.
+    explanation: Whenever uncompensated consumer demand conforms to the weak axiom alongside budget exhaustion and zeroth-degree price homogeneity, the resulting substitution matrix forms a nonpositive quadratic form for any price displacement vector.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 46
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s06-20261014
+    critic:
+      verdict: supports
+      note: The cited proposition proves that the weak axiom of revealed preference implies negative semidefiniteness of the Slutsky substitution matrix for homogeneous demand satisfying Walras' law.

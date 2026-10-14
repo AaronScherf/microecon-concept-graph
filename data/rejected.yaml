@@ -4,3 +4,5 @@
     id: rational-preference-relation--has_property--monotonic-preferences
   - kind: edge
     id: convex-preferences--implies--walrasian-demand
+  - kind: edge
+    id: cobb-douglas-utility-function--component_of--utility-maximization-problem

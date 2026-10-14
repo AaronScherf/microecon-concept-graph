@@ -4,7 +4,9 @@ scope: >-
   Graduate microeconomic theory, first half (choice theory): start from sets, binary relations and orders, then
   preferences, utility and choice (including revealed preference, stochastic choice and departures from rationality),
   then consumer demand (utility maximization and Walrasian demand, duality, Slutsky), then producer theory, then choice
-  under risk and uncertainty and choice over time. Out of scope: game theory, general equilibrium, welfare economics,
+  under risk and uncertainty and choice over time. The five two-commodity utility families used in the homeworks
+  (Cobb-Douglas, constant elasticity of substitution, linear, Leontief, quasi-linear) and the marginal rate of
+  substitution belong in section s05-consumer-demand, with kind function (the marginal rate of substitution: property). Out of scope: game theory, general equilibrium, welfare economics,
   information economics, mechanism design (the second half of the sequence and textbook chapters beyond the ones listed).
 
 must_include:
@@ -38,6 +40,12 @@ must_include:
   - Roy's identity
   - Expected utility theorem
   - Risk aversion
+  - Marginal rate of substitution
+  - [Cobb-Douglas utility function, Cobb-Douglas utility, Cobb-Douglas preferences]
+  - [CES utility function, Constant elasticity of substitution utility, CES preferences]
+  - [Linear utility function, Perfect substitutes, Linear utility]
+  - [Leontief utility function, Perfect complements, Leontief preferences]
+  - [Quasi-linear utility function, Quasi-linear utility, Quasi-linear preferences]
 
 textbook_chapters:
   mwg: [1, 2, 3, 4, 5, 6]
@@ -45,3 +53,35 @@ textbook_chapters:
   ok: [1]
 
 min_nodes_per_section: 5
+
+fill_hints:
+  marginal-rate-of-substitution: >-
+    Define it for two goods (the rate at which the consumer trades good 2 for good 1 holding utility fixed, the ratio
+    of marginal utilities), state why it equals the price ratio at an interior optimum, and give its value for each of
+    the five utility families (Cobb-Douglas, CES, linear, Leontief, quasi-linear).
+  cobb-douglas-utility-function: >-
+    Two goods, u(x1,x2) = x1^a x2^b with a,b > 0. In `formal`, give as display math: the marginal rate of
+    substitution, the Walrasian demand, the indirect utility function, the Hicksian demand, the expenditure function
+    and the Slutsky matrix. In the explanation, say what these show (constant expenditure shares, unit elasticity of
+    substitution, homotheticity, strict monotonicity and convexity).
+  ces-utility-function: >-
+    Two goods, u(x1,x2) = (a1 x1^r + a2 x2^r)^(1/r) with r <= 1 (r not 0 or the Cobb-Douglas limit). In `formal`,
+    give as display math: the marginal rate of substitution, the Walrasian demand, the indirect utility function,
+    the Hicksian demand, the expenditure function and the Slutsky matrix, written with the elasticity of
+    substitution s = 1/(1-r). In the explanation, say how it nests the linear (r -> 1), Cobb-Douglas (r -> 0) and
+    Leontief (r -> -infinity) cases.
+  linear-utility-function: >-
+    Two goods, u(x1,x2) = a x1 + b x2 with a,b > 0 (perfect substitutes). In `formal`, give as display math: the
+    marginal rate of substitution, the Walrasian demand (corner solutions and the tie where it is a correspondence),
+    the indirect utility function, the Hicksian demand, the expenditure function and the Slutsky matrix (where it is
+    defined). In the explanation, say why demand jumps at the price tie.
+  leontief-utility-function: >-
+    Two goods, u(x1,x2) = min(a x1, b x2) with a,b > 0 (perfect complements). In `formal`, give as display math: the
+    marginal rate of substitution (where it exists), the Walrasian demand, the indirect utility function, the Hicksian
+    demand, the expenditure function and the Slutsky matrix. In the explanation, say why goods are consumed in fixed
+    proportions and why compensated demand does not respond to prices.
+  quasi-linear-utility-function: >-
+    Two goods, u(x1,x2) = x1 + x2^a with 0 < a <= 1 (linear in good 1). In `formal`, give as display math: the
+    marginal rate of substitution, the Walrasian demand (interior and corner cases), the indirect utility function,
+    the Hicksian demand, the expenditure function and the Slutsky matrix. In the explanation, say why there is no
+    income effect on good 2 in the interior case.

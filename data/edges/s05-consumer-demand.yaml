@@ -157,3 +157,120 @@
     critic:
       verdict: supports
       note: Any concave or quasiconcave utility representation implies that preference upper contour sets are convex, yielding convex preferences.
+  - id: marginal-rate-of-substitution--defined_on--utility-function
+    source: marginal-rate-of-substitution
+    type: defined_on
+    target: utility-function
+    explanation: The marginal rate of substitution is defined on a differentiable utility function as the ratio of its partial derivatives.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §5.4 Differentiable preferences, p. 80
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The cited passage explicitly defines the marginal rate of substitution as the ratio of marginal utilities derived from a differentiable utility function.
+  - id: marginal-rate-of-substitution--component_of--utility-maximization-problem
+    source: marginal-rate-of-substitution
+    type: component_of
+    target: utility-maximization-problem
+    explanation: Equating the marginal rate of substitution to the price ratio constitutes the necessary first-order optimality condition for interior bundles in the utility maximization problem.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 64
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The Kuhn-Tucker necessary first-order conditions for the utility maximization problem directly equate the marginal rate of substitution to relative commodity prices.
+  - id: cobb-douglas-utility-function--is_a--utility-function
+    source: cobb-douglas-utility-function
+    type: is_a
+    target: utility-function
+    condition: it takes the form of a product of commodity quantities raised to positive powers
+    explanation: The Cobb-Douglas utility specification is a functional form of a utility function exhibiting constant expenditure shares.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Walrasian Demand Correspondence/Function, p. 66
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The passage directly presents the Cobb-Douglas formulation as a utility function specification defined over commodity quantities.
+  - id: ces-utility-function--is_a--utility-function
+    source: ces-utility-function
+    type: is_a
+    target: utility-function
+    condition: it features a constant elasticity of substitution across commodities
+    explanation: The constant elasticity of substitution utility formulation is a utility function specification that nests linear, Cobb-Douglas, and Leontief forms.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §22.C Social Welfare Functions and Social Optima, p. 834
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The passage identifies the constant elasticity of substitution formulation as a standard family of utility functions in demand theory.
+  - id: linear-utility-function--is_a--utility-function
+    source: linear-utility-function
+    type: is_a
+    target: utility-function
+    condition: it assigns constant marginal utility weights to commodities that serve as perfect substitutes
+    explanation: A linear utility function is a utility function specification characterizing consumer preferences with constant rates of substitution.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Example 4.1 - Constant tradeoff, p. 64
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The passage explicitly defines linear utility as a utility function representing preferences with constant substitution trade-offs between commodities.
+  - id: leontief-utility-function--is_a--utility-function
+    source: leontief-utility-function
+    type: is_a
+    target: utility-function
+    condition: it evaluates consumption bundles using the minimum of scaled commodity amounts
+    explanation: The Leontief formulation is a utility function specification representing preferences for perfectly complementary commodities consumed in fixed proportions.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Example 5.5 - Complementary goods, p. 79
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The cited text identifies the minimum-operator specification as a utility function representing complementary goods consumed in fixed proportions.
+  - id: quasi-linear-utility-function--is_a--utility-function
+    source: quasi-linear-utility-function
+    type: is_a
+    target: utility-function
+    condition: it is linear in a numeraire commodity and non-linear in remaining goods
+    explanation: A quasi-linear utility function is a utility function specification combining linear numeraire consumption with concave utility over other commodities.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Quasi-Linear Preferences, p. 68
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-utilities-20261014
+    critic:
+      verdict: supports
+      note: The passage defines quasi-linear preferences through a utility function that is linear in one numeraire commodity and nonlinear in the others.

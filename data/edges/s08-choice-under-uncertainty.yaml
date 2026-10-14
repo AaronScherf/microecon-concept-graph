@@ -276,3 +276,148 @@
     critic:
       verdict: supports
       note: A von Neumann-Morgenstern utility function acts as the outcome valuation component inside the subjective expected utility formulation.
+  - id: rational-preference-relation--hypothesis_of--expected-utility-theorem
+    source: rational-preference-relation
+    type: hypothesis_of
+    target: expected-utility-theorem
+    explanation: A complete and transitive preference relation over probability distributions serves as the foundational ordering that the representation theorem maps into numerical expectations.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 3.2 - Continuity and independence implies expected utility, p. 55
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: The expected utility theorem takes a rational preference relation satisfying completeness and transitivity as an indispensable initial hypothesis.
+  - id: continuous-preference--hypothesis_of--expected-utility-theorem
+    source: continuous-preference
+    type: hypothesis_of
+    target: expected-utility-theorem
+    explanation: Preference continuity across lotteries ensures that small probability shifts preserve weak rankings, providing a necessary hypothesis to construct the expected payoff representation.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 3.2 - Continuity and independence implies expected utility, p. 55
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: Continuity of the preference ordering across lotteries is explicitly required as a hypothesis to obtain an expected utility representation.
+  - id: expected-utility-theorem--yields--utility-function
+    source: expected-utility-theorem
+    type: yields
+    target: utility-function
+    explanation: Under the continuity and independence axioms, the theorem establishes the existence of a real-valued utility assignment that ranks risky alternatives according to expected value.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §THE ANSCOMBE-AUMANN EXPECTED UTILITY THEOREM, p. 370
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: The expected utility theorem establishes the existence of a real-valued utility function that represents preferences over risky alternatives.
+  - id: von-neumann-morgenstern-utility-function--defined_on--set
+    source: von-neumann-morgenstern-utility-function
+    type: defined_on
+    target: set
+    explanation: A von Neumann-Morgenstern utility index is defined across the underlying set of deterministic outcomes or prizes to assign them cardinal payoff levels.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Utility Representation, p. 114
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: A von Neumann-Morgenstern utility function is defined as a mapping from the underlying set of deterministic prizes into real numbers.
+  - id: certainty-equivalent--defined_on--rational-preference-relation
+    source: certainty-equivalent
+    type: defined_on
+    target: rational-preference-relation
+    explanation: The certainty equivalent is defined for an underlying preference relation by determining the sure payoff that leaves the decision maker indifferent to the lottery.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: The certainty equivalent of a lottery is defined directly relative to the decision maker's preference relation as the indifferent sure payoff.
+  - id: arrow-pratt-measure--defined_on--utility-function
+    source: arrow-pratt-measure
+    type: defined_on
+    target: utility-function
+    explanation: The Arrow-Pratt measure is defined for a sufficiently smooth utility function as the negative ratio of its second and first derivatives.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 201
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: The Arrow-Pratt measure is explicitly defined using the ratio of the second and first derivatives of a twice-differentiable utility function.
+  - id: risk-premium--defined_on--rational-preference-relation
+    source: risk-premium
+    type: defined_on
+    target: rational-preference-relation
+    explanation: The risk premium evaluates an individual preference ordering by quantifying the expected return foregone to obtain the certainty equivalent of a gamble.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: The risk premium is derived from the certainty equivalence relationship defined on the agent's preference relation over lotteries.
+  - id: relative-risk-aversion--defined_on--utility-function
+    source: relative-risk-aversion
+    type: defined_on
+    target: utility-function
+    explanation: Relative risk aversion is defined on a twice-differentiable utility function as the elasticity of marginal utility with respect to wealth.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 204
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: Relative risk aversion is defined as the wealth-elasticity of marginal utility computed from a differentiable utility function.
+  - id: subjective-expected-utility--implies--rational-preference-relation
+    source: subjective-expected-utility
+    type: implies
+    target: rational-preference-relation
+    condition: pairwise comparisons are generated by ranking acts according to subjective expected payoff
+    explanation: Maximizing subjective expected utility induces an ordering over uncertain prospects that satisfies completeness and transitivity.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 217
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-cross-s08-20261014
+    critic:
+      verdict: supports
+      note: Ranking acts according to subjective expected utility values guarantees that the induced pairwise preference ordering satisfies completeness and transitivity.
