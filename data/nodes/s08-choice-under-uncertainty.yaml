@@ -3,75 +3,266 @@
     kind: theorem
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Representation result expressing lottery preferences as probability-weighted payoffs.
+    gist: Preferences over lotteries satisfying continuity and independence are represented by the mathematical expectation of an outcome utility index.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094918
+    explanation: Under the expected utility theorem, a rational decision maker facing risky prospects evaluates each lottery by computing the expected value of an underlying Bernoulli utility index assigned to deterministic outcomes. Whenever preferences over the simplex of probability distributions satisfy completeness, transitivity, continuity, and the independence axiom, they admit an affine representation. This structure ensures that indifference curves plotted across probability triangles form mutually parallel straight lines. The resulting assignment is unique up to positive affine transformations, preserving risk attitudes while remaining invariant under changes of origin or positive scale.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Expected Utility Theorem, p. 186
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §<span id="page-360-0"></span>3.1 The Expected Utility Theorem, p. 361
+    formal: |-
+      \text{There exists } u: X \to \mathbb{R} \text{ such that } p \succsim q \iff \sum_{x \in X} p(x) u(x) \ge \sum_{x \in X} q(x) u(x),
+      \text{ unique up to } u \mapsto a u + b \text{ with } a > 0.
+    example: An investor choosing between a safe portfolio yielding \$50{,}000 and a speculative venture yielding \$100{,}000 with probability 0.6 and \$0 with probability 0.4 evaluates the lottery by comparing $u(50{,}000)$ against $0.6 u(100{,}000) + 0.4 u(0)$.
   - id: risk-aversion
     name: Risk aversion
     kind: property
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Preference for a guaranteed expected payoff over facing the lottery itself.
+    gist: Property where a decision maker always prefers obtaining a lottery's expected monetary payoff with certainty over facing the lottery itself.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094918
+    explanation: An economic agent exhibits risk aversion if receiving the expected value of any lottery with certainty is preferred to the risky lottery itself. Within expected utility theory, this behavioral disposition corresponds directly to the concavity of the underlying Bernoulli utility function via Jensen's inequality. Diminishing marginal utility of wealth implies that the pain of a monetary loss outweighs the pleasure of an equal-sized gain, discouraging fair gambles. An agent with strictly concave utility demands a positive risk premium to bear non-trivial uncertainty and actively seeks actuarially fair insurance.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 196
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.6 - Risk aversion and risk neutrality, p. 59
+    formal: \text{For every lottery } F, \quad \int x \, dF(x) \succsim F \iff \int u(x) \, dF(x) \le u\left(\int x \, dF(x)\right).
+    example: A homeowner with wealth \$200{,}000 facing a 1\% chance of a \$50{,}000 fire damage loss prefers paying an actuarially fair insurance premium of \$500 to bearing the uninsured risk.
   - id: von-neumann-morgenstern-utility-function
     name: von Neumann-Morgenstern utility function
     kind: function
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Bernoulli utility function over sure outcomes evaluated under expectation.
+    gist: A real-valued payoff index assigned to deterministic outcomes whose expected value ranks probability distributions over those outcomes.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094918
+    explanation: A von Neumann-Morgenstern utility function (frequently termed a Bernoulli utility function) assigns real numbers to deterministic prizes, forming the foundation for expected utility calculations. The overall evaluation of any lottery is given by taking the mathematical expectation of these payoff values weighted by the corresponding outcome probabilities. Unlike purely ordinal utility functions in consumer theory, this formulation is cardinal in the sense of being unique only up to positive affine transformations ($v \mapsto \alpha v + \beta$ with $\alpha > 0$). Consequently, non-linear monotonic transformations alter the expected values and distort the decision maker's revealed attitude toward risk.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Lotteries over Monetary Outcomes and the Expected Utility Framework, p. 195
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Utility Representation, p. 114
+    formal: 'U(p) = \sum_{z \in Z} p(z) v(z) \quad \text{where } v: Z \to \mathbb{R} \text{ is unique up to } v \mapsto \alpha v + \beta \text{ with } \alpha > 0.'
+    example: If an individual assigns Bernoulli utilities $v(0) = 0$, $v(50) = 7$, and $v(100) = 10$, a lottery yielding \$0 or \$100 with equal probability receives expected utility $0.5(0) + 0.5(10) = 5$, ranking below the sure outcome of \$50.
   - id: independence-axiom
     name: Independence axiom
     kind: axiom
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Axiom stating lottery preference is invariant to mixing with a common lottery.
+    gist: Axiom stating that the preference ranking between two lotteries is preserved when both are mixed with a common third lottery.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094918
+    explanation: The independence axiom posits that combining two risky prospects with an identical third prospect via equal probability weights preserves their original preference ranking. Geometrically, this requirement forces the indifference surfaces on the probability simplex to be mutually parallel hyperplanes, ruling out fanning out or fanning in of indifference lines. Intuitively, conditional on the realization of the third lottery, the agent receives the exact same outcome in both alternatives, leaving the relative desirability solely dependent on the original pair. This property serves as the cornerstone for establishing linearity in probabilities within the expected utility framework.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Preferences over Lotteries, p. 182
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 362
+    formal: \text{For all } L, L', L'' \in \mathcal{L} \text{ and } \alpha \in (0, 1), \quad L \succsim L' \iff \alpha L + (1 - \alpha) L'' \succsim \alpha L' + (1 - \alpha) L''.
+    example: If an agent prefers receiving \$100 for sure over a coin flip between \$250 and \$0, then when offered a 10\% chance at the chosen prize combined with a 90\% chance of getting nothing, the agent must still prefer the 10\% chance of \$100 over the 5\% chance of \$250.
   - id: first-order-stochastic-dominance
     name: First-order stochastic dominance
     kind: property
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Condition where one distribution yields higher outcomes with greater probability.
+    gist: Condition where one probability distribution is preferred to another by every decision maker with monotonically nondecreasing utility.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094918
+    explanation: A distribution $F$ exhibits first-order stochastic dominance over $G$ if every agent with weakly increasing utility obtains at least as much expected utility under $F$ as under $G$. Equivalently, this stochastic order holds if and only if the cumulative distribution function of $F$ lies everywhere weakly below that of $G$, ensuring that the probability of exceeding any given threshold is always higher under $F$. Economically, this relationship can be interpreted as shifting probability mass upward toward superior payoffs without altering the total mass. While dominance guarantees a greater or equal mean return, a simple comparison of means is insufficient because stochastic dominance requires an unambiguous global shift across the entire distribution.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §First-Order Stochastic Dominance, p. 206
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §First-Order Stochastic Dominance, p. 124
+    formal: F \text{ FOSD } G \iff \int u(x) \, dF(x) \ge \int u(x) \, dG(x) \quad \forall \text{ nondecreasing } u \iff F(x) \le G(x) \quad \forall x.
+    example: A bonus structure paying \$10{,}000 with probability 0.7 and \$5{,}000 with probability 0.3 first-order stochastically dominates a structure paying \$10{,}000 with probability 0.4 and \$5{,}000 with probability 0.6.
   - id: certainty-equivalent
     name: Certainty equivalent
     kind: definition
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Sure monetary payoff offering the exact same utility as a given lottery.
+    gist: The guaranteed sum of money that provides an agent exactly the same level of utility as playing a given risky lottery.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094918
+    explanation: The certainty equivalent of a lottery represents the deterministic wealth level at which an individual remains indifferent between receiving that cash amount and bearing the lottery's stochastic return. In the expected utility setting, it is obtained by inverting the strictly increasing Bernoulli utility function evaluated at the expected utility of the distribution. When the decision maker is strictly risk-averse, this monetary valuation falls strictly below the mathematical expectation of the gamble. The gap between the lottery's expected value and its certainty equivalent defines the risk premium the agent willingly forgives to avoid variance.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 197
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+    formal: u(c(F, u)) = \int u(x) \, dF(x) \implies c(F, u) = u^{-1}\left(\int u(x) \, dF(x)\right).
+    example: An agent with utility $u(w) = \sqrt{w}$ facing an even gamble between \$0 and \$100 achieves expected utility $0.5\sqrt{0} + 0.5\sqrt{100} = 5$, yielding a certainty equivalent of $c = 5^2 = \$25$, well below the \$50 expectation.
   - id: arrow-pratt-measure
     name: Arrow-Pratt measure
     kind: definition
     section: s08-choice-under-uncertainty
     topic: risk-and-uncertainty
-    gist: Curvature metric measuring absolute risk aversion via negative ratio of derivatives.
+    gist: Local curvature metric measuring absolute risk aversion via the negative ratio of the second and first derivatives of the utility function.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094918
+    explanation: The Arrow-Pratt measure of absolute risk aversion quantifies the local curvature of a twice-differentiable Bernoulli utility function at a given wealth level. While the second derivative $u''(x)$ captures concavity, it is sensitive to arbitrary positive rescalings of utility; dividing by $u'(x)$ yields an index that remains invariant to positive affine transformations. Higher values of this metric indicate stronger aversion to small additive risks, requiring a larger compensation or risk premium to leave the agent indifferent. Integrating the measure twice completely reconstructs the underlying utility function up to irrelevant affine constants.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 201
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Coefficient of Absolute Risk Aversion, p. 130
+    formal: r_A(x) = -\frac{u''(x)}{u'(x)} = -\frac{d}{dx}\ln(u'(x)).
+    example: For the constant absolute risk aversion (CARA) utility function $u(x) = -e^{-ax}$ with $a > 0$, the Arrow-Pratt index simplifies to $r_A(x) = -(-a^2 e^{-ax}) / (a e^{-ax}) = a$, showing constant risk preferences regardless of wealth.
+  - id: lottery
+    name: Lottery
+    kind: object
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: A formal representation of a risky prospect specifying known probabilities across a collection of mutually exclusive outcomes.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: A simple lottery models choice under objective risk by assigning a non-negative probability to each possible consequence such that the total sum equals one. In decision theory, the space of simple lotteries over $N$ mutually exclusive outcomes corresponds geometrically to the unit simplex $\Delta^{N-1}$. Each extreme point or vertex of this simplex represents a degenerate lottery yielding a single deterministic payoff with certainty. Points in the interior or relative faces describe genuine risk, where the agent's ultimate realization remains stochastically uncertain at the time of choice.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Description of Risky Alternatives, p. 179
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.1 - Lotteries, p. 49
+    formal: L = (p_1, \dots, p_N) \in \Delta^{N-1} \quad \text{where } p_n \ge 0 \quad \forall n \in \{1,\dots,N\} \quad \text{and } \sum_{n=1}^N p_n = 1.
+    example: A roulette wheel wager paying \$35 on a specific number with probability $1/38$ and losing \$1 with probability $37/38$ constitutes a simple two-outcome lottery.
+  - id: compound-lottery
+    name: Compound lottery
+    kind: object
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: A multi-stage risky prospect whose possible realizations are themselves lotteries rather than final deterministic prizes.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: A compound lottery formalizes a hierarchical random process in which an initial randomization selects among several intermediate lotteries according to specified mixing probabilities. Applying the standard laws of probability calculus collapses the multi-stage structure into an equivalent single-stage reduced lottery through convex combination. Under the consequentialist axiom of reduction of compound lotteries, decision makers care exclusively about the final net probability distribution over terminal consequences rather than the multi-stage resolution process. Geometrically, this reduction corresponds to convex combinations of probability vectors within the simplex.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Description of Risky Alternatives, p. 180
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.3 - Compound lottery, p. 52
+    formal: L_{\text{reduced}} = \sum_{k=1}^K \alpha_k L_k \in \Delta^{N-1}, \quad \text{with } p_n = \sum_{k=1}^K \alpha_k p_n^k, \quad \alpha_k \ge 0, \quad \sum_{k=1}^K \alpha_k = 1.
+    example: 'A contestant flips a fair coin: heads enters a raffle offering \$100 with probability 0.8 and \$0 with probability 0.2, while tails enters a contest offering \$50 for sure, collapsing to a reduced lottery paying \$100 with probability 0.4, \$50 with probability 0.5, and \$0 with probability 0.1.'
+  - id: second-order-stochastic-dominance
+    name: Second-order stochastic dominance
+    kind: property
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Stochastic ordering ranking equal-mean distributions such that the dominant distribution is preferred by all risk-averse decision makers.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: Second-order stochastic dominance evaluates the relative dispersion or riskiness between two payoff distributions sharing the same expected return. A distribution $F$ second-order stochastically dominates $G$ if every agent possessing a concave Bernoulli utility function achieves higher expected utility under $F$ than under $G$. Equivalently, this dominance holds if and only if $G$ can be constructed from $F$ via a mean-preserving spread, which adds mean-zero noise to payoffs. In terms of cumulative distribution functions, it corresponds to the condition that the integral of $F$ is everywhere less than or equal to the integral of $G$.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Second-Order Stochastic Dominance, p. 208
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Second-Order Stochastic Dominance, p. 209
+    formal: \int u(x) \, dF(x) \ge \int u(x) \, dG(x) \quad \forall \text{ concave } u \iff \int_0^x F(t) \, dt \le \int_0^x G(t) \, dt \quad \forall x \quad (\text{with equal means}).
+    example: Between an asset paying \$100 with certainty and a risky gamble paying \$50 or \$150 with equal probability, the certain asset second-order stochastically dominates the gamble because both share the \$100 mean but the gamble adds a mean-preserving spread.
+  - id: risk-premium
+    name: Risk premium
+    kind: definition
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: The maximum expected monetary payoff an agent is willing to sacrifice to replace a risky lottery with a certain payout.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: The risk premium measures the amount of expected wealth a decision maker willingly forfeits to eliminate exposure to stochastic variance. Defined as the difference between the expected value of a lottery and its certainty equivalent, it quantifies the personal cost of bearing risk. For a risk-neutral decision maker, the premium is identically zero, whereas risk-averse agents exhibit a strictly positive premium for any non-degenerate gamble. In an expected utility framework, Taylor expansions show that for small local risks, the risk premium is proportional to the variance of the risk multiplied by the Arrow-Pratt measure of absolute risk aversion.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 197
+    formal: R(p) = \mathbb{E}(p) - CE(p) \quad \text{or for a small zero-mean risk } \tilde{\varepsilon}, \quad R(w, \tilde{\varepsilon}) \approx \frac{1}{2} \sigma_{\varepsilon}^2 r_A(w).
+    example: An investor facing a 50-50 gamble yielding either \$100 or \$0 has an expected return of \$50; if their certainty equivalent is \$40, their risk premium is $R = \$50 - \$40 = \$10$.
+  - id: relative-risk-aversion
+    name: Relative risk aversion
+    kind: definition
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Elasticity metric measuring risk aversion toward proportional or percentage gambles as wealth scales.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: The coefficient of relative risk aversion measures an individual's aversion toward proportional fluctuations or percentage risks relative to current wealth. Defined as wealth multiplied by the Arrow-Pratt absolute risk aversion measure, it represents the elasticity of marginal utility with respect to wealth. When this index remains invariant to wealth changes, an investor facing risky returns allocates a constant fraction of total wealth to risky assets regardless of initial wealth. Constant relative risk aversion (CRRA) preferences are standard in macroeconomic and financial models to ensure balanced growth and scale invariance.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 204
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 203
+    formal: r_R(x) = -x \frac{u''(x)}{u'(x)} = x \, r_A(x) = -\frac{d \ln(u'(x))}{d \ln x}.
+    example: For an agent with isoelastic power utility $u(x) = \frac{x^{1-\gamma}-1}{1-\gamma}$ with $\gamma > 0$ and $\gamma \ne 1$ (or $u(x) = \ln x$ when $\gamma = 1$), the relative risk aversion equals $r_R(x) = \gamma$, keeping portfolio shares constant as wealth grows.
+  - id: archimedean-axiom
+    name: Archimedean axiom
+    kind: axiom
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Continuity axiom ensuring no outcome is infinitely desirable or infinitely catastrophic relative to intermediate options.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: The Archimedean axiom (commonly known as the continuity axiom in expected utility theory) guarantees that preferences over lotteries respond continuously to variations in probabilities. Specifically, if a lottery $p$ is strictly preferred to $q$, and $q$ is strictly preferred to $r$, there exists an interior probability mixture of $p$ and $r$ that makes the agent indifferent to $q$. This structural condition rules out lexicographic hierarchies and prevents any single outcome from being so infinitely superior or disastrous that no probability adjustment can compensate for it. Together with the independence axiom, it ensures the existence of a real-valued expected utility representation.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Continuity (C), p. 113
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §3.2.1 Properties of preferences, p. 51
+    formal: p \succ q \succ r \implies \exists \alpha, \beta \in (0, 1) \text{ such that } \alpha p + (1 - \alpha) r \succ q \succ \beta p + (1 - \beta) r \quad (\text{or } q \sim \alpha^* p + (1 - \alpha^*) r).
+    example: An agent facing a choice between \$50 for sure and a gamble between \$100 and immediate death can find a sufficiently high survival probability (e.g., $1 - 10^{-9}$) where they would be indifferent between the gamble and the sure payoff.
+  - id: subjective-expected-utility
+    name: Subjective expected utility
+    kind: model
+    section: s08-choice-under-uncertainty
+    topic: risk-and-uncertainty
+    gist: Decision framework under uncertainty that derives personal probabilistic beliefs and outcome utilities simultaneously from observed choices.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094918
+    explanation: Subjective expected utility theory extends expected utility to environments where objective probabilities across states of the world do not exist. Under appropriate behavioral axioms on acts, the agent acts as though ranking alternatives by the expectation of an outcome utility function according to an endogenous, personal prior distribution. First formulated by Savage and later simplified using horse-race and roulette lotteries by Anscombe and Aumann, it provides behavioral foundations for eliciting personal beliefs directly from observed choice. Consequently, uncertainty is operationalized within standard probability calculus without requiring externally given frequencies.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 217
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 215
+    formal: (x_1, \dots, x_S) \succsim (x'_1, \dots, x'_S) \iff \sum_{s=1}^S \pi_s u(x_s) \ge \sum_{s=1}^S \pi_s u(x'_s) \quad \text{with } \pi_s > 0, \quad \sum_{s=1}^S \pi_s = 1.
+    example: An entrepreneur deciding whether to launch a startup compares uncertain revenues across different macroeconomic states using their personal belief distribution over recessions and expansions rather than objective historical frequencies.

@@ -3,64 +3,245 @@
     kind: object
     section: s07-producer-theory
     topic: producer-theory
-    gist: Set of all technologically feasible net output bundles for a firm.
+    gist: The collection of all technologically attainable netput vectors characterizing a firm's transformation possibilities.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094827
+    explanation: A production set formalizes a firm's technological capabilities across $L$ commodities using netput vectors, where negative entries record input utilization and positive entries record outputs generated. Standard regularity postulates require the set to be closed, non-empty, and satisfy the no-free-lunch principle stating that non-zero output demands strictly positive input commitments. In multi-output or single-output environments, the boundary of this set constitutes the transformation frontier, distinguishing efficient combinations from strictly interior or technologically unfeasible plans.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §5.B Production Sets, p. 139
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 141
+    formal: 'Y \subset \mathbb{R}^L, \quad \text{with transformation representation } Y = \{y \in \mathbb{R}^L : F(y) \le 0\}'
+    example: Consider a firm employing labor $z_1 \ge 0$ to manufacture output $q \ge 0$ under diminishing marginal returns $q \le \sqrt{z_1}$. In netput notation, feasible vectors take the form $y = (-z_1, q) \in \mathbb{R}^2$ such that $y_2 - \sqrt{-y_1} \le 0$ with $y_1 \le 0$.
   - id: profit-maximization-problem
     name: Profit maximization problem
     kind: model
     section: s07-producer-theory
     topic: producer-theory
-    gist: Firm optimization problem selecting net outputs to maximize total profit.
+    gist: The decision problem where a price-taking firm selects a technologically feasible production plan to maximize net revenue.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094827
+    explanation: In the profit maximization problem, a price-taking enterprise chooses a production plan from its feasible technology set to maximize the inner product of market prices and net outputs. When the technology set is strictly convex and bounded above, this program admits a single optimal production choice, simultaneously determining output supply and factor demands. If the technology displays nondecreasing returns to scale, finite solutions require nonpositive profits; otherwise, strictly positive profit opportunities would induce unbounded expansion of production plans.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    formal: \max_{y \in Y} \; p \cdot y \quad \text{subject to } y \in Y
+    example: A competitive firm facing output price $p > 0$ and wage $w > 0$ chooses labor $z \ge 0$ to maximize profit $p \sqrt{z} - w z$. Setting the derivative of profit with respect to labor to zero yields optimal input usage $z^* = (p / (2w))^2$ and supply $q^* = p / (2w)$.
   - id: profit-function
     name: Profit function
     kind: function
     section: s07-producer-theory
     topic: producer-theory
-    gist: Function giving maximum attainable profit as a function of prices.
+    gist: The value function assigning each price vector the maximum profit achievable across a firm's production set.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094827
+    explanation: The profit function $\pi(p)$ is the indirect objective obtained by maximizing net revenue over feasible production plans at market prices $p$. As the pointwise supremum of linear functions in prices, $\pi(p)$ is convex and homogeneous of degree one. Under differentiable conditions, applying the envelope theorem recovers the firm's net supply vector directly through the price gradient of $\pi(p)$.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 6.1 - Production function, p. 95
+    formal: '\pi(p) = \sup \{p \cdot y : y \in Y\}'
+    example: For a single-input production technology $q = 2\sqrt{z}$ with input wage $w > 0$ and product price $p > 0$, maximizing $p(2\sqrt{z}) - wz$ yields input choice $z^* = p^2 / w^2$, leading to the closed-form profit function $\pi(p, w) = p^2 / w$.
   - id: cost-minimization-problem
     name: Cost minimization problem
     kind: model
     section: s07-producer-theory
     topic: producer-theory
-    gist: Firm optimization selecting input quantities to minimize production cost.
+    gist: Optimization program where a price-taking firm selects input quantities to achieve a target output level at lowest total expenditure.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094827
+    explanation: The cost minimization problem requires a firm to determine the cheapest input combination capable of delivering at least a designated output target $q$ given prevailing factor prices $w$. Serving as a necessary condition for profit maximization, this program remains analytically tractable under price-taking in input markets even when output markets are noncompetitive or returns to scale are constant or increasing. At an interior optimum with smooth technologies, the marginal rate of technical substitution between any two factors equals the ratio of their respective input prices.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 151
+    formal: \min_{z \ge 0} \; w \cdot z \quad \text{subject to } f(z) \ge q
+    example: For a Cobb-Douglas production function $q = z_1^{1/2} z_2^{1/2}$ with factor prices $w_1$ and $w_2$, equating the input price ratio to the factor substitution ratio yields $z_1 / z_2 = w_2 / w_1$. Substituting this into the output constraint yields conditional factor demands $z_1(w, q) = q \sqrt{w_2 / w_1}$ and $z_2(w, q) = q \sqrt{w_1 / w_2}$.
   - id: cost-function
     name: Cost function
     kind: function
     section: s07-producer-theory
     topic: producer-theory
-    gist: Function providing minimal cost needed to produce a specified output level.
+    gist: The value function assigning each input price vector and output target the minimum cost necessary to produce that output.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094827
+    explanation: The cost function $c(w, q)$ records the smallest financial expenditure on inputs necessary to manufacture a prescribed volume of output $q$ under factor prices $w$. In factor prices, $c(w, q)$ is nondecreasing, positively homogeneous of degree one, and concave because cost savings can be achieved by substituting away from increasingly expensive inputs. In single-output settings, differentiating the cost function with respect to factor prices yields the firm's conditional input demands via Shephard's lemma.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 103
+    formal: 'c(w, q) = \min_{z \ge 0} \{w \cdot z : f(z) \ge q\}'
+    example: When an enterprise manufactures output using a single factor with production function $f(z) = \sqrt{z}$, producing $q$ units requires input quantity $z = q^2$. Given unit factor price $w > 0$, the resulting cost function is $c(w, q) = w q^2$.
   - id: hotellings-lemma
     name: Hotelling's lemma
     kind: lemma
     section: s07-producer-theory
     topic: producer-theory
-    gist: Result that derivative of profit with respect to output price yields supply.
+    gist: Result stating that differentiating the profit function with respect to commodity prices yields the firm's optimal net supplies.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094827
+    explanation: Hotelling's lemma establishes that whenever a profit-maximizing netput choice is uniquely determined at a price vector $p$, the profit function $\pi(p)$ is differentiable at that point and its gradient equals the optimal netput vector $y(p)$. Because the profit function is convex in prices, each supporting hyperplane generated by this gradient bounds the value function from below. Differentiating the resulting net supply functions produces the symmetric and positive semidefinite substitution matrix, reflecting the absence of income effects in producer theory.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 148
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    formal: \nabla \pi(p) = y(p), \quad \text{or componentwise } \frac{\partial \pi(p)}{\partial p_\ell} = y_\ell(p) \text{ for each commodity } \ell
+    example: If an enterprise operates with profit function $\pi(p_1, p_2) = p_2^2 / (4p_1)$, taking partial derivatives gives factor demand $y_1(p) = \partial \pi / \partial p_1 = -p_2^2 / (4p_1^2)$ and output supply $y_2(p) = \partial \pi / \partial p_2 = p_2 / (2p_1)$.
+  - id: production-function
+    name: Production function
+    kind: function
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: A mathematical mapping specifying the maximum quantity of output achievable from any vector of physical inputs.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: A production function $f(z)$ characterizes single-output production possibilities by defining the upper boundary of attainable output given non-negative input combinations $z$. Typical economic regularity assumptions require $f(z)$ to satisfy $f(0) = 0$, monotonicity reflecting non-negative marginal products, and quasiconcavity ensuring convex input requirement sets. Level sets of the production function form isoquants, whose negative slope defines the marginal rate of technical substitution between competing production factors.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §6.1 The producer, p. 94
+    formal: 'q = f(z), \quad \text{with } Y = \{(-z, q) \in \mathbb{R}_-^{L-1} \times \mathbb{R}_+ : q \le f(z)\}'
+    example: Under a two-input Leontief technology, output is determined by fixed proportions $q = \min\{z_1 / a, z_2 / b\}$ with strictly positive coefficients $a, b > 0$, yielding L-shaped isoquants where factor substitution is zero.
+  - id: marginal-rate-of-technical-substitution
+    name: Marginal rate of technical substitution
+    kind: definition
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: The rate at which one production input can be substituted for another along an isoquant while maintaining constant output.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: The marginal rate of technical substitution quantifies the rate at which an enterprise can substitute one productive input for another without altering the total volume of produced output. Geometrically, it corresponds to the absolute slope of an isoquant in input space, evaluated as the ratio of the respective marginal products. Diminishing technical substitution, an immediate consequence of strictly quasiconcave production technologies, ensures that isoquants are strictly convex toward the origin.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §5.B Production Sets, p. 139
+    formal: MRTS_{\ell k}(z) = \frac{\partial f(z) / \partial z_\ell}{\partial f(z) / \partial z_k} = -\left. \frac{d z_k}{d z_\ell} \right|_{f(z) = q}
+    example: For an enterprise operating with technology $q = \sqrt{K \cdot L}$, the ratio of marginal products simplifies to $MRTS_{LK} = K / L$. As employment expands relative to machinery, this rate decreases, illustrating that additional labor becomes progressively less effective at replacing equipment along a given isoquant.
+  - id: returns-to-scale
+    name: Returns to scale
+    kind: property
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Property describing how output responds to equiproportional scaling of all inputs across a production technology.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: Returns to scale describe how proportional adjustments across all productive inputs alter total output volume or whether a netput vector remains feasible when multiplied by a positive scalar. Constant returns to scale imply that the production set forms a cone and that single-output production functions are homogeneous of degree one, generating zero economic profits in competitive equilibrium. Conversely, decreasing returns capture situations where expanding operation leads to less-than-proportional increases in output, often attributed theoretically to unmodeled fixed factors such as managerial span.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 143
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 145
+    formal: '\text{For } \alpha > 1: \; f(\alpha z) > \alpha f(z) \text{ (IRS)}, \quad f(\alpha z) = \alpha f(z) \text{ (CRS)}, \quad f(\alpha z) < \alpha f(z) \text{ (DRS)}'
+    example: In a Cobb-Douglas technology $f(z_1, z_2) = z_1^\alpha z_2^\beta$, scaling inputs by factor $t > 0$ yields $f(t z_1, t z_2) = t^{\alpha + \beta} f(z_1, z_2)$, exhibiting increasing, constant, or decreasing returns to scale whenever $\alpha + \beta > 1$, $\alpha + \beta = 1$, or $\alpha + \beta < 1$, respectively.
+  - id: conditional-factor-demand
+    name: Conditional factor demand
+    kind: correspondence
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: The cost-minimizing input bundle that attains a targeted output volume at given market factor prices.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: Conditional factor demand $z(w, q)$ identifies the expenditure-minimizing input bundle required to produce target output $q$ under factor prices $w$. Being conditional on fixed output, these demands isolate pure substitution behavior without confounding scale effects, paralleling Hicksian compensated demand in consumer theory. Whenever the underlying technology is strictly quasiconcave, $z(w, q)$ is a single-valued function that is homogeneous of degree zero in factor prices and satisfies the law of demand.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 151
+    formal: 'z(w, q) = \arg\min_{z \ge 0} \{w \cdot z : f(z) \ge q\} = \nabla_w c(w, q)'
+    example: For production function $f(z_1, z_2) = \min\{z_1, z_2\}$, producing $q$ units requires setting both inputs equal to $q$ regardless of factor prices, giving conditional factor demands $z_1(w, q) = q$ and $z_2(w, q) = q$.
+  - id: supply-correspondence
+    name: Supply correspondence
+    kind: correspondence
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Mapping assigning each price vector the set of profit-maximizing netput plans from the firm's production set.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: The supply correspondence $y(p)$ maps a positive price vector to the collection of netput vectors that maximize economic profit over the firm's technology set. Because multiplying all commodity prices by a positive constant does not shift the relative profitability of plans, $y(p)$ is homogeneous of degree zero in prices. When the technology set is strictly convex and bounded above, $y(p)$ is single-valued and continuous, satisfying the law of supply across all price variations.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    formal: 'y(p) = \{y \in Y : p \cdot y = \pi(p)\} = \arg\max_{y \in Y} \; p \cdot y'
+    example: 'Under a strictly convex technology with production function $q = \sqrt{z}$, output price $p > 0$, and factor cost $w > 0$, the unique profit-maximizing netput plan is single-valued: $y(p, w) = (-p^2 / (4w^2), p / (2w))$.'
+  - id: free-disposal
+    name: Free disposal
+    kind: property
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Technological assumption that unwanted inputs or produced outputs can be discarded without expending resources.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: The free disposal property asserts that an enterprise can discard excess factor inputs or surplus produced goods without incurring positive disposal costs. In terms of netput vectors, this assumption requires that if a plan is technologically attainable, any coordinate-wise smaller netput plan is likewise feasible. Economically, free disposal rules out negative shadow prices for commodities, ensuring that marginal products of inputs remain non-negative and market prices in competitive equilibrium are non-negative.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 142
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Technology, p. 99-100
+    formal: y \in Y \text{ and } y' \le y \implies y' \in Y, \quad \text{or equivalently } Y - \mathbb{R}_+^L \subseteq Y
+    example: If a manufacturing plant can produce 10 units of an output using 5 labor hours, free disposal implies that producing only 8 units with 5 hours, or producing 10 units using 7 hours, represents a technologically feasible production plan.
+  - id: law-of-supply
+    name: Law of supply
+    kind: theorem
+    section: s07-producer-theory
+    topic: producer-theory
+    gist: Result stating that price changes and corresponding profit-maximizing netput quantity adjustments move in the same direction.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094827
+    explanation: The law of supply establishes that changes in market prices and the resulting profit-maximizing adjustments in net outputs always have a non-negative inner product. This monotonicity implies that raising an output price increases or maintains its supply, while raising an input price decreases or leaves unchanged factor demand. Unlike consumer demand where income effects can induce Giffen anomalies, producer supply responses are unconstrained by a budget boundary, so substitution effects dictate supply behavior unconditionally.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 149
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    formal: (p - p') \cdot (y - y') \ge 0 \quad \text{for all } y \in y(p) \text{ and } y' \in y(p')
+    example: If a competitive wheat producer faces an output price rise from $p = 4$ to $p' = 6$ per bushel with input costs held constant, the profit-maximizing harvest cannot decrease, moving for example from 100 bushels to 140 bushels.

@@ -3,75 +3,257 @@
     kind: function
     section: s06-duality-and-classical-demand
     topic: duality
-    gist: Value function specifying maximum attainable utility given prices and wealth.
+    gist: Value function capturing maximal achievable utility given market prices and consumer wealth.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094731
+    explanation: The indirect utility function $v(p, w)$ reports the maximum utility reachable in the utility maximization problem at price vector $p$ and wealth level $w$. Under continuous and locally nonsatiated preferences, Berge's maximum theorem ensures that $v(p, w)$ is continuous and homogeneous of degree zero in $(p, w)$. The function increases strictly in wealth, does not increase when prices rise, and exhibits quasiconvexity in $(p, w)$ because convex combinations of budget sets cannot expand the affordable choice space beyond their individual bounds. Differentiating $v(p, w)$ recovers consumer demand via Roy's identity, bridging primal preferences to observable market choices.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67
+    formal: 'v(p, w) = \max_{x \in \mathbb{R}_+^L} \{ u(x) : p \cdot x \le w \}'
+    example: For a consumer with preferences $U(x, y) = x y$ and budget constraint $p_x x + p_y y \le w$, optimal consumption choices are $x = w / (2 p_x)$ and $y = w / (2 p_y)$, producing the indirect utility function $v(p_x, p_y, w) = w^2 / (4 p_x p_y)$.
   - id: expenditure-function
     name: Expenditure function
     kind: function
     section: s06-duality-and-classical-demand
     topic: duality
-    gist: Minimal spending required to attain a specified target utility at given prices.
+    gist: Minimal expenditure required to reach a benchmark utility level at given commodity prices.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094731
+    explanation: The expenditure function $e(p, u)$ assigns to each price vector $p$ and required utility target $u$ the minimum financial outlay necessary to attain that utility level. The function scales linearly when all prices double, grows strictly with the chosen welfare objective, remains weakly increasing in individual prices, and exhibits joint continuity. Because a consumer can substitute away from relatively expensive commodities as relative prices shift, $e(p, u)$ is concave in $p$, lying below any linear extrapolation based on fixed consumption baskets. By Shephard's lemma, the gradient of the expenditure function with respect to prices recovers the compensated Hicksian demand vector.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Expenditure Function, p. 70
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Dual Consumer, p. 98
+    formal: 'e(p, u) = \min_{x \in \mathbb{R}_+^L} \{ p \cdot x : u(x) \ge u \}'
+    example: For two goods with utility $u(x_1, x_2) = x_1^{1/2} x_2^{1/2}$, the minimum cost of reaching utility target $u$ at prices $(p_1, p_2)$ is given by $e(p, u) = 2 u \sqrt{p_1 p_2}$.
   - id: hicksian-demand
     name: Hicksian demand
     kind: correspondence
     section: s06-duality-and-classical-demand
     topic: duality
-    gist: Compensated bundle correspondence achieving target utility at lowest expenditure.
+    gist: Optimal consumption bundle that reaches a required target utility level at minimal expenditure.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094731
+    explanation: Hicksian demand $h(p, u)$ identifies the commodity bundle that achieves a specified target utility $u$ at the lowest total financial outlay when prices are $p$. The resulting bundle is invariant to proportional rescaling of prices, attains exactly the required utility benchmark under local nonsatiation, and yields a single-valued function when preferences are strictly convex. Because real welfare is held constant across price adjustments via implicit expenditure compensation, Hicksian demand isolates pure substitution without any distorting income effects. Connecting primal and dual models, evaluating Marshallian demand at the minimal expenditure level needed for target welfare recovers the identical compensated bundle.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Expenditure Function, p. 72
+    formal: 'h(p, u) = \arg\min_{x \in \mathbb{R}_+^L} \{ p \cdot x : u(x) \ge u \} = \nabla_p e(p, u)'
+    example: For symmetric Cobb-Douglas utility $u(x_1, x_2) = \sqrt{x_1 x_2}$, Hicksian demand for good 1 is $h_1(p_1, p_2, u) = u \sqrt{p_2 / p_1}$, which scales inversely with its own relative price holding utility fixed.
   - id: slutsky-equation
     name: Slutsky equation
     kind: identity
     section: s06-duality-and-classical-demand
     topic: demand
-    gist: Decomposition splitting price sensitivities into substitution and income effects.
+    gist: Fundamental identity decomposing uncompensated price responses into pure substitution and income effects.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094731
+    explanation: The Slutsky equation decomposes the total observable price derivative of Walrasian demand into a compensated substitution response and an income effect. By differentiating the duality identity $h_\ell(p, u) = x_\ell(p, e(p, u))$ with respect to price $p_k$ and invoking Shephard's lemma, the uncompensated price sensitivity is expressed as the Hicksian substitution term minus the consumer's demand scaled by the marginal propensity to consume out of wealth. This relation connects unobservable utility-compensated responses directly to observable market choices and spending data. Consequently, a price increase reduces demand through substitution, while the income effect either reinforces this drop for normal commodities or dampens it for inferior goods.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    formal: \frac{\partial x_\ell(p, w)}{\partial p_k} = \frac{\partial h_\ell(p, v(p, w))}{\partial p_k} - \frac{\partial x_\ell(p, w)}{\partial w} x_k(p, w)
+    example: For Cobb-Douglas demand $x_1(p, w) = \alpha w / p_1$, the total own-price derivative is $-\alpha w / p_1^2$, which decomposes into the compensated substitution term $-\alpha(1 - \alpha) w / p_1^2$ and the negative income effect $-\alpha^2 w / p_1^2$.
   - id: roys-identity
     name: Roy's identity
     kind: identity
     section: s06-duality-and-classical-demand
     topic: duality
-    gist: Formula obtaining Walrasian demand from price and wealth derivatives of indirect utility.
+    gist: Duality result deriving Walrasian demand from the negative ratio of price to wealth derivatives of indirect utility.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2-2026-10-10
+      run: fill-20261014-094731
+    explanation: Roy's identity provides a direct analytical method for generating observable Walrasian demand functions from the indirect utility function without solving constrained optimization programs. When indirect utility $v(p, w)$ is differentiable, applying the envelope theorem to the utility maximization problem shows that the price gradient satisfies $\nabla_p v(p, w) = -\lambda x(p, w)$, where the Lagrange multiplier $\lambda = \partial v(p, w) / \partial w$ represents the marginal utility of wealth. Dividing each price partial derivative by the wealth partial derivative eliminates the multiplier and cancels monotonic transformations of the utility scale. This relationship ensures that specifying tastes directly through an indirect utility function uniquely identifies the underlying consumer demand system.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 84
+    formal: x_\ell(p, w) = -\frac{\frac{\partial v(p, w)}{\partial p_\ell}}{\frac{\partial v(p, w)}{\partial w}}
+    example: Given indirect utility $v(p_1, p_2, w) = w / (2 \sqrt{p_1 p_2})$, differentiating gives $\partial v / \partial p_1 = -w / (4 p_1^{3/2} p_2^{1/2})$ and $\partial v / \partial w = 1 / (2 \sqrt{p_1 p_2})$, yielding Walrasian demand $x_1(p, w) = w / (2 p_1)$.
   - id: expenditure-minimization-problem
     name: Expenditure minimization problem
     kind: model
     section: s06-duality-and-classical-demand
     topic: duality
-    gist: Dual consumer problem minimizing spending subject to achieving target utility.
+    gist: Constrained optimization problem finding the lowest expenditure bundle achieving a target utility level.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094731
+    explanation: The expenditure minimization problem (EMP) serves as the dual formulation of neoclassical consumer choice by minimizing total spending subject to achieving at least a target utility level. Whereas the utility maximization problem fixes monetary wealth and maximizes ordinal satisfaction, the EMP reverses these roles by treating utility as the primary constraint and seeking the lowest supporting hyperplane. When preferences are continuous, monotonic, and strictly convex, the constraint binds with equality at an optimal bundle that is unique. Under local nonsatiation, the optimal solution to the EMP coincides with the solution to the primal problem whenever wealth matches minimal expenditure.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68
+    formal: \min_{x \in \mathbb{R}_+^L} p \cdot x \quad \text{subject to } u(x) \ge u
+    example: A consumer facing prices $p_1 = 2$ and $p_2 = 8$ with utility $u(x_1, x_2) = x_1 x_2$ who aims for utility target $u = 16$ minimizes $2x_1 + 8x_2$ subject to $x_1 x_2 \ge 16$, yielding optimal bundle $x^* = (8, 2)$ with minimal expenditure equal to $32$.
   - id: shephards-lemma
     name: Shephard's lemma
     kind: lemma
     section: s06-duality-and-classical-demand
     topic: duality
-    gist: Result that price gradient of expenditure equals Hicksian compensated demand.
+    gist: Duality result showing that the price gradient of the expenditure function yields Hicksian compensated demand.
     status: proposed
     provenance:
       driver: agent
       agent: antigravity-gemini
-      run: seed-v2b-2026-10-10
+      run: fill-20261014-094731
+    explanation: Shephard's lemma demonstrates that partially differentiating the consumer's expenditure function with respect to any commodity price immediately recovers the compensated demand for that commodity. In the expenditure minimization problem, prices enter the objective function linearly without appearing in the utility target constraint. Applying the envelope theorem ensures that any first-order adjustments in optimal consumption bundles cancel out at the optimum, leaving only the direct marginal cost of the price change. Consequently, the Hessian of the expenditure function constitutes the symmetric and negative semidefinite Slutsky substitution matrix.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79
+    formal: h_\ell(p, u) = \frac{\partial e(p, u)}{\partial p_\ell} \quad \Longleftrightarrow \quad h(p, u) = \nabla_p e(p, u)
+    example: Given the expenditure function $e(p, u) = 2 u \sqrt{p_1 p_2}$, differentiating with respect to $p_1$ yields compensated demand $h_1(p, u) = u \sqrt{p_2 / p_1}$.
+  - id: envelope-theorem
+    name: Envelope theorem
+    kind: theorem
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Calculus theorem equating the derivative of an optimized value function to the partial derivative of its Lagrangian.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: The envelope theorem simplifies sensitivity analysis in parameterized optimization models by establishing that the total derivative of an optimal value function equals the partial derivative of the Lagrangian evaluated at the optimal choice. When objective and constraint functions vary smoothly with an exogenous parameter vector $\alpha$, first-order optimality conditions ensure that induced behavioral adjustments along endogenous choice variables exert zero net first-order impact on the value function. In consumer theory, this mathematical engine underlies both Shephard's lemma, where spending derivatives directly yield Hicksian demands, and Roy's identity, where price sensitivities of indirect utility are proportional to Walrasian consumption.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79
+    formal: \frac{d V(\alpha)}{d \alpha} = \left. \frac{\partial \mathcal{L}(x, \lambda, \alpha)}{\partial \alpha} \right|_{x = x^*(\alpha), \lambda = \lambda^*(\alpha)}
+    example: 'In the parameterized cost minimization $\min_x \{ p \cdot x : f(x) \ge q \}$, the marginal cost of increasing output is $\partial C(p, q) / \partial q = \lambda^*(p, q)$, precisely matching the shadow price on the production constraint.'
+  - id: law-of-compensated-demand
+    name: Law of compensated demand
+    kind: theorem
+    section: s06-duality-and-classical-demand
+    topic: demand
+    gist: Theorem establishing that compensated demand vectors move in the opposite direction of price changes.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: 'The law of compensated demand states that price changes and resulting compensated consumption quantity adjustments always possess a nonpositive inner product: $\Delta p \cdot \Delta h \le 0$. Because Hicksian bundles minimize cost across a constant utility contour, any new price-compensated bundle costs no less at initial prices than the originally selected bundle, ensuring that relative price shifts never generate perverse upward-sloping demand curves. For a single commodity whose price shifts while others remain fixed, this principle guarantees that compensated own-price effects are strictly nonpositive, ruling out Giffen-style behavior once purchasing power is neutralized. In contrast, uncompensated Walrasian demand may violate this monotonicity whenever substantial negative income effects overwhelm substitution.'
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Hicksian Demand and the Compensated Law of Demand, p. 73
+    formal: (p'' - p') \cdot [h(p'', u) - h(p', u)] \le 0
+    example: When the price of good 1 increases from $p_1 = 1$ to $p_1' = 4$ while holding utility constant at $u = 10$ under symmetric Cobb-Douglas tastes, compensated consumption $h_1 = 10 \sqrt{p_2 / p_1}$ drops from $10\sqrt{p_2}$ to $5\sqrt{p_2}$, yielding $\Delta p_1 \cdot \Delta h_1 < 0$.
+  - id: substitution-effect
+    name: Substitution effect
+    kind: definition
+    section: s06-duality-and-classical-demand
+    topic: demand
+    gist: Adjustment in consumer demand caused solely by a change in relative prices while real utility remains constant.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: The substitution effect captures the variation in optimal commodity choices resulting purely from altered relative prices while keeping the consumer on the same indifference surface. In Hicksian demand theory, this response represents movements along an indifference contour as the marginal rate of substitution adjusts to equate the new price ratio. Alternatively, under Slutsky compensation, wealth is adjusted just enough to make the initial consumption bundle affordable, yielding an identical derivative for infinitesimal price shifts. Because indifference curves for strictly convex preferences exhibit diminishing marginal rates of substitution, the substitution effect for an own-price rise is always negative.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44
+    formal: \left. \frac{\partial x_\ell(p, w)}{\partial p_k} \right|_{\text{comp}} = \frac{\partial h_\ell(p, u)}{\partial p_k} = s_{\ell k}(p, w)
+    example: When the price of apples rises relative to oranges while compensating income to maintain initial utility, the consumer substitutes away from apples toward oranges, decreasing apple consumption.
+  - id: income-effect
+    name: Income effect
+    kind: definition
+    section: s06-duality-and-classical-demand
+    topic: demand
+    gist: Change in commodity demand driven by the shift in effective purchasing power when a price varies.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: The income effect measures the change in optimal consumption caused by the shift in a consumer's real purchasing power when a commodity price changes. In the Slutsky decomposition, an increase in the price of good $k$ effectively impoverishes the consumer in proportion to current purchases $x_k(p, w)$, translating into a real income contraction. This purchasing power reduction alters the demand for good $\ell$ according to its marginal propensity to consume out of wealth, $-\frac{\partial x_\ell(p, w)}{\partial w} x_k(p, w)$. For normal goods, the income effect reinforces the negative substitution effect, whereas for an inferior good, it opposes substitution and can theoretically induce upward-sloping demand in Giffen goods.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Wealth effects, p. 35
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Price effects, p. 36-37
+    formal: \text{Income Effect} = -\frac{\partial x_\ell(p, w)}{\partial w} x_k(p, w)
+    example: When bus fare rises, a commuter experiences a drop in real purchasing power; if bus transit is an inferior good, this purchasing power reduction partially counteracts the negative substitution effect by pushing the commuter to consume more rides.
+  - id: slutsky-matrix
+    name: Slutsky matrix
+    kind: object
+    section: s06-duality-and-classical-demand
+    topic: demand
+    gist: Matrix of price derivatives of compensated demand capturing substitution terms across all commodities.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: The Slutsky matrix $S(p, w)$ is the $L \times L$ array collecting all compensated price derivatives of consumer demand, equivalent to the derivative matrix $D_p h(p, u)$ of Hicksian demand. Under preference maximization, Shephard's lemma implies that $S(p, w)$ is the Hessian of the expenditure function with respect to prices, guaranteeing that it is symmetric and negative semidefinite. The matrix satisfies the null-space condition $S(p, w) p = 0$ due to homogeneity of degree zero of Hicksian demand. Even though Hicksian demand is not directly observable, every element $s_{\ell k}(p, w)$ can be computed from observable Marshallian demand derivatives and consumption levels.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    formal: S(p, w) = D_p h(p, v(p, w)) = D_p x(p, w) + D_w x(p, w) x(p, w)^T
+    example: For two goods where $s_{11} = -4$, $s_{22} = -1$, and prices are $p = (1, 2)$, symmetry and homogeneity $S p = 0$ determine the off-diagonal substitution terms $s_{12} = s_{21} = 2$, forming a valid symmetric negative semidefinite matrix.
+  - id: negative-semidefinite-substitution
+    name: Negative semidefiniteness of substitution
+    kind: property
+    section: s06-duality-and-classical-demand
+    topic: demand
+    gist: Curvature property establishing that the quadratic form of price changes through the Slutsky matrix is nonpositive.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: Negative semidefiniteness of the Slutsky substitution matrix requires that $v \cdot S(p, w) v \le 0$ for every perturbation vector $v \in \mathbb{R}^L$. This property originates from the concavity of the expenditure function in prices, where $S(p, w)$ serves as the Hessian matrix $\nabla_p^2 e(p, u)$. An immediate economic consequence is that diagonal entries satisfy $s_{\ell \ell}(p, w) \le 0$, confirming that own-price substitution effects can never be positive. Because expenditure is homogeneous of degree one in prices, Euler's theorem implies $S(p, w) p = 0$, meaning the matrix has at least one zero eigenvalue and is singular rather than negative definite.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 45
+    formal: v \cdot S(p, w) v \le 0 \quad \forall v \in \mathbb{R}^L \quad \text{with } S(p, w) p = 0
+    example: For substitution matrix $S = \begin{bmatrix} -2 & 1 \\ 1 & -0.5 \end{bmatrix}$, the quadratic form evaluates to $v^T S v = -2v_1^2 + 2v_1 v_2 - 0.5v_2^2 = -2(v_1 - 0.5v_2)^2 \le 0$, which is strictly nonpositive for all vectors and zero along $v = (1, 2)$.
+  - id: quasiconvexity-of-indirect-utility
+    name: Quasiconvexity of indirect utility
+    kind: property
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Property ensuring that the indirect utility function possesses convex lower contour sets in prices and wealth.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: "Quasiconvexity of the indirect utility function $v(p, w)$ establishes that its lower contour sets, $\\{(p, w) : v(p, w) \\le \\bar{v}\\}$, are convex sets in price-wealth space. Geometrically, any convex combination of two budget vectors $(p, w)$ and $(p', w')$ generates a budget set that is contained within the union of the two original budget sets. Therefore, an affordable bundle under the averaged price-wealth vector must have been affordable under at least one of the original regimes, preventing the maximized utility at the convex combination from exceeding the maximum of the two initial utility levels. Remarkably, this quasiconvex curvature holds universally for all utility representations, regardless of whether underlying direct preferences are quasiconcave."
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67
+    formal: v(\alpha p + (1 - \alpha) p', \alpha w + (1 - \alpha) w') \le \max \{ v(p, w), v(p', w') \} \quad \forall \alpha \in [0, 1]
+    example: 'Given indirect utility $v(p_1, p_2, w) = w / \sqrt{p_1 p_2}$, the lower contour set $\{ (p, w) : w / \sqrt{p_1 p_2} \le k \}$ is defined by $w^2 \le k^2 p_1 p_2$, which forms a convex cone in $\mathbb{R}_{++}^3$.'
+  - id: duality-of-consumer-choice
+    name: Duality of consumer choice
+    kind: theorem
+    section: s06-duality-and-classical-demand
+    topic: duality
+    gist: Theorem establishing the mathematical isomorphism between utility maximization and expenditure minimization.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-20261014-094731
+    explanation: The duality of consumer choice establishes the exact structural equivalence between the utility maximization problem and the expenditure minimization problem. Under continuous and locally nonsatiated preferences, an optimal bundle maximizing utility under wealth $w$ simultaneously minimizes expenditure to achieve that same maximized utility level. Conversely, the minimal expenditure required to attain target utility $u$ constitutes the budget needed to achieve $u$ in the primal problem. This isomorphism links their optimal value functions as mutual inverses, ensuring $e(p, v(p, w)) = w$ and $v(p, e(p, u)) = u$, while identifying the optimal demand correspondences through $x(p, w) = h(p, v(p, w))$.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68
+    formal: x(p, w) = h(p, v(p, w)) \quad \text{and} \quad e(p, v(p, w)) = w
+    example: For Cobb-Douglas preferences, maximizing utility with wealth $w = 100$ at prices $p = (1, 1)$ yields $x^* = (50, 50)$ with utility $u = 50$, whereas minimizing expenditure for $u = 50$ yields the identical bundle $(50, 50)$ with minimum cost $100$.

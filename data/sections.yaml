@@ -35,15 +35,16 @@
   - id: s06-duality-and-classical-demand
     title: Duality, Expenditure, and Slutsky Decomposition
     order: 6
-    state: planned
-    lectures: []
+    state: in_progress
+    lectures:
+      - '2026-10-13'
   - id: s07-producer-theory
     title: Production and Cost Minimization
     order: 7
-    state: planned
+    state: in_progress
     lectures: []
   - id: s08-choice-under-uncertainty
     title: Choice Under Risk and Uncertainty
     order: 8
-    state: planned
+    state: in_progress
     lectures: []

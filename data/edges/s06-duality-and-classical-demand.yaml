@@ -14,3 +14,227 @@
     critic:
       verdict: supports
       note: ''
+  - id: hicksian-demand--has_property--homogeneity-of-degree-zero
+    source: hicksian-demand
+    type: has_property
+    target: homogeneity-of-degree-zero
+    explanation: Compensated demand is homogeneous of degree zero in prices because scaling all prices by a positive constant leaves the expenditure-minimizing bundle achieving the target utility unchanged.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Expenditure Function, p. 72
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: Compensated demand bundles depend only on relative prices, making Hicksian demand homogeneous of degree zero in commodity prices.
+  - id: envelope-theorem--yields--roys-identity
+    source: envelope-theorem
+    type: yields
+    target: roys-identity
+    explanation: Applying the envelope theorem to the parameterized utility maximization problem expresses uncompensated demand as the ratio of price derivatives to the marginal utility of wealth.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 85
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: Applying the envelope theorem to the indirect utility value function directly generates Roy's identity for consumer demand.
+  - id: utility-function--component_of--expenditure-minimization-problem
+    source: utility-function
+    type: component_of
+    target: expenditure-minimization-problem
+    explanation: The utility function forms the constraint boundary in the expenditure minimization problem by defining the benchmark utility level that affordable consumption bundles must achieve.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: The utility function furnishes the target utility constraint that must be satisfied when solving the expenditure minimization problem.
+  - id: shephards-lemma--yields--hicksian-demand
+    source: shephards-lemma
+    type: yields
+    target: hicksian-demand
+    explanation: Differentiating the expenditure function with respect to commodity prices yields the consumer's optimal compensated demand vector.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: Shephard's lemma establishes that differentiating minimal expenditure across price dimensions yields the compensated consumption vector.
+  - id: expenditure-function--hypothesis_of--shephards-lemma
+    source: expenditure-function
+    type: hypothesis_of
+    target: shephards-lemma
+    explanation: Shephard's lemma takes the expenditure function as an input, establishing that its price gradient equals the compensated demand vector.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: Shephard's lemma requires a differentiable expenditure function as its primary input to compute compensated demand vectors.
+  - id: hicksian-demand--hypothesis_of--law-of-compensated-demand
+    source: hicksian-demand
+    type: hypothesis_of
+    target: law-of-compensated-demand
+    explanation: The compensated law of demand takes Hicksian demand functions as its input and establishes that compensated price and quantity movements are nonpositively aligned.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Hicksian Demand and the Compensated Law of Demand, p. 73
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: The law of compensated demand states that price movements and Hicksian demand adjustments always satisfy a non-positive inner product.
+  - id: slutsky-matrix--has_property--negative-semidefinite-substitution
+    source: slutsky-matrix
+    type: has_property
+    target: negative-semidefinite-substitution
+    explanation: The Slutsky substitution matrix is negative semidefinite, ensuring that quadratic forms formed by price displacement vectors are nonpositive.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: The matrix of compensated price derivatives is negative semidefinite, reflecting the universal non-positivity of own-price substitution effects.
+  - id: indirect-utility-function--has_property--quasiconvexity-of-indirect-utility
+    source: indirect-utility-function
+    type: has_property
+    target: quasiconvexity-of-indirect-utility
+    explanation: The indirect utility function possesses quasiconvexity, so that all lower contour sets in price-wealth space are convex sets.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: Because consumer budget sets expand under price averaging, the indirect utility function is quasiconvex in prices and wealth.
+  - id: expenditure-minimization-problem--hypothesis_of--duality-of-consumer-choice
+    source: expenditure-minimization-problem
+    type: hypothesis_of
+    target: duality-of-consumer-choice
+    explanation: The expenditure minimization problem is a foundational input to the duality theorem, which equates expenditure-minimizing and utility-maximizing bundles.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: The expenditure minimization problem serves as the dual optimization framework establishing the equivalence theorems of consumer duality.
+  - id: utility-maximization-problem--hypothesis_of--duality-of-consumer-choice
+    source: utility-maximization-problem
+    type: hypothesis_of
+    target: duality-of-consumer-choice
+    explanation: The utility maximization problem serves as the primal optimization framework whose optimal solutions are linked to the dual problem by the duality theorem.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114351
+    critic:
+      verdict: supports
+      note: The utility maximization problem represents the primal optimization model linked directly to expenditure minimization via consumer duality.
+  - id: substitution-effect--component_of--slutsky-equation
+    source: substitution-effect
+    type: component_of
+    target: slutsky-equation
+    explanation: The substitution effect represents the utility-compensated price responsiveness component in the Slutsky decomposition.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: The substitution effect constitutes the compensated component of price response in the Slutsky equation.
+  - id: income-effect--component_of--slutsky-equation
+    source: income-effect
+    type: component_of
+    target: slutsky-equation
+    explanation: The income effect enters the Slutsky equation to account for changes in purchasing power when commodity prices vary.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: The income effect enters the Slutsky equation to quantify the purchasing power adjustment caused by price changes.
+  - id: hicksian-demand--component_of--slutsky-equation
+    source: hicksian-demand
+    type: component_of
+    target: slutsky-equation
+    explanation: The price derivatives of Hicksian compensated demand constitute the substitution matrix term within the Slutsky equation.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: The price derivatives of Hicksian demand provide the substitution term within the Slutsky equation decomposition.
+  - id: walrasian-demand--component_of--slutsky-equation
+    source: walrasian-demand
+    type: component_of
+    target: slutsky-equation
+    explanation: The Slutsky equation decomposes the observed price and wealth derivatives of Walrasian demand into constituent substitution and income terms.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: The Slutsky equation decomposes the price and wealth sensitivities of Walrasian demand into substitution and wealth components.

@@ -57,6 +57,61 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §von Neumann and Morgenstern Axiomatization, p. 111",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "The expected utility theorem relies on the Archimedean continuity axiom to ensure preferences over lotteries can be represented numerically.",
+        "verdict": "supports"
+      },
+      "explanation": "The Archimedean continuity axiom is an essential hypothesis in the axiomatic characterization of expected utility, ensuring preferences over lotteries vary continuously with probabilities.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "5345d354afc0850f"
+      },
+      "id": "archimedean-axiom--hypothesis_of--expected-utility-theorem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "archimedean-axiom",
+      "status": "proposed",
+      "target": "expected-utility-theorem",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 201",
+          "source": "mwg"
+        }
+      ],
+      "condition": "the ratio of the negative second derivative to the first derivative remains positive everywhere",
+      "critic": {
+        "note": "A strictly positive Arrow-Pratt ratio guarantees concavity of the Bernoulli utility function, which characterizes risk aversion.",
+        "verdict": "supports"
+      },
+      "explanation": "A positive Arrow-Pratt coefficient of absolute risk aversion reflects strict concavity of the Bernoulli payoff function, guaranteeing risk-averse choice behavior.",
+      "hashes": {
+        "condition": "5b28610c910fc4ef",
+        "explanation": "6d0719bb277c33b8"
+      },
+      "id": "arrow-pratt-measure--implies--risk-aversion",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "arrow-pratt-measure",
+      "status": "proposed",
+      "target": "risk-aversion",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
           "ref": "Random choice",
           "source": "slides"
         }
@@ -179,6 +234,61 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "The certainty equivalent is defined by evaluating a given lottery to identify the sure monetary sum yielding identical expected utility.",
+        "verdict": "supports"
+      },
+      "explanation": "The certainty equivalent is a mapping that pairs each lottery with the sure payoff amount generating equivalent satisfaction for the agent.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "ca91acbf6a6ad504"
+      },
+      "id": "certainty-equivalent--defined_on--lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "certainty-equivalent",
+      "status": "proposed",
+      "target": "lottery",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 197",
+          "source": "mwg"
+        }
+      ],
+      "condition": "for every gamble, the guaranteed payment is less than or equal to the mathematical mean payoff",
+      "critic": {
+        "note": "Risk aversion holds if and only if the certainty equivalent of every non-degenerate gamble is strictly less than its expected value.",
+        "verdict": "supports"
+      },
+      "explanation": "A preference ordering exhibits risk aversion precisely when the certainty equivalent of every lottery is bounded above by its expected return.",
+      "hashes": {
+        "condition": "8ca601b576ac0810",
+        "explanation": "0274e51f67ecf200"
+      },
+      "id": "certainty-equivalent--iff--risk-aversion",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "certainty-equivalent",
+      "status": "proposed",
+      "target": "risk-aversion",
+      "type": "iff"
+    },
+    {
+      "citations": [
+        {
           "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Example - , p. 34",
           "source": "rubinstein"
         }
@@ -269,6 +379,61 @@
     {
       "citations": [
         {
+          "ref": "Press_Microeconomic_Theory_2011, §Description of Risky Alternatives, p. 179",
+          "source": "mwg"
+        }
+      ],
+      "condition": "each realized prize is itself another probability distribution over basic outcomes",
+      "critic": {
+        "note": "A compound lottery constitutes a valid lottery whose possible outcomes are themselves probability distributions over ultimate payoffs.",
+        "verdict": "supports"
+      },
+      "explanation": "A compound lottery represents a multi-stage lottery structure where intermediate stage rewards are lotteries rather than final deterministic prizes.",
+      "hashes": {
+        "condition": "8dd3bebd5430cd77",
+        "explanation": "c033ede29c7ace2e"
+      },
+      "id": "compound-lottery--is_a--lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "compound-lottery",
+      "status": "proposed",
+      "target": "lottery",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Conditional factor demand is the argmin correspondence characterizing optimal factor choices in the cost minimization problem.",
+        "verdict": "supports"
+      },
+      "explanation": "Conditional factor demand designates the optimal input choice vector solving the cost minimization problem for a given output level.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "bf3f7fe0612c33ec"
+      },
+      "id": "conditional-factor-demand--component_of--cost-minimization-problem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "conditional-factor-demand",
+      "status": "proposed",
+      "target": "cost-minimization-problem",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
           "ref": "Utility Maximization 2 part 1",
           "source": "slides"
         },
@@ -341,6 +506,10 @@
           "source": "lecture"
         }
       ],
+      "critic": {
+        "note": "Convexity is introduced as a structural condition requiring the upper contour sets of a preference relation to be convex.",
+        "verdict": "supports"
+      },
       "explanation": "Convexity is a behavioral property defined on an agent's preference relation, requiring all upper contour sets to be convex.",
       "hashes": {
         "condition": "e3b0c44298fc1c14",
@@ -356,6 +525,60 @@
       "status": "proposed",
       "target": "rational-preference-relation",
       "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The cost function is the value function measuring minimal production expenditure in the cost minimization problem.",
+        "verdict": "supports"
+      },
+      "explanation": "The cost function represents the optimized value function measuring minimal expenditure in the cost minimization problem.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "915a35ed65f80df3"
+      },
+      "id": "cost-function--component_of--cost-minimization-problem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "cost-function",
+      "status": "proposed",
+      "target": "cost-minimization-problem",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Shephard's lemma differentiates the cost function with respect to factor prices to recover conditional factor demand.",
+        "verdict": "supports"
+      },
+      "explanation": "A differentiable cost function serves as the primitive value function differentiated in Shephard's lemma to obtain factor demands.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "9ed9f45812dc63cb"
+      },
+      "id": "cost-function--hypothesis_of--shephards-lemma",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "cost-function",
+      "status": "proposed",
+      "target": "shephards-lemma",
+      "type": "hypothesis_of"
     },
     {
       "citations": [
@@ -386,6 +609,33 @@
       "source": "debreus-representation-theorem",
       "status": "proposed",
       "target": "utility-function",
+      "type": "yields"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 85",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Applying the envelope theorem to the indirect utility value function directly generates Roy's identity for consumer demand.",
+        "verdict": "supports"
+      },
+      "explanation": "Applying the envelope theorem to the parameterized utility maximization problem expresses uncompensated demand as the ratio of price derivatives to the marginal utility of wealth.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "9df38eab7c4a9315"
+      },
+      "id": "envelope-theorem--yields--roys-identity",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "envelope-theorem",
+      "status": "proposed",
+      "target": "roys-identity",
       "type": "yields"
     },
     {
@@ -469,6 +719,145 @@
       "status": "proposed",
       "target": "binary-relation",
       "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 3.2 - Continuity and independence implies expected utility, p. 55",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "The expected utility theorem establishes the existence of a von Neumann-Morgenstern utility index that ranks lotteries by expected payoff.",
+        "verdict": "supports"
+      },
+      "explanation": "When preferences over lotteries satisfy continuity and independence, the representation theorem guarantees the existence of an outcome payoff function whose expectations rank distributions.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "d25704e9d4e01fad"
+      },
+      "id": "expected-utility-theorem--yields--von-neumann-morgenstern-utility-function",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "expected-utility-theorem",
+      "status": "proposed",
+      "target": "von-neumann-morgenstern-utility-function",
+      "type": "yields"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Shephard's lemma requires a differentiable expenditure function as its primary input to compute compensated demand vectors.",
+        "verdict": "supports"
+      },
+      "explanation": "Shephard's lemma takes the expenditure function as an input, establishing that its price gradient equals the compensated demand vector.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "87af5af5ecf88108"
+      },
+      "id": "expenditure-function--hypothesis_of--shephards-lemma",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "expenditure-function",
+      "status": "proposed",
+      "target": "shephards-lemma",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The expenditure minimization problem serves as the dual optimization framework establishing the equivalence theorems of consumer duality.",
+        "verdict": "supports"
+      },
+      "explanation": "The expenditure minimization problem is a foundational input to the duality theorem, which equates expenditure-minimizing and utility-maximizing bundles.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "9039eeafed9171ae"
+      },
+      "id": "expenditure-minimization-problem--hypothesis_of--duality-of-consumer-choice",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "expenditure-minimization-problem",
+      "status": "proposed",
+      "target": "duality-of-consumer-choice",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §First-Order Stochastic Dominance, p. 206",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "First-order stochastic dominance establishes an unambiguous partial ranking defined over probability distributions or lotteries.",
+        "verdict": "supports"
+      },
+      "explanation": "First-order stochastic dominance defines a partial ordering over probability distributions, holding whenever one lottery yields higher cumulative probabilities of exceeding any prize cutoff.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "0e2986f9df9f4424"
+      },
+      "id": "first-order-stochastic-dominance--defined_on--lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "first-order-stochastic-dominance",
+      "status": "proposed",
+      "target": "lottery",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 142",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Technology, p. 99-100",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Free disposal is formulated as a monotonicity property governing the geometry of a firm's production set.",
+        "verdict": "supports"
+      },
+      "explanation": "Free disposal is a technological property defined on a production set stipulating that less efficient netput plans remain feasible.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "3e6abb2c04a7ce0f"
+      },
+      "id": "free-disposal--defined_on--production-set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "free-disposal",
+      "status": "proposed",
+      "target": "production-set",
+      "type": "defined_on"
     },
     {
       "citations": [
@@ -557,6 +946,199 @@
     {
       "citations": [
         {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The price derivatives of Hicksian demand provide the substitution term within the Slutsky equation decomposition.",
+        "verdict": "supports"
+      },
+      "explanation": "The price derivatives of Hicksian compensated demand constitute the substitution matrix term within the Slutsky equation.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "65dc7f5e855bd4a4"
+      },
+      "id": "hicksian-demand--component_of--slutsky-equation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "hicksian-demand",
+      "status": "proposed",
+      "target": "slutsky-equation",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Expenditure Function, p. 72",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Compensated demand bundles depend only on relative prices, making Hicksian demand homogeneous of degree zero in commodity prices.",
+        "verdict": "supports"
+      },
+      "explanation": "Compensated demand is homogeneous of degree zero in prices because scaling all prices by a positive constant leaves the expenditure-minimizing bundle achieving the target utility unchanged.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "76bb40abe4a3516d"
+      },
+      "id": "hicksian-demand--has_property--homogeneity-of-degree-zero",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "hicksian-demand",
+      "status": "proposed",
+      "target": "homogeneity-of-degree-zero",
+      "type": "has_property"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Hicksian Demand and the Compensated Law of Demand, p. 73",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The law of compensated demand states that price movements and Hicksian demand adjustments always satisfy a non-positive inner product.",
+        "verdict": "supports"
+      },
+      "explanation": "The compensated law of demand takes Hicksian demand functions as its input and establishes that compensated price and quantity movements are nonpositively aligned.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "4aced7fb4ab193dc"
+      },
+      "id": "hicksian-demand--hypothesis_of--law-of-compensated-demand",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "hicksian-demand",
+      "status": "proposed",
+      "target": "law-of-compensated-demand",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 148",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Hotelling's lemma obtains the firm's supply correspondence by differentiating the profit function with respect to market prices.",
+        "verdict": "supports"
+      },
+      "explanation": "Taking the gradient of the profit function with respect to output and input prices produces the profit-maximizing net supplies.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "64392e2d424680da"
+      },
+      "id": "hotellings-lemma--yields--supply-correspondence",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "hotellings-lemma",
+      "status": "proposed",
+      "target": "supply-correspondence",
+      "type": "yields"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The income effect enters the Slutsky equation to quantify the purchasing power adjustment caused by price changes.",
+        "verdict": "supports"
+      },
+      "explanation": "The income effect enters the Slutsky equation to account for changes in purchasing power when commodity prices vary.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "2a87e692b9b4308e"
+      },
+      "id": "income-effect--component_of--slutsky-equation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "income-effect",
+      "status": "proposed",
+      "target": "slutsky-equation",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 3.2 - Continuity and independence implies expected utility, p. 55",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "The independence axiom is a fundamental assumption needed to derive the linear expected utility representation.",
+        "verdict": "supports"
+      },
+      "explanation": "The independence condition serves as a central assumption for expected utility representation, ensuring preferences over mixtures depend only on differing components.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "16fd23341b39d7d3"
+      },
+      "id": "independence-axiom--hypothesis_of--expected-utility-theorem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "independence-axiom",
+      "status": "proposed",
+      "target": "expected-utility-theorem",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Because consumer budget sets expand under price averaging, the indirect utility function is quasiconvex in prices and wealth.",
+        "verdict": "supports"
+      },
+      "explanation": "The indirect utility function possesses quasiconvexity, so that all lower contour sets in price-wealth space are convex sets.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "2f3336a73649cc2c"
+      },
+      "id": "indirect-utility-function--has_property--quasiconvexity-of-indirect-utility",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "indirect-utility-function",
+      "status": "proposed",
+      "target": "quasiconvexity-of-indirect-utility",
+      "type": "has_property"
+    },
+    {
+      "citations": [
+        {
           "ref": "Utility Maximization 2 part 1",
           "source": "slides"
         },
@@ -589,6 +1171,33 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Lotteries, p. 109",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "A lottery is mathematically formalized as a probability distribution defined over a underlying set of deterministic prizes.",
+        "verdict": "supports"
+      },
+      "explanation": "A simple lottery is a formal probability assignment defined over a set of distinct physical prizes or economic consequences.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "eaee76f149f81977"
+      },
+      "id": "lottery--defined_on--set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "lottery",
+      "status": "proposed",
+      "target": "set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
           "ref": "Random choice",
           "source": "slides"
         }
@@ -613,6 +1222,33 @@
       "status": "proposed",
       "target": "random-utility-model",
       "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The marginal rate of technical substitution is defined as the ratio of input partial derivatives of a production function.",
+        "verdict": "supports"
+      },
+      "explanation": "The marginal rate of technical substitution is defined along the level sets of a differentiable production function.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "5bd4efdd08d6fe6d"
+      },
+      "id": "marginal-rate-of-technical-substitution--defined_on--production-function",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "marginal-rate-of-technical-substitution",
+      "status": "proposed",
+      "target": "production-function",
+      "type": "defined_on"
     },
     {
       "citations": [
@@ -700,6 +1336,147 @@
       "status": "proposed",
       "target": "preorder",
       "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The production function supplies the essential technological equality or inequality constraint in the cost minimization program.",
+        "verdict": "supports"
+      },
+      "explanation": "The production function serves as the technological constraint that requires output to meet or exceed a specified production target.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "ecc54763eec58204"
+      },
+      "id": "production-function--component_of--cost-minimization-problem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "production-function",
+      "status": "proposed",
+      "target": "cost-minimization-problem",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The production set specifies the technologically feasible choice domain over which a price-taking producer maximizes profit.",
+        "verdict": "supports"
+      },
+      "explanation": "The production set defines the feasible constraint region of netput vectors over which the firm maximizes profit.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "62101aede628e7d9"
+      },
+      "id": "production-set--component_of--profit-maximization-problem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "production-set",
+      "status": "proposed",
+      "target": "profit-maximization-problem",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §5.B Production Sets, p. 139",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Technology, p. 99-100",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "it gathers the netput vectors representing technologically feasible production plans",
+      "critic": {
+        "note": "A production set is a subset of multi-dimensional Euclidean space containing all feasible input and output combinations.",
+        "verdict": "supports"
+      },
+      "explanation": "The production set is a subset of the commodity space comprising all input-output combinations that are technologically feasible for a firm.",
+      "hashes": {
+        "condition": "9bdf6c5aa2c98ebf",
+        "explanation": "dcc9cfb72696b3f9"
+      },
+      "id": "production-set--is_a--set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "production-set",
+      "status": "proposed",
+      "target": "set",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Hotelling's lemma takes a differentiable profit function as its foundation to derive optimal supply behavior.",
+        "verdict": "supports"
+      },
+      "explanation": "The profit function serves as the value function differentiated with respect to commodity prices in Hotelling's lemma.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "f853945d0a0518c4"
+      },
+      "id": "profit-function--hypothesis_of--hotellings-lemma",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "profit-function",
+      "status": "proposed",
+      "target": "hotellings-lemma",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        }
+      ],
+      "condition": "for the output quantity chosen under the profit-maximizing plan",
+      "critic": {
+        "note": "Any netput vector that maximizes overall firm profit must necessarily minimize total production costs for that chosen output volume.",
+        "verdict": "supports"
+      },
+      "explanation": "A profit-maximizing firm must minimize the cost of producing its selected level of output, as producing that output at higher cost would reduce total profits.",
+      "hashes": {
+        "condition": "e21a98691d69c9d2",
+        "explanation": "4d22120110f8b69b"
+      },
+      "id": "profit-maximization-problem--implies--cost-minimization-problem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "profit-maximization-problem",
+      "status": "proposed",
+      "target": "cost-minimization-problem",
+      "type": "implies"
     },
     {
       "citations": [
@@ -873,6 +1650,61 @@
     {
       "citations": [
         {
+          "ref": "Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 204",
+          "source": "mwg"
+        }
+      ],
+      "condition": "the relative measure decreases monotonically as wealth expands",
+      "critic": {
+        "note": "Non-increasing relative risk aversion mathematically implies decreasing absolute risk aversion as quantified by the Arrow-Pratt measure.",
+        "verdict": "supports"
+      },
+      "explanation": "Because relative risk aversion scales absolute risk aversion by wealth, non-increasing relative risk aversion necessarily entails decreasing absolute risk aversion.",
+      "hashes": {
+        "condition": "428030ba02ef6bec",
+        "explanation": "301a21af891df966"
+      },
+      "id": "relative-risk-aversion--implies--arrow-pratt-measure",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "relative-risk-aversion",
+      "status": "proposed",
+      "target": "arrow-pratt-measure",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 143",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Returns to scale classifies how production sets expand or contract under positive scalar multiplication of input-output vectors.",
+        "verdict": "supports"
+      },
+      "explanation": "Returns to scale is a technological property defined on a production set describing the feasibility of proportional expansions of input-output plans.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "d2c8314d499d8a7e"
+      },
+      "id": "returns-to-scale--defined_on--production-set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "returns-to-scale",
+      "status": "proposed",
+      "target": "production-set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
           "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.6 - Revealed preference, p. 85",
           "source": "rubinstein"
         }
@@ -897,6 +1729,88 @@
       "status": "proposed",
       "target": "binary-relation",
       "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.6 - Risk aversion and risk neutrality, p. 59",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Risk aversion describes a behavioral preference ordering over lotteries where certain payoffs are preferred to actuarially fair gambles.",
+        "verdict": "supports"
+      },
+      "explanation": "Risk aversion is a behavioral property of a preference relation over lotteries, requiring the certainty of the expected payout to be weakly preferred to the gamble.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "cf398de4aa236d43"
+      },
+      "id": "risk-aversion--defined_on--rational-preference-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "risk-aversion",
+      "status": "proposed",
+      "target": "rational-preference-relation",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "The risk premium quantifies the maximum expected monetary deduction an individual will sacrifice to eliminate risk from a given lottery.",
+        "verdict": "supports"
+      },
+      "explanation": "The risk premium associates with each lottery the difference between its expected monetary return and the individual's certainty equivalent.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "1e26b19a70ea9b18"
+      },
+      "id": "risk-premium--defined_on--lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "risk-premium",
+      "status": "proposed",
+      "target": "lottery",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "the compensation demanded to eliminate risk is non-negative for every lottery",
+      "critic": {
+        "note": "A decision maker is risk averse if and only if their risk premium remains weakly positive across all feasible lotteries.",
+        "verdict": "supports"
+      },
+      "explanation": "Decision makers are risk averse if and only if they require a non-negative risk premium for all risky gambles.",
+      "hashes": {
+        "condition": "df43272c9f1401fb",
+        "explanation": "55301ae2172260e3"
+      },
+      "id": "risk-premium--iff--risk-aversion",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "risk-premium",
+      "status": "proposed",
+      "target": "risk-aversion",
+      "type": "iff"
     },
     {
       "citations": [
@@ -957,6 +1871,33 @@
     {
       "citations": [
         {
+          "ref": "Press_Microeconomic_Theory_2011, §6.D Comparison of Payoff Distributions in Terms of Return and Risk, p. 205",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Second-order stochastic dominance defines a mean-preserving risk comparison between pairs of probability distributions or lotteries.",
+        "verdict": "supports"
+      },
+      "explanation": "Second-order stochastic dominance is a binary property defined over probability distributions sharing identical mean returns to rank their relative riskiness.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "7c88b7f54e4c0611"
+      },
+      "id": "second-order-stochastic-dominance--defined_on--lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "second-order-stochastic-dominance",
+      "status": "proposed",
+      "target": "lottery",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
           "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak Axiom of Revealed Preference (WA) - , p. 43",
           "source": "rubinstein"
         }
@@ -1007,6 +1948,60 @@
       "status": "proposed",
       "target": "weak-axiom-of-revealed-preference",
       "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Shephard's lemma establishes that differentiating minimal expenditure across price dimensions yields the compensated consumption vector.",
+        "verdict": "supports"
+      },
+      "explanation": "Differentiating the expenditure function with respect to commodity prices yields the consumer's optimal compensated demand vector.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "02b9dc3e24dffab4"
+      },
+      "id": "shephards-lemma--yields--hicksian-demand",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "shephards-lemma",
+      "status": "proposed",
+      "target": "hicksian-demand",
+      "type": "yields"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The matrix of compensated price derivatives is negative semidefinite, reflecting the universal non-positivity of own-price substitution effects.",
+        "verdict": "supports"
+      },
+      "explanation": "The Slutsky substitution matrix is negative semidefinite, ensuring that quadratic forms formed by price displacement vectors are nonpositive.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "ca4190bf25b9cb0a"
+      },
+      "id": "slutsky-matrix--has_property--negative-semidefinite-substitution",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "slutsky-matrix",
+      "status": "proposed",
+      "target": "negative-semidefinite-substitution",
+      "type": "has_property"
     },
     {
       "citations": [
@@ -1063,6 +2058,114 @@
       "status": "proposed",
       "target": "weak-axiom-of-revealed-preference",
       "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Subjective Expected Utility (de Finetti's), p. 117",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Subjective expected utility theory formulates decision making over mappings from a set of uncertain states to a set of payoffs.",
+        "verdict": "supports"
+      },
+      "explanation": "Subjective expected utility is a behavioral decision model defined over sets of state-contingent acts or bets.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "fd3d996312a8f22c"
+      },
+      "id": "subjective-expected-utility--defined_on--set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "subjective-expected-utility",
+      "status": "proposed",
+      "target": "set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The substitution effect constitutes the compensated component of price response in the Slutsky equation.",
+        "verdict": "supports"
+      },
+      "explanation": "The substitution effect represents the utility-compensated price responsiveness component in the Slutsky decomposition.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "702afc3cd4d29c40"
+      },
+      "id": "substitution-effect--component_of--slutsky-equation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "substitution-effect",
+      "status": "proposed",
+      "target": "slutsky-equation",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Equiproportional scaling of all input and output prices leaves optimal net supply choices unchanged, ensuring degree zero homogeneity.",
+        "verdict": "supports"
+      },
+      "explanation": "Multiplying all commodity prices by an identical positive factor leaves the optimal netput production bundle unaltered.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "4d08fe0ae57ae8fd"
+      },
+      "id": "supply-correspondence--has_property--homogeneity-of-degree-zero",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "supply-correspondence",
+      "status": "proposed",
+      "target": "homogeneity-of-degree-zero",
+      "type": "has_property"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "The law of supply establishes that price variations and optimal responses of the supply correspondence move in the same direction.",
+        "verdict": "supports"
+      },
+      "explanation": "The optimal supply correspondence serves as the foundational choice mapping analyzed by the law of supply.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "e69939de2bab18ae"
+      },
+      "id": "supply-correspondence--hypothesis_of--law-of-supply",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114450"
+      },
+      "source": "supply-correspondence",
+      "status": "proposed",
+      "target": "law-of-supply",
+      "type": "hypothesis_of"
     },
     {
       "citations": [
@@ -1261,6 +2364,33 @@
     {
       "citations": [
         {
+          "ref": "Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The utility function furnishes the target utility constraint that must be satisfied when solving the expenditure minimization problem.",
+        "verdict": "supports"
+      },
+      "explanation": "The utility function forms the constraint boundary in the expenditure minimization problem by defining the benchmark utility level that affordable consumption bundles must achieve.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "f5ef73fcd0ea9900"
+      },
+      "id": "utility-function--component_of--expenditure-minimization-problem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "utility-function",
+      "status": "proposed",
+      "target": "expenditure-minimization-problem",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
           "ref": "Random choice",
           "source": "slides"
         }
@@ -1324,6 +2454,10 @@
         }
       ],
       "condition": "when the utility function is concave or quasiconcave",
+      "critic": {
+        "note": "Any concave or quasiconcave utility representation implies that preference upper contour sets are convex, yielding convex preferences.",
+        "verdict": "supports"
+      },
       "explanation": "A concave or quasiconcave utility function yields convex upper contour sets, ensuring that the represented preference relation satisfies convexity.",
       "hashes": {
         "condition": "23142e8421ab5354",
@@ -1371,6 +2505,115 @@
       "status": "proposed",
       "target": "rational-preference-relation",
       "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The utility maximization problem represents the primal optimization model linked directly to expenditure minimization via consumer duality.",
+        "verdict": "supports"
+      },
+      "explanation": "The utility maximization problem serves as the primal optimization framework whose optimal solutions are linked to the dual problem by the duality theorem.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "90448b21935c250c"
+      },
+      "id": "utility-maximization-problem--hypothesis_of--duality-of-consumer-choice",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114351"
+      },
+      "source": "utility-maximization-problem",
+      "status": "proposed",
+      "target": "duality-of-consumer-choice",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 217",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "A von Neumann-Morgenstern utility function acts as the outcome valuation component inside the subjective expected utility formulation.",
+        "verdict": "supports"
+      },
+      "explanation": "The subjective expected utility framework evaluates state-contingent prospects using a cardinal outcome utility function weighted by personal state probabilities.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "42e11e2c955be6bd"
+      },
+      "id": "von-neumann-morgenstern-utility-function--component_of--subjective-expected-utility",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "von-neumann-morgenstern-utility-function",
+      "status": "proposed",
+      "target": "subjective-expected-utility",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Utility Representation, p. 114",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "it assigns numerical values to deterministic prizes such that probability distributions are ranked by expected payoff",
+      "critic": {
+        "note": "A von Neumann-Morgenstern utility function is a cardinal utility index whose mathematical expectation represents ordinal rankings over lotteries.",
+        "verdict": "supports"
+      },
+      "explanation": "A von Neumann-Morgenstern utility function specializes standard ordinal utility functions by assigning values to deterministic outcomes whose expected value ranks uncertain prospects.",
+      "hashes": {
+        "condition": "614f0a4f7355747b",
+        "explanation": "9bba135be4d7a4cb"
+      },
+      "id": "von-neumann-morgenstern-utility-function--is_a--utility-function",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-20261014-114601"
+      },
+      "source": "von-neumann-morgenstern-utility-function",
+      "status": "proposed",
+      "target": "utility-function",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The Slutsky equation decomposes the price and wealth sensitivities of Walrasian demand into substitution and wealth components.",
+        "verdict": "supports"
+      },
+      "explanation": "The Slutsky equation decomposes the observed price and wealth derivatives of Walrasian demand into constituent substitution and income terms.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "7c26905f5eb8a898"
+      },
+      "id": "walrasian-demand--component_of--slutsky-equation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans-20261014"
+      },
+      "source": "walrasian-demand",
+      "status": "proposed",
+      "target": "slutsky-equation",
+      "type": "component_of"
     },
     {
       "citations": [
@@ -1491,7 +2734,7 @@
       "type": "implies"
     }
   ],
-  "graph_version": "e820ae4a9490",
+  "graph_version": "75411a8b8880",
   "nodes": [
     {
       "citations": [
@@ -2962,14 +4205,83 @@
       "topic": "demand"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Minimal spending required to attain a specified target utility at given prices.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68",
+          "source": "mwg"
+        }
+      ],
+      "example": "For Cobb-Douglas preferences, maximizing utility with wealth $w = 100$ at prices $p = (1, 1)$ yields $x^* = (50, 50)$ with utility $u = 50$, whereas minimizing expenditure for $u = 50$ yields the identical bundle $(50, 50)$ with minimum cost $100$.",
+      "explanation": "The duality of consumer choice establishes the exact structural equivalence between the utility maximization problem and the expenditure minimization problem. Under continuous and locally nonsatiated preferences, an optimal bundle maximizing utility under wealth $w$ simultaneously minimizes expenditure to achieve that same maximized utility level. Conversely, the minimal expenditure required to attain target utility $u$ constitutes the budget needed to achieve $u$ in the primal problem. This isomorphism links their optimal value functions as mutual inverses, ensuring $e(p, v(p, w)) = w$ and $v(p, e(p, u)) = u$, while identifying the optimal demand correspondences through $x(p, w) = h(p, v(p, w))$.",
+      "formal": "x(p, w) = h(p, v(p, w)) \\quad \\text{and} \\quad e(p, v(p, w)) = w",
+      "gist": "Theorem establishing the mathematical isomorphism between utility maximization and expenditure minimization.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "39f590ed0adcba6d"
+        "example": "af05d4360fcbca6f",
+        "explanation": "5cd4486eb420b7c3",
+        "formal": "d9fe54a143846949",
+        "gist": "9cb6dbd5d75bdb67"
+      },
+      "id": "duality-of-consumer-choice",
+      "kind": "theorem",
+      "name": "Duality of consumer choice",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "duality"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79",
+          "source": "mwg"
+        }
+      ],
+      "example": "In the parameterized cost minimization $\\min_x \\{ p \\cdot x : f(x) \\ge q \\}$, the marginal cost of increasing output is $\\partial C(p, q) / \\partial q = \\lambda^*(p, q)$, precisely matching the shadow price on the production constraint.",
+      "explanation": "The envelope theorem simplifies sensitivity analysis in parameterized optimization models by establishing that the total derivative of an optimal value function equals the partial derivative of the Lagrangian evaluated at the optimal choice. When objective and constraint functions vary smoothly with an exogenous parameter vector $\\alpha$, first-order optimality conditions ensure that induced behavioral adjustments along endogenous choice variables exert zero net first-order impact on the value function. In consumer theory, this mathematical engine underlies both Shephard's lemma, where spending derivatives directly yield Hicksian demands, and Roy's identity, where price sensitivities of indirect utility are proportional to Walrasian consumption.",
+      "formal": "\\frac{d V(\\alpha)}{d \\alpha} = \\left. \\frac{\\partial \\mathcal{L}(x, \\lambda, \\alpha)}{\\partial \\alpha} \\right|_{x = x^*(\\alpha), \\lambda = \\lambda^*(\\alpha)}",
+      "gist": "Calculus theorem equating the derivative of an optimized value function to the partial derivative of its Lagrangian.",
+      "hashes": {
+        "example": "b9ed68c58f3c7887",
+        "explanation": "9fdf8da860c6c4db",
+        "formal": "42c5e1557ca29db3",
+        "gist": "226cab6f6b08cb4c"
+      },
+      "id": "envelope-theorem",
+      "kind": "theorem",
+      "name": "Envelope theorem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "duality"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Expenditure Function, p. 70",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Dual Consumer, p. 98",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "For two goods with utility $u(x_1, x_2) = x_1^{1/2} x_2^{1/2}$, the minimum cost of reaching utility target $u$ at prices $(p_1, p_2)$ is given by $e(p, u) = 2 u \\sqrt{p_1 p_2}$.",
+      "explanation": "The expenditure function $e(p, u)$ assigns to each price vector $p$ and required utility target $u$ the minimum financial outlay necessary to attain that utility level. The function scales linearly when all prices double, grows strictly with the chosen welfare objective, remains weakly increasing in individual prices, and exhibits joint continuity. Because a consumer can substitute away from relatively expensive commodities as relative prices shift, $e(p, u)$ is concave in $p$, lying below any linear extrapolation based on fixed consumption baskets. By Shephard's lemma, the gradient of the expenditure function with respect to prices recovers the compensated Hicksian demand vector.",
+      "formal": "e(p, u) = \\min_{x \\in \\mathbb{R}_+^L} \\{ p \\cdot x : u(x) \\ge u \\}",
+      "gist": "Minimal expenditure required to reach a benchmark utility level at given commodity prices.",
+      "hashes": {
+        "example": "968a90a54cf58ab0",
+        "explanation": "2279fcc0b523f7e6",
+        "formal": "82203a7c510d4adc",
+        "gist": "76d6fe8573d2818d"
       },
       "id": "expenditure-function",
       "kind": "function",
@@ -2977,21 +4289,28 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "duality"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Dual consumer problem minimizing spending subject to achieving target utility.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.E The Expenditure Minimization Problem, p. 68",
+          "source": "mwg"
+        }
+      ],
+      "example": "A consumer facing prices $p_1 = 2$ and $p_2 = 8$ with utility $u(x_1, x_2) = x_1 x_2$ who aims for utility target $u = 16$ minimizes $2x_1 + 8x_2$ subject to $x_1 x_2 \\ge 16$, yielding optimal bundle $x^* = (8, 2)$ with minimal expenditure equal to $32$.",
+      "explanation": "The expenditure minimization problem (EMP) serves as the dual formulation of neoclassical consumer choice by minimizing total spending subject to achieving at least a target utility level. Whereas the utility maximization problem fixes monetary wealth and maximizes ordinal satisfaction, the EMP reverses these roles by treating utility as the primary constraint and seeking the lowest supporting hyperplane. When preferences are continuous, monotonic, and strictly convex, the constraint binds with equality at an optimal bundle that is unique. Under local nonsatiation, the optimal solution to the EMP coincides with the solution to the primal problem whenever wealth matches minimal expenditure.",
+      "formal": "\\min_{x \\in \\mathbb{R}_+^L} p \\cdot x \\quad \\text{subject to } u(x) \\ge u",
+      "gist": "Constrained optimization problem finding the lowest expenditure bundle achieving a target utility level.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "8c22091c4a919f7c"
+        "example": "eba9c87ee557424c",
+        "explanation": "42f616d1d85fd80f",
+        "formal": "b3a7ab32da0625a4",
+        "gist": "d361541a0414eca3"
       },
       "id": "expenditure-minimization-problem",
       "kind": "model",
@@ -2999,21 +4318,28 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "duality"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Compensated bundle correspondence achieving target utility at lowest expenditure.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Expenditure Function, p. 72",
+          "source": "mwg"
+        }
+      ],
+      "example": "For symmetric Cobb-Douglas utility $u(x_1, x_2) = \\sqrt{x_1 x_2}$, Hicksian demand for good 1 is $h_1(p_1, p_2, u) = u \\sqrt{p_2 / p_1}$, which scales inversely with its own relative price holding utility fixed.",
+      "explanation": "Hicksian demand $h(p, u)$ identifies the commodity bundle that achieves a specified target utility $u$ at the lowest total financial outlay when prices are $p$. The resulting bundle is invariant to proportional rescaling of prices, attains exactly the required utility benchmark under local nonsatiation, and yields a single-valued function when preferences are strictly convex. Because real welfare is held constant across price adjustments via implicit expenditure compensation, Hicksian demand isolates pure substitution without any distorting income effects. Connecting primal and dual models, evaluating Marshallian demand at the minimal expenditure level needed for target welfare recovers the identical compensated bundle.",
+      "formal": "h(p, u) = \\arg\\min_{x \\in \\mathbb{R}_+^L} \\{ p \\cdot x : u(x) \\ge u \\} = \\nabla_p e(p, u)",
+      "gist": "Optimal consumption bundle that reaches a required target utility level at minimal expenditure.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "788e69507246fb38"
+        "example": "d17b7d8b0b7fd79c",
+        "explanation": "daec0978209999aa",
+        "formal": "22aba4be111564ee",
+        "gist": "e36d8c7dccab331b"
       },
       "id": "hicksian-demand",
       "kind": "correspondence",
@@ -3021,21 +4347,61 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "duality"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Value function specifying maximum attainable utility given prices and wealth.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Wealth effects, p. 35",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Price effects, p. 36-37",
+          "source": "mwg"
+        }
+      ],
+      "example": "When bus fare rises, a commuter experiences a drop in real purchasing power; if bus transit is an inferior good, this purchasing power reduction partially counteracts the negative substitution effect by pushing the commuter to consume more rides.",
+      "explanation": "The income effect measures the change in optimal consumption caused by the shift in a consumer's real purchasing power when a commodity price changes. In the Slutsky decomposition, an increase in the price of good $k$ effectively impoverishes the consumer in proportion to current purchases $x_k(p, w)$, translating into a real income contraction. This purchasing power reduction alters the demand for good $\\ell$ according to its marginal propensity to consume out of wealth, $-\\frac{\\partial x_\\ell(p, w)}{\\partial w} x_k(p, w)$. For normal goods, the income effect reinforces the negative substitution effect, whereas for an inferior good, it opposes substitution and can theoretically induce upward-sloping demand in Giffen goods.",
+      "formal": "\\text{Income Effect} = -\\frac{\\partial x_\\ell(p, w)}{\\partial w} x_k(p, w)",
+      "gist": "Change in commodity demand driven by the shift in effective purchasing power when a price varies.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "1146f440c669e466"
+        "example": "7dc48564c72a8cfb",
+        "explanation": "6d5a3b1751118458",
+        "formal": "b4c93fe2babe2a73",
+        "gist": "dfdc1d38f8f81f09"
+      },
+      "id": "income-effect",
+      "kind": "definition",
+      "name": "Income effect",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "demand"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67",
+          "source": "mwg"
+        }
+      ],
+      "example": "For a consumer with preferences $U(x, y) = x y$ and budget constraint $p_x x + p_y y \\le w$, optimal consumption choices are $x = w / (2 p_x)$ and $y = w / (2 p_y)$, producing the indirect utility function $v(p_x, p_y, w) = w^2 / (4 p_x p_y)$.",
+      "explanation": "The indirect utility function $v(p, w)$ reports the maximum utility reachable in the utility maximization problem at price vector $p$ and wealth level $w$. Under continuous and locally nonsatiated preferences, Berge's maximum theorem ensures that $v(p, w)$ is continuous and homogeneous of degree zero in $(p, w)$. The function increases strictly in wealth, does not increase when prices rise, and exhibits quasiconvexity in $(p, w)$ because convex combinations of budget sets cannot expand the affordable choice space beyond their individual bounds. Differentiating $v(p, w)$ recovers consumer demand via Roy's identity, bridging primal preferences to observable market choices.",
+      "formal": "v(p, w) = \\max_{x \\in \\mathbb{R}_+^L} \\{ u(x) : p \\cdot x \\le w \\}",
+      "gist": "Value function capturing maximal achievable utility given market prices and consumer wealth.",
+      "hashes": {
+        "example": "a9450e052e86fd6a",
+        "explanation": "9eca5dc87fd50cbc",
+        "formal": "eba6d367eb451163",
+        "gist": "5e0ac1e52d99604e"
       },
       "id": "indirect-utility-function",
       "kind": "function",
@@ -3043,21 +4409,115 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "duality"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Formula obtaining Walrasian demand from price and wealth derivatives of indirect utility.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Hicksian Demand and the Compensated Law of Demand, p. 73",
+          "source": "mwg"
+        }
+      ],
+      "example": "When the price of good 1 increases from $p_1 = 1$ to $p_1' = 4$ while holding utility constant at $u = 10$ under symmetric Cobb-Douglas tastes, compensated consumption $h_1 = 10 \\sqrt{p_2 / p_1}$ drops from $10\\sqrt{p_2}$ to $5\\sqrt{p_2}$, yielding $\\Delta p_1 \\cdot \\Delta h_1 < 0$.",
+      "explanation": "The law of compensated demand states that price changes and resulting compensated consumption quantity adjustments always possess a nonpositive inner product: $\\Delta p \\cdot \\Delta h \\le 0$. Because Hicksian bundles minimize cost across a constant utility contour, any new price-compensated bundle costs no less at initial prices than the originally selected bundle, ensuring that relative price shifts never generate perverse upward-sloping demand curves. For a single commodity whose price shifts while others remain fixed, this principle guarantees that compensated own-price effects are strictly nonpositive, ruling out Giffen-style behavior once purchasing power is neutralized. In contrast, uncompensated Walrasian demand may violate this monotonicity whenever substantial negative income effects overwhelm substitution.",
+      "formal": "(p'' - p') \\cdot [h(p'', u) - h(p', u)] \\le 0",
+      "gist": "Theorem establishing that compensated demand vectors move in the opposite direction of price changes.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "6ea8689b3091af0a"
+        "example": "fcabaddc4041b250",
+        "explanation": "ad96ffe1c9e62075",
+        "formal": "86754031785dd1dc",
+        "gist": "8966eb0cf91484eb"
+      },
+      "id": "law-of-compensated-demand",
+      "kind": "theorem",
+      "name": "Law of compensated demand",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "demand"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 45",
+          "source": "mwg"
+        }
+      ],
+      "example": "For substitution matrix $S = \\begin{bmatrix} -2 & 1 \\\\ 1 & -0.5 \\end{bmatrix}$, the quadratic form evaluates to $v^T S v = -2v_1^2 + 2v_1 v_2 - 0.5v_2^2 = -2(v_1 - 0.5v_2)^2 \\le 0$, which is strictly nonpositive for all vectors and zero along $v = (1, 2)$.",
+      "explanation": "Negative semidefiniteness of the Slutsky substitution matrix requires that $v \\cdot S(p, w) v \\le 0$ for every perturbation vector $v \\in \\mathbb{R}^L$. This property originates from the concavity of the expenditure function in prices, where $S(p, w)$ serves as the Hessian matrix $\\nabla_p^2 e(p, u)$. An immediate economic consequence is that diagonal entries satisfy $s_{\\ell \\ell}(p, w) \\le 0$, confirming that own-price substitution effects can never be positive. Because expenditure is homogeneous of degree one in prices, Euler's theorem implies $S(p, w) p = 0$, meaning the matrix has at least one zero eigenvalue and is singular rather than negative definite.",
+      "formal": "v \\cdot S(p, w) v \\le 0 \\quad \\forall v \\in \\mathbb{R}^L \\quad \\text{with } S(p, w) p = 0",
+      "gist": "Curvature property establishing that the quadratic form of price changes through the Slutsky matrix is nonpositive.",
+      "hashes": {
+        "example": "5fda5dd8efa43cd6",
+        "explanation": "16955b265cc9f877",
+        "formal": "d575d7b0ab4256cc",
+        "gist": "e5b9a845f490377d"
+      },
+      "id": "negative-semidefinite-substitution",
+      "kind": "property",
+      "name": "Negative semidefiniteness of substitution",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "demand"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Indirect Utility Function, p. 67",
+          "source": "mwg"
+        }
+      ],
+      "example": "Given indirect utility $v(p_1, p_2, w) = w / \\sqrt{p_1 p_2}$, the lower contour set $\\{ (p, w) : w / \\sqrt{p_1 p_2} \\le k \\}$ is defined by $w^2 \\le k^2 p_1 p_2$, which forms a convex cone in $\\mathbb{R}_{++}^3$.",
+      "explanation": "Quasiconvexity of the indirect utility function $v(p, w)$ establishes that its lower contour sets, $\\{(p, w) : v(p, w) \\le \\bar{v}\\}$, are convex sets in price-wealth space. Geometrically, any convex combination of two budget vectors $(p, w)$ and $(p', w')$ generates a budget set that is contained within the union of the two original budget sets. Therefore, an affordable bundle under the averaged price-wealth vector must have been affordable under at least one of the original regimes, preventing the maximized utility at the convex combination from exceeding the maximum of the two initial utility levels. Remarkably, this quasiconvex curvature holds universally for all utility representations, regardless of whether underlying direct preferences are quasiconcave.",
+      "formal": "v(\\alpha p + (1 - \\alpha) p', \\alpha w + (1 - \\alpha) w') \\le \\max \\{ v(p, w), v(p', w') \\} \\quad \\forall \\alpha \\in [0, 1]",
+      "gist": "Property ensuring that the indirect utility function possesses convex lower contour sets in prices and wealth.",
+      "hashes": {
+        "example": "e851312a881e2e22",
+        "explanation": "b624c014f31d7f97",
+        "formal": "5a756fc06de4d4b3",
+        "gist": "f70ec4e88d92f816"
+      },
+      "id": "quasiconvexity-of-indirect-utility",
+      "kind": "property",
+      "name": "Quasiconvexity of indirect utility",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "duality"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 84",
+          "source": "mwg"
+        }
+      ],
+      "example": "Given indirect utility $v(p_1, p_2, w) = w / (2 \\sqrt{p_1 p_2})$, differentiating gives $\\partial v / \\partial p_1 = -w / (4 p_1^{3/2} p_2^{1/2})$ and $\\partial v / \\partial w = 1 / (2 \\sqrt{p_1 p_2})$, yielding Walrasian demand $x_1(p, w) = w / (2 p_1)$.",
+      "explanation": "Roy's identity provides a direct analytical method for generating observable Walrasian demand functions from the indirect utility function without solving constrained optimization programs. When indirect utility $v(p, w)$ is differentiable, applying the envelope theorem to the utility maximization problem shows that the price gradient satisfies $\\nabla_p v(p, w) = -\\lambda x(p, w)$, where the Lagrange multiplier $\\lambda = \\partial v(p, w) / \\partial w$ represents the marginal utility of wealth. Dividing each price partial derivative by the wealth partial derivative eliminates the multiplier and cancels monotonic transformations of the utility scale. This relationship ensures that specifying tastes directly through an indirect utility function uniquely identifies the underlying consumer demand system.",
+      "formal": "x_\\ell(p, w) = -\\frac{\\frac{\\partial v(p, w)}{\\partial p_\\ell}}{\\frac{\\partial v(p, w)}{\\partial w}}",
+      "gist": "Duality result deriving Walrasian demand from the negative ratio of price to wealth derivatives of indirect utility.",
+      "hashes": {
+        "example": "82107e5a47b0f2cf",
+        "explanation": "fb3545fbc7af4caa",
+        "formal": "ed36dd3ad6193ec4",
+        "gist": "440a4c2a65a6f32a"
       },
       "id": "roys-identity",
       "kind": "identity",
@@ -3065,21 +4525,28 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "duality"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Result that price gradient of expenditure equals Hicksian compensated demand.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Hicksian Demand and the Expenditure Function, p. 79",
+          "source": "mwg"
+        }
+      ],
+      "example": "Given the expenditure function $e(p, u) = 2 u \\sqrt{p_1 p_2}$, differentiating with respect to $p_1$ yields compensated demand $h_1(p, u) = u \\sqrt{p_2 / p_1}$.",
+      "explanation": "Shephard's lemma demonstrates that partially differentiating the consumer's expenditure function with respect to any commodity price immediately recovers the compensated demand for that commodity. In the expenditure minimization problem, prices enter the objective function linearly without appearing in the utility target constraint. Applying the envelope theorem ensures that any first-order adjustments in optimal consumption bundles cancel out at the optimum, leaving only the direct marginal cost of the price change. Consequently, the Hessian of the expenditure function constitutes the symmetric and negative semidefinite Slutsky substitution matrix.",
+      "formal": "h_\\ell(p, u) = \\frac{\\partial e(p, u)}{\\partial p_\\ell} \\quad \\Longleftrightarrow \\quad h(p, u) = \\nabla_p e(p, u)",
+      "gist": "Duality result showing that the price gradient of the expenditure function yields Hicksian compensated demand.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "9bced2b21d126920"
+        "example": "6f80467206e6734e",
+        "explanation": "c4dde593750e36f9",
+        "formal": "90948e404bbd8a66",
+        "gist": "ea4495b07bcb35c3"
       },
       "id": "shephards-lemma",
       "kind": "lemma",
@@ -3087,21 +4554,28 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "duality"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Decomposition splitting price sensitivities into substitution and income effects.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82",
+          "source": "mwg"
+        }
+      ],
+      "example": "For Cobb-Douglas demand $x_1(p, w) = \\alpha w / p_1$, the total own-price derivative is $-\\alpha w / p_1^2$, which decomposes into the compensated substitution term $-\\alpha(1 - \\alpha) w / p_1^2$ and the negative income effect $-\\alpha^2 w / p_1^2$.",
+      "explanation": "The Slutsky equation decomposes the total observable price derivative of Walrasian demand into a compensated substitution response and an income effect. By differentiating the duality identity $h_\\ell(p, u) = x_\\ell(p, e(p, u))$ with respect to price $p_k$ and invoking Shephard's lemma, the uncompensated price sensitivity is expressed as the Hicksian substitution term minus the consumer's demand scaled by the marginal propensity to consume out of wealth. This relation connects unobservable utility-compensated responses directly to observable market choices and spending data. Consequently, a price increase reduces demand through substitution, while the income effect either reinforces this drop for normal commodities or dampens it for inferior goods.",
+      "formal": "\\frac{\\partial x_\\ell(p, w)}{\\partial p_k} = \\frac{\\partial h_\\ell(p, v(p, w))}{\\partial p_k} - \\frac{\\partial x_\\ell(p, w)}{\\partial w} x_k(p, w)",
+      "gist": "Fundamental identity decomposing uncompensated price responses into pure substitution and income effects.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "e60117ae18e9adf5"
+        "example": "52277c7e63d40225",
+        "explanation": "2cda88cffca2c8df",
+        "formal": "517ddac11299e3ea",
+        "gist": "9fc616ec9d5df572"
       },
       "id": "slutsky-equation",
       "kind": "identity",
@@ -3109,21 +4583,123 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094731"
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
       "topic": "demand"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Function providing minimal cost needed to produce a specified output level.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Hicksian and Walrasian Demand Functions, p. 82",
+          "source": "mwg"
+        }
+      ],
+      "example": "For two goods where $s_{11} = -4$, $s_{22} = -1$, and prices are $p = (1, 2)$, symmetry and homogeneity $S p = 0$ determine the off-diagonal substitution terms $s_{12} = s_{21} = 2$, forming a valid symmetric negative semidefinite matrix.",
+      "explanation": "The Slutsky matrix $S(p, w)$ is the $L \\times L$ array collecting all compensated price derivatives of consumer demand, equivalent to the derivative matrix $D_p h(p, u)$ of Hicksian demand. Under preference maximization, Shephard's lemma implies that $S(p, w)$ is the Hessian of the expenditure function with respect to prices, guaranteeing that it is symmetric and negative semidefinite. The matrix satisfies the null-space condition $S(p, w) p = 0$ due to homogeneity of degree zero of Hicksian demand. Even though Hicksian demand is not directly observable, every element $s_{\\ell k}(p, w)$ can be computed from observable Marshallian demand derivatives and consumption levels.",
+      "formal": "S(p, w) = D_p h(p, v(p, w)) = D_p x(p, w) + D_w x(p, w) x(p, w)^T",
+      "gist": "Matrix of price derivatives of compensated demand capturing substitution terms across all commodities.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "fd4845bc5b5ec557"
+        "example": "baae99526eae33d2",
+        "explanation": "ff7c18a47e079f1b",
+        "formal": "5967847bc0743db7",
+        "gist": "822e2c150cca26c2"
+      },
+      "id": "slutsky-matrix",
+      "kind": "object",
+      "name": "Slutsky matrix",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "demand"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Implications of the Weak Axiom, p. 44",
+          "source": "mwg"
+        }
+      ],
+      "example": "When the price of apples rises relative to oranges while compensating income to maintain initial utility, the consumer substitutes away from apples toward oranges, decreasing apple consumption.",
+      "explanation": "The substitution effect captures the variation in optimal commodity choices resulting purely from altered relative prices while keeping the consumer on the same indifference surface. In Hicksian demand theory, this response represents movements along an indifference contour as the marginal rate of substitution adjusts to equate the new price ratio. Alternatively, under Slutsky compensation, wealth is adjusted just enough to make the initial consumption bundle affordable, yielding an identical derivative for infinitesimal price shifts. Because indifference curves for strictly convex preferences exhibit diminishing marginal rates of substitution, the substitution effect for an own-price rise is always negative.",
+      "formal": "\\left. \\frac{\\partial x_\\ell(p, w)}{\\partial p_k} \\right|_{\\text{comp}} = \\frac{\\partial h_\\ell(p, u)}{\\partial p_k} = s_{\\ell k}(p, w)",
+      "gist": "Adjustment in consumer demand caused solely by a change in relative prices while real utility remains constant.",
+      "hashes": {
+        "example": "068dc65365c7d0ed",
+        "explanation": "2746482d73e035d5",
+        "formal": "cfe0b49e35d67058",
+        "gist": "84b20a3e9eb8736b"
+      },
+      "id": "substitution-effect",
+      "kind": "definition",
+      "name": "Substitution effect",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094731"
+      },
+      "section": "s06-duality-and-classical-demand",
+      "status": "proposed",
+      "topic": "demand"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 151",
+          "source": "mwg"
+        }
+      ],
+      "example": "For production function $f(z_1, z_2) = \\min\\{z_1, z_2\\}$, producing $q$ units requires setting both inputs equal to $q$ regardless of factor prices, giving conditional factor demands $z_1(w, q) = q$ and $z_2(w, q) = q$.",
+      "explanation": "Conditional factor demand $z(w, q)$ identifies the expenditure-minimizing input bundle required to produce target output $q$ under factor prices $w$. Being conditional on fixed output, these demands isolate pure substitution behavior without confounding scale effects, paralleling Hicksian compensated demand in consumer theory. Whenever the underlying technology is strictly quasiconcave, $z(w, q)$ is a single-valued function that is homogeneous of degree zero in factor prices and satisfies the law of demand.",
+      "formal": "z(w, q) = \\arg\\min_{z \\ge 0} \\{w \\cdot z : f(z) \\ge q\\} = \\nabla_w c(w, q)",
+      "gist": "The cost-minimizing input bundle that attains a targeted output volume at given market factor prices.",
+      "hashes": {
+        "example": "5ecb7742855b969f",
+        "explanation": "0383ab840463a367",
+        "formal": "e4a86eeafeac8ea7",
+        "gist": "eb084ac61f0ba341"
+      },
+      "id": "conditional-factor-demand",
+      "kind": "correspondence",
+      "name": "Conditional factor demand",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 103",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "When an enterprise manufactures output using a single factor with production function $f(z) = \\sqrt{z}$, producing $q$ units requires input quantity $z = q^2$. Given unit factor price $w > 0$, the resulting cost function is $c(w, q) = w q^2$.",
+      "explanation": "The cost function $c(w, q)$ records the smallest financial expenditure on inputs necessary to manufacture a prescribed volume of output $q$ under factor prices $w$. In factor prices, $c(w, q)$ is nondecreasing, positively homogeneous of degree one, and concave because cost savings can be achieved by substituting away from increasingly expensive inputs. In single-output settings, differentiating the cost function with respect to factor prices yields the firm's conditional input demands via Shephard's lemma.",
+      "formal": "c(w, q) = \\min_{z \\ge 0} \\{w \\cdot z : f(z) \\ge q\\}",
+      "gist": "The value function assigning each input price vector and output target the minimum cost necessary to produce that output.",
+      "hashes": {
+        "example": "ff7790cb998b51bd",
+        "explanation": "551094b084311646",
+        "formal": "ff7799573b020c7f",
+        "gist": "f0581193be5c8b0c"
       },
       "id": "cost-function",
       "kind": "function",
@@ -3131,21 +4707,32 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094827"
       },
       "section": "s07-producer-theory",
       "status": "proposed",
       "topic": "producer-theory"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Firm optimization selecting input quantities to minimize production cost.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Cost Minimization, p. 151",
+          "source": "mwg"
+        }
+      ],
+      "example": "For a Cobb-Douglas production function $q = z_1^{1/2} z_2^{1/2}$ with factor prices $w_1$ and $w_2$, equating the input price ratio to the factor substitution ratio yields $z_1 / z_2 = w_2 / w_1$. Substituting this into the output constraint yields conditional factor demands $z_1(w, q) = q \\sqrt{w_2 / w_1}$ and $z_2(w, q) = q \\sqrt{w_1 / w_2}$.",
+      "explanation": "The cost minimization problem requires a firm to determine the cheapest input combination capable of delivering at least a designated output target $q$ given prevailing factor prices $w$. Serving as a necessary condition for profit maximization, this program remains analytically tractable under price-taking in input markets even when output markets are noncompetitive or returns to scale are constant or increasing. At an interior optimum with smooth technologies, the marginal rate of technical substitution between any two factors equals the ratio of their respective input prices.",
+      "formal": "\\min_{z \\ge 0} \\; w \\cdot z \\quad \\text{subject to } f(z) \\ge q",
+      "gist": "Optimization program where a price-taking firm selects input quantities to achieve a target output level at lowest total expenditure.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "7c5ac8ed12e4dfa0"
+        "example": "26c45f81430b0404",
+        "explanation": "e5b5aa67a4437132",
+        "formal": "b5e965707a6073ea",
+        "gist": "db3af9642a4a0870"
       },
       "id": "cost-minimization-problem",
       "kind": "model",
@@ -3153,21 +4740,65 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094827"
       },
       "section": "s07-producer-theory",
       "status": "proposed",
       "topic": "producer-theory"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Result that derivative of profit with respect to output price yields supply.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 142",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Technology, p. 99-100",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "If a manufacturing plant can produce 10 units of an output using 5 labor hours, free disposal implies that producing only 8 units with 5 hours, or producing 10 units using 7 hours, represents a technologically feasible production plan.",
+      "explanation": "The free disposal property asserts that an enterprise can discard excess factor inputs or surplus produced goods without incurring positive disposal costs. In terms of netput vectors, this assumption requires that if a plan is technologically attainable, any coordinate-wise smaller netput plan is likewise feasible. Economically, free disposal rules out negative shadow prices for commodities, ensuring that marginal products of inputs remain non-negative and market prices in competitive equilibrium are non-negative.",
+      "formal": "y \\in Y \\text{ and } y' \\le y \\implies y' \\in Y, \\quad \\text{or equivalently } Y - \\mathbb{R}_+^L \\subseteq Y",
+      "gist": "Technological assumption that unwanted inputs or produced outputs can be discarded without expending resources.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "a4446c3f4af10bd0"
+        "example": "52e5c78ec392f20f",
+        "explanation": "6042d7dca3e2af4e",
+        "formal": "4baf266f9b306611",
+        "gist": "c96f7c5d7d2c9f62"
+      },
+      "id": "free-disposal",
+      "kind": "property",
+      "name": "Free disposal",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 148",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "If an enterprise operates with profit function $\\pi(p_1, p_2) = p_2^2 / (4p_1)$, taking partial derivatives gives factor demand $y_1(p) = \\partial \\pi / \\partial p_1 = -p_2^2 / (4p_1^2)$ and output supply $y_2(p) = \\partial \\pi / \\partial p_2 = p_2 / (2p_1)$.",
+      "explanation": "Hotelling's lemma establishes that whenever a profit-maximizing netput choice is uniquely determined at a price vector $p$, the profit function $\\pi(p)$ is differentiable at that point and its gradient equals the optimal netput vector $y(p)$. Because the profit function is convex in prices, each supporting hyperplane generated by this gradient bounds the value function from below. Differentiating the resulting net supply functions produces the symmetric and positive semidefinite substitution matrix, reflecting the absence of income effects in producer theory.",
+      "formal": "\\nabla \\pi(p) = y(p), \\quad \\text{or componentwise } \\frac{\\partial \\pi(p)}{\\partial p_\\ell} = y_\\ell(p) \\text{ for each commodity } \\ell",
+      "gist": "Result stating that differentiating the profit function with respect to commodity prices yields the firm's optimal net supplies.",
+      "hashes": {
+        "example": "f68d5fd7cfe8a5aa",
+        "explanation": "42b6afc43e6b2639",
+        "formal": "a2cbac26e8a1d7f1",
+        "gist": "ddfca60b3a20d532"
       },
       "id": "hotellings-lemma",
       "kind": "lemma",
@@ -3175,21 +4806,131 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094827"
       },
       "section": "s07-producer-theory",
       "status": "proposed",
       "topic": "producer-theory"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Set of all technologically feasible net output bundles for a firm.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 149",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "If a competitive wheat producer faces an output price rise from $p = 4$ to $p' = 6$ per bushel with input costs held constant, the profit-maximizing harvest cannot decrease, moving for example from 100 bushels to 140 bushels.",
+      "explanation": "The law of supply establishes that changes in market prices and the resulting profit-maximizing adjustments in net outputs always have a non-negative inner product. This monotonicity implies that raising an output price increases or maintains its supply, while raising an input price decreases or leaves unchanged factor demand. Unlike consumer demand where income effects can induce Giffen anomalies, producer supply responses are unconstrained by a budget boundary, so substitution effects dictate supply behavior unconditionally.",
+      "formal": "(p - p') \\cdot (y - y') \\ge 0 \\quad \\text{for all } y \\in y(p) \\text{ and } y' \\in y(p')",
+      "gist": "Result stating that price changes and corresponding profit-maximizing netput quantity adjustments move in the same direction.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "9c45c70a43dca6a2"
+        "example": "344920ead8b8dade",
+        "explanation": "050b57302d64f72b",
+        "formal": "c84001ab51966db4",
+        "gist": "2c31d9bafe9aec3d"
+      },
+      "id": "law-of-supply",
+      "kind": "theorem",
+      "name": "Law of supply",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §5.B Production Sets, p. 139",
+          "source": "mwg"
+        }
+      ],
+      "example": "For an enterprise operating with technology $q = \\sqrt{K \\cdot L}$, the ratio of marginal products simplifies to $MRTS_{LK} = K / L$. As employment expands relative to machinery, this rate decreases, illustrating that additional labor becomes progressively less effective at replacing equipment along a given isoquant.",
+      "explanation": "The marginal rate of technical substitution quantifies the rate at which an enterprise can substitute one productive input for another without altering the total volume of produced output. Geometrically, it corresponds to the absolute slope of an isoquant in input space, evaluated as the ratio of the respective marginal products. Diminishing technical substitution, an immediate consequence of strictly quasiconcave production technologies, ensures that isoquants are strictly convex toward the origin.",
+      "formal": "MRTS_{\\ell k}(z) = \\frac{\\partial f(z) / \\partial z_\\ell}{\\partial f(z) / \\partial z_k} = -\\left. \\frac{d z_k}{d z_\\ell} \\right|_{f(z) = q}",
+      "gist": "The rate at which one production input can be substituted for another along an isoquant while maintaining constant output.",
+      "hashes": {
+        "example": "2dcf645da37ed4bd",
+        "explanation": "fd966333853a1477",
+        "formal": "cebbd289a827698b",
+        "gist": "b62922e40da81a66"
+      },
+      "id": "marginal-rate-of-technical-substitution",
+      "kind": "definition",
+      "name": "Marginal rate of technical substitution",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §6.1 The producer, p. 94",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "Under a two-input Leontief technology, output is determined by fixed proportions $q = \\min\\{z_1 / a, z_2 / b\\}$ with strictly positive coefficients $a, b > 0$, yielding L-shaped isoquants where factor substitution is zero.",
+      "explanation": "A production function $f(z)$ characterizes single-output production possibilities by defining the upper boundary of attainable output given non-negative input combinations $z$. Typical economic regularity assumptions require $f(z)$ to satisfy $f(0) = 0$, monotonicity reflecting non-negative marginal products, and quasiconcavity ensuring convex input requirement sets. Level sets of the production function form isoquants, whose negative slope defines the marginal rate of technical substitution between competing production factors.",
+      "formal": "q = f(z), \\quad \\text{with } Y = \\{(-z, q) \\in \\mathbb{R}_-^{L-1} \\times \\mathbb{R}_+ : q \\le f(z)\\}",
+      "gist": "A mathematical mapping specifying the maximum quantity of output achievable from any vector of physical inputs.",
+      "hashes": {
+        "example": "40d5f9b34c5f3e6f",
+        "explanation": "1a82458ba0b22f80",
+        "formal": "265d22e5f77ac007",
+        "gist": "8b0642c62b553dbf"
+      },
+      "id": "production-function",
+      "kind": "function",
+      "name": "Production function",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §5.B Production Sets, p. 139",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 141",
+          "source": "mwg"
+        }
+      ],
+      "example": "Consider a firm employing labor $z_1 \\ge 0$ to manufacture output $q \\ge 0$ under diminishing marginal returns $q \\le \\sqrt{z_1}$. In netput notation, feasible vectors take the form $y = (-z_1, q) \\in \\mathbb{R}^2$ such that $y_2 - \\sqrt{-y_1} \\le 0$ with $y_1 \\le 0$.",
+      "explanation": "A production set formalizes a firm's technological capabilities across $L$ commodities using netput vectors, where negative entries record input utilization and positive entries record outputs generated. Standard regularity postulates require the set to be closed, non-empty, and satisfy the no-free-lunch principle stating that non-zero output demands strictly positive input commitments. In multi-output or single-output environments, the boundary of this set constitutes the transformation frontier, distinguishing efficient combinations from strictly interior or technologically unfeasible plans.",
+      "formal": "Y \\subset \\mathbb{R}^L, \\quad \\text{with transformation representation } Y = \\{y \\in \\mathbb{R}^L : F(y) \\le 0\\}",
+      "gist": "The collection of all technologically attainable netput vectors characterizing a firm's transformation possibilities.",
+      "hashes": {
+        "example": "ee6a31c4576fba6c",
+        "explanation": "5e489df9e5b89888",
+        "formal": "16d66147cf3c78a3",
+        "gist": "a0696ceb0dccb26c"
       },
       "id": "production-set",
       "kind": "object",
@@ -3197,21 +4938,32 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094827"
       },
       "section": "s07-producer-theory",
       "status": "proposed",
       "topic": "producer-theory"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Function giving maximum attainable profit as a function of prices.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 6.1 - Production function, p. 95",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "For a single-input production technology $q = 2\\sqrt{z}$ with input wage $w > 0$ and product price $p > 0$, maximizing $p(2\\sqrt{z}) - wz$ yields input choice $z^* = p^2 / w^2$, leading to the closed-form profit function $\\pi(p, w) = p^2 / w$.",
+      "explanation": "The profit function $\\pi(p)$ is the indirect objective obtained by maximizing net revenue over feasible production plans at market prices $p$. As the pointwise supremum of linear functions in prices, $\\pi(p)$ is convex and homogeneous of degree one. Under differentiable conditions, applying the envelope theorem recovers the firm's net supply vector directly through the price gradient of $\\pi(p)$.",
+      "formal": "\\pi(p) = \\sup \\{p \\cdot y : y \\in Y\\}",
+      "gist": "The value function assigning each price vector the maximum profit achievable across a firm's production set.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "15538df623352753"
+        "example": "21d7031deffbd7ad",
+        "explanation": "f9278de02a6d19ae",
+        "formal": "48a38fae443d3e0f",
+        "gist": "6621486dc24dc08a"
       },
       "id": "profit-function",
       "kind": "function",
@@ -3219,21 +4971,32 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094827"
       },
       "section": "s07-producer-theory",
       "status": "proposed",
       "topic": "producer-theory"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Firm optimization problem selecting net outputs to maximize total profit.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "A competitive firm facing output price $p > 0$ and wage $w > 0$ chooses labor $z \\ge 0$ to maximize profit $p \\sqrt{z} - w z$. Setting the derivative of profit with respect to labor to zero yields optimal input usage $z^* = (p / (2w))^2$ and supply $q^* = p / (2w)$.",
+      "explanation": "In the profit maximization problem, a price-taking enterprise chooses a production plan from its feasible technology set to maximize the inner product of market prices and net outputs. When the technology set is strictly convex and bounded above, this program admits a single optimal production choice, simultaneously determining output supply and factor demands. If the technology displays nondecreasing returns to scale, finite solutions require nonpositive profits; otherwise, strictly positive profit opportunities would induce unbounded expansion of production plans.",
+      "formal": "\\max_{y \\in Y} \\; p \\cdot y \\quad \\text{subject to } y \\in Y",
+      "gist": "The decision problem where a price-taking firm selects a technologically feasible production plan to maximize net revenue.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "a1459e3dd03aae77"
+        "example": "dcfebe66241491b1",
+        "explanation": "6df498e556b5a348",
+        "formal": "5d74e7a1eee68871",
+        "gist": "b92880fc5a697800"
       },
       "id": "profit-maximization-problem",
       "kind": "model",
@@ -3241,21 +5004,131 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094827"
       },
       "section": "s07-producer-theory",
       "status": "proposed",
       "topic": "producer-theory"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Curvature metric measuring absolute risk aversion via negative ratio of derivatives.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 143",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 145",
+          "source": "mwg"
+        }
+      ],
+      "example": "In a Cobb-Douglas technology $f(z_1, z_2) = z_1^\\alpha z_2^\\beta$, scaling inputs by factor $t > 0$ yields $f(t z_1, t z_2) = t^{\\alpha + \\beta} f(z_1, z_2)$, exhibiting increasing, constant, or decreasing returns to scale whenever $\\alpha + \\beta > 1$, $\\alpha + \\beta = 1$, or $\\alpha + \\beta < 1$, respectively.",
+      "explanation": "Returns to scale describe how proportional adjustments across all productive inputs alter total output volume or whether a netput vector remains feasible when multiplied by a positive scalar. Constant returns to scale imply that the production set forms a cone and that single-output production functions are homogeneous of degree one, generating zero economic profits in competitive equilibrium. Conversely, decreasing returns capture situations where expanding operation leads to less-than-proportional increases in output, often attributed theoretically to unmodeled fixed factors such as managerial span.",
+      "formal": "\\text{For } \\alpha > 1: \\; f(\\alpha z) > \\alpha f(z) \\text{ (IRS)}, \\quad f(\\alpha z) = \\alpha f(z) \\text{ (CRS)}, \\quad f(\\alpha z) < \\alpha f(z) \\text{ (DRS)}",
+      "gist": "Property describing how output responds to equiproportional scaling of all inputs across a production technology.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "ee1a0c2dbbd33b02"
+        "example": "57532ff09983c4c1",
+        "explanation": "891c57fb68e8e6a0",
+        "formal": "1196691f0bd3a8f7",
+        "gist": "fe874e59e9f20f3e"
+      },
+      "id": "returns-to-scale",
+      "kind": "property",
+      "name": "Returns to scale",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "Under a strictly convex technology with production function $q = \\sqrt{z}$, output price $p > 0$, and factor cost $w > 0$, the unique profit-maximizing netput plan is single-valued: $y(p, w) = (-p^2 / (4w^2), p / (2w))$.",
+      "explanation": "The supply correspondence $y(p)$ maps a positive price vector to the collection of netput vectors that maximize economic profit over the firm's technology set. Because multiplying all commodity prices by a positive constant does not shift the relative profitability of plans, $y(p)$ is homogeneous of degree zero in prices. When the technology set is strictly convex and bounded above, $y(p)$ is single-valued and continuous, satisfying the law of supply across all price variations.",
+      "formal": "y(p) = \\{y \\in Y : p \\cdot y = \\pi(p)\\} = \\arg\\max_{y \\in Y} \\; p \\cdot y",
+      "gist": "Mapping assigning each price vector the set of profit-maximizing netput plans from the firm's production set.",
+      "hashes": {
+        "example": "f0bed7229770df62",
+        "explanation": "1cc4fa76d75bfcaf",
+        "formal": "786784b1f1193e8a",
+        "gist": "ac510714a7129605"
+      },
+      "id": "supply-correspondence",
+      "kind": "correspondence",
+      "name": "Supply correspondence",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094827"
+      },
+      "section": "s07-producer-theory",
+      "status": "proposed",
+      "topic": "producer-theory"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Continuity (C), p. 113",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §3.2.1 Properties of preferences, p. 51",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "An agent facing a choice between \\$50 for sure and a gamble between \\$100 and immediate death can find a sufficiently high survival probability (e.g., $1 - 10^{-9}$) where they would be indifferent between the gamble and the sure payoff.",
+      "explanation": "The Archimedean axiom (commonly known as the continuity axiom in expected utility theory) guarantees that preferences over lotteries respond continuously to variations in probabilities. Specifically, if a lottery $p$ is strictly preferred to $q$, and $q$ is strictly preferred to $r$, there exists an interior probability mixture of $p$ and $r$ that makes the agent indifferent to $q$. This structural condition rules out lexicographic hierarchies and prevents any single outcome from being so infinitely superior or disastrous that no probability adjustment can compensate for it. Together with the independence axiom, it ensures the existence of a real-valued expected utility representation.",
+      "formal": "p \\succ q \\succ r \\implies \\exists \\alpha, \\beta \\in (0, 1) \\text{ such that } \\alpha p + (1 - \\alpha) r \\succ q \\succ \\beta p + (1 - \\beta) r \\quad (\\text{or } q \\sim \\alpha^* p + (1 - \\alpha^*) r).",
+      "gist": "Continuity axiom ensuring no outcome is infinitely desirable or infinitely catastrophic relative to intermediate options.",
+      "hashes": {
+        "example": "5603580d4ab0f57e",
+        "explanation": "a335f021f34a2341",
+        "formal": "d9dec92d6fd5c76d",
+        "gist": "97e8f2aed8c81345"
+      },
+      "id": "archimedean-axiom",
+      "kind": "axiom",
+      "name": "Archimedean axiom",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 201",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Coefficient of Absolute Risk Aversion, p. 130",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "For the constant absolute risk aversion (CARA) utility function $u(x) = -e^{-ax}$ with $a > 0$, the Arrow-Pratt index simplifies to $r_A(x) = -(-a^2 e^{-ax}) / (a e^{-ax}) = a$, showing constant risk preferences regardless of wealth.",
+      "explanation": "The Arrow-Pratt measure of absolute risk aversion quantifies the local curvature of a twice-differentiable Bernoulli utility function at a given wealth level. While the second derivative $u''(x)$ captures concavity, it is sensitive to arbitrary positive rescalings of utility; dividing by $u'(x)$ yields an index that remains invariant to positive affine transformations. Higher values of this metric indicate stronger aversion to small additive risks, requiring a larger compensation or risk premium to leave the agent indifferent. Integrating the measure twice completely reconstructs the underlying utility function up to irrelevant affine constants.",
+      "formal": "r_A(x) = -\\frac{u''(x)}{u'(x)} = -\\frac{d}{dx}\\ln(u'(x)).",
+      "gist": "Local curvature metric measuring absolute risk aversion via the negative ratio of the second and first derivatives of the utility function.",
+      "hashes": {
+        "example": "840bd68e0b5dc570",
+        "explanation": "ffc44b661943f125",
+        "formal": "5168bb8815581ba1",
+        "gist": "a9b400a038c87d0f"
       },
       "id": "arrow-pratt-measure",
       "kind": "definition",
@@ -3263,21 +5136,32 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
       "topic": "risk-and-uncertainty"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Sure monetary payoff offering the exact same utility as a given lottery.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 197",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "An agent with utility $u(w) = \\sqrt{w}$ facing an even gamble between \\$0 and \\$100 achieves expected utility $0.5\\sqrt{0} + 0.5\\sqrt{100} = 5$, yielding a certainty equivalent of $c = 5^2 = \\$25$, well below the \\$50 expectation.",
+      "explanation": "The certainty equivalent of a lottery represents the deterministic wealth level at which an individual remains indifferent between receiving that cash amount and bearing the lottery's stochastic return. In the expected utility setting, it is obtained by inverting the strictly increasing Bernoulli utility function evaluated at the expected utility of the distribution. When the decision maker is strictly risk-averse, this monetary valuation falls strictly below the mathematical expectation of the gamble. The gap between the lottery's expected value and its certainty equivalent defines the risk premium the agent willingly forgives to avoid variance.",
+      "formal": "u(c(F, u)) = \\int u(x) \\, dF(x) \\implies c(F, u) = u^{-1}\\left(\\int u(x) \\, dF(x)\\right).",
+      "gist": "The guaranteed sum of money that provides an agent exactly the same level of utility as playing a given risky lottery.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "d4629fc1e12de867"
+        "example": "f78244cccd4a758f",
+        "explanation": "7a5f9f17d8b02e29",
+        "formal": "8208506b5ced1614",
+        "gist": "2a81711483a03a31"
       },
       "id": "certainty-equivalent",
       "kind": "definition",
@@ -3285,21 +5169,65 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
       "topic": "risk-and-uncertainty"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Representation result expressing lottery preferences as probability-weighted payoffs.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Description of Risky Alternatives, p. 180",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.3 - Compound lottery, p. 52",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "A contestant flips a fair coin: heads enters a raffle offering \\$100 with probability 0.8 and \\$0 with probability 0.2, while tails enters a contest offering \\$50 for sure, collapsing to a reduced lottery paying \\$100 with probability 0.4, \\$50 with probability 0.5, and \\$0 with probability 0.1.",
+      "explanation": "A compound lottery formalizes a hierarchical random process in which an initial randomization selects among several intermediate lotteries according to specified mixing probabilities. Applying the standard laws of probability calculus collapses the multi-stage structure into an equivalent single-stage reduced lottery through convex combination. Under the consequentialist axiom of reduction of compound lotteries, decision makers care exclusively about the final net probability distribution over terminal consequences rather than the multi-stage resolution process. Geometrically, this reduction corresponds to convex combinations of probability vectors within the simplex.",
+      "formal": "L_{\\text{reduced}} = \\sum_{k=1}^K \\alpha_k L_k \\in \\Delta^{N-1}, \\quad \\text{with } p_n = \\sum_{k=1}^K \\alpha_k p_n^k, \\quad \\alpha_k \\ge 0, \\quad \\sum_{k=1}^K \\alpha_k = 1.",
+      "gist": "A multi-stage risky prospect whose possible realizations are themselves lotteries rather than final deterministic prizes.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "0c5ab50f919cc360"
+        "example": "cd8af7cae25b7040",
+        "explanation": "3c1501fb2ea7db20",
+        "formal": "21dfaa0f5f926c3c",
+        "gist": "4fc24d7a5228d642"
+      },
+      "id": "compound-lottery",
+      "kind": "object",
+      "name": "Compound lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §The Expected Utility Theorem, p. 186",
+          "source": "mwg"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §<span id=\"page-360-0\"></span>3.1 The Expected Utility Theorem, p. 361",
+          "source": "ok"
+        }
+      ],
+      "example": "An investor choosing between a safe portfolio yielding \\$50{,}000 and a speculative venture yielding \\$100{,}000 with probability 0.6 and \\$0 with probability 0.4 evaluates the lottery by comparing $u(50{,}000)$ against $0.6 u(100{,}000) + 0.4 u(0)$.",
+      "explanation": "Under the expected utility theorem, a rational decision maker facing risky prospects evaluates each lottery by computing the expected value of an underlying Bernoulli utility index assigned to deterministic outcomes. Whenever preferences over the simplex of probability distributions satisfy completeness, transitivity, continuity, and the independence axiom, they admit an affine representation. This structure ensures that indifference curves plotted across probability triangles form mutually parallel straight lines. The resulting assignment is unique up to positive affine transformations, preserving risk attitudes while remaining invariant under changes of origin or positive scale.",
+      "formal": "\\text{There exists } u: X \\to \\mathbb{R} \\text{ such that } p \\succsim q \\iff \\sum_{x \\in X} p(x) u(x) \\ge \\sum_{x \\in X} q(x) u(x),\n\\text{ unique up to } u \\mapsto a u + b \\text{ with } a > 0.",
+      "gist": "Preferences over lotteries satisfying continuity and independence are represented by the mathematical expectation of an outcome utility index.",
+      "hashes": {
+        "example": "f25a1f01e53c9737",
+        "explanation": "6dd92c234540b8d9",
+        "formal": "f70ea273105bd7a4",
+        "gist": "dace3e618b7fb249"
       },
       "id": "expected-utility-theorem",
       "kind": "theorem",
@@ -3307,21 +5235,32 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
       "topic": "risk-and-uncertainty"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Condition where one distribution yields higher outcomes with greater probability.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §First-Order Stochastic Dominance, p. 206",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §First-Order Stochastic Dominance, p. 124",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "A bonus structure paying \\$10{,}000 with probability 0.7 and \\$5{,}000 with probability 0.3 first-order stochastically dominates a structure paying \\$10{,}000 with probability 0.4 and \\$5{,}000 with probability 0.6.",
+      "explanation": "A distribution $F$ exhibits first-order stochastic dominance over $G$ if every agent with weakly increasing utility obtains at least as much expected utility under $F$ as under $G$. Equivalently, this stochastic order holds if and only if the cumulative distribution function of $F$ lies everywhere weakly below that of $G$, ensuring that the probability of exceeding any given threshold is always higher under $F$. Economically, this relationship can be interpreted as shifting probability mass upward toward superior payoffs without altering the total mass. While dominance guarantees a greater or equal mean return, a simple comparison of means is insufficient because stochastic dominance requires an unambiguous global shift across the entire distribution.",
+      "formal": "F \\text{ FOSD } G \\iff \\int u(x) \\, dF(x) \\ge \\int u(x) \\, dG(x) \\quad \\forall \\text{ nondecreasing } u \\iff F(x) \\le G(x) \\quad \\forall x.",
+      "gist": "Condition where one probability distribution is preferred to another by every decision maker with monotonically nondecreasing utility.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "732e8276771ba440"
+        "example": "24f4ed1a576a9ad5",
+        "explanation": "65c18bf7e556aa7e",
+        "formal": "6f8eea31cd342dad",
+        "gist": "4efd73b061845ae5"
       },
       "id": "first-order-stochastic-dominance",
       "kind": "property",
@@ -3329,21 +5268,32 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
       "topic": "risk-and-uncertainty"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Axiom stating lottery preference is invariant to mixing with a common lottery.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Preferences over Lotteries, p. 182",
+          "source": "mwg"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 362",
+          "source": "ok"
+        }
+      ],
+      "example": "If an agent prefers receiving \\$100 for sure over a coin flip between \\$250 and \\$0, then when offered a 10\\% chance at the chosen prize combined with a 90\\% chance of getting nothing, the agent must still prefer the 10\\% chance of \\$100 over the 5\\% chance of \\$250.",
+      "explanation": "The independence axiom posits that combining two risky prospects with an identical third prospect via equal probability weights preserves their original preference ranking. Geometrically, this requirement forces the indifference surfaces on the probability simplex to be mutually parallel hyperplanes, ruling out fanning out or fanning in of indifference lines. Intuitively, conditional on the realization of the third lottery, the agent receives the exact same outcome in both alternatives, leaving the relative desirability solely dependent on the original pair. This property serves as the cornerstone for establishing linearity in probabilities within the expected utility framework.",
+      "formal": "\\text{For all } L, L', L'' \\in \\mathcal{L} \\text{ and } \\alpha \\in (0, 1), \\quad L \\succsim L' \\iff \\alpha L + (1 - \\alpha) L'' \\succsim \\alpha L' + (1 - \\alpha) L''.",
+      "gist": "Axiom stating that the preference ranking between two lotteries is preserved when both are mixed with a common third lottery.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "5b17fe17dc241303"
+        "example": "5bb41bc2698b6b9f",
+        "explanation": "48f68d7030690e74",
+        "formal": "049f400cc53e74f9",
+        "gist": "20e55364ece14f89"
       },
       "id": "independence-axiom",
       "kind": "axiom",
@@ -3351,21 +5301,98 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
       "topic": "risk-and-uncertainty"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Preference for a guaranteed expected payoff over facing the lottery itself.",
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Description of Risky Alternatives, p. 179",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.1 - Lotteries, p. 49",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "A roulette wheel wager paying \\$35 on a specific number with probability $1/38$ and losing \\$1 with probability $37/38$ constitutes a simple two-outcome lottery.",
+      "explanation": "A simple lottery models choice under objective risk by assigning a non-negative probability to each possible consequence such that the total sum equals one. In decision theory, the space of simple lotteries over $N$ mutually exclusive outcomes corresponds geometrically to the unit simplex $\\Delta^{N-1}$. Each extreme point or vertex of this simplex represents a degenerate lottery yielding a single deterministic payoff with certainty. Points in the interior or relative faces describe genuine risk, where the agent's ultimate realization remains stochastically uncertain at the time of choice.",
+      "formal": "L = (p_1, \\dots, p_N) \\in \\Delta^{N-1} \\quad \\text{where } p_n \\ge 0 \\quad \\forall n \\in \\{1,\\dots,N\\} \\quad \\text{and } \\sum_{n=1}^N p_n = 1.",
+      "gist": "A formal representation of a risky prospect specifying known probabilities across a collection of mutually exclusive outcomes.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "4b768632cc567f83"
+        "example": "b967b2b212d4281f",
+        "explanation": "455628ce78f9bd8c",
+        "formal": "379102c6d4793b5d",
+        "gist": "468c3c0812139237"
+      },
+      "id": "lottery",
+      "kind": "object",
+      "name": "Lottery",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 204",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 203",
+          "source": "mwg"
+        }
+      ],
+      "example": "For an agent with isoelastic power utility $u(x) = \\frac{x^{1-\\gamma}-1}{1-\\gamma}$ with $\\gamma > 0$ and $\\gamma \\ne 1$ (or $u(x) = \\ln x$ when $\\gamma = 1$), the relative risk aversion equals $r_R(x) = \\gamma$, keeping portfolio shares constant as wealth grows.",
+      "explanation": "The coefficient of relative risk aversion measures an individual's aversion toward proportional fluctuations or percentage risks relative to current wealth. Defined as wealth multiplied by the Arrow-Pratt absolute risk aversion measure, it represents the elasticity of marginal utility with respect to wealth. When this index remains invariant to wealth changes, an investor facing risky returns allocates a constant fraction of total wealth to risky assets regardless of initial wealth. Constant relative risk aversion (CRRA) preferences are standard in macroeconomic and financial models to ensure balanced growth and scale invariance.",
+      "formal": "r_R(x) = -x \\frac{u''(x)}{u'(x)} = x \\, r_A(x) = -\\frac{d \\ln(u'(x))}{d \\ln x}.",
+      "gist": "Elasticity metric measuring risk aversion toward proportional or percentage gambles as wealth scales.",
+      "hashes": {
+        "example": "aa2454a6970465ca",
+        "explanation": "8ca619ac08f3fae9",
+        "formal": "9640a92387ab672f",
+        "gist": "08c389b5c4d11a94"
+      },
+      "id": "relative-risk-aversion",
+      "kind": "definition",
+      "name": "Relative risk aversion",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 196",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.6 - Risk aversion and risk neutrality, p. 59",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "A homeowner with wealth \\$200{,}000 facing a 1\\% chance of a \\$50{,}000 fire damage loss prefers paying an actuarially fair insurance premium of \\$500 to bearing the uninsured risk.",
+      "explanation": "An economic agent exhibits risk aversion if receiving the expected value of any lottery with certainty is preferred to the risky lottery itself. Within expected utility theory, this behavioral disposition corresponds directly to the concavity of the underlying Bernoulli utility function via Jensen's inequality. Diminishing marginal utility of wealth implies that the pain of a monetary loss outweighs the pleasure of an equal-sized gain, discouraging fair gambles. An agent with strictly concave utility demands a positive risk premium to bear non-trivial uncertainty and actively seeks actuarially fair insurance.",
+      "formal": "\\text{For every lottery } F, \\quad \\int x \\, dF(x) \\succsim F \\iff \\int u(x) \\, dF(x) \\le u\\left(\\int x \\, dF(x)\\right).",
+      "gist": "Property where a decision maker always prefers obtaining a lottery's expected monetary payoff with certainty over facing the lottery itself.",
+      "hashes": {
+        "example": "cf9a9f0c5fcb6334",
+        "explanation": "065a9fb265993d80",
+        "formal": "3e89d6abac94a6af",
+        "gist": "e2c698785ea1f1fd"
       },
       "id": "risk-aversion",
       "kind": "property",
@@ -3373,21 +5400,131 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
       "topic": "risk-and-uncertainty"
     },
     {
-      "citations": [],
-      "explanation": "",
-      "gist": "Bernoulli utility function over sure outcomes evaluated under expectation.",
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 197",
+          "source": "mwg"
+        }
+      ],
+      "example": "An investor facing a 50-50 gamble yielding either \\$100 or \\$0 has an expected return of \\$50; if their certainty equivalent is \\$40, their risk premium is $R = \\$50 - \\$40 = \\$10$.",
+      "explanation": "The risk premium measures the amount of expected wealth a decision maker willingly forfeits to eliminate exposure to stochastic variance. Defined as the difference between the expected value of a lottery and its certainty equivalent, it quantifies the personal cost of bearing risk. For a risk-neutral decision maker, the premium is identically zero, whereas risk-averse agents exhibit a strictly positive premium for any non-degenerate gamble. In an expected utility framework, Taylor expansions show that for small local risks, the risk premium is proportional to the variance of the risk multiplied by the Arrow-Pratt measure of absolute risk aversion.",
+      "formal": "R(p) = \\mathbb{E}(p) - CE(p) \\quad \\text{or for a small zero-mean risk } \\tilde{\\varepsilon}, \\quad R(w, \\tilde{\\varepsilon}) \\approx \\frac{1}{2} \\sigma_{\\varepsilon}^2 r_A(w).",
+      "gist": "The maximum expected monetary payoff an agent is willing to sacrifice to replace a risky lottery with a certain payout.",
       "hashes": {
-        "example": "e3b0c44298fc1c14",
-        "explanation": "e3b0c44298fc1c14",
-        "formal": "e3b0c44298fc1c14",
-        "gist": "839cbdbb3376da18"
+        "example": "a962cdaa6b4a07e0",
+        "explanation": "3d9c780c411c368d",
+        "formal": "f0e1a4bb2d3a9955",
+        "gist": "7203c4a3b1703cf7"
+      },
+      "id": "risk-premium",
+      "kind": "definition",
+      "name": "Risk premium",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Second-Order Stochastic Dominance, p. 208",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Second-Order Stochastic Dominance, p. 209",
+          "source": "mwg"
+        }
+      ],
+      "example": "Between an asset paying \\$100 with certainty and a risky gamble paying \\$50 or \\$150 with equal probability, the certain asset second-order stochastically dominates the gamble because both share the \\$100 mean but the gamble adds a mean-preserving spread.",
+      "explanation": "Second-order stochastic dominance evaluates the relative dispersion or riskiness between two payoff distributions sharing the same expected return. A distribution $F$ second-order stochastically dominates $G$ if every agent possessing a concave Bernoulli utility function achieves higher expected utility under $F$ than under $G$. Equivalently, this dominance holds if and only if $G$ can be constructed from $F$ via a mean-preserving spread, which adds mean-zero noise to payoffs. In terms of cumulative distribution functions, it corresponds to the condition that the integral of $F$ is everywhere less than or equal to the integral of $G$.",
+      "formal": "\\int u(x) \\, dF(x) \\ge \\int u(x) \\, dG(x) \\quad \\forall \\text{ concave } u \\iff \\int_0^x F(t) \\, dt \\le \\int_0^x G(t) \\, dt \\quad \\forall x \\quad (\\text{with equal means}).",
+      "gist": "Stochastic ordering ranking equal-mean distributions such that the dominant distribution is preferred by all risk-averse decision makers.",
+      "hashes": {
+        "example": "a910d0d383e883df",
+        "explanation": "ece574df38830687",
+        "formal": "2a811dc463f4980f",
+        "gist": "86d236a1863e9aa8"
+      },
+      "id": "second-order-stochastic-dominance",
+      "kind": "property",
+      "name": "Second-order stochastic dominance",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 217",
+          "source": "mwg"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 215",
+          "source": "mwg"
+        }
+      ],
+      "example": "An entrepreneur deciding whether to launch a startup compares uncertain revenues across different macroeconomic states using their personal belief distribution over recessions and expansions rather than objective historical frequencies.",
+      "explanation": "Subjective expected utility theory extends expected utility to environments where objective probabilities across states of the world do not exist. Under appropriate behavioral axioms on acts, the agent acts as though ranking alternatives by the expectation of an outcome utility function according to an endogenous, personal prior distribution. First formulated by Savage and later simplified using horse-race and roulette lotteries by Anscombe and Aumann, it provides behavioral foundations for eliciting personal beliefs directly from observed choice. Consequently, uncertainty is operationalized within standard probability calculus without requiring externally given frequencies.",
+      "formal": "(x_1, \\dots, x_S) \\succsim (x'_1, \\dots, x'_S) \\iff \\sum_{s=1}^S \\pi_s u(x_s) \\ge \\sum_{s=1}^S \\pi_s u(x'_s) \\quad \\text{with } \\pi_s > 0, \\quad \\sum_{s=1}^S \\pi_s = 1.",
+      "gist": "Decision framework under uncertainty that derives personal probabilistic beliefs and outcome utilities simultaneously from observed choices.",
+      "hashes": {
+        "example": "1f1d6cbc2a168a5b",
+        "explanation": "997890b0b7138810",
+        "formal": "1e0e3e2ca24ca342",
+        "gist": "3cfbdba42ebfbb39"
+      },
+      "id": "subjective-expected-utility",
+      "kind": "model",
+      "name": "Subjective expected utility",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-20261014-094918"
+      },
+      "section": "s08-choice-under-uncertainty",
+      "status": "proposed",
+      "topic": "risk-and-uncertainty"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §Lotteries over Monetary Outcomes and the Expected Utility Framework, p. 195",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Utility Representation, p. 114",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "If an individual assigns Bernoulli utilities $v(0) = 0$, $v(50) = 7$, and $v(100) = 10$, a lottery yielding \\$0 or \\$100 with equal probability receives expected utility $0.5(0) + 0.5(10) = 5$, ranking below the sure outcome of \\$50.",
+      "explanation": "A von Neumann-Morgenstern utility function (frequently termed a Bernoulli utility function) assigns real numbers to deterministic prizes, forming the foundation for expected utility calculations. The overall evaluation of any lottery is given by taking the mathematical expectation of these payoff values weighted by the corresponding outcome probabilities. Unlike purely ordinal utility functions in consumer theory, this formulation is cardinal in the sense of being unique only up to positive affine transformations ($v \\mapsto \\alpha v + \\beta$ with $\\alpha > 0$). Consequently, non-linear monotonic transformations alter the expected values and distort the decision maker's revealed attitude toward risk.",
+      "formal": "U(p) = \\sum_{z \\in Z} p(z) v(z) \\quad \\text{where } v: Z \\to \\mathbb{R} \\text{ is unique up to } v \\mapsto \\alpha v + \\beta \\text{ with } \\alpha > 0.",
+      "gist": "A real-valued payoff index assigned to deterministic outcomes whose expected value ranks probability distributions over those outcomes.",
+      "hashes": {
+        "example": "d2ed648d3493f05e",
+        "explanation": "8f6ee057a4b6c36e",
+        "formal": "093935891bf36449",
+        "gist": "4dcf443fe0b37a06"
       },
       "id": "von-neumann-morgenstern-utility-function",
       "kind": "function",
@@ -3395,7 +5532,7 @@
       "provenance": {
         "agent": "antigravity-gemini",
         "driver": "agent",
-        "run": "seed-v2b-2026-10-10"
+        "run": "fill-20261014-094918"
       },
       "section": "s08-choice-under-uncertainty",
       "status": "proposed",
@@ -3459,9 +5596,11 @@
     },
     {
       "id": "s06-duality-and-classical-demand",
-      "lectures": [],
+      "lectures": [
+        "2026-10-13"
+      ],
       "order": 6.0,
-      "state": "planned",
+      "state": "in_progress",
       "syllabus_ref": null,
       "title": "Duality, Expenditure, and Slutsky Decomposition"
     },
@@ -3469,7 +5608,7 @@
       "id": "s07-producer-theory",
       "lectures": [],
       "order": 7.0,
-      "state": "planned",
+      "state": "in_progress",
       "syllabus_ref": null,
       "title": "Production and Cost Minimization"
     },
@@ -3477,7 +5616,7 @@
       "id": "s08-choice-under-uncertainty",
       "lectures": [],
       "order": 8.0,
-      "state": "planned",
+      "state": "in_progress",
       "syllabus_ref": null,
       "title": "Choice Under Risk and Uncertainty"
     }

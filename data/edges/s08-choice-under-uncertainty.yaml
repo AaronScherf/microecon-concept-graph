@@ -1,0 +1,278 @@
+  - id: independence-axiom--hypothesis_of--expected-utility-theorem
+    source: independence-axiom
+    type: hypothesis_of
+    target: expected-utility-theorem
+    explanation: The independence condition serves as a central assumption for expected utility representation, ensuring preferences over mixtures depend only on differing components.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 3.2 - Continuity and independence implies expected utility, p. 55
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: The independence axiom is a fundamental assumption needed to derive the linear expected utility representation.
+  - id: expected-utility-theorem--yields--von-neumann-morgenstern-utility-function
+    source: expected-utility-theorem
+    type: yields
+    target: von-neumann-morgenstern-utility-function
+    explanation: When preferences over lotteries satisfy continuity and independence, the representation theorem guarantees the existence of an outcome payoff function whose expectations rank distributions.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Proposition 3.2 - Continuity and independence implies expected utility, p. 55
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: The expected utility theorem establishes the existence of a von Neumann-Morgenstern utility index that ranks lotteries by expected payoff.
+  - id: risk-aversion--defined_on--rational-preference-relation
+    source: risk-aversion
+    type: defined_on
+    target: rational-preference-relation
+    explanation: Risk aversion is a behavioral property of a preference relation over lotteries, requiring the certainty of the expected payout to be weakly preferred to the gamble.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 3.6 - Risk aversion and risk neutrality, p. 59
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: Risk aversion describes a behavioral preference ordering over lotteries where certain payoffs are preferred to actuarially fair gambles.
+  - id: von-neumann-morgenstern-utility-function--is_a--utility-function
+    source: von-neumann-morgenstern-utility-function
+    type: is_a
+    target: utility-function
+    condition: it assigns numerical values to deterministic prizes such that probability distributions are ranked by expected payoff
+    explanation: A von Neumann-Morgenstern utility function specializes standard ordinal utility functions by assigning values to deterministic outcomes whose expected value ranks uncertain prospects.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Utility Representation, p. 114
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: A von Neumann-Morgenstern utility function is a cardinal utility index whose mathematical expectation represents ordinal rankings over lotteries.
+  - id: first-order-stochastic-dominance--defined_on--lottery
+    source: first-order-stochastic-dominance
+    type: defined_on
+    target: lottery
+    explanation: First-order stochastic dominance defines a partial ordering over probability distributions, holding whenever one lottery yields higher cumulative probabilities of exceeding any prize cutoff.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §First-Order Stochastic Dominance, p. 206
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: First-order stochastic dominance establishes an unambiguous partial ranking defined over probability distributions or lotteries.
+  - id: certainty-equivalent--defined_on--lottery
+    source: certainty-equivalent
+    type: defined_on
+    target: lottery
+    explanation: The certainty equivalent is a mapping that pairs each lottery with the sure payoff amount generating equivalent satisfaction for the agent.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: The certainty equivalent is defined by evaluating a given lottery to identify the sure monetary sum yielding identical expected utility.
+  - id: certainty-equivalent--iff--risk-aversion
+    source: certainty-equivalent
+    type: iff
+    target: risk-aversion
+    condition: for every gamble, the guaranteed payment is less than or equal to the mathematical mean payoff
+    explanation: A preference ordering exhibits risk aversion precisely when the certainty equivalent of every lottery is bounded above by its expected return.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 197
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: Risk aversion holds if and only if the certainty equivalent of every non-degenerate gamble is strictly less than its expected value.
+  - id: arrow-pratt-measure--implies--risk-aversion
+    source: arrow-pratt-measure
+    type: implies
+    target: risk-aversion
+    condition: the ratio of the negative second derivative to the first derivative remains positive everywhere
+    explanation: A positive Arrow-Pratt coefficient of absolute risk aversion reflects strict concavity of the Bernoulli payoff function, guaranteeing risk-averse choice behavior.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Risk Aversion and Its Measurement, p. 201
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: A strictly positive Arrow-Pratt ratio guarantees concavity of the Bernoulli utility function, which characterizes risk aversion.
+  - id: lottery--defined_on--set
+    source: lottery
+    type: defined_on
+    target: set
+    explanation: A simple lottery is a formal probability assignment defined over a set of distinct physical prizes or economic consequences.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Lotteries, p. 109
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: A lottery is mathematically formalized as a probability distribution defined over a underlying set of deterministic prizes.
+  - id: compound-lottery--is_a--lottery
+    source: compound-lottery
+    type: is_a
+    target: lottery
+    condition: each realized prize is itself another probability distribution over basic outcomes
+    explanation: A compound lottery represents a multi-stage lottery structure where intermediate stage rewards are lotteries rather than final deterministic prizes.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Description of Risky Alternatives, p. 179
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: A compound lottery constitutes a valid lottery whose possible outcomes are themselves probability distributions over ultimate payoffs.
+  - id: second-order-stochastic-dominance--defined_on--lottery
+    source: second-order-stochastic-dominance
+    type: defined_on
+    target: lottery
+    explanation: Second-order stochastic dominance is a binary property defined over probability distributions sharing identical mean returns to rank their relative riskiness.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §6.D Comparison of Payoff Distributions in Terms of Return and Risk, p. 205
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: Second-order stochastic dominance defines a mean-preserving risk comparison between pairs of probability distributions or lotteries.
+  - id: risk-premium--defined_on--lottery
+    source: risk-premium
+    type: defined_on
+    target: lottery
+    explanation: The risk premium associates with each lottery the difference between its expected monetary return and the individual's certainty equivalent.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: The risk premium quantifies the maximum expected monetary deduction an individual will sacrifice to eliminate risk from a given lottery.
+  - id: risk-premium--iff--risk-aversion
+    source: risk-premium
+    type: iff
+    target: risk-aversion
+    condition: the compensation demanded to eliminate risk is non-negative for every lottery
+    explanation: Decision makers are risk averse if and only if they require a non-negative risk premium for all risky gambles.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Certainty Equivalence and the Risk Premium, p. 127
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: A decision maker is risk averse if and only if their risk premium remains weakly positive across all feasible lotteries.
+  - id: relative-risk-aversion--implies--arrow-pratt-measure
+    source: relative-risk-aversion
+    type: implies
+    target: arrow-pratt-measure
+    condition: the relative measure decreases monotonically as wealth expands
+    explanation: Because relative risk aversion scales absolute risk aversion by wealth, non-increasing relative risk aversion necessarily entails decreasing absolute risk aversion.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Comparisons across wealth levels, p. 204
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: Non-increasing relative risk aversion mathematically implies decreasing absolute risk aversion as quantified by the Arrow-Pratt measure.
+  - id: archimedean-axiom--hypothesis_of--expected-utility-theorem
+    source: archimedean-axiom
+    type: hypothesis_of
+    target: expected-utility-theorem
+    explanation: The Archimedean continuity axiom is an essential hypothesis in the axiomatic characterization of expected utility, ensuring preferences over lotteries vary continuously with probabilities.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §von Neumann and Morgenstern Axiomatization, p. 111
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: The expected utility theorem relies on the Archimedean continuity axiom to ensure preferences over lotteries can be represented numerically.
+  - id: subjective-expected-utility--defined_on--set
+    source: subjective-expected-utility
+    type: defined_on
+    target: set
+    explanation: Subjective expected utility is a behavioral decision model defined over sets of state-contingent acts or bets.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Subjective Expected Utility (de Finetti's), p. 117
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: Subjective expected utility theory formulates decision making over mappings from a set of uncertain states to a set of payoffs.
+  - id: von-neumann-morgenstern-utility-function--component_of--subjective-expected-utility
+    source: von-neumann-morgenstern-utility-function
+    type: component_of
+    target: subjective-expected-utility
+    explanation: The subjective expected utility framework evaluates state-contingent prospects using a cardinal outcome utility function weighted by personal state probabilities.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Existence of an Extended Expected Utility Representation, p. 217
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114601
+    critic:
+      verdict: supports
+      note: A von Neumann-Morgenstern utility function acts as the outcome valuation component inside the subjective expected utility formulation.

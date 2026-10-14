@@ -135,6 +135,9 @@
       driver: agent
       agent: antigravity-gemini
       run: link-convex
+    critic:
+      verdict: supports
+      note: Convexity is introduced as a structural condition requiring the upper contour sets of a preference relation to be convex.
   - id: utility-function--implies--convex-preferences
     source: utility-function
     type: implies
@@ -151,3 +154,6 @@
       driver: agent
       agent: antigravity-gemini
       run: link-convex
+    critic:
+      verdict: supports
+      note: Any concave or quasiconcave utility representation implies that preference upper contour sets are convex, yielding convex preferences.

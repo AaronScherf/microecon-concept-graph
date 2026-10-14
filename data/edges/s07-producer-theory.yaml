@@ -1,0 +1,232 @@
+  - id: production-set--is_a--set
+    source: production-set
+    type: is_a
+    target: set
+    condition: it gathers the netput vectors representing technologically feasible production plans
+    explanation: The production set is a subset of the commodity space comprising all input-output combinations that are technologically feasible for a firm.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §5.B Production Sets, p. 139
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Technology, p. 99-100
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: A production set is a subset of multi-dimensional Euclidean space containing all feasible input and output combinations.
+  - id: production-set--component_of--profit-maximization-problem
+    source: production-set
+    type: component_of
+    target: profit-maximization-problem
+    explanation: The production set defines the feasible constraint region of netput vectors over which the firm maximizes profit.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 146
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: The production set specifies the technologically feasible choice domain over which a price-taking producer maximizes profit.
+  - id: profit-function--hypothesis_of--hotellings-lemma
+    source: profit-function
+    type: hypothesis_of
+    target: hotellings-lemma
+    explanation: The profit function serves as the value function differentiated with respect to commodity prices in Hotelling's lemma.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: Hotelling's lemma takes a differentiable profit function as its foundation to derive optimal supply behavior.
+  - id: production-function--component_of--cost-minimization-problem
+    source: production-function
+    type: component_of
+    target: cost-minimization-problem
+    explanation: The production function serves as the technological constraint that requires output to meet or exceed a specified production target.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: The production function supplies the essential technological equality or inequality constraint in the cost minimization program.
+  - id: profit-maximization-problem--implies--cost-minimization-problem
+    source: profit-maximization-problem
+    type: implies
+    target: cost-minimization-problem
+    condition: for the output quantity chosen under the profit-maximizing plan
+    explanation: A profit-maximizing firm must minimize the cost of producing its selected level of output, as producing that output at higher cost would reduce total profits.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: Any netput vector that maximizes overall firm profit must necessarily minimize total production costs for that chosen output volume.
+  - id: hotellings-lemma--yields--supply-correspondence
+    source: hotellings-lemma
+    type: yields
+    target: supply-correspondence
+    explanation: Taking the gradient of the profit function with respect to output and input prices produces the profit-maximizing net supplies.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §The Profit Maximization Problem, p. 148
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: Hotelling's lemma obtains the firm's supply correspondence by differentiating the profit function with respect to market prices.
+  - id: returns-to-scale--defined_on--production-set
+    source: returns-to-scale
+    type: defined_on
+    target: production-set
+    explanation: Returns to scale is a technological property defined on a production set describing the feasibility of proportional expansions of input-output plans.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 143
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: Returns to scale classifies how production sets expand or contract under positive scalar multiplication of input-output vectors.
+  - id: supply-correspondence--has_property--homogeneity-of-degree-zero
+    source: supply-correspondence
+    type: has_property
+    target: homogeneity-of-degree-zero
+    explanation: Multiplying all commodity prices by an identical positive factor leaves the optimal netput production bundle unaltered.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: Equiproportional scaling of all input and output prices leaves optimal net supply choices unchanged, ensuring degree zero homogeneity.
+  - id: supply-correspondence--hypothesis_of--law-of-supply
+    source: supply-correspondence
+    type: hypothesis_of
+    target: law-of-supply
+    explanation: The optimal supply correspondence serves as the foundational choice mapping analyzed by the law of supply.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: The law of supply establishes that price variations and optimal responses of the supply correspondence move in the same direction.
+  - id: free-disposal--defined_on--production-set
+    source: free-disposal
+    type: defined_on
+    target: production-set
+    explanation: Free disposal is a technological property defined on a production set stipulating that less efficient netput plans remain feasible.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Properties of Production Sets, p. 142
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Technology, p. 99-100
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-20261014-114450
+    critic:
+      verdict: supports
+      note: Free disposal is formulated as a monotonicity property governing the geometry of a firm's production set.
+  - id: cost-function--component_of--cost-minimization-problem
+    source: cost-function
+    type: component_of
+    target: cost-minimization-problem
+    explanation: The cost function represents the optimized value function measuring minimal expenditure in the cost minimization problem.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: The cost function is the value function measuring minimal production expenditure in the cost minimization problem.
+  - id: cost-function--hypothesis_of--shephards-lemma
+    source: cost-function
+    type: hypothesis_of
+    target: shephards-lemma
+    explanation: A differentiable cost function serves as the primitive value function differentiated in Shephard's lemma to obtain factor demands.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: Shephard's lemma differentiates the cost function with respect to factor prices to recover conditional factor demand.
+  - id: marginal-rate-of-technical-substitution--defined_on--production-function
+    source: marginal-rate-of-technical-substitution
+    type: defined_on
+    target: production-function
+    explanation: The marginal rate of technical substitution is defined along the level sets of a differentiable production function.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Technologies with Distinct Inputs and Outputs, p. 140
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: The marginal rate of technical substitution is defined as the ratio of input partial derivatives of a production function.
+  - id: conditional-factor-demand--component_of--cost-minimization-problem
+    source: conditional-factor-demand
+    type: component_of
+    target: cost-minimization-problem
+    explanation: Conditional factor demand designates the optimal input choice vector solving the cost minimization problem for a given output level.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §Cost Minimization, p. 150
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans-20261014
+    critic:
+      verdict: supports
+      note: Conditional factor demand is the argmin correspondence characterizing optimal factor choices in the cost minimization problem.
