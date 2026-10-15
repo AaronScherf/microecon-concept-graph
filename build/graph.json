@@ -4487,7 +4487,8 @@
       "type": "implies"
     }
   ],
-  "graph_version": "9e6ce51b88a2",
+  "graph_version": "43ee2b49f2bf",
+  "layouts": [],
   "nodes": [
     {
       "citations": [
@@ -5368,7 +5369,7 @@
       },
       "section": "s02-preference-and-utility",
       "status": "proposed",
-      "topic": "revealed-preference"
+      "topic": "rational-choice"
     },
     {
       "citations": [
@@ -6151,7 +6152,7 @@
       },
       "section": "s04-stochastic-choice",
       "status": "proposed",
-      "topic": "rational-choice"
+      "topic": "stochastic-choice"
     },
     {
       "citations": [
@@ -6904,7 +6905,7 @@
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
-      "topic": "demand"
+      "topic": "duality"
     },
     {
       "citations": [
@@ -6962,7 +6963,7 @@
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
-      "topic": "demand"
+      "topic": "duality"
     },
     {
       "citations": [
@@ -6991,7 +6992,7 @@
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
-      "topic": "demand"
+      "topic": "duality"
     },
     {
       "citations": [
@@ -7107,7 +7108,7 @@
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
-      "topic": "demand"
+      "topic": "duality"
     },
     {
       "citations": [
@@ -7136,7 +7137,7 @@
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
-      "topic": "demand"
+      "topic": "duality"
     },
     {
       "citations": [
@@ -7165,7 +7166,7 @@
       },
       "section": "s06-duality-and-classical-demand",
       "status": "proposed",
-      "topic": "demand"
+      "topic": "duality"
     },
     {
       "citations": [
@@ -8066,9 +8067,13 @@
         "2026-09-07"
       ],
       "order": 1.0,
+      "short": "Order theory",
       "state": "taught",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Mathematical Preliminaries and Order Theory"
+      "title": "Mathematical Preliminaries and Order Theory",
+      "topic": "order-theory"
     },
     {
       "id": "s02-preference-and-utility",
@@ -8078,9 +8083,13 @@
         "2026-09-17"
       ],
       "order": 2.0,
+      "short": "Preferences and utility",
       "state": "taught",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Preferences, Utility, and Rational Choice"
+      "title": "Preferences, Utility, and Rational Choice",
+      "topic": "rational-choice"
     },
     {
       "id": "s03-revealed-preference",
@@ -8088,9 +8097,13 @@
         "2026-09-22"
       ],
       "order": 3.0,
+      "short": "Revealed preference",
       "state": "taught",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Revealed Preference and Extensions"
+      "title": "Revealed Preference and Extensions",
+      "topic": "revealed-preference"
     },
     {
       "id": "s04-stochastic-choice",
@@ -8099,9 +8112,13 @@
         "2026-10-01"
       ],
       "order": 4.0,
+      "short": "Stochastic choice",
       "state": "taught",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Stochastic Choice and Bounded Rationality"
+      "title": "Stochastic Choice and Bounded Rationality",
+      "topic": "stochastic-choice"
     },
     {
       "id": "s05-consumer-demand",
@@ -8110,9 +8127,13 @@
         "2026-10-08"
       ],
       "order": 5.0,
+      "short": "Consumer demand",
       "state": "taught",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Consumer Demand and Utility Maximization"
+      "title": "Consumer Demand and Utility Maximization",
+      "topic": "demand"
     },
     {
       "id": "s06-duality-and-classical-demand",
@@ -8120,25 +8141,37 @@
         "2026-10-13"
       ],
       "order": 6.0,
+      "short": "Duality and Slutsky",
       "state": "in_progress",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Duality, Expenditure, and Slutsky Decomposition"
+      "title": "Duality, Expenditure, and Slutsky Decomposition",
+      "topic": "duality"
     },
     {
       "id": "s07-producer-theory",
       "lectures": [],
       "order": 7.0,
+      "short": "Producer theory",
       "state": "in_progress",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Production and Cost Minimization"
+      "title": "Production and Cost Minimization",
+      "topic": "producer-theory"
     },
     {
       "id": "s08-choice-under-uncertainty",
       "lectures": [],
       "order": 8.0,
+      "short": "Risk and uncertainty",
       "state": "in_progress",
+      "summary": null,
+      "summary_hash": null,
       "syllabus_ref": null,
-      "title": "Choice Under Risk and Uncertainty"
+      "title": "Choice Under Risk and Uncertainty",
+      "topic": "risk-and-uncertainty"
     }
   ],
   "site": {

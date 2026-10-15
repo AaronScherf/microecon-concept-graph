@@ -128,7 +128,7 @@
     name: Weak axiom of revealed preference
     kind: axiom
     section: s02-preference-and-utility
-    topic: revealed-preference
+    topic: rational-choice
     gist: An axiom stating that if an affordable alternative is chosen over another, the latter cannot be chosen when the former is strictly affordable.
     status: proposed
     provenance:

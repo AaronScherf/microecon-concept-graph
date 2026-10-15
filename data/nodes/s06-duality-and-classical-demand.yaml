@@ -55,7 +55,7 @@
     name: Slutsky equation
     kind: identity
     section: s06-duality-and-classical-demand
-    topic: demand
+    topic: duality
     gist: Fundamental identity decomposing uncompensated price responses into pure substitution and income effects.
     status: proposed
     provenance:
@@ -140,7 +140,7 @@
     name: Law of compensated demand
     kind: theorem
     section: s06-duality-and-classical-demand
-    topic: demand
+    topic: duality
     gist: Theorem establishing that compensated demand vectors move in the opposite direction of price changes.
     status: proposed
     provenance:
@@ -157,7 +157,7 @@
     name: Substitution effect
     kind: definition
     section: s06-duality-and-classical-demand
-    topic: demand
+    topic: duality
     gist: Adjustment in consumer demand caused solely by a change in relative prices while real utility remains constant.
     status: proposed
     provenance:
@@ -174,7 +174,7 @@
     name: Income effect
     kind: definition
     section: s06-duality-and-classical-demand
-    topic: demand
+    topic: duality
     gist: Change in commodity demand driven by the shift in effective purchasing power when a price varies.
     status: proposed
     provenance:
@@ -193,7 +193,7 @@
     name: Slutsky matrix
     kind: object
     section: s06-duality-and-classical-demand
-    topic: demand
+    topic: duality
     gist: Matrix of price derivatives of compensated demand capturing substitution terms across all commodities.
     status: proposed
     provenance:
@@ -210,7 +210,7 @@
     name: Negative semidefiniteness of substitution
     kind: property
     section: s06-duality-and-classical-demand
-    topic: demand
+    topic: duality
     gist: Curvature property establishing that the quadratic form of price changes through the Slutsky matrix is nonpositive.
     status: proposed
     provenance:

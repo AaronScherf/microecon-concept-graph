@@ -108,7 +108,7 @@
     name: Satisficing procedure
     kind: model
     section: s04-stochastic-choice
-    topic: rational-choice
+    topic: stochastic-choice
     gist: A bounded rationality procedure that inspects alternatives in a set order and picks the first one meeting an aspiration threshold.
     status: proposed
     provenance:

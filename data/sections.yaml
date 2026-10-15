@@ -4,6 +4,8 @@
     state: taught
     lectures:
       - '2026-09-07'
+    topic: order-theory
+    short: Order theory
   - id: s02-preference-and-utility
     title: Preferences, Utility, and Rational Choice
     order: 2
@@ -12,12 +14,16 @@
       - '2026-09-10'
       - '2026-09-15'
       - '2026-09-17'
+    topic: rational-choice
+    short: Preferences and utility
   - id: s03-revealed-preference
     title: Revealed Preference and Extensions
     order: 3
     state: taught
     lectures:
       - '2026-09-22'
+    topic: revealed-preference
+    short: Revealed preference
   - id: s04-stochastic-choice
     title: Stochastic Choice and Bounded Rationality
     order: 4
@@ -25,6 +31,8 @@
     lectures:
       - '2026-09-29'
       - '2026-10-01'
+    topic: stochastic-choice
+    short: Stochastic choice
   - id: s05-consumer-demand
     title: Consumer Demand and Utility Maximization
     order: 5
@@ -32,19 +40,27 @@
     lectures:
       - '2026-10-06'
       - '2026-10-08'
+    topic: demand
+    short: Consumer demand
   - id: s06-duality-and-classical-demand
     title: Duality, Expenditure, and Slutsky Decomposition
     order: 6
     state: in_progress
     lectures:
       - '2026-10-13'
+    topic: duality
+    short: Duality and Slutsky
   - id: s07-producer-theory
     title: Production and Cost Minimization
     order: 7
     state: in_progress
     lectures: []
+    topic: producer-theory
+    short: Producer theory
   - id: s08-choice-under-uncertainty
     title: Choice Under Risk and Uncertainty
     order: 8
     state: in_progress
     lectures: []
+    topic: risk-and-uncertainty
+    short: Risk and uncertainty
