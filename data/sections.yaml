@@ -6,6 +6,8 @@
       - '2026-09-07'
     topic: order-theory
     short: Order theory
+    summary: Order theory provides the axiomatic language used to model economic choice. Defining binary relations on alternative sets with reflexivity, transitivity, and completeness establishes preorders, partial orders, and total orders. Transitivity ensures coherent decision-making, while mutual comparison yields equivalence relations that partition options into disjoint indifference classes. When rankings are incomplete, Szpilrajn's extension theorem proves they can be extended into complete linear orders. These foundational structures are indispensable for subsequent analysis, justifying numerical utility representations and rational demand.
+    summary_hash: 52accb02cd960dfa
   - id: s02-preference-and-utility
     title: Preferences, Utility, and Rational Choice
     order: 2
@@ -16,6 +18,8 @@
       - '2026-09-17'
     topic: rational-choice
     short: Preferences and utility
+    summary: Individual decision theory connects observable choices to underlying preferences. A rational preference relation separates into strict ranking and indifference, generating upper contour sets that reflect desirability. When a choice structure satisfies Sen's alpha and beta or WARP, selections maximize an underlying preference relation. Furthermore, Debreu's representation theorem shows that continuous preferences admit a numerical utility function, whereas discontinuous structures like lexicographic preferences cannot. Unifying choice consistency, ordinal rankings, and real-valued utility provides the foundation for analyzing constrained demand.
+    summary_hash: ce33113dc5c2e0bd
   - id: s03-revealed-preference
     title: Revealed Preference and Extensions
     order: 3
@@ -24,6 +28,8 @@
       - '2026-09-22'
     topic: revealed-preference
     short: Revealed preference
+    summary: "Revealed preference theory deduces consumer rankings directly from observable choices. Selecting an option over affordable alternatives forms direct comparisons, whose transitive closure defines indirect revealed preferences. Acyclicity axioms rule out contradictory loops: SARP guarantees single-valued rationalizability, while GARP prevents an alternative from being strictly dominated by any bundle it indirectly dominates. For price-consumption data, Afriat's theorem proves that GARP is equivalent to solvable Afriat inequalities and rationalization by a concave utility function, with HARP characterizing homothetic tastes. These non-parametric foundations justify demand analysis."
+    summary_hash: ed1f2772a6b5e420
   - id: s04-stochastic-choice
     title: Stochastic Choice and Bounded Rationality
     order: 4
@@ -33,6 +39,8 @@
       - '2026-10-01'
     topic: stochastic-choice
     short: Stochastic choice
+    summary: Deterministic models cannot capture empirical choice variability or cognitive bounds. Random choice rules represent probabilistic decisions across menus, satisfying regularity and positivity. In random utility frameworks, selections maximize stochastic valuations; Falmagne's theorem and revealed stochastic preference characterize them through the Block-Marschak inequalities. Additive models like multinomial logit generate Luce choice rules obeying stochastic independence of irrelevant alternatives. Meanwhile, bounded rationality heuristics like satisficing replace optimization with aspiration thresholds, connecting axiomatic decision theory to applied discrete choice.
+    summary_hash: 116e5b7a7a59a0a6
   - id: s05-consumer-demand
     title: Consumer Demand and Utility Maximization
     order: 5
@@ -42,6 +50,8 @@
       - '2026-10-08'
     topic: demand
     short: Consumer demand
+    summary: Consumer demand theory examines how price-taking agents allocate wealth across commodities. The utility maximization problem optimizes continuous preferences over a compact budget set. By Berge's theorem of the maximum, optimal choices form a Walrasian demand correspondence that is homogeneous of degree zero and exhausts wealth via Walras' law. Convex preferences ensure interior choices equate price ratios with the marginal rate of substitution, while strict convexity guarantees a unique demand function. Specific functional forms like CES, Cobb-Douglas, linear, Leontief, and quasi-linear illustrate varied substitution patterns, laying the groundwork for dual expenditure analysis.
+    summary_hash: bd69438b7254f460
   - id: s06-duality-and-classical-demand
     title: Duality, Expenditure, and Slutsky Decomposition
     order: 6
@@ -50,6 +60,8 @@
       - '2026-10-13'
     topic: duality
     short: Duality and Slutsky
+    summary: Duality connects utility maximization to expenditure minimization. Maximizing utility generates indirect utility and Walrasian demand, whereas minimizing spending yields the expenditure function and Hicksian demand. Under the envelope theorem, Shephard's lemma derives Hicksian demand from expenditure, while Roy's identity retrieves Walrasian demand from indirect utility. The Slutsky equation decomposes price effects into substitution and income components, with expenditure concavity ensuring a negative semidefinite Slutsky matrix and the law of compensated demand. These dual relationships enable welfare measurement and demand estimation.
+    summary_hash: 2581b6ce1027bd77
   - id: s07-producer-theory
     title: Production and Cost Minimization
     order: 7
@@ -57,6 +69,8 @@
     lectures: []
     topic: producer-theory
     short: Producer theory
+    summary: Producer theory models how price-taking firms transform inputs into outputs. Feasible technologies form a production set or production function, characterized by returns to scale and free disposal. The profit maximization problem yields the firm's supply correspondence and profit function, with Hotelling's lemma recovering supply via price derivatives and convexity ensuring the law of supply. In parallel, the cost minimization problem balances factor prices with the marginal rate of technical substitution to generate conditional factor demands and the cost function. These dual formulations provide the foundation for competitive supply and market equilibrium.
+    summary_hash: 70d2a253456a89ab
   - id: s08-choice-under-uncertainty
     title: Choice Under Risk and Uncertainty
     order: 8
@@ -64,3 +78,5 @@
     lectures: []
     topic: risk-and-uncertainty
     short: Risk and uncertainty
+    summary: Choice theory under uncertainty extends consumer rationality to stochastic environments. Modeling risky prospects as lotteries, the expected utility theorem proves that rankings satisfying the Archimedean and independence axioms admit a von Neumann-Morgenstern utility representation. For monetary payoffs, risk aversion reflects utility concavity, measured by Arrow-Pratt indices and the risk premium. Furthermore, first-order stochastic dominance identifies higher returns, while second-order dominance ranks riskiness. Without objective probabilities, subjective expected utility generates beliefs and values jointly, establishing the foundation for finance and game theory.
+    summary_hash: 1b341a44c788922b
