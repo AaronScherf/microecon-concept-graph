@@ -186,3 +186,19 @@
     critic:
       verdict: supports
       note: ''
+  - id: symmetry--component_of--equivalence-relation
+    source: symmetry
+    type: component_of
+    target: equivalence-relation
+    explanation: Symmetry constitutes one of the three axiomatic requirements defining an equivalence relation alongside reflexivity and transitivity.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: An equivalence relation is defined as a binary relation that satisfies reflexivity, symmetry, and transitivity.

@@ -6,3 +6,5 @@
     id: convex-preferences--implies--walrasian-demand
   - kind: edge
     id: cobb-douglas-utility-function--component_of--utility-maximization-problem
+  - kind: edge
+    id: random-utility-model--has_property--positivity-condition

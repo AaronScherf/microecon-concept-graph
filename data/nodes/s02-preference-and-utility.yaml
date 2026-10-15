@@ -278,3 +278,60 @@
       \text{For } x, y \in \mathbb{R}^2, \ x \succ_L y \iff (x_1 > y_1) \lor (x_1 = y_1 \land x_2 > y_2) \\
       x \sim_L y \iff (x_1 = y_1 \land x_2 = y_2)
     example: Comparing bundles in $\mathbb{R}^2$, we have $(2, 0) \succ_L (1, 100)$ because the first coordinate takes strict precedence, while $(2, 5) \succ_L (2, 3)$ because the first coordinates match and the second coordinate breaks the tie.
+  - id: strict-preference-relation
+    name: Strict preference relation
+    kind: object
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: The asymmetric part of a preference preorder denoting alternatives ranked strictly higher than others.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: The strict preference relation $\succ$ isolates instances where a decision maker views an alternative as unequivocally superior to another. Formally constructed as the asymmetric part of a weak preference relation $\succeq$, it holds when $x \succeq y$ occurs in the absence of $y \succeq x$. Unlike weak preference, strict preference is irreflexive and incomplete, yet it preserves transitivity under standard rational choice axioms. Economists motivate the transitivity of strict preference via arbitrage arguments, noting that intransitive strict rankings expose a consumer to exploitative money pumps.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105
+      - source: lecture
+        ref: '2026-09-15'
+    formal: x \succ y \iff (x \succeq y \land \neg(y \succeq x))
+    example: A consumer choosing between bundles of apples and oranges strictly prefers $(3, 2)$ over $(1, 2)$ if $(3, 2) \succeq (1, 2)$ but $(1, 2) \nsucceq (3, 2)$. Under monotonic tastes, adding any positive commodity strictly increases desirability, establishing $(3, 2) \succ (1, 2)$.
+  - id: indifference-relation
+    name: Indifference relation
+    kind: object
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: The symmetric component of a preference preorder connecting alternatives judged equally desirable.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: The indifference relation $\sim$ identifies pairs of alternatives between which an economic agent exhibits no strict ranking. Obtained as the symmetric core of a weak preference relation $\succeq$, it holds whenever $x \succeq y$ and $y \succeq x$ are simultaneously satisfied. Because weak preference is reflexive and transitive, the induced indifference relation constitutes a formal equivalence relation on the commodity space. Consequently, its equivalence classes partition the consumption space into non-overlapping indifference sets or indifference curves, ensuring that distinct indifference classes never intersect.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36
+    formal: x \sim y \iff (x \succeq y \land y \succeq x)
+    example: For an agent with Cobb-Douglas utility $u(x_1, x_2) = x_1 x_2$, the consumption bundles $(4, 1)$ and $(2, 2)$ both yield a utility score of $4$. Hence $(4, 1) \sim (2, 2)$, placing both commodity allocations on the same hyperbolic indifference curve.
+  - id: upper-contour-set
+    name: Upper contour set
+    kind: object
+    section: s02-preference-and-utility
+    topic: rational-choice
+    gist: The collection of alternatives or consumption bundles ranked weakly above a specified baseline option.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: 'For a given baseline bundle $x$ in consumption set $X$, the upper contour set gathers all allocations that the consumer deems at least as desirable as $x$. Topological and geometric properties of these sets reflect essential behavioral assumptions in consumer theory. For instance, continuity of preferences corresponds to upper contour sets being closed in the commodity topology, whereas convexity of preferences requires that upper contour sets be convex sets. When represented by a utility function $u$, the upper contour set coincides with the upper level set $\{y \in X : u(y) \ge u(x)\}$.'
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106
+    formal: U_{\succeq}(x) = \{y \in X \mid y \succeq x\}
+    example: Suppose preferences over two commodities $\mathbb{R}_+^2$ are represented by $u(x_1, x_2) = \min\{x_1, x_2\}$. For baseline bundle $(2, 2)$, the upper contour set forms the closed quadrant $[2, \infty) \times [2, \infty)$, displaying the right-angled boundary characteristic of perfect complements.

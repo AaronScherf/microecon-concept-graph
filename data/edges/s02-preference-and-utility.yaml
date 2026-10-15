@@ -244,3 +244,188 @@
     critic:
       verdict: supports
       note: ''
+  - id: indifference-relation--has_property--symmetry
+    source: indifference-relation
+    type: has_property
+    target: symmetry
+    explanation: An indifference relation links alternatives regarded as equally desirable, ensuring that mutual preference holds in both directions.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.4 - Symmetric and antisymmetric binary relations, p. 24
+      - source: lecture
+        ref: '2026-09-10'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: By construction, the indifference relation satisfies symmetry because each bundle is weakly preferred to the other.
+  - id: strict-preference-relation--defined_on--rational-preference-relation
+    source: strict-preference-relation
+    type: defined_on
+    target: rational-preference-relation
+    explanation: The strict preference relation is constructed directly from an underlying rational preference relation as its asymmetric part, holding when one option is weakly preferred over another while the reverse ranking fails.
+    citations:
+      - source: slides
+        ref: Utility Maximization 1
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105
+      - source: lecture
+        ref: '2026-09-15'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The strict preference relation is defined as the asymmetric part of an underlying rational preference relation.
+  - id: strict-preference-relation--has_property--transitivity
+    source: strict-preference-relation
+    type: has_property
+    target: transitivity
+    explanation: When chaining pairwise comparisons, if one option strictly ranks above a second and the second strictly ranks above a third, the first is guaranteed to strictly rank above the third.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36
+      - source: lecture
+        ref: '2026-09-15'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The asymmetric subrelation of a complete and transitive preorder is necessarily transitive.
+  - id: strict-preference-relation--is_a--binary-relation
+    source: strict-preference-relation
+    type: is_a
+    target: binary-relation
+    condition: it forms the asymmetric subrelation of a preference relation
+    explanation: Strict preference operates as a binary relation over the alternative space, pairing elements whenever an economic agent strictly prefers one alternative to the other.
+    citations:
+      - source: slides
+        ref: Utility Maximization 1
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The strict preference relation is a binary relation consisting of pairs of alternatives where one is strictly preferred to the other.
+  - id: indifference-relation--defined_on--rational-preference-relation
+    source: indifference-relation
+    type: defined_on
+    target: rational-preference-relation
+    explanation: An indifference relation is derived directly from an underlying rational preference relation as its symmetric part, holding between alternatives that are mutually weakly preferred to one another.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105
+      - source: lecture
+        ref: '2026-09-15'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The indifference relation is formally defined as the symmetric component of a rational preference relation.
+  - id: indifference-relation--is_a--equivalence-relation
+    source: indifference-relation
+    type: is_a
+    target: equivalence-relation
+    condition: it represents the symmetric component of a complete preference preorder
+    explanation: The indifference relation satisfies reflexivity, symmetry, and transitivity, partitioning the choice space into disjoint indifference classes that group alternatives of equal desirability.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The indifference relation satisfies reflexivity, symmetry, and transitivity, making it an equivalence relation on the commodity space.
+  - id: indifference-relation--iff--utility-function
+    source: indifference-relation
+    type: iff
+    target: utility-function
+    condition: preferences admit a real-valued utility representation and two alternatives evaluate to equal utility values
+    explanation: When an agent's preferences are numerically represented by a utility function, two alternatives are related by indifference precisely when the function assigns them identical real numbers.
+    citations:
+      - source: lecture
+        ref: '2026-09-15'
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: When a utility representation exists, two consumption bundles are indifferent if and only if they yield identical utility values.
+  - id: upper-contour-set--defined_on--rational-preference-relation
+    source: upper-contour-set
+    type: defined_on
+    target: rational-preference-relation
+    explanation: An upper contour set is constructed for a specific consumption bundle relative to an underlying rational preference relation, collecting every alternative weakly preferred to that baseline option.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The upper contour set at any alternative is defined as the collection of bundles weakly preferred under the preference relation.
+  - id: upper-contour-set--iff--continuous-preference
+    source: upper-contour-set
+    type: iff
+    target: continuous-preference
+    condition: both the upper contour set and the lower contour set are topologically closed for every reference bundle
+    explanation: Preference continuity is equivalent to the requirement that for every consumption point, the upper contour set and the lower contour set contain all their boundary limit points.
+    citations:
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.C Preference and Utility, p. 57
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: A preference relation on Euclidean space is continuous if and only if its upper and lower contour sets are closed.
+  - id: upper-contour-set--is_a--set
+    source: upper-contour-set
+    type: is_a
+    target: set
+    condition: it gathers consumption bundles that are weakly preferred to a designated reference alternative
+    explanation: An upper contour set is a mathematical subset of the commodity space consisting of all alternatives ranked at least as high as a given anchor bundle.
+    citations:
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106
+      - source: mwg
+        ref: Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The upper contour set is a mathematical set containing all commodity bundles ranking weakly above a chosen reference bundle.

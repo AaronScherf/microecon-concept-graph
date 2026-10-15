@@ -252,3 +252,22 @@
       - source: ok
         ref: Ok_Real_Analysis_with_Economic_Applications_2026, §PROOF, p. 37
     formal: \text{If } (X, \succsim) \text{ is a poset, there exists a linear order } \triangleright \text{ on } X \text{ such that } \succsim \;\subseteq\; \triangleright.
+  - id: symmetry
+    name: Symmetry
+    kind: property
+    section: s01-mathematical-preliminaries
+    topic: order-theory
+    gist: A property of a binary relation where whenever one element is related to another, the reverse relationship also holds.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: A binary relation $R$ on a set $X$ possesses symmetry when the ordering of any related pair can be inverted without altering validity. In microeconomic consumer theory, preference relations themselves are generally not symmetric because agents typically express strict rankings between distinct consumption bundles. However, the symmetric component of a weak preference preorder isolates the agent's indifference relation $\sim$. Under this construction, elements belonging to mutually symmetric comparisons form equivalence classes that partition the choice environment into distinct indifference sets.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.4 - Symmetric and antisymmetric binary relations, p. 24
+      - source: ok
+        ref: Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31
+    formal: \forall x, y \in X, \quad x R y \implies y R x \iff R = R^{-1}
+    example: 'Consumer indifference $\sim$ defines a symmetric relation: if bundle $x$ provides the same utility as bundle $y$, then $y \sim x$. In contrast, strict preference $\succ$ is strictly asymmetric.'

@@ -165,3 +165,109 @@
       This is a necessary condition for rationalizability in a random utility model, since $\{u \in \mathcal{U} : x = \arg\max u(A)\} \subseteq \{u \in \mathcal{U} : x = \arg\max u(B)\}$.
     example: |-
       Let an agent choose among items $\{a, b, c\}$. From the full menu, suppose choice probabilities are $\rho(a, \{a, b, c\}) = 0.2$, $\rho(b, \{a, b, c\}) = 0.3$, and $\rho(c, \{a, b, c\}) = 0.5$. If option $c$ is removed, regularity requires that neither remaining alternative suffers a drop in likelihood; for instance, the reduced menu could yield $\rho(a, \{a, b\}) = 0.4 \ge 0.2$ and $\rho(b, \{a, b\}) = 0.6 \ge 0.3$.
+  - id: positivity-condition
+    name: Positivity condition
+    kind: property
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: Requirement that every available option in a feasible menu is selected with strictly positive probability.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: In stochastic choice theory, the positivity condition demands that the decision maker selects each feasible alternative with non-zero probability from any offered menu. Under a random choice rule $p$, this means that $p(x, A) > 0$ whenever $x \in A$. The postulate prevents deterministic zero-probability exclusions and guarantees that pairwise likelihood ratios remain well-defined across all choice sets. It serves as a foundational assumption in models such as the Luce rule, where choice frequencies are strictly positive fractions of total menu weights.
+    citations:
+      - source: slides
+        ref: Random choice
+      - source: rubinstein
+        ref: Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Problem A24. (NYU 2025), p. 161
+    formal: p(x, A) > 0 \quad \text{for all } A \subseteq X \text{ with } A \neq \emptyset \text{ and all } x \in A
+    example: 'Consider a consumer choosing among three beverages: tea, coffee, and water. A random choice rule satisfying positivity assigns strictly positive selection shares to all three drinks on the full menu, as well as to each drink on every two-element subset. Conversely, if coffee is chosen with probability zero whenever tea is present, positivity fails because an available menu alternative receives zero probability mass.'
+  - id: stochastic-independence-of-irrelevant-alternatives
+    name: Stochastic independence of irrelevant alternatives
+    kind: axiom
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: Axiom stating that the relative ratio of choice probabilities between two options is invariant to the choice set.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: Stochastic independence of irrelevant alternatives requires that the relative likelihood of selecting option $x$ over option $y$ depends solely on the pair $(x, y)$ and not on the presence of any other options in the menu. Formally, for any two menus $A$ and $B$ containing both $x$ and $y$, the odds ratio $p(x, A)/p(y, A)$ equals $p(x, B)/p(y, B)$. Together with the positivity condition, this invariance property characterizes Luce's probabilistic choice rule. While analytically tractable, the axiom imposes rigid substitution patterns that can generate implausible predictions when duplicate or closely substitute goods are added.
+    citations:
+      - source: slides
+        ref: Random choice
+    formal: \frac{p(x, A)}{p(y, A)} = \frac{p(x, B)}{p(y, B)} \quad \text{for all } A, B \in \mathcal{D} \text{ such that } x, y \in A \cap B
+    example: In Debreu's classic red bus versus blue bus scenario, an agent chooses between a car and a red bus with equal odds, so $p(\text{car}, \{\text{car}, \text{red bus}\}) = 1/2$. If an identical blue bus is added to the menu, stochastic independence of irrelevant alternatives forces the ratio between car and red bus to remain $1:1$, yielding equal one-third probabilities for all three alternatives. Intuitively, the duplicate bus should split the bus market share without altering the total probability of traveling by car.
+  - id: block-marschak-inequalities
+    name: Block-Marschak inequalities
+    kind: property
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: System of alternating-sign polynomial inequalities on choice probabilities that characterizes random utility rationalizability.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: The Block-Marschak inequalities establish necessary and sufficient conditions for a stochastic choice rule on a finite universe to be rationalized by a random utility model. For every choice problem $A$ and every item $x \in A$, an alternating sum of choice probabilities across all supersets $B \supseteq A$ must be non-negative. This combinatorial restriction reflects the principle of inclusion-exclusion applied to probability measures over rankings where $x$ remains top-ranked within $A$. When menus expand, the inequalities generalize simple stochastic monotonicity by restricting how substitution patterns evolve across sets of higher cardinality.
+    citations:
+      - source: slides
+        ref: Random choice
+    formal: '\sum_{B \subseteq X : A \subseteq B} (-1)^{|B \setminus A|} p(x, B) \geq 0 \quad \text{for all } A \subseteq X, A \neq \emptyset, \text{ and all } x \in A'
+    example: On a three-element universe $X = \{x, y, z\}$ with $A = \{x\}$, the inequality requires $p(x, \{x\}) - p(x, \{x, y\}) - p(x, \{x, z\}) + p(x, \{x, y, z\}) \ge 0$. Since $p(x, \{x\}) = 1$, this inequality bounds how sharply the probability of picking $x$ can drop across binary comparisons relative to the grand menu. A choice rule assigning probabilities of $0.6$ on each binary problem but $0.1$ on the ternary set yields $1 - 0.6 - 0.6 + 0.1 = -0.1 < 0$, violating the condition and ruling out random utility rationalization.
+  - id: additive-random-utility-model
+    name: Additive random utility model
+    kind: model
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: Stochastic choice structure decomposing total utility into an alternative-specific deterministic payoff and an additive random error.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: The additive random utility model decomposes the evaluation of each alternative into a systematic deterministic component and an unobserved stochastic disturbance. For each available option $x$, the agent's realized payoff is $U(x) = v(x) + \varepsilon_x$, where the joint distribution of the random shocks is invariant to the choice menu. Choice is governed by utility maximization, so the likelihood of selecting $x$ from menu $A$ equals the probability that its total utility exceeds that of all other available options. This specification accounts for observed inconsistencies in individual decision-making, such as cognitive trembling or population-level taste heterogeneity.
+    citations:
+      - source: slides
+        ref: Random choice
+    formal: p(x, A) = \mathbb{P}\left(v(x) + \varepsilon_x > \max_{y \in A \setminus \{x\}} (v(y) + \varepsilon_y)\right) \quad \text{for all } x \in A \subseteq X
+    example: In commuter mode choice between train and bus, systematic values $v(\text{train})$ and $v(\text{bus})$ reflect travel time and fare, while idiosyncratic disturbances capture unobserved daily fluctuations in comfort or delays. If the error terms $\varepsilon_x$ are independent and identically distributed according to the standard Gumbel (type I extreme value) distribution, the additive random utility framework yields the standard multinomial logit probabilities. If disturbances are instead correlated across similar alternatives, generalized extreme value or multinomial probit specifications arise.
+  - id: falmagne-representation-theorem
+    name: Falmagne representation theorem
+    kind: theorem
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: Theorem stating that a random choice rule is rationalizable by a random utility model if and only if it satisfies the Block-Marschak inequalities.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: Falmagne's representation theorem provides a complete axiomatic characterization of random utility models on finite alternative sets. The theorem establishes that a random choice rule is rationalizable by a probability distribution over linear preference orders if and only if the Block-Marschak polynomial is non-negative for every menu $A$ and alternative $x \in A$. Mechanically, these polynomial expressions represent the exact probability assigned to the set of rankings where a given element is preferred to all items outside a menu while being maximal within it. Consequently, non-negativity of these expressions is both necessary and sufficient to recover a valid underlying probability measure over preference orders.
+    citations:
+      - source: slides
+        ref: Random choice
+    formal: 'p \text{ is RUM rationalizable} \iff \sum_{B \subseteq X : A \subseteq B} (-1)^{|B \setminus A|} p(x, B) \geq 0 \quad \forall A \subseteq X, \, A \neq \emptyset, \, \forall x \in A'
+    example: Suppose an empirical investigator observes complete stochastic choice data across all non-empty subsets of a four-candidate election. If computing the alternating polynomial for a candidate on any subset yields a negative value, Falmagne's theorem immediately implies that no distribution over deterministic candidate rankings can generate the observed choice probabilities. Conversely, if all such polynomial expressions remain non-negative, the analyst is guaranteed that the stochastic data can be fully rationalized by an unobserved distribution over voter preference orderings.
+  - id: multinomial-logit-model
+    name: Multinomial logit model
+    kind: model
+    section: s04-stochastic-choice
+    topic: stochastic-choice
+    gist: Discrete choice model where alternatives receive additive type I extreme value errors, producing Luce choice probabilities.
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: fill-density-20261014
+    explanation: The multinomial logit model is an additive random utility specification where each alternative's latent utility equals a deterministic index plus an independent and identically distributed type I extreme value (Gumbel) shock. Maximizing this perturbed utility produces closed-form choice probabilities proportional to the exponentiated deterministic payoffs. This formulation is mathematically equivalent to the Luce choice rule, with scale values given by $u(x) = \exp(v(x))$. While computationally convenient and widely implemented in empirical demand analysis, the model inherently enforces stochastic independence of irrelevant alternatives, restricting cross-alternative substitution.
+    citations:
+      - source: slides
+        ref: Random choice
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §7.2 Interactions Between Luce Players, p. 134-135
+    formal: p(x, A) = \frac{\exp(v(x))}{\sum_{y \in A} \exp(v(y))} = \frac{u(x)}{\sum_{y \in A} u(y)} \quad \text{where } U(x) = v(x) + \varepsilon_x, \; \varepsilon_x \overset{\text{iid}}{\sim} \text{Gumbel}(0, 1)
+    example: In empirical industrial organization, consumers choose among breakfast cereals whose deterministic indices depend on price, sugar content, and brand advertising. The multinomial logit framework yields simple closed-form market shares for each brand from observed product characteristics. However, introducing a new cereal that closely mimics an existing brand draws proportional demand from all options rather than substituting predominantly from its nearest neighbor, illustrating the restrictive substitution patterns of the model.

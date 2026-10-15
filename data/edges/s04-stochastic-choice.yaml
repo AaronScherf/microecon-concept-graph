@@ -131,3 +131,104 @@
     critic:
       verdict: supports
       note: ''
+  - id: block-marschak-inequalities--iff--random-utility-model
+    source: block-marschak-inequalities
+    type: iff
+    target: random-utility-model
+    condition: for any stochastic choice rule observed across all non-empty subsets of a finite universe
+    via: falmagne-representation-theorem
+    explanation: Under Falmagne's representation theorem, an observed stochastic choice function admits a random utility representation precisely when its choice probabilities satisfy the alternating Block-Marschak non-negativity restrictions.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The representation theorem establishes that a stochastic choice rule on a finite universe is rationalizable by a random utility model if and only if it satisfies the Block-Marschak inequalities.
+  - id: block-marschak-inequalities--hypothesis_of--falmagne-representation-theorem
+    source: block-marschak-inequalities
+    type: hypothesis_of
+    target: falmagne-representation-theorem
+    explanation: The system of alternating-sign polynomial conditions forms the foundational characterization requirement in Falmagne's representation theorem for random utility rationalization.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: Falmagne's representation theorem explicitly takes satisfaction of the Block-Marschak inequalities as its characterizing hypothesis.
+  - id: additive-random-utility-model--is_a--random-utility-model
+    source: additive-random-utility-model
+    type: is_a
+    target: random-utility-model
+    condition: individual valuations decompose into a deterministic payoff index plus an additive random shock
+    explanation: An additive random utility structure is a specialized instance of the random utility model where an alternative's realized score splits into a systematic payoff and an additive disturbance.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: The materials define the additive random utility model as a random utility model where valuations decompose into a deterministic payoff index plus an additive random shock.
+  - id: falmagne-representation-theorem--yields--random-utility-model
+    source: falmagne-representation-theorem
+    type: yields
+    target: random-utility-model
+    explanation: When the polynomial restrictions hold on all subsets of alternatives, Falmagne's representation theorem guarantees rationalizability by an unobserved random utility distribution.
+    citations:
+      - source: slides
+        ref: Random choice
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: Falmagne's theorem demonstrates that satisfying the polynomial inequalities yields a valid random utility representation.
+  - id: multinomial-logit-model--implies--luce-model
+    source: multinomial-logit-model
+    type: implies
+    target: luce-model
+    condition: when alternatives have independent and identically distributed type I extreme value disturbances and scale weights equal exponentiated utilities
+    explanation: Assuming independent type I extreme value additive errors in the discrete choice formulation yields choice probabilities identical to the ratio form of the Luce model.
+    citations:
+      - source: rubinstein
+        ref: Rubenstein_Corel_Ventura_INDEXCHP_2001, §7.2 Interactions Between Luce Players, p. 134-135
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-density-20261014
+    critic:
+      verdict: supports
+      note: Assuming independent and identically distributed type I extreme value disturbances yields choice probabilities conforming to the Luce rule.
+  - id: multinomial-logit-model--implies--stochastic-independence-of-irrelevant-alternatives
+    source: multinomial-logit-model
+    type: implies
+    target: stochastic-independence-of-irrelevant-alternatives
+    condition: when random utility shocks follow independent and identically distributed type I extreme value distributions
+    explanation: The multinomial logit specification generates Luce choice probabilities whose pairwise probability ratios depend exclusively on alternative-specific values, implying stochastic independence of irrelevant alternatives.
+    citations:
+      - source: slides
+        ref: Course Intro
+    status: proposed
+    provenance:
+      driver: agent
+      agent: antigravity-gemini
+      run: link-orphans2-20261014
+    critic:
+      verdict: supports
+      note: When random utility shocks follow independent and identically distributed type I extreme value distributions, choice probabilities satisfy the constant pairwise odds ratio property defining stochastic independence of irrelevant alternatives.

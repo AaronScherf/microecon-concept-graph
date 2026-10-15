@@ -3,6 +3,63 @@
     {
       "citations": [
         {
+          "ref": "Random choice",
+          "source": "slides"
+        }
+      ],
+      "condition": "individual valuations decompose into a deterministic payoff index plus an additive random shock",
+      "critic": {
+        "note": "The materials define the additive random utility model as a random utility model where valuations decompose into a deterministic payoff index plus an additive random shock.",
+        "verdict": "supports"
+      },
+      "explanation": "An additive random utility structure is a specialized instance of the random utility model where an alternative's realized score splits into a systematic payoff and an additive disturbance.",
+      "hashes": {
+        "condition": "1571ce1a9579ff22",
+        "explanation": "982b51e535229a57"
+      },
+      "id": "additive-random-utility-model--is_a--random-utility-model",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "additive-random-utility-model",
+      "status": "proposed",
+      "target": "random-utility-model",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "for any finite set of price and consumption bundle observations",
+      "critic": {
+        "note": "Afriat's theorem proves that on any finite dataset of prices and chosen bundles, satisfying the generalized axiom of revealed preference is equivalent to the solvability of the Afriat inequalities.",
+        "verdict": "supports"
+      },
+      "explanation": "A finite consumption dataset can be rationalized by a continuous, strictly increasing, and concave utility function if and only if it satisfies GARP, which is equivalent to the solvability of the Afriat inequalities.",
+      "hashes": {
+        "condition": "169d8ddc458b2691",
+        "explanation": "80042fd600f9a479"
+      },
+      "id": "afriat-inequalities--iff--generalized-axiom-of-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans2-20261014"
+      },
+      "source": "afriat-inequalities",
+      "status": "proposed",
+      "target": "generalized-axiom-of-revealed-preference",
+      "type": "iff",
+      "via": "afriats-theorem"
+    },
+    {
+      "citations": [
+        {
           "ref": "2026-09-22",
           "source": "lecture"
         }
@@ -194,6 +251,62 @@
       "status": "proposed",
       "target": "set",
       "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        }
+      ],
+      "critic": {
+        "note": "Falmagne's representation theorem explicitly takes satisfaction of the Block-Marschak inequalities as its characterizing hypothesis.",
+        "verdict": "supports"
+      },
+      "explanation": "The system of alternating-sign polynomial conditions forms the foundational characterization requirement in Falmagne's representation theorem for random utility rationalization.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "92eba8025d191b4a"
+      },
+      "id": "block-marschak-inequalities--hypothesis_of--falmagne-representation-theorem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "block-marschak-inequalities",
+      "status": "proposed",
+      "target": "falmagne-representation-theorem",
+      "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        }
+      ],
+      "condition": "for any stochastic choice rule observed across all non-empty subsets of a finite universe",
+      "critic": {
+        "note": "The representation theorem establishes that a stochastic choice rule on a finite universe is rationalizable by a random utility model if and only if it satisfies the Block-Marschak inequalities.",
+        "verdict": "supports"
+      },
+      "explanation": "Under Falmagne's representation theorem, an observed stochastic choice function admits a random utility representation precisely when its choice probabilities satisfy the alternating Block-Marschak non-negativity restrictions.",
+      "hashes": {
+        "condition": "2cc04f6d8c3f82d9",
+        "explanation": "6287bdbeef911c13"
+      },
+      "id": "block-marschak-inequalities--iff--random-utility-model",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "block-marschak-inequalities",
+      "status": "proposed",
+      "target": "random-utility-model",
+      "type": "iff",
+      "via": "falmagne-representation-theorem"
     },
     {
       "citations": [
@@ -720,6 +833,62 @@
     {
       "citations": [
         {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "condition": "when demand is single-valued and consumption sets are convex",
+      "critic": {
+        "note": "Prohibiting cycles in revealed preference ensures that indirect revealed preference chains cannot cycle, satisfying the strong axiom of revealed preference for single-valued demand.",
+        "verdict": "supports"
+      },
+      "explanation": "Ruling out cycles in preference comparisons ensures that indirect revealed preference cannot cycle between distinct alternatives, satisfying the strong axiom of revealed preference.",
+      "hashes": {
+        "condition": "6c064781fa7a9d2d",
+        "explanation": "309ed6ce39ce85ec"
+      },
+      "id": "cyclical-consistency--implies--strong-axiom-of-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans2-20261014"
+      },
+      "source": "cyclical-consistency",
+      "status": "proposed",
+      "target": "strong-axiom-of-revealed-preference",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak and Strong Axioms of Revealed Preference, p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "for single-valued Walrasian demand observations on competitive budget sets",
+      "critic": {
+        "note": "Cyclical consistency prohibits preference cycles containing strict preference, directly implying the two-budget revealed preference asymmetry defining the weak axiom for single-valued demand.",
+        "verdict": "supports"
+      },
+      "explanation": "Cyclical consistency prevents preference cycles that contain any strict preference relation, directly implying the pairwise consistency required by the weak axiom of revealed preference.",
+      "hashes": {
+        "condition": "1c827bfe7ec422d9",
+        "explanation": "0fd1da4213565120"
+      },
+      "id": "cyclical-consistency--implies--weak-axiom-of-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans2-20261014"
+      },
+      "source": "cyclical-consistency",
+      "status": "proposed",
+      "target": "weak-axiom-of-revealed-preference",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
           "ref": "Utility Maximization 2 part 1",
           "source": "slides"
         },
@@ -747,6 +916,61 @@
       "status": "proposed",
       "target": "utility-function",
       "type": "yields"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.6 - Revealed preference, p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Direct revealed preference is defined by evaluating which affordable alternatives belong to the consumer budget set when a bundle is chosen.",
+        "verdict": "supports"
+      },
+      "explanation": "Direct revealed preference evaluates pairs of consumption bundles that are jointly contained within a consumer budget set.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "1c124542229dc8ed"
+      },
+      "id": "direct-revealed-preference--defined_on--budget-set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "direct-revealed-preference",
+      "status": "proposed",
+      "target": "budget-set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Utility Maximization 1 Proofs",
+          "source": "slides"
+        }
+      ],
+      "condition": "it relates a selected alternative to any affordable bundle in the chosen menu",
+      "critic": {
+        "note": "Direct revealed preference is a binary relation pairing chosen options with alternative affordable options in the budget set.",
+        "verdict": "supports"
+      },
+      "explanation": "Direct revealed preference establishes a binary relation across alternatives based on empirical choices from feasible sets.",
+      "hashes": {
+        "condition": "9622e26c88a2a84d",
+        "explanation": "a4d2abd41d8da450"
+      },
+      "id": "direct-revealed-preference--is_a--binary-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "direct-revealed-preference",
+      "status": "proposed",
+      "target": "binary-relation",
+      "type": "is_a"
     },
     {
       "citations": [
@@ -964,6 +1188,33 @@
       "status": "proposed",
       "target": "duality-of-consumer-choice",
       "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        }
+      ],
+      "critic": {
+        "note": "Falmagne's theorem demonstrates that satisfying the polynomial inequalities yields a valid random utility representation.",
+        "verdict": "supports"
+      },
+      "explanation": "When the polynomial restrictions hold on all subsets of alternatives, Falmagne's representation theorem guarantees rationalizability by an unobserved random utility distribution.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "cb288e37ad2da8b6"
+      },
+      "id": "falmagne-representation-theorem--yields--random-utility-model",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "falmagne-representation-theorem",
+      "status": "proposed",
+      "target": "random-utility-model",
+      "type": "yields"
     },
     {
       "citations": [
@@ -1218,6 +1469,34 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Homothetic Preferences, p. 67",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "when consumption choices are generated by maximizing a degree-one homogeneous utility function",
+      "critic": {
+        "note": "Maximizing a degree-one homogeneous utility function rationalizes consumer choice and generates a Walrasian demand correspondence whose consumption bundles scale proportionally with wealth.",
+        "verdict": "supports"
+      },
+      "explanation": "The homothetic axiom of revealed preference guarantees that consumer choices scale proportionally with changes in income, producing Walrasian demand correspondences with linear expansion paths.",
+      "hashes": {
+        "condition": "1788306a78710c6f",
+        "explanation": "acc9d3117bb6f2d4"
+      },
+      "id": "homothetic-axiom-of-revealed-preference--implies--walrasian-demand",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans2-20261014"
+      },
+      "source": "homothetic-axiom-of-revealed-preference",
+      "status": "proposed",
+      "target": "walrasian-demand",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
           "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Supply Function of the Profit-Maximizing Producer, p. 102",
           "source": "rubinstein"
         },
@@ -1245,6 +1524,90 @@
       "status": "proposed",
       "target": "supply-correspondence",
       "type": "yields"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "condition": "for single-valued Walrasian demand functions defined on competitive budget sets",
+      "critic": {
+        "note": "The text states that Houthakker's axiom of revealed preference is equivalent to the strong axiom of revealed preference for consumer demand functions.",
+        "verdict": "supports"
+      },
+      "explanation": "Houthakker formulated the strong axiom of revealed preference as a recursive closure of the weak axiom ruling out cyclical preference chains, making the two formulations equivalent.",
+      "hashes": {
+        "condition": "82e33e92948650af",
+        "explanation": "a148a9522e4d49ff"
+      },
+      "id": "houthakkers-axiom--iff--strong-axiom-of-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "houthakkers-axiom",
+      "status": "proposed",
+      "target": "strong-axiom-of-revealed-preference",
+      "type": "iff"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "condition": "for single-valued Walrasian demand functions",
+      "critic": {
+        "note": "Satisfaction of Houthakker's axiom ensures that observable demand behavior can be rationalized by a complete and transitive preference relation.",
+        "verdict": "supports"
+      },
+      "explanation": "Under Houthakker axiom, single-valued demand behavior can be rationalized by a complete and transitive preference relation.",
+      "hashes": {
+        "condition": "0820d81d4a4160db",
+        "explanation": "eea0f69d1ba3d296"
+      },
+      "id": "houthakkers-axiom--implies--rational-preference-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "houthakkers-axiom",
+      "status": "proposed",
+      "target": "rational-preference-relation",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "condition": "for single-valued demand functions with two or more commodities",
+      "critic": {
+        "note": "Because Houthakker's axiom enforces acyclicity on chains of all lengths, it directly implies the weak axiom of revealed preference.",
+        "verdict": "supports"
+      },
+      "explanation": "Because Houthakker axiom precludes indirect preference cycles of arbitrary length, it directly entails the two-alternative weak axiom of revealed preference.",
+      "hashes": {
+        "condition": "760dc3276b803a55",
+        "explanation": "69a6027ad9ca5d14"
+      },
+      "id": "houthakkers-axiom--implies--weak-axiom-of-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "houthakkers-axiom",
+      "status": "proposed",
+      "target": "weak-axiom-of-revealed-preference",
+      "type": "implies"
     },
     {
       "citations": [
@@ -1299,6 +1662,210 @@
       "status": "proposed",
       "target": "expected-utility-theorem",
       "type": "hypothesis_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105",
+          "source": "ok"
+        },
+        {
+          "ref": "2026-09-15",
+          "source": "lecture"
+        }
+      ],
+      "critic": {
+        "note": "The indifference relation is formally defined as the symmetric component of a rational preference relation.",
+        "verdict": "supports"
+      },
+      "explanation": "An indifference relation is derived directly from an underlying rational preference relation as its symmetric part, holding between alternatives that are mutually weakly preferred to one another.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "3579cfc663010426"
+      },
+      "id": "indifference-relation--defined_on--rational-preference-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indifference-relation",
+      "status": "proposed",
+      "target": "rational-preference-relation",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.4 - Symmetric and antisymmetric binary relations, p. 24",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "2026-09-10",
+          "source": "lecture"
+        }
+      ],
+      "critic": {
+        "note": "By construction, the indifference relation satisfies symmetry because each bundle is weakly preferred to the other.",
+        "verdict": "supports"
+      },
+      "explanation": "An indifference relation links alternatives regarded as equally desirable, ensuring that mutual preference holds in both directions.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "0f0da88f7fc9485a"
+      },
+      "id": "indifference-relation--has_property--symmetry",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indifference-relation",
+      "status": "proposed",
+      "target": "symmetry",
+      "type": "has_property"
+    },
+    {
+      "citations": [
+        {
+          "ref": "2026-09-15",
+          "source": "lecture"
+        }
+      ],
+      "condition": "preferences admit a real-valued utility representation and two alternatives evaluate to equal utility values",
+      "critic": {
+        "note": "When a utility representation exists, two consumption bundles are indifferent if and only if they yield identical utility values.",
+        "verdict": "supports"
+      },
+      "explanation": "When an agent's preferences are numerically represented by a utility function, two alternatives are related by indifference precisely when the function assigns them identical real numbers.",
+      "hashes": {
+        "condition": "8e7367da03e09624",
+        "explanation": "f1a7aeca87488497"
+      },
+      "id": "indifference-relation--iff--utility-function",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indifference-relation",
+      "status": "proposed",
+      "target": "utility-function",
+      "type": "iff"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36",
+          "source": "ok"
+        }
+      ],
+      "condition": "it represents the symmetric component of a complete preference preorder",
+      "critic": {
+        "note": "The indifference relation satisfies reflexivity, symmetry, and transitivity, making it an equivalence relation on the commodity space.",
+        "verdict": "supports"
+      },
+      "explanation": "The indifference relation satisfies reflexivity, symmetry, and transitivity, partitioning the choice space into disjoint indifference classes that group alternatives of equal desirability.",
+      "hashes": {
+        "condition": "6b0296dc85070d2a",
+        "explanation": "df37d45aa4895844"
+      },
+      "id": "indifference-relation--is_a--equivalence-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indifference-relation",
+      "status": "proposed",
+      "target": "equivalence-relation",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "Indirect revealed preference is defined as the transitive closure generated by the direct revealed preference relation.",
+        "verdict": "supports"
+      },
+      "explanation": "Indirect revealed preference is constructed by connecting alternatives through finite sequential chains of direct revealed preference.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "3e1119d7f791133c"
+      },
+      "id": "indirect-revealed-preference--defined_on--direct-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indirect-revealed-preference",
+      "status": "proposed",
+      "target": "direct-revealed-preference",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "As the transitive closure of pairwise direct revealed preference relations, the indirect relation is transitive by definition.",
+        "verdict": "supports"
+      },
+      "explanation": "Because indirect revealed preference is formed by linking finite chains of pairwise choices, the resulting relation satisfies transitivity.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "7be97335f0f811bc"
+      },
+      "id": "indirect-revealed-preference--has_property--transitivity",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indirect-revealed-preference",
+      "status": "proposed",
+      "target": "transitivity",
+      "type": "has_property"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "condition": "it relates alternatives connected by a finite sequence of pairwise direct revealed preferences",
+      "critic": {
+        "note": "Indirect revealed preference is a binary relation formed by finite chains of pairwise choice comparisons.",
+        "verdict": "supports"
+      },
+      "explanation": "Indirect revealed preference constitutes a binary relation ordering bundles whenever an unbroken sequence of pairwise selections links them.",
+      "hashes": {
+        "condition": "6fa723851ce78380",
+        "explanation": "44ef738325565b45"
+      },
+      "id": "indirect-revealed-preference--is_a--binary-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "indirect-revealed-preference",
+      "status": "proposed",
+      "target": "binary-relation",
+      "type": "is_a"
     },
     {
       "citations": [
@@ -1659,6 +2226,62 @@
       "source": "monotonic-preferences",
       "status": "proposed",
       "target": "walras-law",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Corel_Ventura_INDEXCHP_2001, §7.2 Interactions Between Luce Players, p. 134-135",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "when alternatives have independent and identically distributed type I extreme value disturbances and scale weights equal exponentiated utilities",
+      "critic": {
+        "note": "Assuming independent and identically distributed type I extreme value disturbances yields choice probabilities conforming to the Luce rule.",
+        "verdict": "supports"
+      },
+      "explanation": "Assuming independent type I extreme value additive errors in the discrete choice formulation yields choice probabilities identical to the ratio form of the Luce model.",
+      "hashes": {
+        "condition": "8b1371676658844f",
+        "explanation": "88e5a6f892d8abe2"
+      },
+      "id": "multinomial-logit-model--implies--luce-model",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "multinomial-logit-model",
+      "status": "proposed",
+      "target": "luce-model",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Course Intro",
+          "source": "slides"
+        }
+      ],
+      "condition": "when random utility shocks follow independent and identically distributed type I extreme value distributions",
+      "critic": {
+        "note": "When random utility shocks follow independent and identically distributed type I extreme value distributions, choice probabilities satisfy the constant pairwise odds ratio property defining stochastic independence of irrelevant alternatives.",
+        "verdict": "supports"
+      },
+      "explanation": "The multinomial logit specification generates Luce choice probabilities whose pairwise probability ratios depend exclusively on alternative-specific values, implying stochastic independence of irrelevant alternatives.",
+      "hashes": {
+        "condition": "e177840f77986566",
+        "explanation": "33ae69a2772e0366"
+      },
+      "id": "multinomial-logit-model--implies--stochastic-independence-of-irrelevant-alternatives",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-orphans2-20261014"
+      },
+      "source": "multinomial-logit-model",
+      "status": "proposed",
+      "target": "stochastic-independence-of-irrelevant-alternatives",
       "type": "implies"
     },
     {
@@ -2552,6 +3175,191 @@
     {
       "citations": [
         {
+          "ref": "Utility Maximization 1",
+          "source": "slides"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105",
+          "source": "ok"
+        },
+        {
+          "ref": "2026-09-15",
+          "source": "lecture"
+        }
+      ],
+      "critic": {
+        "note": "The strict preference relation is defined as the asymmetric part of an underlying rational preference relation.",
+        "verdict": "supports"
+      },
+      "explanation": "The strict preference relation is constructed directly from an underlying rational preference relation as its asymmetric part, holding when one option is weakly preferred over another while the reverse ranking fails.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "61b24a5746d4e7b4"
+      },
+      "id": "strict-preference-relation--defined_on--rational-preference-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "strict-preference-relation",
+      "status": "proposed",
+      "target": "rational-preference-relation",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105",
+          "source": "ok"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36",
+          "source": "ok"
+        },
+        {
+          "ref": "2026-09-15",
+          "source": "lecture"
+        }
+      ],
+      "critic": {
+        "note": "The asymmetric subrelation of a complete and transitive preorder is necessarily transitive.",
+        "verdict": "supports"
+      },
+      "explanation": "When chaining pairwise comparisons, if one option strictly ranks above a second and the second strictly ranks above a third, the first is guaranteed to strictly rank above the third.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "85bebfbfbceefdb9"
+      },
+      "id": "strict-preference-relation--has_property--transitivity",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "strict-preference-relation",
+      "status": "proposed",
+      "target": "transitivity",
+      "type": "has_property"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Utility Maximization 1",
+          "source": "slides"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105",
+          "source": "ok"
+        }
+      ],
+      "condition": "it forms the asymmetric subrelation of a preference relation",
+      "critic": {
+        "note": "The strict preference relation is a binary relation consisting of pairs of alternatives where one is strictly preferred to the other.",
+        "verdict": "supports"
+      },
+      "explanation": "Strict preference operates as a binary relation over the alternative space, pairing elements whenever an economic agent strictly prefers one alternative to the other.",
+      "hashes": {
+        "condition": "bb7d2ed04f005e45",
+        "explanation": "1da31151e19ecb00"
+      },
+      "id": "strict-preference-relation--is_a--binary-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "strict-preference-relation",
+      "status": "proposed",
+      "target": "binary-relation",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "Strict revealed preference is defined relative to a budget set where the unchosen option is strictly affordable.",
+        "verdict": "supports"
+      },
+      "explanation": "Strict revealed preference is evaluated on commodity bundles within a budget set where the unchosen option costs strictly less than available wealth.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "168dabce6f05f6f4"
+      },
+      "id": "strictly-revealed-preferred--defined_on--budget-set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "strictly-revealed-preferred",
+      "status": "proposed",
+      "target": "budget-set",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "for any chosen bundle where the unselected option costs strictly less than income",
+      "critic": {
+        "note": "Any alternative that costs strictly less than income is in the budget set, so strict revealed preference implies direct revealed preference.",
+        "verdict": "supports"
+      },
+      "explanation": "Because an alternative costing strictly less than wealth is necessarily affordable within the budget set, strictly revealed preference implies direct revealed preference.",
+      "hashes": {
+        "condition": "c79b103668c1fa1a",
+        "explanation": "e68e1d2a0298c3cd"
+      },
+      "id": "strictly-revealed-preferred--implies--direct-revealed-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "strictly-revealed-preferred",
+      "status": "proposed",
+      "target": "direct-revealed-preference",
+      "type": "implies"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "condition": "the unchosen alternative is strictly cheaper than the consumer total expenditure",
+      "critic": {
+        "note": "The strict revealed preference relation is a binary relation between chosen bundles and strictly affordable alternatives.",
+        "verdict": "supports"
+      },
+      "explanation": "Strict revealed preference defines a binary relation over bundles whenever an alternative is strictly affordable in the budget set from which another bundle is chosen.",
+      "hashes": {
+        "condition": "1c97af55e458d8d8",
+        "explanation": "c45ed224729a817b"
+      },
+      "id": "strictly-revealed-preferred--is_a--binary-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "strictly-revealed-preferred",
+      "status": "proposed",
+      "target": "binary-relation",
+      "type": "is_a"
+    },
+    {
+      "citations": [
+        {
           "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
           "source": "mwg"
         }
@@ -2798,6 +3606,33 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25",
+          "source": "rubinstein"
+        }
+      ],
+      "critic": {
+        "note": "An equivalence relation is defined as a binary relation that satisfies reflexivity, symmetry, and transitivity.",
+        "verdict": "supports"
+      },
+      "explanation": "Symmetry constitutes one of the three axiomatic requirements defining an equivalence relation alongside reflexivity and transitivity.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "9655cc2b99400be1"
+      },
+      "id": "symmetry--component_of--equivalence-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "symmetry",
+      "status": "proposed",
+      "target": "equivalence-relation",
+      "type": "component_of"
+    },
+    {
+      "citations": [
+        {
           "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36",
           "source": "ok"
         }
@@ -3015,6 +3850,125 @@
       "status": "proposed",
       "target": "rational-preference-relation",
       "type": "component_of"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106",
+          "source": "ok"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54",
+          "source": "mwg"
+        }
+      ],
+      "critic": {
+        "note": "The upper contour set at any alternative is defined as the collection of bundles weakly preferred under the preference relation.",
+        "verdict": "supports"
+      },
+      "explanation": "An upper contour set is constructed for a specific consumption bundle relative to an underlying rational preference relation, collecting every alternative weakly preferred to that baseline option.",
+      "hashes": {
+        "condition": "e3b0c44298fc1c14",
+        "explanation": "3afd5640246cbde2"
+      },
+      "id": "upper-contour-set--defined_on--rational-preference-relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "upper-contour-set",
+      "status": "proposed",
+      "target": "rational-preference-relation",
+      "type": "defined_on"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.C Preference and Utility, p. 57",
+          "source": "mwg"
+        }
+      ],
+      "condition": "both the upper contour set and the lower contour set are topologically closed for every reference bundle",
+      "critic": {
+        "note": "A preference relation on Euclidean space is continuous if and only if its upper and lower contour sets are closed.",
+        "verdict": "supports"
+      },
+      "explanation": "Preference continuity is equivalent to the requirement that for every consumption point, the upper contour set and the lower contour set contain all their boundary limit points.",
+      "hashes": {
+        "condition": "be22158d291d0120",
+        "explanation": "7cc935d40a331b7f"
+      },
+      "id": "upper-contour-set--iff--continuous-preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "upper-contour-set",
+      "status": "proposed",
+      "target": "continuous-preference",
+      "type": "iff"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54",
+          "source": "mwg"
+        }
+      ],
+      "condition": "the upper contour set is a convex set for every consumption bundle in the commodity space",
+      "critic": {
+        "note": "Convexity of preferences is defined by the requirement that all upper contour sets are convex sets.",
+        "verdict": "supports"
+      },
+      "explanation": "A preference relation exhibits convexity precisely when the upper contour set of each consumption bundle constitutes a convex geometric set, capturing diminishing marginal rates of substitution.",
+      "hashes": {
+        "condition": "ac0aa9aed957b616",
+        "explanation": "7ed44c9db118c20c"
+      },
+      "id": "upper-contour-set--iff--convex-preferences",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "upper-contour-set",
+      "status": "proposed",
+      "target": "convex-preferences",
+      "type": "iff"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106",
+          "source": "ok"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54",
+          "source": "mwg"
+        }
+      ],
+      "condition": "it gathers consumption bundles that are weakly preferred to a designated reference alternative",
+      "critic": {
+        "note": "The upper contour set is a mathematical set containing all commodity bundles ranking weakly above a chosen reference bundle.",
+        "verdict": "supports"
+      },
+      "explanation": "An upper contour set is a mathematical subset of the commodity space consisting of all alternatives ranked at least as high as a given anchor bundle.",
+      "hashes": {
+        "condition": "864b855cd900bff0",
+        "explanation": "427574e88fb44fdc"
+      },
+      "id": "upper-contour-set--is_a--set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "link-density-20261014"
+      },
+      "source": "upper-contour-set",
+      "status": "proposed",
+      "target": "set",
+      "type": "is_a"
     },
     {
       "citations": [
@@ -3533,7 +4487,7 @@
       "type": "implies"
     }
   ],
-  "graph_version": "33e34687d56a",
+  "graph_version": "9e6ce51b88a2",
   "nodes": [
     {
       "citations": [
@@ -3805,6 +4759,39 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.4 - Symmetric and antisymmetric binary relations, p. 24",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 31",
+          "source": "ok"
+        }
+      ],
+      "example": "Consumer indifference $\\sim$ defines a symmetric relation: if bundle $x$ provides the same utility as bundle $y$, then $y \\sim x$. In contrast, strict preference $\\succ$ is strictly asymmetric.",
+      "explanation": "A binary relation $R$ on a set $X$ possesses symmetry when the ordering of any related pair can be inverted without altering validity. In microeconomic consumer theory, preference relations themselves are generally not symmetric because agents typically express strict rankings between distinct consumption bundles. However, the symmetric component of a weak preference preorder isolates the agent's indifference relation $\\sim$. Under this construction, elements belonging to mutually symmetric comparisons form equivalence classes that partition the choice environment into distinct indifference sets.",
+      "formal": "\\forall x, y \\in X, \\quad x R y \\implies y R x \\iff R = R^{-1}",
+      "gist": "A property of a binary relation where whenever one element is related to another, the reverse relationship also holds.",
+      "hashes": {
+        "example": "5166b919cc3a7a4e",
+        "explanation": "56cb343c68a9d086",
+        "formal": "6754ae2b6277676a",
+        "gist": "9115173988bd0c0e"
+      },
+      "id": "symmetry",
+      "kind": "property",
+      "name": "Symmetry",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s01-mathematical-preliminaries",
+      "status": "proposed",
+      "topic": "order-theory"
+    },
+    {
+      "citations": [
+        {
           "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §<span id=\"page-36-0\"></span>SZPILRAJN'S THEOREM, p. 36",
           "source": "ok"
         },
@@ -4037,6 +5024,39 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.5 - Equivalence relation, p. 25",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §EXAMPLE 3, p. 36",
+          "source": "ok"
+        }
+      ],
+      "example": "For an agent with Cobb-Douglas utility $u(x_1, x_2) = x_1 x_2$, the consumption bundles $(4, 1)$ and $(2, 2)$ both yield a utility score of $4$. Hence $(4, 1) \\sim (2, 2)$, placing both commodity allocations on the same hyperbolic indifference curve.",
+      "explanation": "The indifference relation $\\sim$ identifies pairs of alternatives between which an economic agent exhibits no strict ranking. Obtained as the symmetric core of a weak preference relation $\\succeq$, it holds whenever $x \\succeq y$ and $y \\succeq x$ are simultaneously satisfied. Because weak preference is reflexive and transitive, the induced indifference relation constitutes a formal equivalence relation on the commodity space. Consequently, its equivalence classes partition the consumption space into non-overlapping indifference sets or indifference curves, ensuring that distinct indifference classes never intersect.",
+      "formal": "x \\sim y \\iff (x \\succeq y \\land y \\succeq x)",
+      "gist": "The symmetric component of a preference preorder connecting alternatives judged equally desirable.",
+      "hashes": {
+        "example": "7c5b3225a2e3965c",
+        "explanation": "d9162d2968e1b188",
+        "formal": "d273b6786dbea039",
+        "gist": "43986e6856d4df71"
+      },
+      "id": "indifference-relation",
+      "kind": "object",
+      "name": "Indifference relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s02-preference-and-utility",
+      "status": "proposed",
+      "topic": "rational-choice"
+    },
+    {
+      "citations": [
+        {
           "ref": "Utility Maximization 2 part 1",
           "source": "slides"
         },
@@ -4209,6 +5229,72 @@
     {
       "citations": [
         {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §4.1 Preference Relations, p. 105",
+          "source": "ok"
+        },
+        {
+          "ref": "2026-09-15",
+          "source": "lecture"
+        }
+      ],
+      "example": "A consumer choosing between bundles of apples and oranges strictly prefers $(3, 2)$ over $(1, 2)$ if $(3, 2) \\succeq (1, 2)$ but $(1, 2) \\nsucceq (3, 2)$. Under monotonic tastes, adding any positive commodity strictly increases desirability, establishing $(3, 2) \\succ (1, 2)$.",
+      "explanation": "The strict preference relation $\\succ$ isolates instances where a decision maker views an alternative as unequivocally superior to another. Formally constructed as the asymmetric part of a weak preference relation $\\succeq$, it holds when $x \\succeq y$ occurs in the absence of $y \\succeq x$. Unlike weak preference, strict preference is irreflexive and incomplete, yet it preserves transitivity under standard rational choice axioms. Economists motivate the transitivity of strict preference via arbitrage arguments, noting that intransitive strict rankings expose a consumer to exploitative money pumps.",
+      "formal": "x \\succ y \\iff (x \\succeq y \\land \\neg(y \\succeq x))",
+      "gist": "The asymmetric part of a preference preorder denoting alternatives ranked strictly higher than others.",
+      "hashes": {
+        "example": "5e37951241ab9fb8",
+        "explanation": "108bb5abadf756e7",
+        "formal": "994e9fe600c42f3a",
+        "gist": "4d06517cb1683bef"
+      },
+      "id": "strict-preference-relation",
+      "kind": "object",
+      "name": "Strict preference relation",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s02-preference-and-utility",
+      "status": "proposed",
+      "topic": "rational-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.B Preference Relations - Basic Properties, p. 53-54",
+          "source": "mwg"
+        },
+        {
+          "ref": "Ok_Real_Analysis_with_Economic_Applications_2026, §DEFINITION, p. 106",
+          "source": "ok"
+        }
+      ],
+      "example": "Suppose preferences over two commodities $\\mathbb{R}_+^2$ are represented by $u(x_1, x_2) = \\min\\{x_1, x_2\\}$. For baseline bundle $(2, 2)$, the upper contour set forms the closed quadrant $[2, \\infty) \\times [2, \\infty)$, displaying the right-angled boundary characteristic of perfect complements.",
+      "explanation": "For a given baseline bundle $x$ in consumption set $X$, the upper contour set gathers all allocations that the consumer deems at least as desirable as $x$. Topological and geometric properties of these sets reflect essential behavioral assumptions in consumer theory. For instance, continuity of preferences corresponds to upper contour sets being closed in the commodity topology, whereas convexity of preferences requires that upper contour sets be convex sets. When represented by a utility function $u$, the upper contour set coincides with the upper level set $\\{y \\in X : u(y) \\ge u(x)\\}$.",
+      "formal": "U_{\\succeq}(x) = \\{y \\in X \\mid y \\succeq x\\}",
+      "gist": "The collection of alternatives or consumption bundles ranked weakly above a specified baseline option.",
+      "hashes": {
+        "example": "300a2a5d037950a0",
+        "explanation": "716c7ce523786d43",
+        "formal": "5cfdeb93345ef515",
+        "gist": "61911de7011279b6"
+      },
+      "id": "upper-contour-set",
+      "kind": "object",
+      "name": "Upper contour set",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s02-preference-and-utility",
+      "status": "proposed",
+      "topic": "rational-choice"
+    },
+    {
+      "citations": [
+        {
           "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Concept of Utility Representation, p. 22",
           "source": "rubinstein"
         },
@@ -4287,6 +5373,39 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Rationalizing, p. 37",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "2026-10-06",
+          "source": "lecture"
+        }
+      ],
+      "example": "Given two choices with $p^1 = (2, 1), x^1 = (3, 4)$ and $p^2 = (1, 2), x^2 = (5, 1)$, cross-expenditure differences are $p^1 \\cdot (x^2 - x^1) = 1$ and $p^2 \\cdot (x^1 - x^2) = 4$. Assigning utility levels $u_1 = 10, u_2 = 11$ alongside multipliers $\\lambda_1 = 2, \\lambda_2 = 1$ satisfies $11 \\le 10 + 2(1)$ and $10 \\le 11 + 1(4)$, solving the Afriat system.",
+      "explanation": "For a finite sequence of price-quantity choices $\\{(p^t, x^t)\\}_{t=1}^T$, the Afriat inequalities form a solvable linear system in scalar utility values $u_t$ and positive multipliers $\\lambda_t$. They represent the discrete first-order and concavity conditions of constrained utility maximization, where each $\\lambda_t$ acts as the marginal utility of wealth. Afriat's theorem establishes that this system admits a solution if and only if the consumption data can be rationalized by a continuous, strictly increasing, and concave utility function. Finding a feasible solution allows explicit constructive recovery of a rationalizing piecewise-linear utility function.",
+      "formal": "u_s \\leq u_t + \\lambda_t p^t \\cdot (x^s - x^t) \\quad \\forall s, t \\in \\{1, \\dots, T\\}, \\quad \\text{with } \\lambda_t > 0",
+      "gist": "System of linear inequalities in utility levels and Lagrange multipliers characterizing dataset rationalizability.",
+      "hashes": {
+        "example": "96a5c1858d15842d",
+        "explanation": "b2683ed3e1226fc3",
+        "formal": "a51d04f1e476e6b1",
+        "gist": "699da0b93c9127ed"
+      },
+      "id": "afriat-inequalities",
+      "kind": "definition",
+      "name": "Afriat inequalities",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
           "ref": "2026-09-22",
           "source": "lecture"
         }
@@ -4308,6 +5427,72 @@
         "agent": "antigravity-gemini",
         "driver": "agent",
         "run": "fill-s03"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak and Strong Axioms of Revealed Preference, p. 85",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        }
+      ],
+      "example": "Suppose bundle $a$ is chosen when $b$ is affordable ($a R^D b$), and $b$ is chosen when $c$ is affordable ($b R^D c$). If the consumer then chooses $c$ while $a$ is strictly cheaper than $c$ ($c S a$), this creates a cycle $a R c$ and $c S a$, violating cyclical consistency.",
+      "explanation": "Cyclical consistency requires that no finite sequence of observed choices produces a contradictory preference loop. Whenever an option $x^1$ stands in the revealed preference relation to $x^K$ through a chain of budget comparisons, the consumer cannot simultaneously exhibit that $x^K$ is strictly chosen over $x^1$. While the Weak Axiom of Revealed Preference prevents cycles of length two, cyclical consistency eliminates cycles of arbitrary finite length $K \\ge 2$. In empirical consumer analysis, this condition is necessary and sufficient for choice data to be rationalized by an optimizing utility function.",
+      "formal": "x^1 R^D x^2 R^D \\dots R^D x^K \\implies \\neg (x^K S x^1) \\quad \\text{for any finite sequence } \\{x^k\\}_{k=1}^K",
+      "gist": "Revealed preference axiom prohibiting closed preference cycles that contain at least one strict preference comparison.",
+      "hashes": {
+        "example": "8cd502d95f79b2ab",
+        "explanation": "e027c59ff8d12e6d",
+        "formal": "e3ddf16e5e84e18d",
+        "gist": "5edaa6272f075c0f"
+      },
+      "id": "cyclical-consistency",
+      "kind": "axiom",
+      "name": "Cyclical consistency",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 5.6 - Revealed preference, p. 85",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "At prices $p = (4, 2)$ and income $w = 20$, a consumer selects bundle $x = (3, 4)$. Because the alternative bundle $y = (2, 5)$ costs $4(2) + 2(5) = 18 \\le 20$, bundle $y$ was affordable within the budget set, establishing $x R^D y$.",
+      "explanation": "Direct revealed preference, denoted $x R^D y$, is an empirical binary relation constructed directly from observed choices. An alternative $x$ is directly revealed preferred to $y$ if $x$ is chosen from a budget environment where $y$ is also feasible. When choices are generated by an underlying preference relation, observing this choice implies that $x$ is weakly preferred to $y$. If the agent's preferences are locally non-satiated, selecting $x$ when $y$ satisfies $p \\cdot y \\le p \\cdot x$ establishes that $y$ cannot be strictly better than $x$.",
+      "formal": "x R^D y \\iff \\exists (p, w) \\text{ such that } x = x(p, w), \\, y \\in B(p, w) \\text{ (i.e., } p \\cdot y \\leq w = p \\cdot x \\text{)}",
+      "gist": "Binary relation established when an alternative is selected from a budget set in which another bundle was affordable.",
+      "hashes": {
+        "example": "dab876b28d0763a5",
+        "explanation": "3b1a96b7693c2932",
+        "formal": "8e496ccae5c3f50d",
+        "gist": "816392af34d9efe2"
+      },
+      "id": "direct-revealed-preference",
+      "kind": "object",
+      "name": "Direct revealed preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
       },
       "section": "s03-revealed-preference",
       "status": "proposed",
@@ -4353,6 +5538,105 @@
     {
       "citations": [
         {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Homothetic Preferences, p. 67",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "2026-10-06",
+          "source": "lecture"
+        }
+      ],
+      "example": "Consider two observations with $p^1 = (1, 2), x^1 = (2, 1)$ so $p^1 \\cdot x^1 = 4$, and $p^2 = (2, 1), x^2 = (1, 2)$ so $p^2 \\cdot x^2 = 4$. Evaluating cross expenditures gives $p^1 \\cdot x^2 = 5$ and $p^2 \\cdot x^1 = 5$. The product of expenditure ratios is $(5/4) \\times (5/4) = 25/16 \\ge 1$, satisfying HARP.",
+      "explanation": "The Homothetic Axiom of Revealed Preference (HARP) is a non-parametric consistency test that characterizes whether choice data can be rationalized by homothetic preferences. Homothetic preferences possess rays of constant marginal rates of substitution from the origin, ensuring that demand scales linearly with wealth. HARP requires that for any sequence of observed choices, the product of the relative expenditure ratios along any cyclic chain must be at least one. If this condition holds, there exists a continuous, increasing, concave, and homogeneous of degree one utility function rationalizing the observed demand.",
+      "formal": "\\prod_{k=1}^K \\frac{p^{t_k} \\cdot x^{t_{k+1}}}{p^{t_k} \\cdot x^{t_k}} \\geq 1 \\quad \\text{for every cyclic index sequence } (t_1, t_2, \\dots, t_K, t_{K+1} = t_1)",
+      "gist": "Revealed preference axiom characterizing datasets rationalizable by a homothetic and degree-one homogeneous utility function.",
+      "hashes": {
+        "example": "3865c7829435d7bb",
+        "explanation": "4a6506e5f1141528",
+        "formal": "45c34e2e65080a85",
+        "gist": "0fa3ade355adbac7"
+      },
+      "id": "homothetic-axiom-of-revealed-preference",
+      "kind": "axiom",
+      "name": "Homothetic axiom of revealed preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Press_Microeconomic_Theory_2011, §3.J The Strong Axiom of Revealed Preference, p. 102",
+          "source": "mwg"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §The Weak and Strong Axioms of Revealed Preference, p. 85",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "Suppose $x$ is purchased when $y$ is affordable ($p^x \\cdot y \\le p^x \\cdot x$), and in another period $y$ is purchased when $z$ is affordable ($p^y \\cdot z \\le p^y \\cdot y$) for distinct bundles $x, y, z$. Houthakker's axiom requires that at prices where $z$ is chosen, bundle $x$ must be strictly unaffordable ($p^z \\cdot x > p^z \\cdot z$).",
+      "explanation": "Houthakker's axiom, universally known as the Strong Axiom of Revealed Preference (SARP), provides a necessary and sufficient condition for single-valued demand functions to be rationalized by preferences. It closes the transitivity gap left by Samuelson's Weak Axiom by demanding acyclicity across choice sequences of arbitrary length. Specifically, when bundle $x^1$ links to a distinct bundle $x^K$ via intermediate revealed comparisons, the first bundle $x^1$ must cost strictly more than the budget available at the observation where $x^K$ is chosen. This requirement ensures that the transitive closure of observed pairwise choices is an asymmetric relation that can be extended to a complete preference ranking.",
+      "formal": "\\left[ \\forall k \\in \\{1, \\dots, K-1\\}, \\, p^k \\cdot x^{k+1} \\leq p^k \\cdot x^k \\text{ with } x^1 \\neq x^K \\right] \\implies p^K \\cdot x^1 > p^K \\cdot x^K",
+      "gist": "Revealed preference axiom requiring that indirect revealed preference between distinct bundles is asymmetric, equivalent to SARP.",
+      "hashes": {
+        "example": "b8f8942e42291b59",
+        "explanation": "70a41abeda9685bf",
+        "formal": "b0c6f64916f572c9",
+        "gist": "6bbec298b86f7def"
+      },
+      "id": "houthakkers-axiom",
+      "kind": "axiom",
+      "name": "Houthakker's axiom",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §Definition 1.2 - Transitive binary relation, p. 24",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "2026-09-15",
+          "source": "lecture"
+        }
+      ],
+      "example": "Suppose bundle $x$ is purchased when $y$ is affordable, so $x R^D y$, and in a different price regime bundle $y$ is purchased while $z$ is affordable, giving $y R^D z$. Even if $x$ and $z$ were never compared in the same budget set, the sequence establishes that $x R z$.",
+      "explanation": "Indirect revealed preference, denoted $x R y$, extends direct revealed preference by imposing transitive consistency across multiple observation periods. A bundle $x$ is indirectly revealed preferred to $y$ if there is a finite chain of intermediate choices connecting $x$ to $y$ through successive direct revealed preference relations. In consumer theory, this transitive closure allows researchers to infer welfare rankings between bundles that were never simultaneously available in any single budget set. It forms the core operational structure required to formulate SARP and Afriat's theorem.",
+      "formal": "x R y \\iff \\exists \\{w_k\\}_{k=0}^K \\text{ with } w_0 = x \\text{ and } w_K = y \\text{ such that } w_{k-1} R^D w_k \\text{ for each } k \\in \\{1, \\dots, K\\}",
+      "gist": "Transitive closure of direct revealed preference, linking alternatives through a finite sequence of pairwise choices.",
+      "hashes": {
+        "example": "670513929e252e2a",
+        "explanation": "4e2e83b90a0a50e6",
+        "formal": "5747aedcd70154a1",
+        "gist": "1f701c91347aa61e"
+      },
+      "id": "indirect-revealed-preference",
+      "kind": "object",
+      "name": "Indirect revealed preference",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
           "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §The weak axiom of revealed preference, p. 84",
           "source": "rubinstein"
         },
@@ -4386,6 +5670,39 @@
         "agent": "antigravity-gemini",
         "driver": "agent",
         "run": "fill-s03"
+      },
+      "section": "s03-revealed-preference",
+      "status": "proposed",
+      "topic": "revealed-preference"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Comment - , p. 85",
+          "source": "rubinstein"
+        },
+        {
+          "ref": "Rubenstein_Models_in_Microeconomic_Theory_2023, §The weak axiom of revealed preference, p. 84",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "If prices are $p = (5, 5)$ and the consumer selects $x = (2, 2)$ spending \\$20, an alternative bundle $y = (1, 2)$ costing \\$15 lies strictly inside the budget frontier. Because $p \\cdot y < p \\cdot x$, bundle $x$ is strictly revealed preferred to $y$ ($x S y$).",
+      "explanation": "An alternative $x$ is strictly revealed preferred to an alternative $y$, written $x S y$, when $x$ is chosen from a budget environment in which $y$ costs strictly less than the expenditure spent on $x$. Under local non-satiation or monotonicity of consumer tastes, any bundle strictly inside the budget frontier is dominated by an affordable neighboring bundle. Consequently, choosing $x$ while rejecting a strictly cheaper alternative $y$ rules out consumer indifference between them. This relation provides the strict component necessary to test acyclicity and formulate GARP.",
+      "formal": "x S y \\iff \\exists (p, w) \\text{ such that } x = x(p, w) \\text{ and } p \\cdot y < w = p \\cdot x",
+      "gist": "Binary relation arising when a selected alternative is chosen over another strictly affordable, unchosen option.",
+      "hashes": {
+        "example": "7aafcbc1234c8d5f",
+        "explanation": "4828e8a7bbc28372",
+        "formal": "b7c9e6414bcb2e3c",
+        "gist": "efe2fd0b60f6f046"
+      },
+      "id": "strictly-revealed-preferred",
+      "kind": "object",
+      "name": "Strictly revealed preferred",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
       },
       "section": "s03-revealed-preference",
       "status": "proposed",
@@ -4466,6 +5783,35 @@
         {
           "ref": "Random choice",
           "source": "slides"
+        }
+      ],
+      "example": "In commuter mode choice between train and bus, systematic values $v(\\text{train})$ and $v(\\text{bus})$ reflect travel time and fare, while idiosyncratic disturbances capture unobserved daily fluctuations in comfort or delays. If the error terms $\\varepsilon_x$ are independent and identically distributed according to the standard Gumbel (type I extreme value) distribution, the additive random utility framework yields the standard multinomial logit probabilities. If disturbances are instead correlated across similar alternatives, generalized extreme value or multinomial probit specifications arise.",
+      "explanation": "The additive random utility model decomposes the evaluation of each alternative into a systematic deterministic component and an unobserved stochastic disturbance. For each available option $x$, the agent's realized payoff is $U(x) = v(x) + \\varepsilon_x$, where the joint distribution of the random shocks is invariant to the choice menu. Choice is governed by utility maximization, so the likelihood of selecting $x$ from menu $A$ equals the probability that its total utility exceeds that of all other available options. This specification accounts for observed inconsistencies in individual decision-making, such as cognitive trembling or population-level taste heterogeneity.",
+      "formal": "p(x, A) = \\mathbb{P}\\left(v(x) + \\varepsilon_x > \\max_{y \\in A \\setminus \\{x\\}} (v(y) + \\varepsilon_y)\\right) \\quad \\text{for all } x \\in A \\subseteq X",
+      "gist": "Stochastic choice structure decomposing total utility into an alternative-specific deterministic payoff and an additive random error.",
+      "hashes": {
+        "example": "593fd1f22626fe1a",
+        "explanation": "b3cebd142ce59154",
+        "formal": "516818df94c8a24d",
+        "gist": "eef69bdbe63e269f"
+      },
+      "id": "additive-random-utility-model",
+      "kind": "model",
+      "name": "Additive random utility model",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s04-stochastic-choice",
+      "status": "proposed",
+      "topic": "stochastic-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
         },
         {
           "ref": "Press_Microeconomic_Theory_2011, §1.D The Relationship between Preference Relations and Choice Rules, p. 27",
@@ -4499,6 +5845,64 @@
         {
           "ref": "Random choice",
           "source": "slides"
+        }
+      ],
+      "example": "On a three-element universe $X = \\{x, y, z\\}$ with $A = \\{x\\}$, the inequality requires $p(x, \\{x\\}) - p(x, \\{x, y\\}) - p(x, \\{x, z\\}) + p(x, \\{x, y, z\\}) \\ge 0$. Since $p(x, \\{x\\}) = 1$, this inequality bounds how sharply the probability of picking $x$ can drop across binary comparisons relative to the grand menu. A choice rule assigning probabilities of $0.6$ on each binary problem but $0.1$ on the ternary set yields $1 - 0.6 - 0.6 + 0.1 = -0.1 < 0$, violating the condition and ruling out random utility rationalization.",
+      "explanation": "The Block-Marschak inequalities establish necessary and sufficient conditions for a stochastic choice rule on a finite universe to be rationalized by a random utility model. For every choice problem $A$ and every item $x \\in A$, an alternating sum of choice probabilities across all supersets $B \\supseteq A$ must be non-negative. This combinatorial restriction reflects the principle of inclusion-exclusion applied to probability measures over rankings where $x$ remains top-ranked within $A$. When menus expand, the inequalities generalize simple stochastic monotonicity by restricting how substitution patterns evolve across sets of higher cardinality.",
+      "formal": "\\sum_{B \\subseteq X : A \\subseteq B} (-1)^{|B \\setminus A|} p(x, B) \\geq 0 \\quad \\text{for all } A \\subseteq X, A \\neq \\emptyset, \\text{ and all } x \\in A",
+      "gist": "System of alternating-sign polynomial inequalities on choice probabilities that characterizes random utility rationalizability.",
+      "hashes": {
+        "example": "21b2f025990ba27a",
+        "explanation": "f5cf3b3bff0f9227",
+        "formal": "e3240c69a0c87297",
+        "gist": "7aff81c98a4a8436"
+      },
+      "id": "block-marschak-inequalities",
+      "kind": "property",
+      "name": "Block-Marschak inequalities",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s04-stochastic-choice",
+      "status": "proposed",
+      "topic": "stochastic-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        }
+      ],
+      "example": "Suppose an empirical investigator observes complete stochastic choice data across all non-empty subsets of a four-candidate election. If computing the alternating polynomial for a candidate on any subset yields a negative value, Falmagne's theorem immediately implies that no distribution over deterministic candidate rankings can generate the observed choice probabilities. Conversely, if all such polynomial expressions remain non-negative, the analyst is guaranteed that the stochastic data can be fully rationalized by an unobserved distribution over voter preference orderings.",
+      "explanation": "Falmagne's representation theorem provides a complete axiomatic characterization of random utility models on finite alternative sets. The theorem establishes that a random choice rule is rationalizable by a probability distribution over linear preference orders if and only if the Block-Marschak polynomial is non-negative for every menu $A$ and alternative $x \\in A$. Mechanically, these polynomial expressions represent the exact probability assigned to the set of rankings where a given element is preferred to all items outside a menu while being maximal within it. Consequently, non-negativity of these expressions is both necessary and sufficient to recover a valid underlying probability measure over preference orders.",
+      "formal": "p \\text{ is RUM rationalizable} \\iff \\sum_{B \\subseteq X : A \\subseteq B} (-1)^{|B \\setminus A|} p(x, B) \\geq 0 \\quad \\forall A \\subseteq X, \\, A \\neq \\emptyset, \\, \\forall x \\in A",
+      "gist": "Theorem stating that a random choice rule is rationalizable by a random utility model if and only if it satisfies the Block-Marschak inequalities.",
+      "hashes": {
+        "example": "f48a736fbce9ba2e",
+        "explanation": "5fc76333fc364e20",
+        "formal": "9ea22827383c878b",
+        "gist": "48d958a4aa0cb320"
+      },
+      "id": "falmagne-representation-theorem",
+      "kind": "theorem",
+      "name": "Falmagne representation theorem",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s04-stochastic-choice",
+      "status": "proposed",
+      "topic": "stochastic-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
         },
         {
           "ref": "Rubenstein_Corel_Ventura_INDEXCHP_2001, §7.2 Interactions Between Luce Players, p. 134-135",
@@ -4522,6 +5926,72 @@
         "agent": "antigravity-gemini",
         "driver": "agent",
         "run": "fill-s04"
+      },
+      "section": "s04-stochastic-choice",
+      "status": "proposed",
+      "topic": "stochastic-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        },
+        {
+          "ref": "Rubenstein_Corel_Ventura_INDEXCHP_2001, §7.2 Interactions Between Luce Players, p. 134-135",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "In empirical industrial organization, consumers choose among breakfast cereals whose deterministic indices depend on price, sugar content, and brand advertising. The multinomial logit framework yields simple closed-form market shares for each brand from observed product characteristics. However, introducing a new cereal that closely mimics an existing brand draws proportional demand from all options rather than substituting predominantly from its nearest neighbor, illustrating the restrictive substitution patterns of the model.",
+      "explanation": "The multinomial logit model is an additive random utility specification where each alternative's latent utility equals a deterministic index plus an independent and identically distributed type I extreme value (Gumbel) shock. Maximizing this perturbed utility produces closed-form choice probabilities proportional to the exponentiated deterministic payoffs. This formulation is mathematically equivalent to the Luce choice rule, with scale values given by $u(x) = \\exp(v(x))$. While computationally convenient and widely implemented in empirical demand analysis, the model inherently enforces stochastic independence of irrelevant alternatives, restricting cross-alternative substitution.",
+      "formal": "p(x, A) = \\frac{\\exp(v(x))}{\\sum_{y \\in A} \\exp(v(y))} = \\frac{u(x)}{\\sum_{y \\in A} u(y)} \\quad \\text{where } U(x) = v(x) + \\varepsilon_x, \\; \\varepsilon_x \\overset{\\text{iid}}{\\sim} \\text{Gumbel}(0, 1)",
+      "gist": "Discrete choice model where alternatives receive additive type I extreme value errors, producing Luce choice probabilities.",
+      "hashes": {
+        "example": "e8418acd6b7c7442",
+        "explanation": "ab7046e6cc5cae63",
+        "formal": "29e55d7de961f2ad",
+        "gist": "965d6957f588c74c"
+      },
+      "id": "multinomial-logit-model",
+      "kind": "model",
+      "name": "Multinomial logit model",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s04-stochastic-choice",
+      "status": "proposed",
+      "topic": "stochastic-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        },
+        {
+          "ref": "Rubenstein_Lecture_Notes_in_Microeconomic_Theory_2026, §Problem A24. (NYU 2025), p. 161",
+          "source": "rubinstein"
+        }
+      ],
+      "example": "Consider a consumer choosing among three beverages: tea, coffee, and water. A random choice rule satisfying positivity assigns strictly positive selection shares to all three drinks on the full menu, as well as to each drink on every two-element subset. Conversely, if coffee is chosen with probability zero whenever tea is present, positivity fails because an available menu alternative receives zero probability mass.",
+      "explanation": "In stochastic choice theory, the positivity condition demands that the decision maker selects each feasible alternative with non-zero probability from any offered menu. Under a random choice rule $p$, this means that $p(x, A) > 0$ whenever $x \\in A$. The postulate prevents deterministic zero-probability exclusions and guarantees that pairwise likelihood ratios remain well-defined across all choice sets. It serves as a foundational assumption in models such as the Luce rule, where choice frequencies are strictly positive fractions of total menu weights.",
+      "formal": "p(x, A) > 0 \\quad \\text{for all } A \\subseteq X \\text{ with } A \\neq \\emptyset \\text{ and all } x \\in A",
+      "gist": "Requirement that every available option in a feasible menu is selected with strictly positive probability.",
+      "hashes": {
+        "example": "a3b9c4bbcdea3118",
+        "explanation": "4f6f682f6f388c39",
+        "formal": "13c60b5026a315a3",
+        "gist": "2c91a8de08ac07e4"
+      },
+      "id": "positivity-condition",
+      "kind": "property",
+      "name": "Positivity condition",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
       },
       "section": "s04-stochastic-choice",
       "status": "proposed",
@@ -4682,6 +6152,35 @@
       "section": "s04-stochastic-choice",
       "status": "proposed",
       "topic": "rational-choice"
+    },
+    {
+      "citations": [
+        {
+          "ref": "Random choice",
+          "source": "slides"
+        }
+      ],
+      "example": "In Debreu's classic red bus versus blue bus scenario, an agent chooses between a car and a red bus with equal odds, so $p(\\text{car}, \\{\\text{car}, \\text{red bus}\\}) = 1/2$. If an identical blue bus is added to the menu, stochastic independence of irrelevant alternatives forces the ratio between car and red bus to remain $1:1$, yielding equal one-third probabilities for all three alternatives. Intuitively, the duplicate bus should split the bus market share without altering the total probability of traveling by car.",
+      "explanation": "Stochastic independence of irrelevant alternatives requires that the relative likelihood of selecting option $x$ over option $y$ depends solely on the pair $(x, y)$ and not on the presence of any other options in the menu. Formally, for any two menus $A$ and $B$ containing both $x$ and $y$, the odds ratio $p(x, A)/p(y, A)$ equals $p(x, B)/p(y, B)$. Together with the positivity condition, this invariance property characterizes Luce's probabilistic choice rule. While analytically tractable, the axiom imposes rigid substitution patterns that can generate implausible predictions when duplicate or closely substitute goods are added.",
+      "formal": "\\frac{p(x, A)}{p(y, A)} = \\frac{p(x, B)}{p(y, B)} \\quad \\text{for all } A, B \\in \\mathcal{D} \\text{ such that } x, y \\in A \\cap B",
+      "gist": "Axiom stating that the relative ratio of choice probabilities between two options is invariant to the choice set.",
+      "hashes": {
+        "example": "4a0df5f5e07a8f9f",
+        "explanation": "5b1e6cd0d7ff90e6",
+        "formal": "ef67115456067af3",
+        "gist": "3a85ed1011c0ff56"
+      },
+      "id": "stochastic-independence-of-irrelevant-alternatives",
+      "kind": "axiom",
+      "name": "Stochastic independence of irrelevant alternatives",
+      "provenance": {
+        "agent": "antigravity-gemini",
+        "driver": "agent",
+        "run": "fill-density-20261014"
+      },
+      "section": "s04-stochastic-choice",
+      "status": "proposed",
+      "topic": "stochastic-choice"
     },
     {
       "citations": [
